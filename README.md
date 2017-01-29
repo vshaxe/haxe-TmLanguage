@@ -4,6 +4,14 @@
 
 This repository contains the `.tmLanguage` grammar files for `.hx` and `.hxml` used for syntax highlighting by the [Visual Studio Code extension](https://github.com/vshaxe/vshaxe).
 
+## Haxe example
+
+![Haxe highlighting](images/haxe.png)
+
+## HXML example
+
+![hxml highlighting](images/hxml.png)
+
 ## Conversion
 
 The `tmLanguage` XML files are converted from their `YAML-tmLanguage` source files:
