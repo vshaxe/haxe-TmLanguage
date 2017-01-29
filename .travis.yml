@@ -1,0 +1,13 @@
+language: haxe
+sudo: false
+haxe:
+ - development
+
+install:
+ - haxelib install hxnodejs
+ - haxelib install yaml
+ - haxelib git plist https://github.com/back2dos/plist
+ - npm install vscode-textmate 
+
+script:
+ - haxe all.hxml
