@@ -1,0 +1,810 @@
+original file
+-----------------------------------
+switch(e.expr) {
+    case EConst(CString(s)) if (StringTools.startsWith(s, "foo")):
+        "1";
+    case EConst(CString(s)) if (StringTools.startsWith(s, "bar")):
+        "2";
+    case EConst(CInt(i)) if (switch(Std.parseInt(i) * 2) { case 4: true; case _: false; }):
+        "3";
+    case EConst(_):
+        "4";
+    default:
+        "5";
+}
+
+switch [true, 1, "foo"] {
+    case [true, 1, "foo"]: "0";
+    case [true, 1, _]: "1";
+    case _: "_";
+}
+
+class Colors {
+    static function toInt( c : Color ) : Int {
+        return switch( c ) {
+            case Red: 0xFF0000;
+            case Green: 0x00FF00;
+            case Blue: 0x0000FF;
+            case Grey(v): (v << 16) | (v << 8) | v;
+            case Rgb(r,g,b): (r << 16) | (g << 8) | b;
+            case Alpha(a,c): (a << 24) | (toInt(c) & 0xFFFFFF);
+        }
+    }
+}
+-----------------------------------
+
+>switch(e.expr) {
+ ^^^^^^
+ source.hx keyword.control.flow-control.hx
+       ^
+       source.hx meta.brace.round.hx
+        ^
+        source.hx variable.other.hx
+         ^
+         source.hx
+          ^^^^
+          source.hx variable.other.hx
+              ^
+              source.hx meta.brace.round.hx
+               ^
+               source.hx
+                ^
+                source.hx punctuation.definition.block.begin.hx
+>    case EConst(CString(s)) if (StringTools.startsWith(s, "foo")):
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^^^^^^
+          source.hx entity.name.type.hx
+                ^
+                source.hx meta.brace.round.hx
+                 ^^^^^^^
+                 source.hx entity.name.type.hx
+                        ^
+                        source.hx meta.brace.round.hx
+                         ^
+                         source.hx variable.other.hx
+                          ^
+                          source.hx meta.brace.round.hx
+                           ^
+                           source.hx meta.brace.round.hx
+                            ^
+                            source.hx
+                             ^^
+                             source.hx keyword.control.flow-control.hx
+                               ^^
+                               source.hx
+                                 ^^^^^^^^^^^
+                                 source.hx support.class.builtin.hx
+                                            ^
+                                            source.hx
+                                             ^^^^^^^^^^
+                                             source.hx entity.name.function.hx
+                                                       ^
+                                                       source.hx meta.brace.round.hx
+                                                        ^
+                                                        source.hx variable.other.hx
+                                                         ^
+                                                         source.hx punctuation.separator.comma.hx
+                                                          ^
+                                                          source.hx
+                                                           ^
+                                                           source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                                            ^^^
+                                                            source.hx string.quoted.double.hx
+                                                               ^
+                                                               source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                                                ^
+                                                                source.hx meta.brace.round.hx
+                                                                 ^
+                                                                 source.hx meta.brace.round.hx
+                                                                  ^
+                                                                  source.hx
+>        "1";
+ ^^^^^^^^
+ source.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+          ^
+          source.hx string.quoted.double.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>    case EConst(CString(s)) if (StringTools.startsWith(s, "bar")):
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^^^^^^
+          source.hx entity.name.type.hx
+                ^
+                source.hx meta.brace.round.hx
+                 ^^^^^^^
+                 source.hx entity.name.type.hx
+                        ^
+                        source.hx meta.brace.round.hx
+                         ^
+                         source.hx variable.other.hx
+                          ^
+                          source.hx meta.brace.round.hx
+                           ^
+                           source.hx meta.brace.round.hx
+                            ^
+                            source.hx
+                             ^^
+                             source.hx keyword.control.flow-control.hx
+                               ^^
+                               source.hx
+                                 ^^^^^^^^^^^
+                                 source.hx support.class.builtin.hx
+                                            ^
+                                            source.hx
+                                             ^^^^^^^^^^
+                                             source.hx entity.name.function.hx
+                                                       ^
+                                                       source.hx meta.brace.round.hx
+                                                        ^
+                                                        source.hx variable.other.hx
+                                                         ^
+                                                         source.hx punctuation.separator.comma.hx
+                                                          ^
+                                                          source.hx
+                                                           ^
+                                                           source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                                            ^^^
+                                                            source.hx string.quoted.double.hx
+                                                               ^
+                                                               source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                                                ^
+                                                                source.hx meta.brace.round.hx
+                                                                 ^
+                                                                 source.hx meta.brace.round.hx
+                                                                  ^
+                                                                  source.hx
+>        "2";
+ ^^^^^^^^
+ source.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+          ^
+          source.hx string.quoted.double.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>    case EConst(CInt(i)) if (switch(Std.parseInt(i) * 2) { case 4: true; case _: false; }):
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^^^^^^
+          source.hx entity.name.type.hx
+                ^
+                source.hx meta.brace.round.hx
+                 ^^^^
+                 source.hx entity.name.type.hx
+                     ^
+                     source.hx meta.brace.round.hx
+                      ^
+                      source.hx variable.other.hx
+                       ^
+                       source.hx meta.brace.round.hx
+                        ^
+                        source.hx meta.brace.round.hx
+                         ^
+                         source.hx
+                          ^^
+                          source.hx keyword.control.flow-control.hx
+                            ^^
+                            source.hx
+                              ^^^^^^
+                              source.hx keyword.control.flow-control.hx
+                                    ^
+                                    source.hx meta.brace.round.hx
+                                     ^^^
+                                     source.hx support.class.builtin.hx
+                                        ^
+                                        source.hx
+                                         ^^^^^^^^
+                                         source.hx entity.name.function.hx
+                                                 ^
+                                                 source.hx meta.brace.round.hx
+                                                  ^
+                                                  source.hx variable.other.hx
+                                                   ^
+                                                   source.hx meta.brace.round.hx
+                                                    ^
+                                                    source.hx
+                                                     ^
+                                                     source.hx keyword.operator.arithmetic.hx
+                                                      ^
+                                                      source.hx
+                                                       ^
+                                                       source.hx constant.numeric.decimal.hx
+                                                        ^
+                                                        source.hx meta.brace.round.hx
+                                                         ^^^
+                                                         source.hx
+                                                            ^^^^
+                                                            source.hx keyword.control.flow-control.hx
+                                                                ^
+                                                                source.hx
+                                                                 ^
+                                                                 source.hx constant.numeric.decimal.hx
+                                                                  ^
+                                                                  source.hx
+                                                                   ^
+                                                                   source.hx
+                                                                    ^^^^
+                                                                    source.hx constant.language.hx
+                                                                        ^
+                                                                        source.hx punctuation.terminator.hx
+                                                                         ^
+                                                                         source.hx
+                                                                          ^^^^
+                                                                          source.hx keyword.control.flow-control.hx
+                                                                              ^
+                                                                              source.hx
+                                                                               ^
+                                                                               source.hx variable.other.hx
+                                                                                ^
+                                                                                source.hx
+                                                                                 ^
+                                                                                 source.hx
+                                                                                  ^^^^^
+                                                                                  source.hx constant.language.hx
+                                                                                       ^
+                                                                                       source.hx punctuation.terminator.hx
+                                                                                        ^^
+                                                                                        source.hx
+                                                                                          ^
+                                                                                          source.hx meta.brace.round.hx
+                                                                                           ^
+                                                                                           source.hx
+>        "3";
+ ^^^^^^^^
+ source.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+          ^
+          source.hx string.quoted.double.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>    case EConst(_):
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^^^^^^
+          source.hx entity.name.type.hx
+                ^
+                source.hx meta.brace.round.hx
+                 ^
+                 source.hx variable.other.hx
+                  ^
+                  source.hx meta.brace.round.hx
+                   ^
+                   source.hx
+>        "4";
+ ^^^^^^^^
+ source.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+          ^
+          source.hx string.quoted.double.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>    default:
+ ^^^^
+ source.hx
+     ^^^^^^^
+     source.hx keyword.control.flow-control.hx
+            ^
+            source.hx
+>        "5";
+ ^^^^^^^^
+ source.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+          ^
+          source.hx string.quoted.double.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>switch [true, 1, "foo"] {
+ ^^^^^^
+ source.hx keyword.control.flow-control.hx
+       ^
+       source.hx
+        ^
+        source.hx meta.array.literal.hx punctuation.definition.array.begin.hx
+         ^^^^
+         source.hx meta.array.literal.hx constant.language.hx
+             ^
+             source.hx meta.array.literal.hx punctuation.separator.comma.hx
+              ^
+              source.hx meta.array.literal.hx
+               ^
+               source.hx meta.array.literal.hx constant.numeric.decimal.hx
+                ^
+                source.hx meta.array.literal.hx punctuation.separator.comma.hx
+                 ^
+                 source.hx meta.array.literal.hx
+                  ^
+                  source.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                   ^^^
+                   source.hx meta.array.literal.hx string.quoted.double.hx
+                      ^
+                      source.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                       ^
+                       source.hx meta.array.literal.hx punctuation.definition.array.end.hx
+                        ^
+                        source.hx
+                         ^
+                         source.hx punctuation.definition.block.begin.hx
+>    case [true, 1, "foo"]: "0";
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^
+          source.hx meta.array.literal.hx punctuation.definition.array.begin.hx
+           ^^^^
+           source.hx meta.array.literal.hx constant.language.hx
+               ^
+               source.hx meta.array.literal.hx punctuation.separator.comma.hx
+                ^
+                source.hx meta.array.literal.hx
+                 ^
+                 source.hx meta.array.literal.hx constant.numeric.decimal.hx
+                  ^
+                  source.hx meta.array.literal.hx punctuation.separator.comma.hx
+                   ^
+                   source.hx meta.array.literal.hx
+                    ^
+                    source.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                     ^^^
+                     source.hx meta.array.literal.hx string.quoted.double.hx
+                        ^
+                        source.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                         ^
+                         source.hx meta.array.literal.hx punctuation.definition.array.end.hx
+                          ^
+                          source.hx
+                           ^
+                           source.hx
+                            ^
+                            source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                             ^
+                             source.hx string.quoted.double.hx
+                              ^
+                              source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                               ^
+                               source.hx punctuation.terminator.hx
+>    case [true, 1, _]: "1";
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^
+          source.hx meta.array.literal.hx punctuation.definition.array.begin.hx
+           ^^^^
+           source.hx meta.array.literal.hx constant.language.hx
+               ^
+               source.hx meta.array.literal.hx punctuation.separator.comma.hx
+                ^
+                source.hx meta.array.literal.hx
+                 ^
+                 source.hx meta.array.literal.hx constant.numeric.decimal.hx
+                  ^
+                  source.hx meta.array.literal.hx punctuation.separator.comma.hx
+                   ^
+                   source.hx meta.array.literal.hx
+                    ^
+                    source.hx meta.array.literal.hx variable.other.hx
+                     ^
+                     source.hx meta.array.literal.hx punctuation.definition.array.end.hx
+                      ^
+                      source.hx
+                       ^
+                       source.hx
+                        ^
+                        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                         ^
+                         source.hx string.quoted.double.hx
+                          ^
+                          source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                           ^
+                           source.hx punctuation.terminator.hx
+>    case _: "_";
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^
+          source.hx variable.other.hx
+           ^
+           source.hx
+            ^
+            source.hx
+             ^
+             source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+              ^
+              source.hx string.quoted.double.hx
+               ^
+               source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                ^
+                source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>class Colors {
+ ^^^^^
+ source.hx meta.class.hx meta.class.identifier.hx storage.type.class.hx
+      ^
+      source.hx meta.class.hx meta.class.identifier.hx
+       ^^^^^^
+       source.hx meta.class.hx meta.class.identifier.hx entity.name.type.class.hx
+             ^
+             source.hx meta.class.hx
+              ^
+              source.hx meta.class.hx punctuation.definition.block.begin.hx
+>    static function toInt( c : Color ) : Int {
+ ^^^^
+ source.hx meta.class.hx meta.block.hx
+     ^^^^^^
+     source.hx meta.class.hx meta.block.hx storage.modifier.hx
+           ^
+           source.hx meta.class.hx meta.block.hx
+            ^^^^^^^^
+            source.hx meta.class.hx meta.block.hx meta.method.hx storage.type.function.hx
+                    ^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx
+                     ^^^^^
+                     source.hx meta.class.hx meta.block.hx meta.method.hx entity.name.function.hx
+                          ^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx variable.parameter.hx
+                             ^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx
+                              ^
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx keyword.operator.type.annotation.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx
+                                ^^^^^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx entity.name.type.hx
+                                     ^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx
+                                      ^
+                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx keyword.operator.type.annotation.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx
+                                          ^^^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx support.class.builtin.hx
+                                             ^
+                                             source.hx meta.class.hx meta.block.hx meta.method.hx
+                                              ^
+                                              source.hx meta.class.hx meta.block.hx meta.method.hx punctuation.definition.block.begin.hx
+>        return switch( c ) {
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                ^^^^^^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                          ^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.begin.hx
+>            case Red: 0xFF0000;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                  ^^^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                     ^
+                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^^^^^^^^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>            case Green: 0x00FF00;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                  ^^^^^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                         ^^^^^^^^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                                 ^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>            case Blue: 0x0000FF;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                  ^^^^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                        ^^^^^^^^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>            case Grey(v): (v << 16) | (v << 8) | v;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                  ^^^^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                          ^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                             ^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                              ^^
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                 ^^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                   ^
+                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                     ^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                      ^
+                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                          ^^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                            ^
+                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                             ^
+                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                              ^
+                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                               ^
+                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                ^
+                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                                 ^
+                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                  ^
+                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                   ^
+                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>            case Rgb(r,g,b): (r << 16) | (g << 8) | b;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                  ^^^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                     ^
+                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                          ^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                             ^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                              ^
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                 ^^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                   ^
+                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                    ^^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                      ^
+                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                          ^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                           ^
+                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                            ^
+                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                             ^^
+                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                               ^
+                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                ^
+                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                                 ^
+                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                  ^
+                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                   ^
+                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                                    ^
+                                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                     ^
+                                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                      ^
+                                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>            case Alpha(a,c): (a << 24) | (toInt(c) & 0xFFFFFF);
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                  ^^^^^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                          ^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                             ^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                              ^
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                 ^^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                   ^
+                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                    ^^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                      ^
+                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                          ^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                           ^^^^^
+                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                                                ^
+                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                 ^
+                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                  ^
+                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                   ^
+                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                    ^
+                                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                                     ^
+                                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                      ^^^^^^^^
+                                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                                                              ^
+                                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                               ^
+                                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        }
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>    }
+ ^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+     ^
+     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>}
+ ^
+ source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx

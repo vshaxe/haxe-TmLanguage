@@ -1,0 +1,58 @@
+original file
+-----------------------------------
+try {
+    throw "error";
+} catch (e:Dynamic<T>) {}
+-----------------------------------
+
+>try {
+ ^^^
+ source.hx keyword.control.catch-exception.hx
+    ^
+    source.hx
+     ^
+     source.hx punctuation.definition.block.begin.hx
+>    throw "error";
+ ^^^^
+ source.hx
+     ^^^^^
+     source.hx keyword.control.catch-exception.hx
+          ^
+          source.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+            ^^^^^
+            source.hx string.quoted.double.hx
+                 ^
+                 source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                  ^
+                  source.hx punctuation.terminator.hx
+>} catch (e:Dynamic<T>) {}
+ ^
+ source.hx punctuation.definition.block.end.hx
+  ^
+  source.hx
+   ^^^^^
+   source.hx keyword.control.catch-exception.hx
+        ^^
+        source.hx
+          ^
+          source.hx variable.other.hx
+           ^
+           source.hx keyword.operator.type.annotation.hx
+            ^^^^^^^
+            source.hx support.class.builtin.hx
+                   ^
+                   source.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                    ^
+                    source.hx meta.type-parameters.hx entity.name.type.hx
+                     ^
+                     source.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                      ^
+                      source.hx meta.brace.round.hx
+                       ^
+                       source.hx
+                        ^
+                        source.hx punctuation.definition.block.begin.hx
+                         ^
+                         source.hx punctuation.definition.block.end.hx

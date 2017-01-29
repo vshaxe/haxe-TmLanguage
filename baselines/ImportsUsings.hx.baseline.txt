@@ -1,0 +1,224 @@
+original file
+-----------------------------------
+package;
+package net.onthewings;
+
+import net.onthewings.Test;
+import net.onthewings.*;
+import net.onthewings.Test.*;
+import _net.onthewings.Test.field;
+
+import _ha_xe.Int64 as I64;
+import haxe.Int64 in I64;
+import haxe.Int64 in __Int64;
+import haxe.macro.Expr;
+import haxe.__Int64;
+import haxe.__Int64.field;
+
+using Lambda;
+using _ne_t.onthewings.__Int64;
+using __Int64;
+using net.onthewings.Test;
+-----------------------------------
+
+>package;
+ ^^^^^^^
+ source.hx meta.package.hx storage.type.package.hx
+        ^
+        source.hx meta.package.hx punctuation.terminator.hx
+>package net.onthewings;
+ ^^^^^^^
+ source.hx meta.package.hx storage.type.package.hx
+        ^^^^^^^^^^^^^^^
+        source.hx meta.package.hx support.package.hx
+                       ^
+                       source.hx meta.package.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>import net.onthewings.Test;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^^^^^^^^^^^
+        source.hx support.package.hx
+                       ^^^^
+                       source.hx entity.name.type.hx
+                           ^
+                           source.hx punctuation.terminator.hx
+>import net.onthewings.*;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^^^^^^^^^^^
+        source.hx support.package.hx
+                       ^
+                       source.hx support.package.hx
+                        ^
+                        source.hx punctuation.terminator.hx
+>import net.onthewings.Test.*;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^^^^^^^^^^^
+        source.hx support.package.hx
+                       ^^^^^
+                       source.hx entity.name.type.hx
+                            ^
+                            source.hx support.package.hx
+                             ^
+                             source.hx punctuation.terminator.hx
+>import _net.onthewings.Test.field;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^^^^^^^^^^^^
+        source.hx support.package.hx
+                        ^^^^^
+                        source.hx entity.name.type.hx
+                             ^^^^^
+                             source.hx support.package.hx
+                                  ^
+                                  source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>import _ha_xe.Int64 as I64;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^^^
+        source.hx support.package.hx
+               ^^^^^
+               source.hx entity.name.type.hx
+                    ^
+                    source.hx
+                     ^^
+                     source.hx keyword.other.hx
+                       ^
+                       source.hx
+                        ^^^
+                        source.hx entity.name.type.hx
+                           ^
+                           source.hx punctuation.terminator.hx
+>import haxe.Int64 in I64;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^
+        source.hx support.package.hx
+             ^^^^^
+             source.hx entity.name.type.hx
+                  ^
+                  source.hx
+                   ^^
+                   source.hx keyword.other.hx
+                     ^
+                     source.hx
+                      ^^^
+                      source.hx entity.name.type.hx
+                         ^
+                         source.hx punctuation.terminator.hx
+>import haxe.Int64 in __Int64;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^
+        source.hx support.package.hx
+             ^^^^^
+             source.hx entity.name.type.hx
+                  ^
+                  source.hx
+                   ^^
+                   source.hx keyword.other.hx
+                     ^
+                     source.hx
+                      ^^^^^^^
+                      source.hx entity.name.type.hx
+                             ^
+                             source.hx punctuation.terminator.hx
+>import haxe.macro.Expr;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^^^^^^^
+        source.hx support.package.hx
+                   ^^^^
+                   source.hx entity.name.type.hx
+                       ^
+                       source.hx punctuation.terminator.hx
+>import haxe.__Int64;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^
+        source.hx support.package.hx
+             ^^^^^^^
+             source.hx entity.name.type.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>import haxe.__Int64.field;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^
+        source.hx support.package.hx
+             ^^^^^^^^
+             source.hx entity.name.type.hx
+                     ^^^^^
+                     source.hx support.package.hx
+                          ^
+                          source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>using Lambda;
+ ^^^^^
+ source.hx storage.type.using.hx
+      ^
+      source.hx
+       ^^^^^^
+       source.hx entity.name.type.hx
+             ^
+             source.hx punctuation.terminator.hx
+>using _ne_t.onthewings.__Int64;
+ ^^^^^
+ source.hx storage.type.using.hx
+      ^
+      source.hx
+       ^^^^^^^^^^^^^^^^^
+       source.hx support.package.hx
+                        ^^^^^^^
+                        source.hx entity.name.type.hx
+                               ^
+                               source.hx punctuation.terminator.hx
+>using __Int64;
+ ^^^^^
+ source.hx storage.type.using.hx
+      ^
+      source.hx
+       ^^^^^^^
+       source.hx entity.name.type.hx
+              ^
+              source.hx punctuation.terminator.hx
+>using net.onthewings.Test;
+ ^^^^^
+ source.hx storage.type.using.hx
+      ^
+      source.hx
+       ^^^^^^^^^^^^^^^
+       source.hx support.package.hx
+                      ^^^^
+                      source.hx entity.name.type.hx
+                          ^
+                          source.hx punctuation.terminator.hx

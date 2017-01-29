@@ -1,0 +1,48 @@
+original file
+-----------------------------------
+varName;
+functionName;
+UPPER_CASE;
+Math.PI;
+Math.POSITIVE_INFINITY;
+__Int64;
+-----------------------------------
+
+>varName;
+ ^^^^^^^
+ source.hx variable.other.hx
+        ^
+        source.hx punctuation.terminator.hx
+>functionName;
+ ^^^^^^^^^^^^
+ source.hx variable.other.hx
+             ^
+             source.hx punctuation.terminator.hx
+>UPPER_CASE;
+ ^^^^^^^^^^
+ source.hx variable.other.hx
+           ^
+           source.hx punctuation.terminator.hx
+>Math.PI;
+ ^^^^
+ source.hx support.class.builtin.hx
+     ^
+     source.hx
+      ^^
+      source.hx variable.other.hx
+        ^
+        source.hx punctuation.terminator.hx
+>Math.POSITIVE_INFINITY;
+ ^^^^
+ source.hx support.class.builtin.hx
+     ^
+     source.hx
+      ^^^^^^^^^^^^^^^^^
+      source.hx variable.other.hx
+                       ^
+                       source.hx punctuation.terminator.hx
+>__Int64;
+ ^^^^^^^
+ source.hx entity.name.type.hx
+        ^
+        source.hx punctuation.terminator.hx

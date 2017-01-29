@@ -1,0 +1,124 @@
+original file
+-----------------------------------
+~/^[1-9]\d{0,2}$/g;
+~/^Null<(\$\d+)>$/;
+~/^@(param|default|exception|throws|deprecated|return|returns|since|see)\s+([^@]+)/gm;
+-----------------------------------
+
+>~/^[1-9]\d{0,2}$/g;
+ ^^
+ source.hx string.regexp.hx punctuation.definition.string.begin.hx
+   ^
+   source.hx string.regexp.hx keyword.control.anchor.regexp
+    ^
+    source.hx string.regexp.hx constant.other.character-class.set.regexp punctuation.definition.character-class.regexp
+     ^^^
+     source.hx string.regexp.hx constant.other.character-class.set.regexp constant.other.character-class.range.regexp
+        ^
+        source.hx string.regexp.hx constant.other.character-class.set.regexp punctuation.definition.character-class.regexp
+         ^^
+         source.hx string.regexp.hx constant.other.character-class.regexp
+           ^^^^^
+           source.hx string.regexp.hx keyword.operator.quantifier.regexp
+                ^
+                source.hx string.regexp.hx keyword.control.anchor.regexp
+                 ^
+                 source.hx string.regexp.hx punctuation.definition.string.end.hx
+                  ^
+                  source.hx string.regexp.hx keyword.other.hx
+                   ^
+                   source.hx punctuation.terminator.hx
+>~/^Null<(\$\d+)>$/;
+ ^^
+ source.hx string.regexp.hx punctuation.definition.string.begin.hx
+   ^
+   source.hx string.regexp.hx keyword.control.anchor.regexp
+    ^^^^^
+    source.hx string.regexp.hx
+         ^
+         source.hx string.regexp.hx meta.group.regexp punctuation.definition.group.regexp
+          ^^
+          source.hx string.regexp.hx meta.group.regexp constant.character.escape.backslash.regexp
+            ^^
+            source.hx string.regexp.hx meta.group.regexp constant.other.character-class.regexp
+              ^
+              source.hx string.regexp.hx meta.group.regexp keyword.operator.quantifier.regexp
+               ^
+               source.hx string.regexp.hx meta.group.regexp punctuation.definition.group.regexp
+                ^
+                source.hx string.regexp.hx
+                 ^
+                 source.hx string.regexp.hx keyword.control.anchor.regexp
+                  ^
+                  source.hx string.regexp.hx punctuation.definition.string.end.hx
+                   ^
+                   source.hx punctuation.terminator.hx
+>~/^@(param|default|exception|throws|deprecated|return|returns|since|see)\s+([^@]+)/gm;
+ ^^
+ source.hx string.regexp.hx punctuation.definition.string.begin.hx
+   ^
+   source.hx string.regexp.hx keyword.control.anchor.regexp
+    ^
+    source.hx string.regexp.hx
+     ^
+     source.hx string.regexp.hx meta.group.regexp punctuation.definition.group.regexp
+      ^^^^^
+      source.hx string.regexp.hx meta.group.regexp
+           ^
+           source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+            ^^^^^^^
+            source.hx string.regexp.hx meta.group.regexp
+                   ^
+                   source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+                    ^^^^^^^^^
+                    source.hx string.regexp.hx meta.group.regexp
+                             ^
+                             source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+                              ^^^^^^
+                              source.hx string.regexp.hx meta.group.regexp
+                                    ^
+                                    source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+                                     ^^^^^^^^^^
+                                     source.hx string.regexp.hx meta.group.regexp
+                                               ^
+                                               source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+                                                ^^^^^^
+                                                source.hx string.regexp.hx meta.group.regexp
+                                                      ^
+                                                      source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+                                                       ^^^^^^^
+                                                       source.hx string.regexp.hx meta.group.regexp
+                                                              ^
+                                                              source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+                                                               ^^^^^
+                                                               source.hx string.regexp.hx meta.group.regexp
+                                                                    ^
+                                                                    source.hx string.regexp.hx meta.group.regexp keyword.operator.or.regexp
+                                                                     ^^^
+                                                                     source.hx string.regexp.hx meta.group.regexp
+                                                                        ^
+                                                                        source.hx string.regexp.hx meta.group.regexp punctuation.definition.group.regexp
+                                                                         ^^
+                                                                         source.hx string.regexp.hx constant.other.character-class.regexp
+                                                                           ^
+                                                                           source.hx string.regexp.hx keyword.operator.quantifier.regexp
+                                                                            ^
+                                                                            source.hx string.regexp.hx meta.group.regexp punctuation.definition.group.regexp
+                                                                             ^
+                                                                             source.hx string.regexp.hx meta.group.regexp constant.other.character-class.set.regexp punctuation.definition.character-class.regexp
+                                                                              ^
+                                                                              source.hx string.regexp.hx meta.group.regexp constant.other.character-class.set.regexp keyword.operator.negation.regexp
+                                                                               ^
+                                                                               source.hx string.regexp.hx meta.group.regexp constant.other.character-class.set.regexp
+                                                                                ^
+                                                                                source.hx string.regexp.hx meta.group.regexp constant.other.character-class.set.regexp punctuation.definition.character-class.regexp
+                                                                                 ^
+                                                                                 source.hx string.regexp.hx meta.group.regexp keyword.operator.quantifier.regexp
+                                                                                  ^
+                                                                                  source.hx string.regexp.hx meta.group.regexp punctuation.definition.group.regexp
+                                                                                   ^
+                                                                                   source.hx string.regexp.hx punctuation.definition.string.end.hx
+                                                                                    ^^
+                                                                                    source.hx string.regexp.hx keyword.other.hx
+                                                                                      ^
+                                                                                      source.hx punctuation.terminator.hx

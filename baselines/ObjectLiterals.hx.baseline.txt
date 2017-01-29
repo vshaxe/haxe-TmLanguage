@@ -1,0 +1,86 @@
+original file
+-----------------------------------
+{ a: "", b: -1 };
+var point = { "x" : 1, "y" : -5 };
+-----------------------------------
+
+>{ a: "", b: -1 };
+ ^
+ source.hx punctuation.definition.block.begin.hx
+  ^
+  source.hx
+   ^
+   source.hx variable.other.hx
+    ^^
+    source.hx
+      ^
+      source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.separator.comma.hx
+         ^
+         source.hx
+          ^
+          source.hx variable.other.hx
+           ^^
+           source.hx
+             ^
+             source.hx keyword.operator.arithmetic.hx
+              ^
+              source.hx constant.numeric.decimal.hx
+               ^
+               source.hx
+                ^
+                source.hx punctuation.definition.block.end.hx
+                 ^
+                 source.hx punctuation.terminator.hx
+>var point = { "x" : 1, "y" : -5 };
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^^^^^
+     source.hx variable.other.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.assignment.hx
+            ^
+            source.hx
+             ^
+             source.hx punctuation.definition.block.begin.hx
+              ^
+              source.hx
+               ^
+               source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                ^
+                source.hx string.quoted.double.hx
+                 ^
+                 source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                  ^^^
+                  source.hx
+                     ^
+                     source.hx constant.numeric.decimal.hx
+                      ^
+                      source.hx punctuation.separator.comma.hx
+                       ^
+                       source.hx
+                        ^
+                        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                         ^
+                         source.hx string.quoted.double.hx
+                          ^
+                          source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                           ^^^
+                           source.hx
+                              ^
+                              source.hx keyword.operator.arithmetic.hx
+                               ^
+                               source.hx constant.numeric.decimal.hx
+                                ^
+                                source.hx
+                                 ^
+                                 source.hx punctuation.definition.block.end.hx
+                                  ^
+                                  source.hx punctuation.terminator.hx

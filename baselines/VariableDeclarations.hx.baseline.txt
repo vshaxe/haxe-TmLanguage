@@ -1,0 +1,482 @@
+original file
+-----------------------------------
+var f = function(foo) {}
+var f = function (foo) {}
+
+var v:Dynamic<Float>;
+var v:Dynamic<{ "x":Int, y:Int }>;
+var v:{ foo:Dynamic<Float> };
+var v/**/:/**/Foo/**/, /**/ b:Dynamic<Float> = a < b;
+var v:{ foo:Dynamic<Float>, "bar":String }, b, c:Foo = a < b;
+
+var v = {
+    5;
+};
+
+{
+    var x;
+    var y = 3;
+    var z : String;
+    var w : String = "";
+    var a, b : Bool, c : Int = 0;
+}
+-----------------------------------
+
+>var f = function(foo) {}
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx
+       ^
+       source.hx keyword.operator.assignment.hx
+        ^
+        source.hx
+         ^^^^^^^^
+         source.hx meta.method.hx storage.type.function.hx
+                 ^
+                 source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                  ^^^
+                  source.hx meta.method.hx meta.parameters.hx variable.parameter.hx
+                     ^
+                     source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                      ^
+                      source.hx meta.method.hx
+                       ^
+                       source.hx meta.method.hx punctuation.definition.block.begin.hx
+                        ^
+                        source.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>var f = function (foo) {}
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx
+       ^
+       source.hx keyword.operator.assignment.hx
+        ^
+        source.hx
+         ^^^^^^^^
+         source.hx meta.method.hx storage.type.function.hx
+                 ^
+                 source.hx meta.method.hx
+                  ^
+                  source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                   ^^^
+                   source.hx meta.method.hx meta.parameters.hx variable.parameter.hx
+                      ^
+                      source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                       ^
+                       source.hx meta.method.hx
+                        ^
+                        source.hx meta.method.hx punctuation.definition.block.begin.hx
+                         ^
+                         source.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>var v:Dynamic<Float>;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^^^^^
+       source.hx support.class.builtin.hx
+              ^
+              source.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+               ^^^^^
+               source.hx meta.type-parameters.hx support.class.builtin.hx
+                    ^
+                    source.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                     ^
+                     source.hx punctuation.terminator.hx
+>var v:Dynamic<{ "x":Int, y:Int }>;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^^^^^
+       source.hx support.class.builtin.hx
+              ^
+              source.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+               ^
+               source.hx meta.type-parameters.hx punctuation.definition.block.begin.hx
+                ^
+                source.hx meta.type-parameters.hx meta.block.hx
+                 ^
+                 source.hx meta.type-parameters.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                  ^
+                  source.hx meta.type-parameters.hx meta.block.hx string.quoted.double.hx
+                   ^
+                   source.hx meta.type-parameters.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                    ^
+                    source.hx meta.type-parameters.hx meta.block.hx keyword.operator.type.annotation.hx
+                     ^^^
+                     source.hx meta.type-parameters.hx meta.block.hx support.class.builtin.hx
+                        ^
+                        source.hx meta.type-parameters.hx meta.block.hx punctuation.separator.comma.hx
+                         ^
+                         source.hx meta.type-parameters.hx meta.block.hx
+                          ^
+                          source.hx meta.type-parameters.hx meta.block.hx variable.other.hx
+                           ^
+                           source.hx meta.type-parameters.hx meta.block.hx keyword.operator.type.annotation.hx
+                            ^^^
+                            source.hx meta.type-parameters.hx meta.block.hx support.class.builtin.hx
+                               ^
+                               source.hx meta.type-parameters.hx meta.block.hx
+                                ^
+                                source.hx meta.type-parameters.hx meta.block.hx punctuation.definition.block.end.hx
+                                 ^
+                                 source.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                  ^
+                                  source.hx punctuation.terminator.hx
+>var v:{ foo:Dynamic<Float> };
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^
+       source.hx punctuation.definition.block.begin.hx
+        ^
+        source.hx meta.block.hx
+         ^^^
+         source.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.block.hx keyword.operator.type.annotation.hx
+             ^^^^^^^
+             source.hx meta.block.hx support.class.builtin.hx
+                    ^
+                    source.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                     ^^^^^
+                     source.hx meta.block.hx meta.type-parameters.hx support.class.builtin.hx
+                          ^
+                          source.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                           ^
+                           source.hx meta.block.hx
+                            ^
+                            source.hx meta.block.hx punctuation.definition.block.end.hx
+                             ^
+                             source.hx punctuation.terminator.hx
+>var v/**/:/**/Foo/**/, /**/ b:Dynamic<Float> = a < b;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^^
+      source.hx comment.block.hx punctuation.definition.comment.hx
+        ^^
+        source.hx comment.block.hx punctuation.definition.comment.hx
+          ^
+          source.hx keyword.operator.type.annotation.hx
+           ^^
+           source.hx comment.block.hx punctuation.definition.comment.hx
+             ^^
+             source.hx comment.block.hx punctuation.definition.comment.hx
+               ^^^
+               source.hx entity.name.type.hx
+                  ^^
+                  source.hx comment.block.hx punctuation.definition.comment.hx
+                    ^^
+                    source.hx comment.block.hx punctuation.definition.comment.hx
+                      ^
+                      source.hx punctuation.separator.comma.hx
+                       ^
+                       source.hx
+                        ^^
+                        source.hx comment.block.hx punctuation.definition.comment.hx
+                          ^^
+                          source.hx comment.block.hx punctuation.definition.comment.hx
+                            ^
+                            source.hx
+                             ^
+                             source.hx variable.other.hx
+                              ^
+                              source.hx keyword.operator.type.annotation.hx
+                               ^^^^^^^
+                               source.hx support.class.builtin.hx
+                                      ^
+                                      source.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                       ^^^^^
+                                       source.hx meta.type-parameters.hx support.class.builtin.hx
+                                            ^
+                                            source.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                             ^
+                                             source.hx
+                                              ^
+                                              source.hx keyword.operator.assignment.hx
+                                               ^
+                                               source.hx
+                                                ^
+                                                source.hx variable.other.hx
+                                                 ^
+                                                 source.hx
+                                                  ^
+                                                  source.hx keyword.operator.comparison.hx
+                                                   ^
+                                                   source.hx
+                                                    ^
+                                                    source.hx variable.other.hx
+                                                     ^
+                                                     source.hx punctuation.terminator.hx
+>var v:{ foo:Dynamic<Float>, "bar":String }, b, c:Foo = a < b;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^
+       source.hx punctuation.definition.block.begin.hx
+        ^
+        source.hx meta.block.hx
+         ^^^
+         source.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.block.hx keyword.operator.type.annotation.hx
+             ^^^^^^^
+             source.hx meta.block.hx support.class.builtin.hx
+                    ^
+                    source.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                     ^^^^^
+                     source.hx meta.block.hx meta.type-parameters.hx support.class.builtin.hx
+                          ^
+                          source.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                           ^
+                           source.hx meta.block.hx punctuation.separator.comma.hx
+                            ^
+                            source.hx meta.block.hx
+                             ^
+                             source.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                              ^^^
+                              source.hx meta.block.hx string.quoted.double.hx
+                                 ^
+                                 source.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                  ^
+                                  source.hx meta.block.hx keyword.operator.type.annotation.hx
+                                   ^^^^^^
+                                   source.hx meta.block.hx support.class.builtin.hx
+                                         ^
+                                         source.hx meta.block.hx
+                                          ^
+                                          source.hx meta.block.hx punctuation.definition.block.end.hx
+                                           ^
+                                           source.hx punctuation.separator.comma.hx
+                                            ^
+                                            source.hx
+                                             ^
+                                             source.hx variable.other.hx
+                                              ^
+                                              source.hx punctuation.separator.comma.hx
+                                               ^
+                                               source.hx
+                                                ^
+                                                source.hx variable.other.hx
+                                                 ^
+                                                 source.hx keyword.operator.type.annotation.hx
+                                                  ^^^
+                                                  source.hx entity.name.type.hx
+                                                     ^
+                                                     source.hx
+                                                      ^
+                                                      source.hx keyword.operator.assignment.hx
+                                                       ^
+                                                       source.hx
+                                                        ^
+                                                        source.hx variable.other.hx
+                                                         ^
+                                                         source.hx
+                                                          ^
+                                                          source.hx keyword.operator.comparison.hx
+                                                           ^
+                                                           source.hx
+                                                            ^
+                                                            source.hx variable.other.hx
+                                                             ^
+                                                             source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>var v = {
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx
+       ^
+       source.hx keyword.operator.assignment.hx
+        ^
+        source.hx
+         ^
+         source.hx punctuation.definition.block.begin.hx
+>    5;
+ ^^^^
+ source.hx
+     ^
+     source.hx constant.numeric.decimal.hx
+      ^
+      source.hx punctuation.terminator.hx
+>};
+ ^
+ source.hx punctuation.definition.block.end.hx
+  ^
+  source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>{
+ ^
+ source.hx punctuation.definition.block.begin.hx
+>    var x;
+ ^^^^
+ source.hx
+     ^^^
+     source.hx storage.type.variable.hx
+        ^
+        source.hx
+         ^
+         source.hx variable.other.hx
+          ^
+          source.hx punctuation.terminator.hx
+>    var y = 3;
+ ^^^^
+ source.hx
+     ^^^
+     source.hx storage.type.variable.hx
+        ^
+        source.hx
+         ^
+         source.hx variable.other.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.assignment.hx
+            ^
+            source.hx
+             ^
+             source.hx constant.numeric.decimal.hx
+              ^
+              source.hx punctuation.terminator.hx
+>    var z : String;
+ ^^^^
+ source.hx
+     ^^^
+     source.hx storage.type.variable.hx
+        ^
+        source.hx
+         ^
+         source.hx variable.other.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.type.annotation.hx
+            ^
+            source.hx
+             ^^^^^^
+             source.hx support.class.builtin.hx
+                   ^
+                   source.hx punctuation.terminator.hx
+>    var w : String = "";
+ ^^^^
+ source.hx
+     ^^^
+     source.hx storage.type.variable.hx
+        ^
+        source.hx
+         ^
+         source.hx variable.other.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.type.annotation.hx
+            ^
+            source.hx
+             ^^^^^^
+             source.hx support.class.builtin.hx
+                   ^
+                   source.hx
+                    ^
+                    source.hx keyword.operator.assignment.hx
+                     ^
+                     source.hx
+                      ^
+                      source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                       ^
+                       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                        ^
+                        source.hx punctuation.terminator.hx
+>    var a, b : Bool, c : Int = 0;
+ ^^^^
+ source.hx
+     ^^^
+     source.hx storage.type.variable.hx
+        ^
+        source.hx
+         ^
+         source.hx variable.other.hx
+          ^
+          source.hx punctuation.separator.comma.hx
+           ^
+           source.hx
+            ^
+            source.hx variable.other.hx
+             ^
+             source.hx
+              ^
+              source.hx keyword.operator.type.annotation.hx
+               ^
+               source.hx
+                ^^^^
+                source.hx support.class.builtin.hx
+                    ^
+                    source.hx punctuation.separator.comma.hx
+                     ^
+                     source.hx
+                      ^
+                      source.hx variable.other.hx
+                       ^
+                       source.hx
+                        ^
+                        source.hx keyword.operator.type.annotation.hx
+                         ^
+                         source.hx
+                          ^^^
+                          source.hx support.class.builtin.hx
+                             ^
+                             source.hx
+                              ^
+                              source.hx keyword.operator.assignment.hx
+                               ^
+                               source.hx
+                                ^
+                                source.hx constant.numeric.decimal.hx
+                                 ^
+                                 source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx

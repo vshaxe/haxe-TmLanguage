@@ -1,0 +1,17 @@
+# multiple args in the same line:
+-debug -v
+# leading whitespace:
+ 	-v
+# dce args
+-dce std
+-dce full
+-dce no
+-dce invalid
+# dce arg with random whitespace
+-dce   	 	 std
+# argument inside another word
+-java some-version-test
+-java some-version
+-java some-versions
+# commented out arg
+#-java

@@ -1,0 +1,132 @@
+original file
+-----------------------------------
+--macro server.setModuleCheckPolicy(['DefaultAssetLibrary'], [CheckFileContentModification])
+--macro include('haxe.ds')
+-main Main
+-main foo.unit.Main
+-main foo
+-----------------------------------
+
+>--macro server.setModuleCheckPolicy(['DefaultAssetLibrary'], [CheckFileContentModification])
+ ^^^^^^^
+ source.hxml keyword.other.hxml
+        ^
+        source.hxml
+         ^^^^^^
+         source.hxml variable.other.hx
+               ^
+               source.hxml
+                ^^^^^^^^^^^^^^^^^^^^
+                source.hxml entity.name.function.hx
+                                    ^
+                                    source.hxml meta.brace.round.hx
+                                     ^
+                                     source.hxml meta.array.literal.hx punctuation.definition.array.begin.hx
+                                      ^
+                                      source.hxml meta.array.literal.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+                                       ^
+                                       source.hxml meta.array.literal.hx string.quoted.single.hx
+                                        ^
+                                        source.hxml meta.array.literal.hx string.quoted.single.hx
+                                         ^
+                                         source.hxml meta.array.literal.hx string.quoted.single.hx
+                                          ^
+                                          source.hxml meta.array.literal.hx string.quoted.single.hx
+                                           ^
+                                           source.hxml meta.array.literal.hx string.quoted.single.hx
+                                            ^
+                                            source.hxml meta.array.literal.hx string.quoted.single.hx
+                                             ^
+                                             source.hxml meta.array.literal.hx string.quoted.single.hx
+                                              ^
+                                              source.hxml meta.array.literal.hx string.quoted.single.hx
+                                               ^
+                                               source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                ^
+                                                source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                 ^
+                                                 source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                  ^
+                                                  source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                   ^
+                                                   source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                    ^
+                                                    source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                     ^
+                                                     source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                      ^
+                                                      source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                       ^
+                                                       source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                        ^
+                                                        source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                         ^
+                                                         source.hxml meta.array.literal.hx string.quoted.single.hx
+                                                          ^
+                                                          source.hxml meta.array.literal.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                                                           ^
+                                                           source.hxml meta.array.literal.hx punctuation.definition.array.end.hx
+                                                            ^
+                                                            source.hxml punctuation.separator.comma.hx
+                                                             ^
+                                                             source.hxml
+                                                              ^
+                                                              source.hxml meta.array.literal.hx punctuation.definition.array.begin.hx
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                               source.hxml meta.array.literal.hx entity.name.type.hx
+                                                                                           ^
+                                                                                           source.hxml meta.array.literal.hx punctuation.definition.array.end.hx
+                                                                                            ^
+                                                                                            source.hxml meta.brace.round.hx
+>--macro include('haxe.ds')
+ ^^^^^^^
+ source.hxml keyword.other.hxml
+        ^
+        source.hxml
+         ^^^^^^^
+         source.hxml entity.name.function.hx
+                ^
+                source.hxml meta.brace.round.hx
+                 ^
+                 source.hxml string.quoted.single.hx punctuation.definition.string.begin.hx
+                  ^
+                  source.hxml string.quoted.single.hx
+                   ^
+                   source.hxml string.quoted.single.hx
+                    ^
+                    source.hxml string.quoted.single.hx
+                     ^
+                     source.hxml string.quoted.single.hx
+                      ^
+                      source.hxml string.quoted.single.hx
+                       ^
+                       source.hxml string.quoted.single.hx
+                        ^
+                        source.hxml string.quoted.single.hx
+                         ^
+                         source.hxml string.quoted.single.hx punctuation.definition.string.end.hx
+                          ^
+                          source.hxml meta.brace.round.hx
+>-main Main
+ ^^^^^
+ source.hxml keyword.other.hxml
+      ^
+      source.hxml
+       ^^^^
+       source.hxml entity.name.type.hx
+>-main foo.unit.Main
+ ^^^^^
+ source.hxml keyword.other.hxml
+      ^
+      source.hxml
+       ^^^^^^^^^
+       source.hxml support.package.hx
+                ^^^^
+                source.hxml entity.name.type.hx
+>-main foo
+ ^^^^^
+ source.hxml keyword.other.hxml
+      ^
+      source.hxml
+       ^^^^
+       source.hxml

@@ -1,0 +1,218 @@
+original file
+-----------------------------------
+var MMap:MMap<String, String> = new MMap<String, String>();
+var a = new A<String>(12);
+var ct = new foo.CanvasTexture(12, "foo");
+eq(ct.i, 12);
+eq(ct.s, "foo");
+( { name:"test" } )
+Map.new;
+-----------------------------------
+
+>var MMap:MMap<String, String> = new MMap<String, String>();
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^^^^
+     source.hx variable.other.hx
+         ^
+         source.hx keyword.operator.type.annotation.hx
+          ^^^^
+          source.hx entity.name.type.hx
+              ^
+              source.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+               ^^^^^^
+               source.hx meta.type-parameters.hx support.class.builtin.hx
+                     ^
+                     source.hx meta.type-parameters.hx punctuation.separator.comma.hx
+                      ^
+                      source.hx meta.type-parameters.hx
+                       ^^^^^^
+                       source.hx meta.type-parameters.hx support.class.builtin.hx
+                             ^
+                             source.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                              ^
+                              source.hx
+                               ^
+                               source.hx keyword.operator.assignment.hx
+                                ^
+                                source.hx
+                                 ^^^
+                                 source.hx new.expr.hx keyword.operator.new.hx
+                                    ^
+                                    source.hx new.expr.hx
+                                     ^^^^
+                                     source.hx new.expr.hx entity.name.type.hx
+                                         ^
+                                         source.hx new.expr.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                          ^^^^^^
+                                          source.hx new.expr.hx meta.type-parameters.hx support.class.builtin.hx
+                                                ^
+                                                source.hx new.expr.hx meta.type-parameters.hx punctuation.separator.comma.hx
+                                                 ^
+                                                 source.hx new.expr.hx meta.type-parameters.hx
+                                                  ^^^^^^
+                                                  source.hx new.expr.hx meta.type-parameters.hx support.class.builtin.hx
+                                                        ^
+                                                        source.hx new.expr.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                                         ^
+                                                         source.hx meta.brace.round.hx
+                                                          ^
+                                                          source.hx meta.brace.round.hx
+                                                           ^
+                                                           source.hx punctuation.terminator.hx
+>var a = new A<String>(12);
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx
+       ^
+       source.hx keyword.operator.assignment.hx
+        ^
+        source.hx
+         ^^^
+         source.hx new.expr.hx keyword.operator.new.hx
+            ^
+            source.hx new.expr.hx
+             ^
+             source.hx new.expr.hx entity.name.type.hx
+              ^
+              source.hx new.expr.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+               ^^^^^^
+               source.hx new.expr.hx meta.type-parameters.hx support.class.builtin.hx
+                     ^
+                     source.hx new.expr.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                      ^
+                      source.hx meta.brace.round.hx
+                       ^^
+                       source.hx constant.numeric.decimal.hx
+                         ^
+                         source.hx meta.brace.round.hx
+                          ^
+                          source.hx punctuation.terminator.hx
+>var ct = new foo.CanvasTexture(12, "foo");
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^^
+     source.hx variable.other.hx
+       ^
+       source.hx
+        ^
+        source.hx keyword.operator.assignment.hx
+         ^
+         source.hx
+          ^^^
+          source.hx new.expr.hx keyword.operator.new.hx
+             ^
+             source.hx new.expr.hx
+              ^^^^
+              source.hx new.expr.hx support.package.hx
+                  ^^^^^^^^^^^^^
+                  source.hx new.expr.hx entity.name.type.hx
+                               ^
+                               source.hx meta.brace.round.hx
+                                ^^
+                                source.hx constant.numeric.decimal.hx
+                                  ^
+                                  source.hx punctuation.separator.comma.hx
+                                   ^
+                                   source.hx
+                                    ^
+                                    source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                     ^^^
+                                     source.hx string.quoted.double.hx
+                                        ^
+                                        source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                         ^
+                                         source.hx meta.brace.round.hx
+                                          ^
+                                          source.hx punctuation.terminator.hx
+>eq(ct.i, 12);
+ ^^
+ source.hx entity.name.function.hx
+   ^
+   source.hx meta.brace.round.hx
+    ^^
+    source.hx variable.other.hx
+      ^
+      source.hx
+       ^
+       source.hx variable.other.hx
+        ^
+        source.hx punctuation.separator.comma.hx
+         ^
+         source.hx
+          ^^
+          source.hx constant.numeric.decimal.hx
+            ^
+            source.hx meta.brace.round.hx
+             ^
+             source.hx punctuation.terminator.hx
+>eq(ct.s, "foo");
+ ^^
+ source.hx entity.name.function.hx
+   ^
+   source.hx meta.brace.round.hx
+    ^^
+    source.hx variable.other.hx
+      ^
+      source.hx
+       ^
+       source.hx variable.other.hx
+        ^
+        source.hx punctuation.separator.comma.hx
+         ^
+         source.hx
+          ^
+          source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+           ^^^
+           source.hx string.quoted.double.hx
+              ^
+              source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+               ^
+               source.hx meta.brace.round.hx
+                ^
+                source.hx punctuation.terminator.hx
+>( { name:"test" } )
+ ^
+ source.hx meta.brace.round.hx
+  ^
+  source.hx
+   ^
+   source.hx punctuation.definition.block.begin.hx
+    ^
+    source.hx
+     ^^^^
+     source.hx variable.other.hx
+         ^
+         source.hx
+          ^
+          source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+           ^^^^
+           source.hx string.quoted.double.hx
+               ^
+               source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                ^
+                source.hx
+                 ^
+                 source.hx punctuation.definition.block.end.hx
+                  ^
+                  source.hx
+                   ^
+                   source.hx meta.brace.round.hx
+>Map.new;
+ ^^^
+ source.hx support.class.builtin.hx
+    ^
+    source.hx
+     ^^^
+     source.hx keyword.operator.new.hx
+        ^
+        source.hx punctuation.terminator.hx

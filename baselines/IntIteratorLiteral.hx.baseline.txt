@@ -1,0 +1,38 @@
+original file
+-----------------------------------
+0...10;
+0...array.length;
+a...b;
+-----------------------------------
+
+>0...10;
+ ^
+ source.hx constant.numeric.decimal.hx
+  ^^^
+  source.hx keyword.operator.intiterator.hx
+     ^^
+     source.hx constant.numeric.decimal.hx
+       ^
+       source.hx punctuation.terminator.hx
+>0...array.length;
+ ^
+ source.hx constant.numeric.decimal.hx
+  ^^^
+  source.hx keyword.operator.intiterator.hx
+     ^^^^^
+     source.hx variable.other.hx
+          ^
+          source.hx
+           ^^^^^^
+           source.hx variable.other.hx
+                 ^
+                 source.hx punctuation.terminator.hx
+>a...b;
+ ^
+ source.hx variable.other.hx
+  ^^^
+  source.hx keyword.operator.intiterator.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx punctuation.terminator.hx

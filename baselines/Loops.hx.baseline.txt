@@ -1,0 +1,122 @@
+original file
+-----------------------------------
+for(i in 0...20) {}
+for ( i   in 0...20) {}
+while (true) {}
+
+do {
+    break;
+    continue;
+} while (true)
+-----------------------------------
+
+>for(i in 0...20) {}
+ ^^^
+ source.hx keyword.control.flow-control.hx
+    ^
+    source.hx meta.brace.bround.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx
+       ^^
+       source.hx keyword.other.in.hx
+         ^
+         source.hx
+          ^
+          source.hx constant.numeric.decimal.hx
+           ^^^
+           source.hx keyword.operator.intiterator.hx
+              ^^
+              source.hx constant.numeric.decimal.hx
+                ^
+                source.hx meta.brace.bround.hx
+                 ^
+                 source.hx
+                  ^
+                  source.hx punctuation.definition.block.begin.hx
+                   ^
+                   source.hx punctuation.definition.block.end.hx
+>for ( i   in 0...20) {}
+ ^^^
+ source.hx keyword.control.flow-control.hx
+    ^
+    source.hx
+     ^
+     source.hx meta.brace.bround.hx
+      ^
+      source.hx
+       ^
+       source.hx variable.other.hx
+        ^^^
+        source.hx
+           ^^
+           source.hx keyword.other.in.hx
+             ^
+             source.hx
+              ^
+              source.hx constant.numeric.decimal.hx
+               ^^^
+               source.hx keyword.operator.intiterator.hx
+                  ^^
+                  source.hx constant.numeric.decimal.hx
+                    ^
+                    source.hx meta.brace.bround.hx
+                     ^
+                     source.hx
+                      ^
+                      source.hx punctuation.definition.block.begin.hx
+                       ^
+                       source.hx punctuation.definition.block.end.hx
+>while (true) {}
+ ^^^^^
+ source.hx keyword.control.flow-control.hx
+      ^^
+      source.hx
+        ^^^^
+        source.hx constant.language.hx
+            ^
+            source.hx meta.brace.round.hx
+             ^
+             source.hx
+              ^
+              source.hx punctuation.definition.block.begin.hx
+               ^
+               source.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>do {
+ ^^
+ source.hx keyword.control.flow-control.hx
+   ^
+   source.hx
+    ^
+    source.hx punctuation.definition.block.begin.hx
+>    break;
+ ^^^^
+ source.hx
+     ^^^^^
+     source.hx keyword.control.flow-control.hx
+          ^
+          source.hx punctuation.terminator.hx
+>    continue;
+ ^^^^
+ source.hx
+     ^^^^^^^^
+     source.hx keyword.control.flow-control.hx
+             ^
+             source.hx punctuation.terminator.hx
+>} while (true)
+ ^
+ source.hx punctuation.definition.block.end.hx
+  ^
+  source.hx
+   ^^^^^
+   source.hx keyword.control.flow-control.hx
+        ^^
+        source.hx
+          ^^^^
+          source.hx constant.language.hx
+              ^
+              source.hx meta.brace.round.hx

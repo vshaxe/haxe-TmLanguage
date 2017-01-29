@@ -1,0 +1,100 @@
+original file
+-----------------------------------
+var a:Int = cast 2;
+var b:Int = cast (2, Int);
+var b:Int = cast (2, Dynamic<Int>);
+-----------------------------------
+
+>var a:Int = cast 2;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^
+       source.hx support.class.builtin.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.assignment.hx
+            ^
+            source.hx
+             ^^^^
+             source.hx keyword.other.untyped.hx
+                 ^
+                 source.hx
+                  ^
+                  source.hx constant.numeric.decimal.hx
+                   ^
+                   source.hx punctuation.terminator.hx
+>var b:Int = cast (2, Int);
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^
+       source.hx support.class.builtin.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.assignment.hx
+            ^
+            source.hx
+             ^^^^
+             source.hx keyword.other.untyped.hx
+                 ^^
+                 source.hx
+                   ^
+                   source.hx constant.numeric.decimal.hx
+                    ^^
+                    source.hx
+                      ^^^
+                      source.hx support.class.builtin.hx
+                         ^
+                         source.hx meta.brace.round.hx
+                          ^
+                          source.hx punctuation.terminator.hx
+>var b:Int = cast (2, Dynamic<Int>);
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^
+       source.hx support.class.builtin.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.assignment.hx
+            ^
+            source.hx
+             ^^^^
+             source.hx keyword.other.untyped.hx
+                 ^^
+                 source.hx
+                   ^
+                   source.hx constant.numeric.decimal.hx
+                    ^^
+                    source.hx
+                      ^^^^^^^
+                      source.hx support.class.builtin.hx
+                             ^
+                             source.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                              ^^^
+                              source.hx meta.type-parameters.hx support.class.builtin.hx
+                                 ^
+                                 source.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                  ^
+                                  source.hx meta.brace.round.hx
+                                   ^
+                                   source.hx punctuation.terminator.hx

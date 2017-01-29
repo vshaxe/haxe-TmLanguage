@@ -1,0 +1,250 @@
+original file
+-----------------------------------
+0;
+-134;
+0xFF00;
+
+123.0;
+123.;
+.14179;
+13e50;
+-1e-99;
+-1E+99;
+
+0xFFff50;
+
+"hello";
+"hello \"world\" !";
+'hello "world" !';
+
+"Multi
+line
+string";
+
+'Multi
+line
+string';
+
+true;
+false;
+
+null;
+-----------------------------------
+
+>0;
+ ^
+ source.hx constant.numeric.decimal.hx
+  ^
+  source.hx punctuation.terminator.hx
+>-134;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^
+  source.hx constant.numeric.decimal.hx
+     ^
+     source.hx punctuation.terminator.hx
+>0xFF00;
+ ^^^^^^
+ source.hx constant.numeric.hex.hx
+       ^
+       source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>123.0;
+ ^^^
+ source.hx constant.numeric.decimal.hx
+    ^
+    source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+     ^
+     source.hx constant.numeric.decimal.hx
+      ^
+      source.hx punctuation.terminator.hx
+>123.;
+ ^^^
+ source.hx constant.numeric.decimal.hx
+    ^
+    source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+     ^
+     source.hx punctuation.terminator.hx
+>.14179;
+ ^
+ source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+  ^^^^^
+  source.hx constant.numeric.decimal.hx
+       ^
+       source.hx punctuation.terminator.hx
+>13e50;
+ ^^^^^
+ source.hx constant.numeric.decimal.hx
+      ^
+      source.hx punctuation.terminator.hx
+>-1e-99;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^^^
+  source.hx constant.numeric.decimal.hx
+       ^
+       source.hx punctuation.terminator.hx
+>-1E+99;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^^^
+  source.hx constant.numeric.decimal.hx
+       ^
+       source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>0xFFff50;
+ ^^^^^^^^
+ source.hx constant.numeric.hex.hx
+         ^
+         source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>"hello";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^^
+  source.hx string.quoted.double.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>"hello \"world\" !";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^^^
+  source.hx string.quoted.double.hx
+        ^^
+        source.hx string.quoted.double.hx constant.character.escape.hx
+          ^^^^^
+          source.hx string.quoted.double.hx
+               ^^
+               source.hx string.quoted.double.hx constant.character.escape.hx
+                 ^^
+                 source.hx string.quoted.double.hx
+                   ^
+                   source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>'hello "world" !';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^
+  source.hx string.quoted.single.hx
+   ^
+   source.hx string.quoted.single.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx
+        ^
+        source.hx string.quoted.single.hx
+         ^
+         source.hx string.quoted.single.hx
+          ^
+          source.hx string.quoted.single.hx
+           ^
+           source.hx string.quoted.single.hx
+            ^
+            source.hx string.quoted.single.hx
+             ^
+             source.hx string.quoted.single.hx
+              ^
+              source.hx string.quoted.single.hx
+               ^
+               source.hx string.quoted.single.hx
+                ^
+                source.hx string.quoted.single.hx
+                 ^
+                 source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                  ^
+                  source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>"Multi
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^^^
+  source.hx string.quoted.double.hx
+>line
+ ^^^^^
+ source.hx string.quoted.double.hx
+>string";
+ ^^^^^^
+ source.hx string.quoted.double.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>'Multi
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^
+  source.hx string.quoted.single.hx
+   ^
+   source.hx string.quoted.single.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+>line
+ ^
+ source.hx string.quoted.single.hx
+  ^
+  source.hx string.quoted.single.hx
+   ^
+   source.hx string.quoted.single.hx
+    ^
+    source.hx string.quoted.single.hx
+>string';
+ ^
+ source.hx string.quoted.single.hx
+  ^
+  source.hx string.quoted.single.hx
+   ^
+   source.hx string.quoted.single.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>true;
+ ^^^^
+ source.hx constant.language.hx
+     ^
+     source.hx punctuation.terminator.hx
+>false;
+ ^^^^^
+ source.hx constant.language.hx
+      ^
+      source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>null;
+ ^^^^
+ source.hx constant.language.hx
+     ^
+     source.hx punctuation.terminator.hx

@@ -1,0 +1,744 @@
+original file
+-----------------------------------
+class Foo {
+    function foo() {
+        var e = macro var $myVar = 0;
+        var e = macro ${v}.toLowerCase();
+        var e = macro o.$myField;
+        var e = macro { $myField : 0 };
+        var e = macro $i{varName}++;
+        var e = macro $v{myStr};
+        var args = [macro "sub", macro 3];
+        var e = macro "Hello".toLowerCase($a{args});
+        (macro $i{tmp}.addAtom($v{name}, $atom)).finalize(op.pos);
+
+        var c = macro class MyClass extends Foo implements IClass {
+            public function new() { }
+            public function $funcName() {
+                trace($v{funcName} + " was called");
+            }
+        }
+
+        //macro class could have no name...
+        var def = macro class {
+            private inline function new(loader) this = loader;
+            private var loader(get,never) : $loaderType;
+            inline private function get_loader() : $loaderType return this;
+        };
+
+        var c = macro interface IClass {};
+    }
+}
+-----------------------------------
+
+>class Foo {
+ ^^^^^
+ source.hx meta.class.hx meta.class.identifier.hx storage.type.class.hx
+      ^
+      source.hx meta.class.hx meta.class.identifier.hx
+       ^^^
+       source.hx meta.class.hx meta.class.identifier.hx entity.name.type.class.hx
+          ^
+          source.hx meta.class.hx
+           ^
+           source.hx meta.class.hx punctuation.definition.block.begin.hx
+>    function foo() {
+ ^^^^
+ source.hx meta.class.hx meta.block.hx
+     ^^^^^^^^
+     source.hx meta.class.hx meta.block.hx meta.method.hx storage.type.function.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx
+              ^^^
+              source.hx meta.class.hx meta.block.hx meta.method.hx entity.name.function.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                  ^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                   ^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx
+                    ^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx punctuation.definition.block.begin.hx
+>        var e = macro var $myVar = 0;
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^^^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+                          ^^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                            ^^^^^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                 ^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                  ^
+                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                                   ^
+                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                     ^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        var e = macro ${v}.toLowerCase();
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.begin.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                          ^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                            ^^^^^^^^^^^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        var e = macro o.$myField;
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                          ^^^^^^^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.reification.hx
+                                 ^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        var e = macro { $myField : 0 };
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.begin.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                          ^^^^^^^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.reification.hx
+                                 ^^^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                     ^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                      ^
+                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        var e = macro $i{varName}++;
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.reification.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                          ^^^^^^^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                 ^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                  ^^
+                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.increment-decrement.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        var e = macro $v{myStr};
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.reification.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                          ^^^^^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        var args = [macro "sub", macro 3];
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                  ^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                   ^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                    ^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx punctuation.definition.array.begin.hx
+                     ^^^^^
+                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx storage.modifier.hx
+                          ^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                            ^^^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx string.quoted.double.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx punctuation.separator.comma.hx
+                                 ^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx
+                                  ^^^^^
+                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx storage.modifier.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx constant.numeric.decimal.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.array.literal.hx punctuation.definition.array.end.hx
+                                          ^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        var e = macro "Hello".toLowerCase($a{args});
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                        ^^^^^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx
+                             ^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                              ^
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                               ^^^^^^^^^^^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                                          ^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                           ^
+                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                                            ^
+                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.reification.hx
+                                             ^
+                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                              ^^^^
+                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                  ^
+                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                   ^
+                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                    ^
+                                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>        (macro $i{tmp}.addAtom($v{name}, $atom)).finalize(op.pos);
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+          ^^^^^
+          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.reification.hx
+                  ^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                   ^^^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                      ^^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                        ^^^^^^^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                                 ^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.reification.hx
+                                  ^
+                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                   ^^^^
+                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                          ^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                                           ^^^^
+                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.reification.hx
+                                               ^
+                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                ^
+                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                 ^
+                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                  ^^^^^^^^
+                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                                                          ^
+                                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                           ^^
+                                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                             ^
+                                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                              ^^^
+                                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                                 ^
+                                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                                  ^
+                                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>
+ ^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+>        var c = macro class MyClass extends Foo implements IClass {
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^^^^^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                             ^^^^^^^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                     ^^^^^^^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                                            ^
+                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                             ^^^
+                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                                                ^
+                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                 ^^^^^^^^^^
+                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                                                           ^
+                                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                            ^^^^^^
+                                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                                                                  ^
+                                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                                   ^
+                                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.begin.hx
+>            public function new() { }
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                   ^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                    ^^^^^^^^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx storage.type.function.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                             ^^^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx storage.type.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                                 ^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                  ^
+                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                   ^
+                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx punctuation.definition.block.begin.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx
+                                     ^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>            public function $funcName() {
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                   ^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                    ^^^^^^^^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx storage.type.function.hx
+                            ^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                             ^
+                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx punctuation.definition.reification.hx
+                              ^^^^^^^^
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx variable.reification.hx
+                                      ^
+                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx punctuation.definition.block.begin.hx
+>                trace($v{funcName} + " was called");
+ ^^^^^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx keyword.other.trace.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx
+                       ^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx keyword.reification.hx
+                         ^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx
+                          ^^^^^^^^
+                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                  ^^
+                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx keyword.operator.arithmetic.hx
+                                     ^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx
+                                      ^
+                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                       ^^^^^^^^^^^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx
+                                                  ^
+                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                                   ^
+                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                    ^
+                                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>            }
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>        }
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+>        //macro class could have no name...
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx comment.line.double-slash.hx
+>        var def = macro class {
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                  ^
+                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                   ^^^^^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                         ^^^^^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.hx
+                              ^
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.begin.hx
+>            private inline function new(loader) this = loader;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                    ^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                     ^^^^^^
+                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                            ^^^^^^^^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx storage.type.function.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                     ^^^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx storage.type.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                                         ^^^^^^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx variable.parameter.hx
+                                               ^
+                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                                ^
+                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                                 ^^^^
+                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx variable.language.hx
+                                                     ^
+                                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                                      ^
+                                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx keyword.operator.assignment.hx
+                                                       ^
+                                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                                        ^^^^^^
+                                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx variable.other.hx
+                                                              ^
+                                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx punctuation.terminator.hx
+>            private var loader(get,never) : $loaderType;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                    ^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                     ^^^
+                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+                        ^
+                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                         ^^^^^^
+                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                               ^
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                                ^^^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.parameters.hx storage.type.property.hx
+                                   ^
+                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.parameters.hx punctuation.separator.comma.hx
+                                    ^^^^^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.parameters.hx storage.type.property.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                          ^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                           ^
+                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.type.annotation.hx
+                                            ^
+                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                             ^
+                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.reification.hx
+                                              ^^^^^^^^^^
+                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.reification.hx
+                                                        ^
+                                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>            inline private function get_loader() : $loaderType return this;
+ ^^^^^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^^^^^^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                   ^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                    ^^^^^^^
+                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                           ^
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                            ^^^^^^^^
+                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx storage.type.function.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                     ^^^^^^^^^^
+                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx entity.name.function.hx
+                                               ^
+                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                                                ^
+                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                                 ^
+                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                                  ^
+                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx keyword.operator.type.annotation.hx
+                                                   ^
+                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                                    ^
+                                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx punctuation.definition.reification.hx
+                                                     ^^^^^^^^^^
+                                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx variable.reification.hx
+                                                               ^
+                                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                                                ^^^^^^
+                                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx keyword.control.flow-control.hx
+                                                                      ^
+                                                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx
+                                                                       ^^^^
+                                                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx variable.language.hx
+                                                                           ^
+                                                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx punctuation.terminator.hx
+>        };
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+          ^
+          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>
+ ^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+>        var c = macro interface IClass {};
+ ^^^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
+            ^
+            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+              ^
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 ^^^^^
+                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.modifier.hx
+                      ^
+                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       ^^^^^^^^^
+                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.hx
+                                ^
+                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                 ^^^^^^
+                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                                       ^
+                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                        ^
+                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.begin.hx
+                                         ^
+                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+                                          ^
+                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+>    }
+ ^^^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+>}
+ ^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx

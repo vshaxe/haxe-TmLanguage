@@ -1,0 +1,802 @@
+original file
+-----------------------------------
+// compiler-built-in-metadata
+// how to update for new meta:
+
+// use this to get the list for this source file:
+// haxe --help-metas | cut -c -24 | cut -c 1- | sed '/^\s*$/d' | tr -d ' '
+
+// to get the list for the regex:
+// haxe --help-metas | cut -c -24 | cut -c 4- | sed '/^\s*$/d' | tr -d ' '|  tr '\n' '|'
+
+@:abi
+@:abstract
+@:access
+@:allow
+@:analyzer
+@:annotation
+@:arrayAccess
+@:astSource
+@:autoBuild
+@:bind
+@:bitmap
+@:bridgeProperties
+@:build
+@:buildXml
+@:callable
+@:classCode
+@:commutative
+@:compilerGenerated
+@:const
+@:coreApi
+@:coreType
+@:cppFileCode
+@:cppInclude
+@:cppNamespaceCode
+@:dce
+@:debug
+@:decl
+@:delegate
+@:depend
+@:deprecated
+@:eager
+@:enum
+@:event
+@:expose
+@:extern
+@:fakeEnum
+@:file
+@:fileXml
+@:final
+@:fixed
+@:font
+@:forward
+@:forwardStatics
+@:from
+@:functionCode
+@:functionTailCode
+@:generic
+@:genericBuild
+@:getter
+@:hack
+@:headerClassCode
+@:headerCode
+@:headerInclude
+@:headerNamespaceCode
+@:hxGen
+@:ifFeature
+@:include
+@:internal
+@:isVar
+@:javaCanonical
+@:jsRequire
+@:keep
+@:keepInit
+@:keepSub
+@:luaRequire
+@:macro
+@:mergeBlock
+@:meta
+@:multiType
+@:native
+@:nativeChildren
+@:nativeGen
+@:nativeProperty
+@:nativeStaticExtension
+@:noCompletion
+@:noDebug
+@:noDoc
+@:noImportGlobal
+@:noPrivateAccess
+@:noStack
+@:noUsing
+@:nonVirtual
+@:notNull
+@:ns
+@:objc
+@:objcProtocol
+@:op
+@:optional
+@:overload
+@:phpConstants
+@:phpGlobal
+@:privateAccess
+@:property
+@:protected
+@:publicFields
+@:pure
+@:pythonImport
+@:readOnly
+@:remove
+@:require
+@:resolve
+@:rtti
+@:runtime
+@:runtimeValue
+@:scalar
+@:selfCall
+@:setter
+@:sound
+@:sourceFile
+@:stackOnly
+@:strict
+@:struct
+@:structAccess
+@:structInit
+@:suppressWarnings
+@:templatedCall
+@:throws
+@:to
+@:transient
+@:unifyMinDynamic
+@:unreflective
+@:unsafe
+@:value
+@:void
+@:volatile
+-----------------------------------
+
+>// compiler-built-in-metadata
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>// how to update for new meta:
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>
+ ^
+ source.hx
+>// use this to get the list for this source file:
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>// haxe --help-metas | cut -c -24 | cut -c 1- | sed '/^\s*$/d' | tr -d ' '
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>
+ ^
+ source.hx
+>// to get the list for the regex:
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>// haxe --help-metas | cut -c -24 | cut -c 4- | sed '/^\s*$/d' | tr -d ' '|  tr '\n' '|'
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>
+ ^
+ source.hx
+>@:abi
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^
+  source.hx storage.modifier.metadata.hx
+>@:abstract
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:access
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:allow
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:analyzer
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:annotation
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:arrayAccess
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:astSource
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:autoBuild
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:bind
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:bitmap
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:bridgeProperties
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:build
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:buildXml
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:callable
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:classCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:commutative
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:compilerGenerated
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:const
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:coreApi
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:coreType
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:cppFileCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:cppInclude
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:cppNamespaceCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:dce
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^
+  source.hx storage.modifier.metadata.hx
+>@:debug
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:decl
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:delegate
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:depend
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:deprecated
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:eager
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:enum
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:event
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:expose
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:extern
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:fakeEnum
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:file
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:fileXml
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:final
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:fixed
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:font
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:forward
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:forwardStatics
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:from
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:functionCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:functionTailCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:generic
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:genericBuild
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:getter
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:hack
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:headerClassCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:headerCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:headerInclude
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:headerNamespaceCode
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:hxGen
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:ifFeature
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:include
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:internal
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:isVar
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:javaCanonical
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:jsRequire
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:keep
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:keepInit
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:keepSub
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:luaRequire
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:macro
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:mergeBlock
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:meta
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:multiType
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:native
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:nativeChildren
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:nativeGen
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:nativeProperty
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:nativeStaticExtension
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noCompletion
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noDebug
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noDoc
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noImportGlobal
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noPrivateAccess
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noStack
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noUsing
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:nonVirtual
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:notNull
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:ns
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^
+  source.hx storage.modifier.metadata.hx
+>@:objc
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:objcProtocol
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:op
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^
+  source.hx storage.modifier.metadata.hx
+>@:optional
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:overload
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:phpConstants
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:phpGlobal
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:privateAccess
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:property
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:protected
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:publicFields
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:pure
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:pythonImport
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:readOnly
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:remove
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:require
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:resolve
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:rtti
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:runtime
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:runtimeValue
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:scalar
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:selfCall
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:setter
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:sound
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:sourceFile
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:stackOnly
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:strict
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:struct
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:structAccess
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:structInit
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:suppressWarnings
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:templatedCall
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:throws
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:to
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^
+  source.hx storage.modifier.metadata.hx
+>@:transient
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:unifyMinDynamic
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:unreflective
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:unsafe
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:value
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:void
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:volatile
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx

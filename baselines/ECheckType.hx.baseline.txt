@@ -1,0 +1,54 @@
+original file
+-----------------------------------
+var f = (123:Float);
+(null : Enum<T>);
+-----------------------------------
+
+>var f = (123:Float);
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx
+       ^
+       source.hx keyword.operator.assignment.hx
+        ^
+        source.hx
+         ^
+         source.hx meta.brace.round.hx
+          ^^^
+          source.hx constant.numeric.decimal.hx
+             ^
+             source.hx keyword.operator.type.annotation.hx
+              ^^^^^
+              source.hx support.class.builtin.hx
+                   ^
+                   source.hx meta.brace.round.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>(null : Enum<T>);
+ ^
+ source.hx meta.brace.round.hx
+  ^^^^
+  source.hx constant.language.hx
+      ^
+      source.hx
+       ^
+       source.hx keyword.operator.type.annotation.hx
+        ^
+        source.hx
+         ^^^^
+         source.hx support.class.builtin.hx
+             ^
+             source.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+              ^
+              source.hx meta.type-parameters.hx entity.name.type.hx
+               ^
+               source.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                ^
+                source.hx meta.brace.round.hx
+                 ^
+                 source.hx punctuation.terminator.hx

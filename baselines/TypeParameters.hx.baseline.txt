@@ -1,0 +1,364 @@
+original file
+-----------------------------------
+class EvtQueue<T:(Iterable<T:({ public function foo():Void; }, EventManager)>, Measurable)> {
+    var evt : T;
+}
+
+abstract Abstract<T>(String<T>) from String<T> to String<T> {
+    public static var fromStringMap(default, null):Map<String, FlxKey>
+        = _fo_o._FlxMacroUtil.buildMap("flixel.input.keyboard.FlxKey");
+}
+
+interface ITest<T> extends IBase<T> {
+    function test():Void;
+}
+
+private class Signal2<T1, T2> extends FlxBaseSignal<T1->T2->Void>
+{
+}
+-----------------------------------
+
+>class EvtQueue<T:(Iterable<T:({ public function foo():Void; }, EventManager)>, Measurable)> {
+ ^^^^^
+ source.hx meta.class.hx meta.class.identifier.hx storage.type.class.hx
+      ^
+      source.hx meta.class.hx meta.class.identifier.hx
+       ^^^^^^^^
+       source.hx meta.class.hx meta.class.identifier.hx entity.name.type.class.hx
+               ^
+               source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                ^
+                source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                 ^
+                 source.hx meta.class.hx meta.type-parameters.hx keyword.operator.type.annotation.hx
+                  ^
+                  source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.constraint.begin.hx
+                   ^^^^^^^^
+                   source.hx meta.class.hx meta.type-parameters.hx support.class.builtin.hx
+                           ^
+                           source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                            ^
+                            source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx entity.name.type.hx
+                             ^
+                             source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx keyword.operator.type.annotation.hx
+                              ^
+                              source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx punctuation.definition.constraint.begin.hx
+                               ^
+                               source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx punctuation.definition.block.begin.hx
+                                ^
+                                source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx
+                                 ^^^^^^
+                                 source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx storage.modifier.hx
+                                       ^
+                                       source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx
+                                        ^^^^^^^^
+                                        source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx storage.type.function.hx
+                                                ^
+                                                source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx
+                                                 ^^^
+                                                 source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx entity.name.function.hx
+                                                    ^
+                                                    source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                                                     ^
+                                                     source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                                      ^
+                                                      source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx keyword.operator.type.annotation.hx
+                                                       ^^^^
+                                                       source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx support.class.builtin.hx
+                                                           ^
+                                                           source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx meta.method.hx punctuation.terminator.hx
+                                                            ^
+                                                            source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx
+                                                             ^
+                                                             source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx meta.block.hx punctuation.definition.block.end.hx
+                                                              ^
+                                                              source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx punctuation.separator.comma.hx
+                                                               ^
+                                                               source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx
+                                                                ^^^^^^^^^^^^
+                                                                source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx entity.name.type.hx
+                                                                            ^
+                                                                            source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx punctuation.definition.constraint.end.hx
+                                                                             ^
+                                                                             source.hx meta.class.hx meta.type-parameters.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                                                              ^
+                                                                              source.hx meta.class.hx meta.type-parameters.hx punctuation.separator.comma.hx
+                                                                               ^
+                                                                               source.hx meta.class.hx meta.type-parameters.hx
+                                                                                ^^^^^^^^^^
+                                                                                source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                                                                                          ^
+                                                                                          source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.constraint.end.hx
+                                                                                           ^
+                                                                                           source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                                                                            ^
+                                                                                            source.hx meta.class.hx
+                                                                                             ^
+                                                                                             source.hx meta.class.hx punctuation.definition.block.begin.hx
+>    var evt : T;
+ ^^^^
+ source.hx meta.class.hx meta.block.hx
+     ^^^
+     source.hx meta.class.hx meta.block.hx storage.type.variable.hx
+        ^
+        source.hx meta.class.hx meta.block.hx
+         ^^^
+         source.hx meta.class.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.class.hx meta.block.hx
+             ^
+             source.hx meta.class.hx meta.block.hx keyword.operator.type.annotation.hx
+              ^
+              source.hx meta.class.hx meta.block.hx
+               ^
+               source.hx meta.class.hx meta.block.hx entity.name.type.hx
+                ^
+                source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>abstract Abstract<T>(String<T>) from String<T> to String<T> {
+ ^^^^^^^^
+ source.hx meta.abstract.hx storage.type.class.hx
+         ^
+         source.hx meta.abstract.hx
+          ^^^^^^^^
+          source.hx meta.abstract.hx entity.name.type.class.hx
+                  ^
+                  source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                   ^
+                   source.hx meta.abstract.hx meta.type-parameters.hx entity.name.type.hx
+                    ^
+                    source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                     ^
+                     source.hx meta.abstract.hx punctuation.definition.other.hx
+                      ^^^^^^
+                      source.hx meta.abstract.hx support.class.builtin.hx
+                            ^
+                            source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                             ^
+                             source.hx meta.abstract.hx meta.type-parameters.hx entity.name.type.hx
+                              ^
+                              source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                               ^
+                               source.hx meta.abstract.hx punctuation.definition.other.hx
+                                ^
+                                source.hx meta.abstract.hx
+                                 ^^^^
+                                 source.hx meta.abstract.hx keyword.other.hx
+                                     ^
+                                     source.hx meta.abstract.hx
+                                      ^^^^^^
+                                      source.hx meta.abstract.hx support.class.builtin.hx
+                                            ^
+                                            source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                             ^
+                                             source.hx meta.abstract.hx meta.type-parameters.hx entity.name.type.hx
+                                              ^
+                                              source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                               ^
+                                               source.hx meta.abstract.hx
+                                                ^^
+                                                source.hx meta.abstract.hx keyword.other.hx
+                                                  ^
+                                                  source.hx meta.abstract.hx
+                                                   ^^^^^^
+                                                   source.hx meta.abstract.hx support.class.builtin.hx
+                                                         ^
+                                                         source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                                          ^
+                                                          source.hx meta.abstract.hx meta.type-parameters.hx entity.name.type.hx
+                                                           ^
+                                                           source.hx meta.abstract.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                                            ^
+                                                            source.hx meta.abstract.hx
+                                                             ^
+                                                             source.hx meta.abstract.hx punctuation.definition.block.begin.hx
+>    public static var fromStringMap(default, null):Map<String, FlxKey>
+ ^^^^
+ source.hx meta.abstract.hx meta.block.hx
+     ^^^^^^
+     source.hx meta.abstract.hx meta.block.hx storage.modifier.hx
+           ^
+           source.hx meta.abstract.hx meta.block.hx
+            ^^^^^^
+            source.hx meta.abstract.hx meta.block.hx storage.modifier.hx
+                  ^
+                  source.hx meta.abstract.hx meta.block.hx
+                   ^^^
+                   source.hx meta.abstract.hx meta.block.hx storage.type.variable.hx
+                      ^
+                      source.hx meta.abstract.hx meta.block.hx
+                       ^^^^^^^^^^^^^
+                       source.hx meta.abstract.hx meta.block.hx variable.other.hx
+                                    ^
+                                    source.hx meta.abstract.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                                     ^^^^^^^
+                                     source.hx meta.abstract.hx meta.block.hx meta.parameters.hx storage.type.property.hx
+                                            ^
+                                            source.hx meta.abstract.hx meta.block.hx meta.parameters.hx punctuation.separator.comma.hx
+                                             ^
+                                             source.hx meta.abstract.hx meta.block.hx meta.parameters.hx
+                                              ^^^^
+                                              source.hx meta.abstract.hx meta.block.hx meta.parameters.hx storage.type.property.hx
+                                                  ^
+                                                  source.hx meta.abstract.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                                   ^
+                                                   source.hx meta.abstract.hx meta.block.hx keyword.operator.type.annotation.hx
+                                                    ^^^
+                                                    source.hx meta.abstract.hx meta.block.hx support.class.builtin.hx
+                                                       ^
+                                                       source.hx meta.abstract.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                                        ^^^^^^
+                                                        source.hx meta.abstract.hx meta.block.hx meta.type-parameters.hx support.class.builtin.hx
+                                                              ^
+                                                              source.hx meta.abstract.hx meta.block.hx meta.type-parameters.hx punctuation.separator.comma.hx
+                                                               ^
+                                                               source.hx meta.abstract.hx meta.block.hx meta.type-parameters.hx
+                                                                ^^^^^^
+                                                                source.hx meta.abstract.hx meta.block.hx meta.type-parameters.hx entity.name.type.hx
+                                                                      ^
+                                                                      source.hx meta.abstract.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+>        = _fo_o._FlxMacroUtil.buildMap("flixel.input.keyboard.FlxKey");
+ ^^^^^^^^
+ source.hx meta.abstract.hx meta.block.hx
+         ^
+         source.hx meta.abstract.hx meta.block.hx keyword.operator.assignment.hx
+          ^
+          source.hx meta.abstract.hx meta.block.hx
+           ^^^^^^
+           source.hx meta.abstract.hx meta.block.hx support.package.hx
+                 ^^^^^^^^^^^^^
+                 source.hx meta.abstract.hx meta.block.hx entity.name.type.hx
+                              ^
+                              source.hx meta.abstract.hx meta.block.hx
+                               ^^^^^^^^
+                               source.hx meta.abstract.hx meta.block.hx entity.name.function.hx
+                                       ^
+                                       source.hx meta.abstract.hx meta.block.hx meta.brace.round.hx
+                                        ^
+                                        source.hx meta.abstract.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                         source.hx meta.abstract.hx meta.block.hx string.quoted.double.hx
+                                                                     ^
+                                                                     source.hx meta.abstract.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                                                      ^
+                                                                      source.hx meta.abstract.hx meta.block.hx meta.brace.round.hx
+                                                                       ^
+                                                                       source.hx meta.abstract.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.abstract.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>interface ITest<T> extends IBase<T> {
+ ^^^^^^^^^
+ source.hx meta.interface.hx storage.type.class.hx
+          ^
+          source.hx meta.interface.hx
+           ^^^^^
+           source.hx meta.interface.hx entity.name.type.class.hx
+                ^
+                source.hx meta.interface.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                 ^
+                 source.hx meta.interface.hx meta.type-parameters.hx entity.name.type.hx
+                  ^
+                  source.hx meta.interface.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                   ^
+                   source.hx meta.interface.hx
+                    ^^^^^^^
+                    source.hx meta.interface.hx storage.modifier.hx
+                           ^
+                           source.hx meta.interface.hx
+                            ^^^^^
+                            source.hx meta.interface.hx entity.name.type.hx
+                                 ^
+                                 source.hx meta.interface.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                  ^
+                                  source.hx meta.interface.hx meta.type-parameters.hx entity.name.type.hx
+                                   ^
+                                   source.hx meta.interface.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                    ^
+                                    source.hx meta.interface.hx
+                                     ^
+                                     source.hx meta.interface.hx punctuation.definition.block.begin.hx
+>    function test():Void;
+ ^^^^
+ source.hx meta.interface.hx meta.block.hx
+     ^^^^^^^^
+     source.hx meta.interface.hx meta.block.hx meta.method.hx storage.type.function.hx
+             ^
+             source.hx meta.interface.hx meta.block.hx meta.method.hx
+              ^^^^
+              source.hx meta.interface.hx meta.block.hx meta.method.hx entity.name.function.hx
+                  ^
+                  source.hx meta.interface.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                   ^
+                   source.hx meta.interface.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                    ^
+                    source.hx meta.interface.hx meta.block.hx meta.method.hx keyword.operator.type.annotation.hx
+                     ^^^^
+                     source.hx meta.interface.hx meta.block.hx meta.method.hx support.class.builtin.hx
+                         ^
+                         source.hx meta.interface.hx meta.block.hx meta.method.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.interface.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>private class Signal2<T1, T2> extends FlxBaseSignal<T1->T2->Void>
+ ^^^^^^^
+ source.hx storage.modifier.hx
+        ^
+        source.hx
+         ^^^^^
+         source.hx meta.class.hx meta.class.identifier.hx storage.type.class.hx
+              ^
+              source.hx meta.class.hx meta.class.identifier.hx
+               ^^^^^^^
+               source.hx meta.class.hx meta.class.identifier.hx entity.name.type.class.hx
+                      ^
+                      source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                       ^^
+                       source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                         ^
+                         source.hx meta.class.hx meta.type-parameters.hx punctuation.separator.comma.hx
+                          ^
+                          source.hx meta.class.hx meta.type-parameters.hx
+                           ^^
+                           source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                             ^
+                             source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                              ^
+                              source.hx meta.class.hx
+                               ^^^^^^^
+                               source.hx meta.class.hx storage.modifier.hx
+                                      ^
+                                      source.hx meta.class.hx
+                                       ^^^^^^^^^^^^^
+                                       source.hx meta.class.hx entity.name.type.hx
+                                                    ^
+                                                    source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                                     ^^
+                                                     source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                                                       ^^
+                                                       source.hx meta.class.hx meta.type-parameters.hx keyword.operator.type.function.hx
+                                                         ^^
+                                                         source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                                                           ^^
+                                                           source.hx meta.class.hx meta.type-parameters.hx keyword.operator.type.function.hx
+                                                             ^^^^
+                                                             source.hx meta.class.hx meta.type-parameters.hx support.class.builtin.hx
+                                                                 ^
+                                                                 source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+>{
+ ^
+ source.hx meta.class.hx punctuation.definition.block.begin.hx
+>}
+ ^
+ source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx

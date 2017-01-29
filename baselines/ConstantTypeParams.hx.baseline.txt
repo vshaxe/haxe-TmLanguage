@@ -1,0 +1,106 @@
+original file
+-----------------------------------
+typedef WinHandle = hl.Abstract<"ui_window">;
+typedef WinHandle = hl.Abstract<@:const 5>;
+typedef WinHandle = hl.Abstract<["foo", 5]>;
+-----------------------------------
+
+>typedef WinHandle = hl.Abstract<"ui_window">;
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^^^^^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+                  ^
+                  source.hx meta.typedef.hx
+                   ^
+                   source.hx meta.typedef.hx keyword.operator.assignment.hx
+                    ^
+                    source.hx meta.typedef.hx
+                     ^^^
+                     source.hx meta.typedef.hx support.package.hx
+                        ^^^^^^^^
+                        source.hx meta.typedef.hx entity.name.type.hx
+                                ^
+                                source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                 ^
+                                 source.hx meta.typedef.hx meta.type-parameters.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                  ^^^^^^^^^
+                                  source.hx meta.typedef.hx meta.type-parameters.hx string.quoted.double.hx
+                                           ^
+                                           source.hx meta.typedef.hx meta.type-parameters.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                            ^
+                                            source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                             ^
+                                             source.hx meta.typedef.hx punctuation.terminator.hx
+>typedef WinHandle = hl.Abstract<@:const 5>;
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^^^^^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+                  ^
+                  source.hx meta.typedef.hx
+                   ^
+                   source.hx meta.typedef.hx keyword.operator.assignment.hx
+                    ^
+                    source.hx meta.typedef.hx
+                     ^^^
+                     source.hx meta.typedef.hx support.package.hx
+                        ^^^^^^^^
+                        source.hx meta.typedef.hx entity.name.type.hx
+                                ^
+                                source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                 ^
+                                 source.hx meta.typedef.hx meta.type-parameters.hx punctuation.metadata.hx
+                                  ^^^^^^
+                                  source.hx meta.typedef.hx meta.type-parameters.hx storage.modifier.metadata.hx
+                                        ^
+                                        source.hx meta.typedef.hx meta.type-parameters.hx
+                                         ^
+                                         source.hx meta.typedef.hx meta.type-parameters.hx constant.numeric.decimal.hx
+                                          ^
+                                          source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                           ^
+                                           source.hx meta.typedef.hx punctuation.terminator.hx
+>typedef WinHandle = hl.Abstract<["foo", 5]>;
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^^^^^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+                  ^
+                  source.hx meta.typedef.hx
+                   ^
+                   source.hx meta.typedef.hx keyword.operator.assignment.hx
+                    ^
+                    source.hx meta.typedef.hx
+                     ^^^
+                     source.hx meta.typedef.hx support.package.hx
+                        ^^^^^^^^
+                        source.hx meta.typedef.hx entity.name.type.hx
+                                ^
+                                source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                 ^
+                                 source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx punctuation.definition.array.begin.hx
+                                  ^
+                                  source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                   ^^^
+                                   source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx string.quoted.double.hx
+                                      ^
+                                      source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                       ^
+                                       source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx punctuation.separator.comma.hx
+                                        ^
+                                        source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx
+                                         ^
+                                         source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx constant.numeric.decimal.hx
+                                          ^
+                                          source.hx meta.typedef.hx meta.type-parameters.hx meta.array.literal.hx punctuation.definition.array.end.hx
+                                           ^
+                                           source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                            ^
+                                            source.hx meta.typedef.hx punctuation.terminator.hx

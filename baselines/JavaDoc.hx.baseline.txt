@@ -1,0 +1,82 @@
+original file
+-----------------------------------
+/**
+ * IndexOf function
+ *
+ * @param arr an array
+ * @param v the value to search
+ * @return the index
+ * @since 4.0.0-alpha.2
+ * @see haxe.org
+ * @deprecated
+ */
+-----------------------------------
+
+>/**
+ ^^^
+ source.hx comment.block.documentation.hx punctuation.definition.comment.hx
+> * IndexOf function
+ ^^^^^^^^^^^^^^^^^^^^
+ source.hx comment.block.documentation.hx
+> *
+ ^^^
+ source.hx comment.block.documentation.hx
+> * @param arr an array
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+          ^
+          source.hx comment.block.documentation.hx
+           ^^^
+           source.hx comment.block.documentation.hx variable.other.javadoc
+              ^
+              source.hx comment.block.documentation.hx
+               ^^^^^^^^^
+               source.hx comment.block.documentation.hx
+> * @param v the value to search
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+          ^
+          source.hx comment.block.documentation.hx
+           ^
+           source.hx comment.block.documentation.hx variable.other.javadoc
+            ^
+            source.hx comment.block.documentation.hx
+             ^^^^^^^^^^^^^^^^^^^^
+             source.hx comment.block.documentation.hx
+> * @return the index
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+           ^^^^^^^^^^^
+           source.hx comment.block.documentation.hx
+> * @since 4.0.0-alpha.2
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+          ^
+          source.hx comment.block.documentation.hx
+           ^^^^^^^^^^^^^
+           source.hx comment.block.documentation.hx constant.numeric.javadoc
+> * @see haxe.org
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+        ^^^^^^^^^^
+        source.hx comment.block.documentation.hx
+> * @deprecated
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+> */
+ ^
+ source.hx comment.block.documentation.hx
+  ^^
+  source.hx comment.block.documentation.hx punctuation.definition.comment.hx

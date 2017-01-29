@@ -1,0 +1,580 @@
+original file
+-----------------------------------
+// 'is' should be highlighted
+(Math.random() * 5 is String);
+trace(("" is String));
+super(("" is String));
+for (i in 0...("" is String)) {}
+while (("" is String)) {}
+switch ("" is String) { case _:}
+@:native(("" is String))
+@:custom(("" is String))
+untyped __call__(("" is String));
+
+// 'is' should not be highlighted
+Math.random() * 5 is String;
+trace("" is String);
+super("" is String);
+while ("" is String) {}
+switch "" is String { case _:}
+for ("" is String) {}
+@:native("" is String)
+@:custom("" is String)
+untyped __call__("" is String);
+
+var is:Int;
+
+// Std.is() still needs to be a method name
+(Std.is());
+-----------------------------------
+
+>// 'is' should be highlighted
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>(Math.random() * 5 is String);
+ ^
+ source.hx meta.brace.round.hx
+  ^^^^
+  source.hx support.class.builtin.hx
+      ^
+      source.hx
+       ^^^^^^
+       source.hx entity.name.function.hx
+             ^
+             source.hx meta.brace.round.hx
+              ^
+              source.hx meta.brace.round.hx
+               ^
+               source.hx
+                ^
+                source.hx keyword.operator.arithmetic.hx
+                 ^
+                 source.hx
+                  ^
+                  source.hx constant.numeric.decimal.hx
+                   ^
+                   source.hx
+                    ^^
+                    source.hx keyword.other.hx
+                      ^
+                      source.hx
+                       ^^^^^^
+                       source.hx support.class.builtin.hx
+                             ^
+                             source.hx meta.brace.round.hx
+                              ^
+                              source.hx punctuation.terminator.hx
+>trace(("" is String));
+ ^^^^^
+ source.hx keyword.other.trace.hx
+      ^
+      source.hx
+       ^
+       source.hx meta.brace.round.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+          ^
+          source.hx
+           ^^
+           source.hx keyword.other.hx
+             ^
+             source.hx
+              ^^^^^^
+              source.hx support.class.builtin.hx
+                    ^
+                    source.hx meta.brace.round.hx
+                     ^
+                     source.hx meta.brace.round.hx
+                      ^
+                      source.hx punctuation.terminator.hx
+>super(("" is String));
+ ^^^^^
+ source.hx variable.language.hx
+      ^
+      source.hx
+       ^
+       source.hx meta.brace.round.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+          ^
+          source.hx
+           ^^
+           source.hx keyword.other.hx
+             ^
+             source.hx
+              ^^^^^^
+              source.hx support.class.builtin.hx
+                    ^
+                    source.hx meta.brace.round.hx
+                     ^
+                     source.hx meta.brace.round.hx
+                      ^
+                      source.hx punctuation.terminator.hx
+>for (i in 0...("" is String)) {}
+ ^^^
+ source.hx keyword.control.flow-control.hx
+    ^
+    source.hx
+     ^
+     source.hx meta.brace.bround.hx
+      ^
+      source.hx variable.other.hx
+       ^
+       source.hx
+        ^^
+        source.hx keyword.other.in.hx
+          ^
+          source.hx
+           ^
+           source.hx constant.numeric.decimal.hx
+            ^^^
+            source.hx keyword.operator.intiterator.hx
+               ^
+               source.hx meta.brace.round.hx
+                ^
+                source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                 ^
+                 source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                  ^
+                  source.hx
+                   ^^
+                   source.hx keyword.other.hx
+                     ^
+                     source.hx
+                      ^^^^^^
+                      source.hx support.class.builtin.hx
+                            ^
+                            source.hx meta.brace.round.hx
+                             ^
+                             source.hx meta.brace.bround.hx
+                              ^
+                              source.hx
+                               ^
+                               source.hx punctuation.definition.block.begin.hx
+                                ^
+                                source.hx punctuation.definition.block.end.hx
+>while (("" is String)) {}
+ ^^^^^
+ source.hx keyword.control.flow-control.hx
+      ^^
+      source.hx
+        ^
+        source.hx meta.brace.round.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+          ^
+          source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+           ^
+           source.hx
+            ^^
+            source.hx keyword.other.hx
+              ^
+              source.hx
+               ^^^^^^
+               source.hx support.class.builtin.hx
+                     ^
+                     source.hx meta.brace.round.hx
+                      ^
+                      source.hx meta.brace.round.hx
+                       ^
+                       source.hx
+                        ^
+                        source.hx punctuation.definition.block.begin.hx
+                         ^
+                         source.hx punctuation.definition.block.end.hx
+>switch ("" is String) { case _:}
+ ^^^^^^
+ source.hx keyword.control.flow-control.hx
+       ^
+       source.hx
+        ^
+        source.hx meta.brace.round.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+          ^
+          source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+           ^
+           source.hx
+            ^^
+            source.hx keyword.other.hx
+              ^
+              source.hx
+               ^^^^^^
+               source.hx support.class.builtin.hx
+                     ^
+                     source.hx meta.brace.round.hx
+                      ^
+                      source.hx
+                       ^
+                       source.hx punctuation.definition.block.begin.hx
+                        ^
+                        source.hx
+                         ^^^^
+                         source.hx keyword.control.flow-control.hx
+                             ^
+                             source.hx
+                              ^
+                              source.hx variable.other.hx
+                               ^
+                               source.hx
+                                ^
+                                source.hx punctuation.definition.block.end.hx
+>@:native(("" is String))
+ ^
+ source.hx punctuation.metadata.hx
+  ^
+  source.hx storage.modifier.metadata.hx
+   ^^^^^^
+   source.hx storage.modifier.metadata.hx meta.brace.round.hx
+         ^
+         source.hx
+          ^
+          source.hx meta.brace.round.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+            ^
+            source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+             ^
+             source.hx
+              ^^
+              source.hx keyword.other.hx
+                ^
+                source.hx
+                 ^^^^^^
+                 source.hx support.class.builtin.hx
+                       ^
+                       source.hx meta.brace.round.hx
+                        ^
+                        source.hx meta.brace.round.hx
+>@:custom(("" is String))
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx variable.metadata.hx
+         ^
+         source.hx meta.brace.round.hx
+          ^
+          source.hx meta.brace.round.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+            ^
+            source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+             ^
+             source.hx
+              ^^
+              source.hx keyword.other.hx
+                ^
+                source.hx
+                 ^^^^^^
+                 source.hx support.class.builtin.hx
+                       ^
+                       source.hx meta.brace.round.hx
+                        ^
+                        source.hx meta.brace.round.hx
+>untyped __call__(("" is String));
+ ^^^^^^^
+ source.hx keyword.other.untyped.hx
+        ^
+        source.hx
+         ^^^^^^^^
+         source.hx keyword.other.untyped-function.hx
+                 ^
+                 source.hx meta.brace.round.hx
+                  ^
+                  source.hx meta.brace.round.hx
+                   ^
+                   source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                    ^
+                    source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                     ^
+                     source.hx
+                      ^^
+                      source.hx keyword.other.hx
+                        ^
+                        source.hx
+                         ^^^^^^
+                         source.hx support.class.builtin.hx
+                               ^
+                               source.hx meta.brace.round.hx
+                                ^
+                                source.hx meta.brace.round.hx
+                                 ^
+                                 source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>// 'is' should not be highlighted
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>Math.random() * 5 is String;
+ ^^^^
+ source.hx support.class.builtin.hx
+     ^
+     source.hx
+      ^^^^^^
+      source.hx entity.name.function.hx
+            ^
+            source.hx meta.brace.round.hx
+             ^
+             source.hx meta.brace.round.hx
+              ^
+              source.hx
+               ^
+               source.hx keyword.operator.arithmetic.hx
+                ^
+                source.hx
+                 ^
+                 source.hx constant.numeric.decimal.hx
+                  ^
+                  source.hx
+                   ^^
+                   source.hx variable.other.hx
+                     ^
+                     source.hx
+                      ^^^^^^
+                      source.hx support.class.builtin.hx
+                            ^
+                            source.hx punctuation.terminator.hx
+>trace("" is String);
+ ^^^^^
+ source.hx keyword.other.trace.hx
+      ^
+      source.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+         ^
+         source.hx
+          ^^
+          source.hx variable.other.hx
+            ^
+            source.hx
+             ^^^^^^
+             source.hx support.class.builtin.hx
+                   ^
+                   source.hx meta.brace.round.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>super("" is String);
+ ^^^^^
+ source.hx variable.language.hx
+      ^
+      source.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+         ^
+         source.hx
+          ^^
+          source.hx variable.other.hx
+            ^
+            source.hx
+             ^^^^^^
+             source.hx support.class.builtin.hx
+                   ^
+                   source.hx meta.brace.round.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>while ("" is String) {}
+ ^^^^^
+ source.hx keyword.control.flow-control.hx
+      ^^
+      source.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+          ^
+          source.hx
+           ^^
+           source.hx variable.other.hx
+             ^
+             source.hx
+              ^^^^^^
+              source.hx support.class.builtin.hx
+                    ^
+                    source.hx meta.brace.round.hx
+                     ^
+                     source.hx
+                      ^
+                      source.hx punctuation.definition.block.begin.hx
+                       ^
+                       source.hx punctuation.definition.block.end.hx
+>switch "" is String { case _:}
+ ^^^^^^
+ source.hx keyword.control.flow-control.hx
+       ^
+       source.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+          ^
+          source.hx
+           ^^
+           source.hx variable.other.hx
+             ^
+             source.hx
+              ^^^^^^
+              source.hx support.class.builtin.hx
+                    ^
+                    source.hx
+                     ^
+                     source.hx punctuation.definition.block.begin.hx
+                      ^
+                      source.hx
+                       ^^^^
+                       source.hx keyword.control.flow-control.hx
+                           ^
+                           source.hx
+                            ^
+                            source.hx variable.other.hx
+                             ^
+                             source.hx
+                              ^
+                              source.hx punctuation.definition.block.end.hx
+>for ("" is String) {}
+ ^^^
+ source.hx keyword.control.flow-control.hx
+    ^^
+    source.hx
+      ^
+      source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+        ^
+        source.hx
+         ^^
+         source.hx variable.other.hx
+           ^
+           source.hx
+            ^^^^^^
+            source.hx support.class.builtin.hx
+                  ^
+                  source.hx meta.brace.round.hx
+                   ^
+                   source.hx
+                    ^
+                    source.hx punctuation.definition.block.begin.hx
+                     ^
+                     source.hx punctuation.definition.block.end.hx
+>@:native("" is String)
+ ^
+ source.hx punctuation.metadata.hx
+  ^
+  source.hx storage.modifier.metadata.hx
+   ^^^^^^
+   source.hx storage.modifier.metadata.hx meta.brace.round.hx
+         ^
+         source.hx
+          ^
+          source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx
+             ^^
+             source.hx variable.other.hx
+               ^
+               source.hx
+                ^^^^^^
+                source.hx support.class.builtin.hx
+                      ^
+                      source.hx meta.brace.round.hx
+>@:custom("" is String)
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx variable.metadata.hx
+         ^
+         source.hx meta.brace.round.hx
+          ^
+          source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx
+             ^^
+             source.hx variable.other.hx
+               ^
+               source.hx
+                ^^^^^^
+                source.hx support.class.builtin.hx
+                      ^
+                      source.hx meta.brace.round.hx
+>untyped __call__("" is String);
+ ^^^^^^^
+ source.hx keyword.other.untyped.hx
+        ^
+        source.hx
+         ^^^^^^^^
+         source.hx keyword.other.untyped-function.hx
+                 ^
+                 source.hx meta.brace.round.hx
+                  ^
+                  source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                   ^
+                   source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                    ^
+                    source.hx
+                     ^^
+                     source.hx variable.other.hx
+                       ^
+                       source.hx
+                        ^^^^^^
+                        source.hx support.class.builtin.hx
+                              ^
+                              source.hx meta.brace.round.hx
+                               ^
+                               source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>var is:Int;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^^
+     source.hx variable.other.hx
+       ^
+       source.hx keyword.operator.type.annotation.hx
+        ^^^
+        source.hx support.class.builtin.hx
+           ^
+           source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>// Std.is() still needs to be a method name
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>(Std.is());
+ ^
+ source.hx meta.brace.round.hx
+  ^^^
+  source.hx support.class.builtin.hx
+     ^
+     source.hx
+      ^^
+      source.hx entity.name.function.hx
+        ^
+        source.hx meta.brace.round.hx
+         ^
+         source.hx meta.brace.round.hx
+          ^
+          source.hx meta.brace.round.hx
+           ^
+           source.hx punctuation.terminator.hx

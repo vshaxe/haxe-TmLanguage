@@ -1,0 +1,272 @@
+original file
+-----------------------------------
+typedef Pt = {
+    #if #else #end
+    var x:Dynamic<Float>;
+    var y:Float;
+    @:optional var z:Float; /* optional z */
+    private function add(pt:Pt):Void;
+}
+
+typedef Pt2 = {
+    #if #else #end
+    x:Dynamic<Float>,
+    y:Float,
+    ?z:Float, //optional z
+    add : Point -> Void,
+}
+
+typedef DS = Dynamic<String>;
+-----------------------------------
+
+>typedef Pt = {
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+           ^
+           source.hx meta.typedef.hx
+            ^
+            source.hx meta.typedef.hx keyword.operator.assignment.hx
+             ^
+             source.hx meta.typedef.hx
+              ^
+              source.hx meta.typedef.hx punctuation.definition.block.begin.hx
+>    #if #else #end
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^^^^
+     source.hx meta.typedef.hx meta.block.hx punctuation.definition.tag
+         ^^^^^
+         source.hx meta.typedef.hx meta.block.hx punctuation.definition.tag
+              ^
+              source.hx meta.typedef.hx meta.block.hx
+               ^^^^
+               source.hx meta.typedef.hx meta.block.hx punctuation.definition.tag
+>    var x:Dynamic<Float>;
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^^^
+     source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+        ^
+        source.hx meta.typedef.hx meta.block.hx
+         ^
+         source.hx meta.typedef.hx meta.block.hx variable.other.hx
+          ^
+          source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+           ^^^^^^^
+           source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                  ^
+                  source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                   ^^^^^
+                   source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx support.class.builtin.hx
+                        ^
+                        source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                         ^
+                         source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+>    var y:Float;
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^^^
+     source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+        ^
+        source.hx meta.typedef.hx meta.block.hx
+         ^
+         source.hx meta.typedef.hx meta.block.hx variable.other.hx
+          ^
+          source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+           ^^^^^
+           source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                ^
+                source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+>    @:optional var z:Float; /* optional z */
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx punctuation.metadata.hx
+      ^^^^^^^^^
+      source.hx meta.typedef.hx meta.block.hx storage.modifier.metadata.hx
+               ^
+               source.hx meta.typedef.hx meta.block.hx
+                ^^^
+                source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+                   ^
+                   source.hx meta.typedef.hx meta.block.hx
+                    ^
+                    source.hx meta.typedef.hx meta.block.hx variable.other.hx
+                     ^
+                     source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+                      ^^^^^
+                      source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                           ^
+                           source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+                            ^
+                            source.hx meta.typedef.hx meta.block.hx
+                             ^^
+                             source.hx meta.typedef.hx meta.block.hx comment.block.hx punctuation.definition.comment.hx
+                               ^^^^^^^^^^^^
+                               source.hx meta.typedef.hx meta.block.hx comment.block.hx
+                                           ^^
+                                           source.hx meta.typedef.hx meta.block.hx comment.block.hx punctuation.definition.comment.hx
+>    private function add(pt:Pt):Void;
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^^^^^^^
+     source.hx meta.typedef.hx meta.block.hx storage.modifier.hx
+            ^
+            source.hx meta.typedef.hx meta.block.hx
+             ^^^^^^^^
+             source.hx meta.typedef.hx meta.block.hx meta.method.hx storage.type.function.hx
+                     ^
+                     source.hx meta.typedef.hx meta.block.hx meta.method.hx
+                      ^^^
+                      source.hx meta.typedef.hx meta.block.hx meta.method.hx entity.name.function.hx
+                         ^
+                         source.hx meta.typedef.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                          ^^
+                          source.hx meta.typedef.hx meta.block.hx meta.method.hx meta.parameters.hx variable.parameter.hx
+                            ^
+                            source.hx meta.typedef.hx meta.block.hx meta.method.hx meta.parameters.hx keyword.operator.type.annotation.hx
+                             ^^
+                             source.hx meta.typedef.hx meta.block.hx meta.method.hx meta.parameters.hx entity.name.type.hx
+                               ^
+                               source.hx meta.typedef.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                ^
+                                source.hx meta.typedef.hx meta.block.hx meta.method.hx keyword.operator.type.annotation.hx
+                                 ^^^^
+                                 source.hx meta.typedef.hx meta.block.hx meta.method.hx support.class.builtin.hx
+                                     ^
+                                     source.hx meta.typedef.hx meta.block.hx meta.method.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>typedef Pt2 = {
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+            ^
+            source.hx meta.typedef.hx
+             ^
+             source.hx meta.typedef.hx keyword.operator.assignment.hx
+              ^
+              source.hx meta.typedef.hx
+               ^
+               source.hx meta.typedef.hx punctuation.definition.block.begin.hx
+>    #if #else #end
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^^^^
+     source.hx meta.typedef.hx meta.block.hx punctuation.definition.tag
+         ^^^^^
+         source.hx meta.typedef.hx meta.block.hx punctuation.definition.tag
+              ^
+              source.hx meta.typedef.hx meta.block.hx
+               ^^^^
+               source.hx meta.typedef.hx meta.block.hx punctuation.definition.tag
+>    x:Dynamic<Float>,
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx variable.other.hx
+      ^
+      source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+       ^^^^^^^
+       source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+              ^
+              source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+               ^^^^^
+               source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx support.class.builtin.hx
+                    ^
+                    source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                     ^
+                     source.hx meta.typedef.hx meta.block.hx punctuation.separator.comma.hx
+>    y:Float,
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx variable.other.hx
+      ^
+      source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+       ^^^^^
+       source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+            ^
+            source.hx meta.typedef.hx meta.block.hx punctuation.separator.comma.hx
+>    ?z:Float, //optional z
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx keyword.operator.optional.hx
+      ^
+      source.hx meta.typedef.hx meta.block.hx variable.other.hx
+       ^
+       source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+        ^^^^^
+        source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+             ^
+             source.hx meta.typedef.hx meta.block.hx punctuation.separator.comma.hx
+              ^
+              source.hx meta.typedef.hx meta.block.hx
+               ^^
+               source.hx meta.typedef.hx meta.block.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+                 ^^^^^^^^^^^
+                 source.hx meta.typedef.hx meta.block.hx comment.line.double-slash.hx
+>    add : Point -> Void,
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^^^
+     source.hx meta.typedef.hx meta.block.hx variable.other.hx
+        ^
+        source.hx meta.typedef.hx meta.block.hx
+         ^
+         source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+          ^
+          source.hx meta.typedef.hx meta.block.hx
+           ^^^^^
+           source.hx meta.typedef.hx meta.block.hx entity.name.type.hx
+                ^
+                source.hx meta.typedef.hx meta.block.hx
+                 ^^
+                 source.hx meta.typedef.hx meta.block.hx keyword.operator.type.function.hx
+                   ^
+                   source.hx meta.typedef.hx meta.block.hx
+                    ^^^^
+                    source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                        ^
+                        source.hx meta.typedef.hx meta.block.hx punctuation.separator.comma.hx
+>}
+ ^
+ source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>typedef DS = Dynamic<String>;
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+           ^
+           source.hx meta.typedef.hx
+            ^
+            source.hx meta.typedef.hx keyword.operator.assignment.hx
+             ^
+             source.hx meta.typedef.hx
+              ^^^^^^^
+              source.hx meta.typedef.hx support.class.builtin.hx
+                     ^
+                     source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                      ^^^^^^
+                      source.hx meta.typedef.hx meta.type-parameters.hx support.class.builtin.hx
+                            ^
+                            source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                             ^
+                             source.hx meta.typedef.hx punctuation.terminator.hx

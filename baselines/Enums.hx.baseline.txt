@@ -1,0 +1,186 @@
+original file
+-----------------------------------
+enum Color<T1, T2> {
+    Red;
+    Green;
+    Blue;
+    Grey( v : T1 );
+    Rgb( r : Int, g : T1, ?b : T2 = null );
+    ALPHA( a : Int, col : Color );
+}
+-----------------------------------
+
+>enum Color<T1, T2> {
+ ^^^^
+ source.hx meta.enum.hx storage.type.class.hx
+     ^
+     source.hx meta.enum.hx
+      ^^^^^
+      source.hx meta.enum.hx entity.name.type.class.hx
+           ^
+           source.hx meta.enum.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+            ^^
+            source.hx meta.enum.hx meta.type-parameters.hx entity.name.type.hx
+              ^
+              source.hx meta.enum.hx meta.type-parameters.hx punctuation.separator.comma.hx
+               ^
+               source.hx meta.enum.hx meta.type-parameters.hx
+                ^^
+                source.hx meta.enum.hx meta.type-parameters.hx entity.name.type.hx
+                  ^
+                  source.hx meta.enum.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                   ^
+                   source.hx meta.enum.hx
+                    ^
+                    source.hx meta.enum.hx punctuation.definition.block.begin.hx
+>    Red;
+ ^^^^
+ source.hx meta.enum.hx meta.block.hx
+     ^^^
+     source.hx meta.enum.hx meta.block.hx entity.name.type.hx
+        ^^
+        source.hx meta.enum.hx meta.block.hx
+>    Green;
+ ^^^^
+ source.hx meta.enum.hx meta.block.hx
+     ^^^^^
+     source.hx meta.enum.hx meta.block.hx entity.name.type.hx
+          ^^
+          source.hx meta.enum.hx meta.block.hx
+>    Blue;
+ ^^^^
+ source.hx meta.enum.hx meta.block.hx
+     ^^^^
+     source.hx meta.enum.hx meta.block.hx entity.name.type.hx
+         ^^
+         source.hx meta.enum.hx meta.block.hx
+>    Grey( v : T1 );
+ ^^^^
+ source.hx meta.enum.hx meta.block.hx
+     ^^^^
+     source.hx meta.enum.hx meta.block.hx entity.name.type.hx
+         ^
+         source.hx meta.enum.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+          ^
+          source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+           ^
+           source.hx meta.enum.hx meta.block.hx meta.parameters.hx variable.parameter.hx
+            ^
+            source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+             ^
+             source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.type.annotation.hx
+              ^
+              source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+               ^^
+               source.hx meta.enum.hx meta.block.hx meta.parameters.hx entity.name.type.hx
+                 ^
+                 source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                  ^
+                  source.hx meta.enum.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                   ^^
+                   source.hx meta.enum.hx meta.block.hx
+>    Rgb( r : Int, g : T1, ?b : T2 = null );
+ ^^^^
+ source.hx meta.enum.hx meta.block.hx
+     ^^^
+     source.hx meta.enum.hx meta.block.hx entity.name.type.hx
+        ^
+        source.hx meta.enum.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+         ^
+         source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+          ^
+          source.hx meta.enum.hx meta.block.hx meta.parameters.hx variable.parameter.hx
+           ^
+           source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+            ^
+            source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.type.annotation.hx
+             ^
+             source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+              ^^^
+              source.hx meta.enum.hx meta.block.hx meta.parameters.hx support.class.builtin.hx
+                 ^
+                 source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                  ^
+                  source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                   ^
+                   source.hx meta.enum.hx meta.block.hx meta.parameters.hx variable.parameter.hx
+                    ^
+                    source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                     ^
+                     source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.type.annotation.hx
+                      ^
+                      source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                       ^^
+                       source.hx meta.enum.hx meta.block.hx meta.parameters.hx entity.name.type.hx
+                         ^
+                         source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                          ^
+                          source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                           ^
+                           source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.optional.hx
+                            ^
+                            source.hx meta.enum.hx meta.block.hx meta.parameters.hx variable.parameter.hx
+                             ^
+                             source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                              ^
+                              source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.type.annotation.hx
+                               ^
+                               source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                                ^^
+                                source.hx meta.enum.hx meta.block.hx meta.parameters.hx entity.name.type.hx
+                                  ^
+                                  source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                                   ^
+                                   source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.assignment.hx
+                                    ^
+                                    source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                                     ^^^^
+                                     source.hx meta.enum.hx meta.block.hx meta.parameters.hx constant.language.hx
+                                         ^
+                                         source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                                          ^
+                                          source.hx meta.enum.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                           ^^
+                                           source.hx meta.enum.hx meta.block.hx
+>    ALPHA( a : Int, col : Color );
+ ^^^^
+ source.hx meta.enum.hx meta.block.hx
+     ^^^^^
+     source.hx meta.enum.hx meta.block.hx variable.other.hx
+          ^
+          source.hx meta.enum.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+           ^
+           source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+            ^
+            source.hx meta.enum.hx meta.block.hx meta.parameters.hx variable.parameter.hx
+             ^
+             source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+              ^
+              source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.type.annotation.hx
+               ^
+               source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                ^^^
+                source.hx meta.enum.hx meta.block.hx meta.parameters.hx support.class.builtin.hx
+                   ^
+                   source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                    ^
+                    source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                     ^^^
+                     source.hx meta.enum.hx meta.block.hx meta.parameters.hx variable.parameter.hx
+                        ^
+                        source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                         ^
+                         source.hx meta.enum.hx meta.block.hx meta.parameters.hx keyword.operator.type.annotation.hx
+                          ^
+                          source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                           ^^^^^
+                           source.hx meta.enum.hx meta.block.hx meta.parameters.hx entity.name.type.hx
+                                ^
+                                source.hx meta.enum.hx meta.block.hx meta.parameters.hx
+                                 ^
+                                 source.hx meta.enum.hx meta.block.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                  ^^
+                                  source.hx meta.enum.hx meta.block.hx
+>}
+ ^
+ source.hx meta.enum.hx meta.block.hx punctuation.definition.block.end.hx

@@ -1,0 +1,104 @@
+original file
+-----------------------------------
+=
+==
+!=
+<=
+>=
+<
+>
+!
+&&
+||
+~
+&
+|
+^
+<<
+>>
+>>>
+--
+++
+...
++
+-
+*
+/
+%
+-----------------------------------
+
+>=
+ ^
+ source.hx keyword.operator.assignment.hx
+>==
+ ^^
+ source.hx keyword.operator.comparison.hx
+>!=
+ ^^
+ source.hx keyword.operator.comparison.hx
+><=
+ ^^
+ source.hx keyword.operator.comparison.hx
+>>=
+ ^^
+ source.hx keyword.operator.comparison.hx
+><
+ ^
+ source.hx keyword.operator.comparison.hx
+>>
+ ^
+ source.hx keyword.operator.comparison.hx
+>!
+ ^
+ source.hx keyword.operator.logical.hx
+>&&
+ ^^
+ source.hx keyword.operator.logical.hx
+>||
+ ^^
+ source.hx keyword.operator.logical.hx
+>~
+ ^
+ source.hx keyword.operator.bitwise.hx
+>&
+ ^
+ source.hx keyword.operator.bitwise.hx
+>|
+ ^
+ source.hx keyword.operator.bitwise.hx
+>^
+ ^
+ source.hx keyword.operator.bitwise.hx
+><<
+ ^^
+ source.hx keyword.operator.bitwise.hx
+>>>
+ ^^
+ source.hx keyword.operator.bitwise.hx
+>>>>
+ ^^^
+ source.hx keyword.operator.bitwise.hx
+>--
+ ^^
+ source.hx keyword.operator.increment-decrement.hx
+>++
+ ^^
+ source.hx keyword.operator.increment-decrement.hx
+>...
+ ^^^
+ source.hx keyword.operator.intiterator.hx
+>+
+ ^
+ source.hx keyword.operator.arithmetic.hx
+>-
+ ^
+ source.hx keyword.operator.arithmetic.hx
+>*
+ ^
+ source.hx keyword.operator.arithmetic.hx
+>/
+ ^
+ source.hx keyword.operator.arithmetic.hx
+>%
+ ^
+ source.hx keyword.operator.arithmetic.hx

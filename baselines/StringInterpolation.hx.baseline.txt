@@ -1,0 +1,140 @@
+original file
+-----------------------------------
+'$$variable $variable\''; /* */
+'random ${"number" + '${macro 5}' + (Math.random() * 5) /* */ }';
+-----------------------------------
+
+>'$$variable $variable\''; /* */
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^
+  source.hx string.quoted.single.hx constant.character.escape.hx
+   ^
+   source.hx string.quoted.single.hx constant.character.escape.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx
+        ^
+        source.hx string.quoted.single.hx
+         ^
+         source.hx string.quoted.single.hx
+          ^
+          source.hx string.quoted.single.hx
+           ^
+           source.hx string.quoted.single.hx
+            ^
+            source.hx string.quoted.single.hx
+             ^
+             source.hx punctuation.definition.block.begin.hx
+              ^^^^^^^^
+              source.hx variable.other.hx
+                      ^
+                      source.hx string.quoted.single.hx constant.character.escape.hx
+                       ^
+                       source.hx string.quoted.single.hx constant.character.escape.hx
+                        ^
+                        source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                         ^
+                         source.hx punctuation.terminator.hx
+                          ^
+                          source.hx
+                           ^^
+                           source.hx comment.block.hx punctuation.definition.comment.hx
+                             ^
+                             source.hx comment.block.hx
+                              ^^
+                              source.hx comment.block.hx punctuation.definition.comment.hx
+>'random ${"number" + '${macro 5}' + (Math.random() * 5) /* */ }';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^
+  source.hx string.quoted.single.hx
+   ^
+   source.hx string.quoted.single.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx
+        ^
+        source.hx string.quoted.single.hx
+         ^^
+         source.hx punctuation.definition.block.begin.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+            ^^^^^^
+            source.hx string.quoted.double.hx
+                  ^
+                  source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                   ^
+                   source.hx
+                    ^
+                    source.hx keyword.operator.arithmetic.hx
+                     ^
+                     source.hx
+                      ^
+                      source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+                       ^^
+                       source.hx punctuation.definition.block.begin.hx
+                         ^^^^^
+                         source.hx storage.modifier.hx
+                              ^
+                              source.hx
+                               ^
+                               source.hx constant.numeric.decimal.hx
+                                ^
+                                source.hx punctuation.definition.block.end.hx
+                                 ^
+                                 source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                                  ^
+                                  source.hx
+                                   ^
+                                   source.hx keyword.operator.arithmetic.hx
+                                    ^
+                                    source.hx
+                                     ^
+                                     source.hx meta.brace.round.hx
+                                      ^^^^
+                                      source.hx support.class.builtin.hx
+                                          ^
+                                          source.hx
+                                           ^^^^^^
+                                           source.hx entity.name.function.hx
+                                                 ^
+                                                 source.hx meta.brace.round.hx
+                                                  ^
+                                                  source.hx meta.brace.round.hx
+                                                   ^
+                                                   source.hx
+                                                    ^
+                                                    source.hx keyword.operator.arithmetic.hx
+                                                     ^
+                                                     source.hx
+                                                      ^
+                                                      source.hx constant.numeric.decimal.hx
+                                                       ^
+                                                       source.hx meta.brace.round.hx
+                                                        ^
+                                                        source.hx
+                                                         ^^
+                                                         source.hx comment.block.hx punctuation.definition.comment.hx
+                                                           ^
+                                                           source.hx comment.block.hx
+                                                            ^^
+                                                            source.hx comment.block.hx punctuation.definition.comment.hx
+                                                              ^
+                                                              source.hx
+                                                               ^
+                                                               source.hx punctuation.definition.block.end.hx
+                                                                ^
+                                                                source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                                                                 ^
+                                                                 source.hx punctuation.terminator.hx
