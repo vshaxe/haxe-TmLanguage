@@ -1,6 +1,6 @@
 # haxe-TmLanguage
 
-[![Build Status](https://travis-ci.org/vshaxe/vshaxe.svg?branch=master)](https://travis-ci.org/vshaxe/vshaxe)
+[![Build Status](https://travis-ci.org/vshaxe/haxe-TmLanguage.svg?branch=master)](https://travis-ci.org/vshaxe/haxe-TmLanguage)
 
 This repository contains the `.tmLanguage` grammar files for `.hx` and `.hxml` used for syntax highlighting by the [Visual Studio Code extension](https://github.com/vshaxe/vshaxe).
 
