@@ -3,6 +3,8 @@ import sys.io.File;
 
 import VscodeTextmate;
 
+using StringTools;
+
 // ported and adapted from https://github.com/Microsoft/TypeScript-TmLanguage
 class Build {
     public static inline var GENERATED_DIR = "generated";
@@ -23,8 +25,8 @@ class Build {
         var hxmlGrammar = register.loadGrammarFromPathSync("hxml.tmLanguage");
 
         for (fileName in FileSystem.readDirectory(CASES_DIR)) {
-            var text = File.getContent('$CASES_DIR/$fileName');
-            var grammar = if (StringTools.endsWith(fileName, ".hxml")) hxmlGrammar else haxeGrammar;
+            var text = File.getContent('$CASES_DIR/$fileName').replace("\r\n", "\n");
+            var grammar = if (fileName.endsWith(".hxml")) hxmlGrammar else haxeGrammar;
             var result = getScopesAtMarkers(text, grammar);
             if (result.markerScopes != null)
                 File.saveContent('$GENERATED_DIR/$fileName.txt', result.markerScopes);
@@ -46,7 +48,7 @@ class Build {
             var markerLocations = getMarkerLocations(line);
             if (markerLocations.length > 0) {
                 hasMarkers = true;
-                line = StringTools.replace(line, MARKER, "");
+                line = line.replace(MARKER, "");
             }
 
             var result = grammar.tokenizeLine(line, ruleStack);
