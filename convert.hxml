@@ -1,0 +1,5 @@
+-cp src
+-main Converter
+-lib yaml
+-lib plist
+-neko bin/convert.n
