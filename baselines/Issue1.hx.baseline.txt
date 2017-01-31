@@ -1,0 +1,62 @@
+original file
+-----------------------------------
+#if foo/*test*/#end
+#if foo//test
+#end
+
+#if (foo)/*test*/#end
+#if (foo)//
+#end
+-----------------------------------
+
+>#if foo/*test*/#end
+ ^^^^^^^
+ source.hx punctuation.definition.tag
+        ^^
+        source.hx comment.block.hx punctuation.definition.comment.hx
+          ^^^^
+          source.hx comment.block.hx
+              ^^
+              source.hx comment.block.hx punctuation.definition.comment.hx
+                ^^^^
+                source.hx punctuation.definition.tag
+>#if foo//test
+ ^^^^^^^
+ source.hx punctuation.definition.tag
+        ^^
+        source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+          ^^^^^
+          source.hx comment.line.double-slash.hx
+>#end
+ ^^^^
+ source.hx punctuation.definition.tag
+>
+ ^
+ source.hx
+>#if (foo)/*test*/#end
+ ^^^^^
+ source.hx punctuation.definition.tag punctuation.definition.tag
+      ^^^
+      source.hx punctuation.definition.tag
+         ^
+         source.hx punctuation.definition.tag
+          ^^
+          source.hx comment.block.hx punctuation.definition.comment.hx
+            ^^^^
+            source.hx comment.block.hx
+                ^^
+                source.hx comment.block.hx punctuation.definition.comment.hx
+                  ^^^^
+                  source.hx punctuation.definition.tag
+>#if (foo)//
+ ^^^^^
+ source.hx punctuation.definition.tag punctuation.definition.tag
+      ^^^
+      source.hx punctuation.definition.tag
+         ^
+         source.hx punctuation.definition.tag
+          ^^
+          source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+>#end
+ ^^^^
+ source.hx punctuation.definition.tag

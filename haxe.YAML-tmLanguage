@@ -192,7 +192,7 @@ repository:
     endCaptures:
       '1': {name: punctuation.definition.block.begin.hx}
     patterns:
-    - include: '#type'   
+    - include: '#type'
   enum-block:
     begin: (?<=\{)
     end: (\})
@@ -740,7 +740,7 @@ repository:
         end: (?=\))
         patterns:
         - include: '#type'
-      - include: '#block-contents'      
+      - include: '#block-contents'
     - match: \b(try|catch|throw)\b
       name: keyword.control.catch-exception.hx
     - begin: \b(case|default)\b
@@ -819,7 +819,7 @@ repository:
     # the correct scope is meta.preprocessor, but at least in the default theme,
     # the gray of punctuation.definition.tag looks _much_ better
     patterns:
-    - match: ((#(if|elseif))[\s!]+([a-zA-Z0-9_]+)\s)
+    - match: ((#(if|elseif))[\s!]+([a-zA-Z0-9_]+)(?=\s|/*|//))
       captures:
         '0': {name: punctuation.definition.tag}
     - begin: ((#(if|elseif))[\s!]*\()

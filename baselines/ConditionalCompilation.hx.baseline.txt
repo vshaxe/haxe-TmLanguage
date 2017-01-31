@@ -36,7 +36,7 @@ class Foo {
 -----------------------------------
 
 >#if flash8
- ^^^^^^^^^^^
+ ^^^^^^^^^^
  source.hx punctuation.definition.tag
 >// Haxe code specific for flash player 8
  ^^
@@ -44,7 +44,7 @@ class Foo {
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    source.hx comment.line.double-slash.hx
 >#elseif flash
- ^^^^^^^^^^^^^^
+ ^^^^^^^^^^^^^
  source.hx punctuation.definition.tag
 >// Haxe code specific for flash platform (any version)
  ^^
@@ -52,7 +52,7 @@ class Foo {
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    source.hx comment.line.double-slash.hx
 >#elseif js
- ^^^^^^^^^^^
+ ^^^^^^^^^^
  source.hx punctuation.definition.tag
 >// Haxe code specific for javascript plaform
  ^^
@@ -60,7 +60,7 @@ class Foo {
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    source.hx comment.line.double-slash.hx
 >#elseif neko
- ^^^^^^^^^^^^^
+ ^^^^^^^^^^^^
  source.hx punctuation.definition.tag
 >// Haxe code specific for neko plaform
  ^^
@@ -237,7 +237,7 @@ class Foo {
 >        #if foo
  ^^^^^^^^
  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-         ^^^^^^^^
+         ^^^^^^^
          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
 >            #if !!(flash || js)
  ^^^^^^^^^^^^
@@ -370,8 +370,10 @@ class Foo {
                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.language.hx
                                           ^
                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-                                           ^^^^^^^^^^^^^^
+                                           ^^^^^^^^^^^^^
                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                                                        ^
+                                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
                                                          ^^^^^^
                                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
                                                                ^
