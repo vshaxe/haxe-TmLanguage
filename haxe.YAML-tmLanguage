@@ -873,7 +873,7 @@ repository:
     match: ;
     name: punctuation.terminator.hx
   constant-name:
-    match: '\b([_A-Z][_A-Z0-9]+)\b'
+    match: '\b([_A-Z][_A-Z0-9]*)\b'
     name: variable.other.hx
   type:
     patterns:
