@@ -12,15 +12,21 @@ class Test {
         var hasError = false;
         for (file in FileSystem.readDirectory(GENERATED_DIR)) {
             var generatedText = File.getContent('$GENERATED_DIR/$file');
-            var baselinesText = File.getContent('$BASELINES_DIR/$file');
+            var baseline = '$BASELINES_DIR/$file';
+            if (!FileSystem.exists(baseline)) {
+                Sys.println('Warning: "$file" has no baseline.');
+                continue;
+            }
+            var baselinesText = File.getContent(baseline);
             if (removeNewlines(generatedText) != removeNewlines(baselinesText)) {
                 hasError = true;
-                Sys.println('File $file is not the same as the baseline!');
+                Sys.println('Error: "$file" is not the same as the baseline!');
             }
         }
+        
+        Sys.println(" \n" + if (hasError) "Failed!" else "Success.");
         if (hasError)
             Sys.exit(1);
-        Sys.println("Test done.");
     }
 
     static function removeNewlines(text:String):String {
