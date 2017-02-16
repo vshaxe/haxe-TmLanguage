@@ -536,7 +536,7 @@ repository:
     - include: '#method-name-post'
     - include: '#method-block'
   method-name:
-    begin: \b(function)\b\s*(?:(new)|([_A-Za-z]\w*))?
+    begin: \b(function)\b\s*\b(?:(new)|([_A-Za-z]\w*))?\b
     beginCaptures:
       '1': {name: storage.type.function.hx}
       '2': {name: storage.type.hx}
