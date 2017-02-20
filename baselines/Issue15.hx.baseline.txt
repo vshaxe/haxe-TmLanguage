@@ -1,0 +1,66 @@
+original file
+-----------------------------------
+var a, // comment
+    b;
+
+var a #if foo : Int #end,
+    b;
+-----------------------------------
+
+>var a, // comment
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx punctuation.separator.comma.hx
+       ^
+       source.hx
+        ^^
+        source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+          ^^^^^^^^^
+          source.hx comment.line.double-slash.hx
+>    b;
+ ^^^^
+ source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>var a #if foo : Int #end,
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx
+       ^^^^^^^
+       source.hx punctuation.definition.tag
+              ^
+              source.hx
+               ^
+               source.hx keyword.operator.type.annotation.hx
+                ^
+                source.hx
+                 ^^^
+                 source.hx support.class.builtin.hx
+                    ^
+                    source.hx
+                     ^^^^
+                     source.hx punctuation.definition.tag
+                         ^
+                         source.hx punctuation.separator.comma.hx
+>    b;
+ ^^^^
+ source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx punctuation.terminator.hx
