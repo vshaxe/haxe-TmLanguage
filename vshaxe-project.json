@@ -1,0 +1,86 @@
+{
+    "inherit": "vshaxe-node",
+    "haxelibs": [
+        {
+            "name": "yaml",
+            "installArgs": ["install", "yaml"]
+        },
+        {
+            "name": "plist",
+            "installArgs": ["git", "plist", "https://github.com/back2dos/plist"]
+        }
+    ],
+    "targets": [
+        {
+            "name": "tm-language",
+            "composite": true,
+            "targetDependencies": [
+                "tm-language-conversion",
+                "tm-language-tests"
+            ],
+            "args": {
+                "debug": true
+            }
+        },
+        {
+            "inherit": "empty",
+            "name": "tm-language-conversion",
+            "args": {
+                "haxelibs": ["yaml", "plist"],
+                "classPaths": [
+                    "src"
+                ],
+                "output": {
+                    "target": "neko",
+                    "path": "bin/convert.n"
+                },
+                "main": "Converter",
+
+                "debug": true
+            },
+            "afterBuildCommands": [
+                ["neko", "bin/convert.n"]
+            ]
+        },
+        {
+            "name": "tm-language-build-tests",
+            "installCommands": [
+                ["npm", "install", "vscode-textmate"]
+            ],
+            "args": {
+                "classPaths": [
+                "src"
+                ],
+                "output": {
+                    "target": "js",
+                    "path": "bin/build.js"
+                },
+                "main": "Build",
+                "debug": true
+            },
+            "afterBuildCommands": [
+                ["node", "bin/build.js"]
+            ]
+        },
+        {
+            "name": "tm-language-tests",
+            "targetDependencies": [
+                "tm-language-build-tests"
+            ],
+            "args": {
+                "classPaths": [
+                    "src"
+                ],
+                "output": {
+                    "target": "js",
+                    "path": "bin/test.js"
+                },
+                "main": "Test",
+                "debug": true
+            },
+            "afterBuildCommands": [
+                ["node", "bin/test.js"]
+            ]
+        }
+    ]
+}
