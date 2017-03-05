@@ -1,5 +1,6 @@
 language: haxe
 sudo: false
+dist: trusty
 haxe:
  - development
 
