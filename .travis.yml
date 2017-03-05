@@ -4,10 +4,7 @@ haxe:
  - development
 
 install:
- - haxelib install hxnodejs
- - haxelib install yaml
- - haxelib git plist https://github.com/back2dos/plist
- - npm install vscode-textmate
+ - haxelib git vshaxe-build https://github.com/vshaxe/vshaxe-build
 
 script:
- - haxe all.hxml
+ - haxelib run vshaxe-build -t tm-language -m both
