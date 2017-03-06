@@ -1,5 +1,6 @@
 {
     "inherit": "vshaxe-node",
+    "mainTarget": "tm-language",
     "haxelibs": [
         {
             "name": "yaml",
