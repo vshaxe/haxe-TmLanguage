@@ -833,18 +833,24 @@ repository:
     - match: ((#(if|elseif))[\s!]+([a-zA-Z0-9_]+)(?=\s|/*|//))
       captures:
         '0': {name: punctuation.definition.tag}
-    - begin: ((#(if|elseif))[\s!]*\()
+    - begin: ((#(if|elseif))[\s!]*)(?=\()
       beginCaptures:
         '0': {name: punctuation.definition.tag}
-      end: (\)|\n)
+      end: (?<=\)|\n)
+      endCaptures:
+        '0': {name: punctuation.definition.tag}
       name: punctuation.definition.tag
       patterns:
-      - begin: \(
-        end: \)
+      - include: '#conditional-compilation-parens'
     - match: (#(end|else|error|line))
       name: punctuation.definition.tag
     - match: '(#([a-zA-Z0-9_]*))\s'
       name: punctuation.definition.tag
+  conditional-compilation-parens:
+    begin: '\('
+    end: '\)'
+    patterns:
+    - include: '#conditional-compilation-parens'
   operator-assignment:
     match: (=)
     name: keyword.operator.assignment.hx

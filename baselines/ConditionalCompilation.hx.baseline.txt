@@ -5,9 +5,9 @@ original file
 #elseif flash
 // Haxe code specific for flash platform (any version)
 #elseif js
-// Haxe code specific for javascript plaform
+// Haxe code specific for javascript platform
 #elseif neko
-// Haxe code specific for neko plaform
+// Haxe code specific for neko platform
 #else
 // do something else
     #error  // will display an error "Not implemented on this platform"
@@ -54,18 +54,18 @@ class Foo {
 >#elseif js
  ^^^^^^^^^^
  source.hx punctuation.definition.tag
->// Haxe code specific for javascript plaform
+>// Haxe code specific for javascript platform
  ^^
  source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    source.hx comment.line.double-slash.hx
 >#elseif neko
  ^^^^^^^^^^^^
  source.hx punctuation.definition.tag
->// Haxe code specific for neko plaform
+>// Haxe code specific for neko platform
  ^^
  source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    source.hx comment.line.double-slash.hx
 >#else
  ^^^^^
@@ -193,8 +193,10 @@ class Foo {
 >        #if ((haxe_ver >= 3.1) && foo)
  ^^^^^^^^
  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-         ^^^^^
+         ^^^^
          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag punctuation.definition.tag
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
               ^
               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
                ^^^^^^^^^^^^^^^
@@ -242,8 +244,10 @@ class Foo {
 >            #if !!(flash || js)
  ^^^^^^^^^^^^
  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-             ^^^^^^^
+             ^^^^^^
              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag punctuation.definition.tag
+                   ^
+                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
                     ^^^^^^^^^^^
                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
                                ^
@@ -354,8 +358,10 @@ class Foo {
 >        #if (haxe_ver >= 3.1) return true #elseif false return false #else throw "error" #end ;
  ^^^^^^^^
  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-         ^^^^^
+         ^^^^
          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag punctuation.definition.tag
+             ^
+             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
               ^^^^^^^^^^^^^^^
               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
                              ^

@@ -3,9 +3,9 @@
 #elseif flash
 // Haxe code specific for flash platform (any version)
 #elseif js
-// Haxe code specific for javascript plaform
+// Haxe code specific for javascript platform
 #elseif neko
-// Haxe code specific for neko plaform
+// Haxe code specific for neko platform
 #else
 // do something else
     #error  // will display an error "Not implemented on this platform"

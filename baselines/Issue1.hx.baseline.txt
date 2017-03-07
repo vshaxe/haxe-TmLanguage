@@ -34,8 +34,10 @@ original file
  ^
  source.hx
 >#if (foo)/*test*/#end
- ^^^^^
+ ^^^^
  source.hx punctuation.definition.tag punctuation.definition.tag
+     ^
+     source.hx punctuation.definition.tag
       ^^^
       source.hx punctuation.definition.tag
          ^
@@ -49,8 +51,10 @@ original file
                   ^^^^
                   source.hx punctuation.definition.tag
 >#if (foo)//
- ^^^^^
+ ^^^^
  source.hx punctuation.definition.tag punctuation.definition.tag
+     ^
+     source.hx punctuation.definition.tag
       ^^^
       source.hx punctuation.definition.tag
          ^

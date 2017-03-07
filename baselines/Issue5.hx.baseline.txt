@@ -1,0 +1,28 @@
+original file
+-----------------------------------
+#if (((foo)) && bar)
+#end
+-----------------------------------
+
+>#if (((foo)) && bar)
+ ^^^^
+ source.hx punctuation.definition.tag punctuation.definition.tag
+     ^
+     source.hx punctuation.definition.tag
+      ^
+      source.hx punctuation.definition.tag
+       ^
+       source.hx punctuation.definition.tag
+        ^^^
+        source.hx punctuation.definition.tag
+           ^
+           source.hx punctuation.definition.tag
+            ^
+            source.hx punctuation.definition.tag
+             ^^^^^^^
+             source.hx punctuation.definition.tag
+                    ^
+                    source.hx punctuation.definition.tag
+>#end
+ ^^^^
+ source.hx punctuation.definition.tag
