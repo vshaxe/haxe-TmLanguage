@@ -1,0 +1,72 @@
+original file
+-----------------------------------
+typedef Bar<T> = {
+    >Foo<String>,
+    >FooBar,
+    var a:Int;
+}
+-----------------------------------
+
+>typedef Bar<T> = {
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+            ^
+            source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+             ^
+             source.hx meta.typedef.hx meta.type-parameters.hx entity.name.type.hx
+              ^
+              source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+               ^
+               source.hx meta.typedef.hx
+                ^
+                source.hx meta.typedef.hx keyword.operator.assignment.hx
+                 ^
+                 source.hx meta.typedef.hx
+                  ^
+                  source.hx meta.typedef.hx punctuation.definition.block.begin.hx
+>    >Foo<String>,
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx
+      ^^^
+      source.hx meta.typedef.hx meta.block.hx entity.name.type.hx
+         ^
+         source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+          ^^^^^^
+          source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx support.class.builtin.hx
+                ^
+                source.hx meta.typedef.hx meta.block.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                 ^
+                 source.hx meta.typedef.hx meta.block.hx
+>    >FooBar,
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx
+      ^^^^^^
+      source.hx meta.typedef.hx meta.block.hx entity.name.type.hx
+            ^
+            source.hx meta.typedef.hx meta.block.hx
+>    var a:Int;
+ ^^^^
+ source.hx meta.typedef.hx meta.block.hx
+     ^^^
+     source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+        ^
+        source.hx meta.typedef.hx meta.block.hx
+         ^
+         source.hx meta.typedef.hx meta.block.hx variable.other.hx
+          ^
+          source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+           ^^^
+           source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+              ^
+              source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx

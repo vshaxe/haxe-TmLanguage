@@ -286,9 +286,15 @@ repository:
     - include: '#modifiers'
     - include: '#punctuation-comma'
     - include: '#operator-optional'
+    - include: '#typedef-extension'
     - include: '#typedef-simple-field-type-hint'
     - include: '#identifier-name'
     - include: '#strings'
+  typedef-extension:
+    begin: '>'
+    end: ','
+    patterns:
+    - include: '#type'
   typedef-simple-field-type-hint:
     begin: ':'
     beginCaptures:
