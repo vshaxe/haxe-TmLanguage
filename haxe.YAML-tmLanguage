@@ -201,6 +201,7 @@ repository:
     name: meta.block.hx
     patterns:
     - include: '#global'
+    - include: '#metadata'
     - include: '#parameters'
     - include: '#identifiers'
   interface:
