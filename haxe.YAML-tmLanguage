@@ -92,7 +92,8 @@ repository:
     name: meta.abstract.hx
     patterns:
     - include: '#abstract-name'
-    - include: '#abstract-name-post'
+    - include: '#abstract-underlying-type'
+    - include: '#abstract-implicit-cast'
     - include: '#abstract-block'
   abstract-name:
     begin: \b(abstract)\b
@@ -103,21 +104,29 @@ repository:
       '1': {name: entity.name.type.class.hx}
     patterns:
     - include: '#global'
-  abstract-name-post:
-    begin: (?<=\w)
-    end: ([\{;])
+  abstract-underlying-type:
+    begin: \(
+    beginCaptures:
+      '0': {name: meta.brace.round.hx}
+    end: \)
     endCaptures:
-      '1': {name: punctuation.definition.block.begin.hx}
+      '0': {name: meta.brace.round.hx}
     patterns:
     - include: '#global'
-    - match: \b(from|to)\b
-      name: keyword.other.hx
     - include: '#type'
-    - match: '[\(\)]'
-      name: punctuation.definition.other.hx
+  abstract-implicit-cast:
+    begin: \b(from|to)\b
+    beginCaptures:
+      '1': {name: keyword.other.hx}
+    end: (?=(\b(from|to|{)\b))
+    patterns:
+    - include: '#global'
+    - include: '#type'
   abstract-block:
-    begin: (?<=\{)
-    end: (\})
+    begin: ({)
+    beginCaptures:
+      '1': {name: foo.bar.hx}
+    end: (})
     endCaptures:
       '1': {name: punctuation.definition.block.end.hx}
     name: meta.block.hx
