@@ -1,0 +1,272 @@
+original file
+-----------------------------------
+() -> 1;
+(?a:Int) -> a;
+(a:Int=1, b:String) -> a + b.length;
+map = [1 => a -> a + a, 2 => a -> a + a, 3 => a -> a + a];
+(() -> 1:Void->Int);
+
+var f:Void->Int;
+var f:Int->Int->(Int->Int);
+-----------------------------------
+
+>() -> 1;
+ ^
+ source.hx meta.brace.round.hx
+  ^
+  source.hx meta.brace.round.hx
+   ^
+   source.hx
+    ^^
+    source.hx storage.type.function.arrow.hx
+      ^
+      source.hx
+       ^
+       source.hx constant.numeric.decimal.hx
+        ^
+        source.hx punctuation.terminator.hx
+>(?a:Int) -> a;
+ ^
+ source.hx meta.brace.round.hx
+  ^
+  source.hx keyword.operator.ternary.hx
+   ^
+   source.hx variable.other.hx
+    ^
+    source.hx keyword.operator.ternary.hx
+     ^^^
+     source.hx support.class.builtin.hx
+        ^
+        source.hx meta.brace.round.hx
+         ^
+         source.hx
+          ^^
+          source.hx storage.type.function.arrow.hx
+            ^
+            source.hx
+             ^
+             source.hx variable.other.hx
+              ^
+              source.hx punctuation.terminator.hx
+>(a:Int=1, b:String) -> a + b.length;
+ ^
+ source.hx meta.brace.round.hx
+  ^
+  source.hx variable.other.hx
+   ^
+   source.hx keyword.operator.type.annotation.hx
+    ^^^
+    source.hx support.class.builtin.hx
+       ^^^^^
+       source.hx
+            ^
+            source.hx keyword.operator.type.annotation.hx
+             ^^^^^^
+             source.hx support.class.builtin.hx
+                   ^
+                   source.hx meta.brace.round.hx
+                    ^
+                    source.hx
+                     ^^
+                     source.hx storage.type.function.arrow.hx
+                       ^
+                       source.hx
+                        ^
+                        source.hx variable.other.hx
+                         ^
+                         source.hx
+                          ^
+                          source.hx keyword.operator.arithmetic.hx
+                           ^
+                           source.hx
+                            ^
+                            source.hx variable.other.hx
+                             ^
+                             source.hx
+                              ^^^^^^
+                              source.hx variable.other.hx
+                                    ^
+                                    source.hx punctuation.terminator.hx
+>map = [1 => a -> a + a, 2 => a -> a + a, 3 => a -> a + a];
+ ^^^
+ source.hx variable.other.hx
+    ^
+    source.hx
+     ^
+     source.hx keyword.operator.assignment.hx
+      ^
+      source.hx
+       ^
+       source.hx meta.array.literal.hx punctuation.definition.array.begin.hx
+        ^
+        source.hx meta.array.literal.hx constant.numeric.decimal.hx
+         ^
+         source.hx meta.array.literal.hx
+          ^
+          source.hx meta.array.literal.hx keyword.operator.assignment.hx
+           ^
+           source.hx meta.array.literal.hx keyword.operator.comparison.hx
+            ^
+            source.hx meta.array.literal.hx
+             ^
+             source.hx meta.array.literal.hx variable.other.hx
+              ^
+              source.hx meta.array.literal.hx
+               ^^
+               source.hx meta.array.literal.hx storage.type.function.arrow.hx
+                 ^
+                 source.hx meta.array.literal.hx
+                  ^
+                  source.hx meta.array.literal.hx variable.other.hx
+                   ^
+                   source.hx meta.array.literal.hx
+                    ^
+                    source.hx meta.array.literal.hx keyword.operator.arithmetic.hx
+                     ^
+                     source.hx meta.array.literal.hx
+                      ^
+                      source.hx meta.array.literal.hx variable.other.hx
+                       ^
+                       source.hx meta.array.literal.hx punctuation.separator.comma.hx
+                        ^
+                        source.hx meta.array.literal.hx
+                         ^
+                         source.hx meta.array.literal.hx constant.numeric.decimal.hx
+                          ^
+                          source.hx meta.array.literal.hx
+                           ^
+                           source.hx meta.array.literal.hx keyword.operator.assignment.hx
+                            ^
+                            source.hx meta.array.literal.hx keyword.operator.comparison.hx
+                             ^
+                             source.hx meta.array.literal.hx
+                              ^
+                              source.hx meta.array.literal.hx variable.other.hx
+                               ^
+                               source.hx meta.array.literal.hx
+                                ^^
+                                source.hx meta.array.literal.hx storage.type.function.arrow.hx
+                                  ^
+                                  source.hx meta.array.literal.hx
+                                   ^
+                                   source.hx meta.array.literal.hx variable.other.hx
+                                    ^
+                                    source.hx meta.array.literal.hx
+                                     ^
+                                     source.hx meta.array.literal.hx keyword.operator.arithmetic.hx
+                                      ^
+                                      source.hx meta.array.literal.hx
+                                       ^
+                                       source.hx meta.array.literal.hx variable.other.hx
+                                        ^
+                                        source.hx meta.array.literal.hx punctuation.separator.comma.hx
+                                         ^
+                                         source.hx meta.array.literal.hx
+                                          ^
+                                          source.hx meta.array.literal.hx constant.numeric.decimal.hx
+                                           ^
+                                           source.hx meta.array.literal.hx
+                                            ^
+                                            source.hx meta.array.literal.hx keyword.operator.assignment.hx
+                                             ^
+                                             source.hx meta.array.literal.hx keyword.operator.comparison.hx
+                                              ^
+                                              source.hx meta.array.literal.hx
+                                               ^
+                                               source.hx meta.array.literal.hx variable.other.hx
+                                                ^
+                                                source.hx meta.array.literal.hx
+                                                 ^^
+                                                 source.hx meta.array.literal.hx storage.type.function.arrow.hx
+                                                   ^
+                                                   source.hx meta.array.literal.hx
+                                                    ^
+                                                    source.hx meta.array.literal.hx variable.other.hx
+                                                     ^
+                                                     source.hx meta.array.literal.hx
+                                                      ^
+                                                      source.hx meta.array.literal.hx keyword.operator.arithmetic.hx
+                                                       ^
+                                                       source.hx meta.array.literal.hx
+                                                        ^
+                                                        source.hx meta.array.literal.hx variable.other.hx
+                                                         ^
+                                                         source.hx meta.array.literal.hx punctuation.definition.array.end.hx
+                                                          ^
+                                                          source.hx punctuation.terminator.hx
+>(() -> 1:Void->Int);
+ ^
+ source.hx meta.brace.round.hx
+  ^
+  source.hx meta.brace.round.hx
+   ^
+   source.hx meta.brace.round.hx
+    ^
+    source.hx
+     ^^
+     source.hx storage.type.function.arrow.hx
+       ^
+       source.hx
+        ^
+        source.hx constant.numeric.decimal.hx
+         ^
+         source.hx keyword.operator.type.annotation.hx
+          ^^^^
+          source.hx support.class.builtin.hx
+              ^^
+              source.hx keyword.operator.type.function.hx
+                ^^^
+                source.hx support.class.builtin.hx
+                   ^
+                   source.hx meta.brace.round.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>var f:Void->Int;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^^
+       source.hx support.class.builtin.hx
+           ^^
+           source.hx keyword.operator.type.function.hx
+             ^^^
+             source.hx support.class.builtin.hx
+                ^
+                source.hx punctuation.terminator.hx
+>var f:Int->Int->(Int->Int);
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^
+       source.hx support.class.builtin.hx
+          ^^
+          source.hx keyword.operator.type.function.hx
+            ^^^
+            source.hx support.class.builtin.hx
+               ^^
+               source.hx keyword.operator.type.function.hx
+                 ^
+                 source.hx
+                  ^^^
+                  source.hx support.class.builtin.hx
+                     ^^
+                     source.hx keyword.operator.type.function.hx
+                       ^^^
+                       source.hx support.class.builtin.hx
+                          ^
+                          source.hx
+                           ^
+                           source.hx punctuation.terminator.hx

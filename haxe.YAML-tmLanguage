@@ -776,6 +776,8 @@ repository:
       name: keyword.operator.new.hx
     - match: \b(abstract|class|enum|interface|typedef)\b
       name: storage.type.hx
+    - match: '->'
+      name: storage.type.function.arrow.hx
     - include: '#modifiers'
     - include: '#modifiers-inheritance'
   punctuation-braces:
