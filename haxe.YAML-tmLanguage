@@ -41,6 +41,7 @@ repository:
     - include: '#strings'
     - include: '#metadata'
     - include: '#method'
+    - include: '#arrow-function'
     - include: '#variable'
     - include: '#modifiers'
     - include: '#new-expr'
@@ -574,6 +575,17 @@ repository:
     patterns:
     - include: '#block'
     - include: '#block-contents'
+  arrow-function:
+    begin: '(\()(?=[^(]*?\)\s*->)'
+    beginCaptures:
+      '1': {name: punctuation.definition.parameters.begin.hx}
+    end: '(\))\s*(->)'
+    endCaptures:
+      '1': {name: punctuation.definition.parameters.end.hx}
+      '2': {name: storage.type.function.arrow.hx}
+    name: meta.method.arrow.hx
+    patterns:
+    - include: '#parameter'
   parameters:
     begin: \(
     beginCaptures:
