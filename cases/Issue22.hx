@@ -1,0 +1,1 @@
+Foo(macro:Dynamic, test());

@@ -808,7 +808,7 @@ repository:
     - include: '#block-contents'
     - include: '#type-check'
   type-check:
-    begin: (?=:)
+    begin: (?<!macro)(?=:)
     end: (?=\))
     patterns:
     - include: '#operator-type-hint'

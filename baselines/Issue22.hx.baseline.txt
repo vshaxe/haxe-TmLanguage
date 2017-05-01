@@ -1,0 +1,30 @@
+original file
+-----------------------------------
+Foo(macro:Dynamic, test());
+-----------------------------------
+
+>Foo(macro:Dynamic, test());
+ ^^^
+ source.hx entity.name.type.hx
+    ^
+    source.hx meta.brace.round.hx
+     ^^^^^
+     source.hx storage.modifier.hx
+          ^
+          source.hx
+           ^^^^^^^
+           source.hx support.class.builtin.hx
+                  ^
+                  source.hx punctuation.separator.comma.hx
+                   ^
+                   source.hx
+                    ^^^^
+                    source.hx entity.name.function.hx
+                        ^
+                        source.hx meta.brace.round.hx
+                         ^
+                         source.hx meta.brace.round.hx
+                          ^
+                          source.hx meta.brace.round.hx
+                           ^
+                           source.hx punctuation.terminator.hx
