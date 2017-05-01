@@ -549,7 +549,7 @@ repository:
       '1': {name: storage.type.function.hx}
       '2': {name: storage.type.hx}
       '3': {name: entity.name.function.hx}
-    end: (?=\()
+    end: (?=$|\()
     patterns:
     - include: '#macro-reification'
     - include: '#type-parameters'
@@ -653,7 +653,7 @@ repository:
     begin: \b(var)\b
     beginCaptures:
       '1': {name: storage.type.variable.hx}
-    end: ([_a-zA-Z]\w*)
+    end: (?=$)|([_a-zA-Z]\w*)
     endCaptures:
       '1': {name: variable.other.hx}
   variable-name-next:

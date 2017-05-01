@@ -1,0 +1,42 @@
+original file
+-----------------------------------
+class A {
+    function
+    var
+}
+
+// comment
+-----------------------------------
+
+>class A {
+ ^^^^^
+ source.hx meta.class.hx meta.class.identifier.hx storage.type.class.hx
+      ^
+      source.hx meta.class.hx meta.class.identifier.hx
+       ^
+       source.hx meta.class.hx meta.class.identifier.hx entity.name.type.class.hx
+        ^
+        source.hx meta.class.hx
+         ^
+         source.hx meta.class.hx punctuation.definition.block.begin.hx
+>    function
+ ^^^^
+ source.hx meta.class.hx meta.block.hx
+     ^^^^^^^^
+     source.hx meta.class.hx meta.block.hx meta.method.hx storage.type.function.hx
+>    var
+ ^^^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx
+     ^^^
+     source.hx meta.class.hx meta.block.hx meta.method.hx storage.type.variable.hx
+>}
+ ^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx
+>
+ ^
+ source.hx meta.class.hx meta.block.hx meta.method.hx
+>// comment
+ ^^
+ source.hx meta.class.hx meta.block.hx meta.method.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^
+   source.hx meta.class.hx meta.block.hx meta.method.hx comment.line.double-slash.hx
