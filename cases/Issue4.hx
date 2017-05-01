@@ -1,6 +1,9 @@
 class A {
     function
     var
-}
+    var 
+    var foo:
 
-// comment
+    // comment
+    function foo() {}
+}

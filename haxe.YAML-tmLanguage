@@ -641,7 +641,7 @@ repository:
     name: keyword.operator.optional.hx
   variable:
     begin: (?=\bvar\b)
-    end: (;)
+    end: (?=$)|(;)
     endCaptures:
       '1': {name: punctuation.terminator.hx}
     patterns:
@@ -669,7 +669,7 @@ repository:
     begin: ':'
     beginCaptures:
       '0': {name: keyword.operator.type.annotation.hx}
-    end: (?=;|,|=)
+    end: (?=$|;|,|=)
     patterns:
     - include: '#type'
   variable-assign:
