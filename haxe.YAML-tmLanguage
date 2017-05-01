@@ -800,6 +800,7 @@ repository:
     endCaptures:
       '0': {name: meta.brace.round.hx}
     patterns:
+    - include: '#keywords'
     - include: '#method-call'
     # is-operator, only allowed with mandatory braces
     - match: \bis\b

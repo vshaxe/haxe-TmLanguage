@@ -1,0 +1,34 @@
+original file
+-----------------------------------
+Foo(if (true) true else false);
+-----------------------------------
+
+>Foo(if (true) true else false);
+ ^^^
+ source.hx entity.name.type.hx
+    ^
+    source.hx meta.brace.round.hx
+     ^^
+     source.hx keyword.control.flow-control.hx
+       ^^
+       source.hx
+         ^^^^
+         source.hx constant.language.hx
+             ^
+             source.hx meta.brace.round.hx
+              ^
+              source.hx
+               ^^^^
+               source.hx constant.language.hx
+                   ^
+                   source.hx
+                    ^^^^
+                    source.hx keyword.control.flow-control.hx
+                        ^
+                        source.hx
+                         ^^^^^
+                         source.hx constant.language.hx
+                              ^
+                              source.hx meta.brace.round.hx
+                               ^
+                               source.hx punctuation.terminator.hx
