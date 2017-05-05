@@ -714,7 +714,7 @@ repository:
     begin: (?<!\.)\b(new)\b
     beginCaptures:
       '1': { name: keyword.operator.new.hx }
-    end: (?=\()
+    end: (?=$|\()
     patterns:
     - include: '#type'
   for-loop:
@@ -932,7 +932,7 @@ repository:
     begin: (<)
     beginCaptures:
       '1': {name: punctuation.definition.typeparameters.begin.hx}
-    end: (>)
+    end: (?=$)|(>)
     endCaptures:
       '1': {name: punctuation.definition.typeparameters.end.hx}
     name: meta.type-parameters.hx
