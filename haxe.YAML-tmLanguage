@@ -924,7 +924,7 @@ repository:
     - match: \b(Any|Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|Enum|EnumValue|EReg|Float|IMap|Int|IntIterator|Iterable|Iterator|Lambda|List|ListIterator|ListNode|Map|Math|Null|Reflect|Std|String|StringBuf|StringTools|Sys|Type|UInt|ValueType|Void|Xml|XmlType)\b
       captures:
         '1': {name: support.class.builtin.hx}
-    - match: \b((_*[a-z]\w*\.)*)(_*[A-Z]\w*)\b
+    - match: \b(?<!\.)((_*[a-z]\w*\.)*)(_*[A-Z]\w*)\b
       captures:
         '1': {name: support.package.hx}
         '3': {name: entity.name.type.hx}

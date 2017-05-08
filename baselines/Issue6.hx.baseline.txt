@@ -1,0 +1,22 @@
+original file
+-----------------------------------
+Type.property.Property
+pckage.Type
+-----------------------------------
+
+>Type.property.Property
+ ^^^^
+ source.hx support.class.builtin.hx
+     ^
+     source.hx
+      ^^^^^^^^
+      source.hx variable.other.hx
+              ^
+              source.hx
+               ^^^^^^^^
+               source.hx variable.other.hx
+>pckage.Type
+ ^^^^^^^
+ source.hx support.package.hx
+        ^^^^
+        source.hx entity.name.type.hx
