@@ -1,0 +1,24 @@
+original file
+-----------------------------------
+import module.Module.SubType as Foo;
+-----------------------------------
+
+>import module.Module.SubType as Foo;
+ ^^^^^^
+ source.hx storage.type.import.hx
+       ^
+       source.hx
+        ^^^^^^^
+        source.hx support.package.hx
+               ^^^^^^^^^^^^^^
+               source.hx entity.name.type.hx
+                             ^
+                             source.hx
+                              ^^
+                              source.hx keyword.other.hx
+                                ^
+                                source.hx
+                                 ^^^
+                                 source.hx entity.name.type.hx
+                                    ^
+                                    source.hx punctuation.terminator.hx
