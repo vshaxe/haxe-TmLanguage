@@ -430,9 +430,9 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
                               ^^^^^^^^^
                               source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
                                        ^
-                                       source.hx meta.method.hx meta.parameters.hx
+                                       source.hx meta.method.hx meta.parameters.hx support.package.hx
                                         ^^^^^^^^
-                                        source.hx meta.method.hx meta.parameters.hx variable.other.hx
+                                        source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
                                                 ^
                                                 source.hx meta.method.hx meta.parameters.hx
 >    value2:/**/{ /**/ ?foo /**/ : /**/ Dynamic /**/ <String> /**/ }):Void

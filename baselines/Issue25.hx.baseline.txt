@@ -1,0 +1,22 @@
+original file
+-----------------------------------
+var f:Foo.SubType;
+-----------------------------------
+
+>var f:Foo.SubType;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^^^
+       source.hx entity.name.type.hx
+          ^
+          source.hx support.package.hx
+           ^^^^^^^
+           source.hx entity.name.type.hx
+                  ^
+                  source.hx punctuation.terminator.hx
