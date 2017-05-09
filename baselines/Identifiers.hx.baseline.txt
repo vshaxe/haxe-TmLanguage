@@ -6,6 +6,7 @@ UPPER_CASE;
 Math.PI;
 Math.POSITIVE_INFINITY;
 __Int64;
+FlxColor.BLUE;
 -----------------------------------
 
 >varName;
@@ -46,3 +47,12 @@ __Int64;
  source.hx entity.name.type.hx
         ^
         source.hx punctuation.terminator.hx
+>FlxColor.BLUE;
+ ^^^^^^^^
+ source.hx entity.name.type.hx
+         ^
+         source.hx
+          ^^^^
+          source.hx variable.other.hx
+              ^
+              source.hx punctuation.terminator.hx
