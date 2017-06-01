@@ -1,0 +1,14 @@
+original file
+-----------------------------------
+'$1'
+-----------------------------------
+
+>'$1'
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^
+  source.hx string.quoted.single.hx
+   ^
+   source.hx string.quoted.single.hx
+    ^
+    source.hx string.quoted.single.hx punctuation.definition.string.end.hx

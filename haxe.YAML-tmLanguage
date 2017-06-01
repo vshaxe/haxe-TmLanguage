@@ -496,7 +496,7 @@ repository:
         patterns:
         - include: '#block-contents'
       # String interpolation : "$test"'
-      - match: (\$)(\w+)
+      - match: (\$)([_a-zA-Z]\w*)
         captures:
           '1': {name: punctuation.definition.block.begin.hx}
           '2': {name: variable.other.hx}
