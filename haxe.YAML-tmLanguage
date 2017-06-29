@@ -721,12 +721,12 @@ repository:
     begin: \b(for)\b\s*(\()\s*\b([_A-Za-z]\w*)\b\s+(in)
     beginCaptures:
       '1': {name: keyword.control.flow-control.hx}
-      '2': {name: meta.brace.bround.hx}
+      '2': {name: meta.brace.round.hx}
       '3': {name: variable.other.hx}
       '4': {name: keyword.other.in.hx}
     end: (\))
     endCaptures:
-      '1': {name: meta.brace.bround.hx}
+      '1': {name: meta.brace.round.hx}
     patterns:
     - include: '#block'
     - include: '#block-contents'

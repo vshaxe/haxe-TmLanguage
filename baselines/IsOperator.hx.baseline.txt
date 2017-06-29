@@ -122,7 +122,7 @@ var is:Int;
     ^
     source.hx
      ^
-     source.hx meta.brace.bround.hx
+     source.hx meta.brace.round.hx
       ^
       source.hx variable.other.hx
        ^
@@ -152,7 +152,7 @@ var is:Int;
                             ^
                             source.hx meta.brace.round.hx
                              ^
-                             source.hx meta.brace.bround.hx
+                             source.hx meta.brace.round.hx
                               ^
                               source.hx
                                ^

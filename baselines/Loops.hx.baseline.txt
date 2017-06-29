@@ -14,7 +14,7 @@ do {
  ^^^
  source.hx keyword.control.flow-control.hx
     ^
-    source.hx meta.brace.bround.hx
+    source.hx meta.brace.round.hx
      ^
      source.hx variable.other.hx
       ^
@@ -30,7 +30,7 @@ do {
               ^^
               source.hx constant.numeric.decimal.hx
                 ^
-                source.hx meta.brace.bround.hx
+                source.hx meta.brace.round.hx
                  ^
                  source.hx
                   ^
@@ -43,7 +43,7 @@ do {
     ^
     source.hx
      ^
-     source.hx meta.brace.bround.hx
+     source.hx meta.brace.round.hx
       ^
       source.hx
        ^
@@ -61,7 +61,7 @@ do {
                   ^^
                   source.hx constant.numeric.decimal.hx
                     ^
-                    source.hx meta.brace.bround.hx
+                    source.hx meta.brace.round.hx
                      ^
                      source.hx
                       ^
