@@ -98,6 +98,7 @@
 @:overload
 @:phpConstants
 @:phpGlobal
+@:pos
 @:privateAccess
 @:property
 @:protected

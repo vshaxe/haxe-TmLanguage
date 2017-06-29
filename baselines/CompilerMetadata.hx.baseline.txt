@@ -100,6 +100,7 @@ original file
 @:overload
 @:phpConstants
 @:phpGlobal
+@:pos
 @:privateAccess
 @:property
 @:protected
@@ -629,6 +630,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:pos
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^
   source.hx storage.modifier.metadata.hx
 >@:privateAccess
  ^
