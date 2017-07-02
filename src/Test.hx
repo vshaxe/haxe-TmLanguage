@@ -14,6 +14,7 @@ class Test {
             var generatedText = File.getContent('$GENERATED_DIR/$file');
             var baseline = '$BASELINES_DIR/$file';
             if (!FileSystem.exists(baseline)) {
+                hasError = true;
                 Sys.println('Warning: "$file" has no baseline.');
                 continue;
             }
@@ -23,7 +24,7 @@ class Test {
                 Sys.println('Error: "$file" is not the same as the baseline!');
             }
         }
-        
+
         Sys.println(" \n" + if (hasError) "Failed!" else "Success.");
         if (hasError)
             Sys.exit(1);
