@@ -1,0 +1,22 @@
+original file
+-----------------------------------
+(function() {})
+-----------------------------------
+
+>(function() {})
+ ^
+ source.hx meta.brace.round.hx
+  ^^^^^^^^
+  source.hx meta.method.hx storage.type.function.hx
+          ^
+          source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+           ^
+           source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+            ^
+            source.hx meta.method.hx
+             ^
+             source.hx meta.method.hx punctuation.definition.block.begin.hx
+              ^
+              source.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+               ^
+               source.hx meta.brace.round.hx
