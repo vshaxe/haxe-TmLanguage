@@ -440,7 +440,7 @@ repository:
       name: comment.line.double-slash.hx
   javadoc-tags:
     patterns:
-    - match: (@param)\s+([_A-Za-z]\w*)\s+
+    - match: (@(?:param|exception|throws))\s+([_A-Za-z]\w*)\s+
       captures:
         '1': {name: storage.type.class.javadoc}
         '2': {name: variable.other.javadoc}

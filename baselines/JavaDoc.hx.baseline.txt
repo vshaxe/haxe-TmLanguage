@@ -9,6 +9,8 @@ original file
  * @since 4.0.0-alpha.2
  * @see haxe.org
  * @deprecated
+ * @throws ArgumentException when the argument is invalid
+ * @exception ArgumentException when the argument is invalid
  */
 -----------------------------------
 
@@ -75,6 +77,32 @@ original file
  source.hx comment.block.documentation.hx
     ^^^^^^^^^^^
     source.hx comment.block.documentation.hx storage.type.class.javadoc
+> * @throws ArgumentException when the argument is invalid
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+           ^
+           source.hx comment.block.documentation.hx
+            ^^^^^^^^^^^^^^^^^
+            source.hx comment.block.documentation.hx variable.other.javadoc
+                             ^
+                             source.hx comment.block.documentation.hx
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              source.hx comment.block.documentation.hx
+> * @exception ArgumentException when the argument is invalid
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+              ^
+              source.hx comment.block.documentation.hx
+               ^^^^^^^^^^^^^^^^^
+               source.hx comment.block.documentation.hx variable.other.javadoc
+                                ^
+                                source.hx comment.block.documentation.hx
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 source.hx comment.block.documentation.hx
 > */
  ^
  source.hx comment.block.documentation.hx
