@@ -11,6 +11,7 @@ original file
  * @deprecated
  * @throws ArgumentException when the argument is invalid
  * @exception ArgumentException when the argument is invalid
+ * @event added Dispatched when an object is added
  */
 -----------------------------------
 
@@ -103,6 +104,19 @@ original file
                                 source.hx comment.block.documentation.hx
                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                                  source.hx comment.block.documentation.hx
+> * @event added Dispatched when an object is added
+ ^^^
+ source.hx comment.block.documentation.hx
+    ^^^^^^
+    source.hx comment.block.documentation.hx storage.type.class.javadoc
+          ^
+          source.hx comment.block.documentation.hx
+           ^^^^^
+           source.hx comment.block.documentation.hx variable.other.javadoc
+                ^
+                source.hx comment.block.documentation.hx
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 source.hx comment.block.documentation.hx
 > */
  ^
  source.hx comment.block.documentation.hx

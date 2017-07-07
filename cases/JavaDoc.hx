@@ -9,4 +9,5 @@
  * @deprecated
  * @throws ArgumentException when the argument is invalid
  * @exception ArgumentException when the argument is invalid
+ * @event added Dispatched when an object is added
  */
