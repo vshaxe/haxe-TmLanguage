@@ -920,7 +920,7 @@ repository:
       - include: '#typedef-block'
   type-name:
     patterns:
-    - match: \b(Any|Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|Enum|EnumValue|EReg|Float|IMap|Int|IntIterator|Iterable|Iterator|Lambda|List|ListIterator|ListNode|Map|Math|Null|Reflect|Std|String|StringBuf|StringTools|Sys|Type|UInt|ValueType|Void|Xml|XmlType)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b
+    - match: \b(Any|Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|Enum|EnumValue|EReg|Float|IMap|Int|IntIterator|Iterable|Iterator|Lambda|List|ListIterator|ListNode|Map|Math|Null|Reflect|Single|Std|String|StringBuf|StringTools|Sys|Type|UInt|ValueType|Void|Xml|XmlType)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b
       captures:
         '1': {name: support.class.builtin.hx}
         '2': {name: support.package.hx}
