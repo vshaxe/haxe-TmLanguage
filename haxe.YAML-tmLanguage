@@ -707,7 +707,7 @@ repository:
     - match: '\b(get|set)_[_A-Za-z]\w*\b'
       name: entity.name.function.hx
   modifiers:
-    match: \b(public|private|static|dynamic|inline|macro|extern|override)\b
+    match: \b(public|private|static|dynamic|inline|macro|extern|override|final)\b
     name: storage.modifier.hx
   new-expr:
     name: new.expr.hx
