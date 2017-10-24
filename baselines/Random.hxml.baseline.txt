@@ -28,17 +28,17 @@ original file
  ^^^^^^
  source.hxml keyword.other.hxml
        ^^^
-       source.hxml keyword.other.hxml
+       source.hxml
 ># leading whitespace:
  ^
  source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml
   ^^^^^^^^^^^^^^^^^^^^^
   source.hxml comment.line.number-sign.hxml
 > 	-v
- ^
+ ^^
  source.hxml
-  ^^^
-  source.hxml keyword.other.hxml
+   ^^
+   source.hxml keyword.other.hxml
 ># dce args
  ^
  source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml
@@ -56,7 +56,7 @@ original file
 >-dce invalid
  ^^^^^
  source.hxml keyword.other.hxml
-      ^^^^^^^^
+      ^^^^^^^
       source.hxml
 ># dce arg with random whitespace
  ^
@@ -74,17 +74,17 @@ original file
 >-java some-version-test
  ^^^^^
  source.hxml keyword.other.hxml
-      ^^^^^^^^^^^^^^^^^^^
+      ^^^^^^^^^^^^^^^^^^
       source.hxml
 >-java some-version
  ^^^^^
  source.hxml keyword.other.hxml
-      ^^^^^^^^^^^^^^
+      ^^^^^^^^^^^^^
       source.hxml
 >-java some-versions
  ^^^^^
  source.hxml keyword.other.hxml
-      ^^^^^^^^^^^^^^^
+      ^^^^^^^^^^^^^^
       source.hxml
 ># commented out arg
  ^
