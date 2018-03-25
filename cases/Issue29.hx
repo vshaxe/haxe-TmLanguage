@@ -1,0 +1,1 @@
+function new(init:(T->Void)->(Dynamic->Void)->Void):Void;

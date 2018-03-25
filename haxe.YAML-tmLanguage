@@ -575,22 +575,11 @@ repository:
     patterns:
     - include: '#block'
     - include: '#block-contents'
-  arrow-function:
-    begin: '(\()(?=[^(]*?\)\s*->)'
-    beginCaptures:
-      '1': {name: punctuation.definition.parameters.begin.hx}
-    end: '(\))\s*(->)'
-    endCaptures:
-      '1': {name: punctuation.definition.parameters.end.hx}
-      '2': {name: storage.type.function.arrow.hx}
-    name: meta.method.arrow.hx
-    patterns:
-    - include: '#parameter'
   parameters:
     begin: \(
     beginCaptures:
       '0': {name: punctuation.definition.parameters.begin.hx}
-    end: \s*(\))
+    end: \s*(\)(?!\s*->))
     endCaptures:
       '1': {name: punctuation.definition.parameters.end.hx}
     name: meta.parameters.hx
@@ -598,7 +587,7 @@ repository:
     - include: '#parameter'
   parameter:
     begin: (?<=\(|,)
-    end: (?=\)|,)
+    end: (?=\)(?!\s*->)|,)
     patterns:
     - include: '#parameter-name'
     - include: '#parameter-type-hint'
@@ -618,7 +607,7 @@ repository:
     begin: ':'
     beginCaptures:
       '0': {name: keyword.operator.type.annotation.hx}
-    end: (?=\)|,|=)
+    end: (?=\)(?!\s*->)|,|=)
     patterns:
     - include: '#type'
   parameter-assign:
@@ -629,6 +618,33 @@ repository:
     patterns:
     - include: '#block'
     - include: '#block-contents'
+  arrow-function:
+    begin: '(\()(?=[^(]*?\)\s*->)'
+    beginCaptures:
+      '1': {name: punctuation.definition.parameters.begin.hx}
+    end: '(\))\s*(->)'
+    endCaptures:
+      '1': {name: punctuation.definition.parameters.end.hx}
+      '2': {name: storage.type.function.arrow.hx}
+    name: meta.method.arrow.hx
+    patterns:
+    - include: '#arrow-function-parameter'
+  arrow-function-parameter:
+    begin: (?<=\(|,)
+    end: (?=\)|,)
+    patterns:
+    - include: '#parameter-name'
+    - include: '#arrow-function-parameter-type-hint'
+    - include: '#parameter-assign'
+    - include: '#punctuation-comma'
+    - include: '#global'
+  arrow-function-parameter-type-hint:
+    begin: ':'
+    beginCaptures:
+      '0': {name: keyword.operator.type.annotation.hx}
+    end: (?=\)|,|=)
+    patterns:
+    - include: '#type'
   method-return-type-hint:
     begin: (?<=\))\s*(:)
     beginCaptures:
