@@ -947,6 +947,39 @@ repository:
       end: (?<=\})
       patterns:
       - include: '#typedef-block'
+    - include: '#function-type'
+  function-type:
+    begin: \(
+    beginCaptures:
+      '0': {name: punctuation.definition.parameters.begin.hx}
+    end: \)
+    endCaptures:
+      '0': {name: punctuation.definition.parameters.end.hx}
+    patterns:
+    - include: '#function-type-parameter'
+  function-type-parameter:
+    begin: (?<=\(|,)
+    end: (?=\)|,)
+    patterns:
+    - include: '#global'
+    - include: '#metadata'
+    - include: '#operator-optional'
+    - include: '#punctuation-comma'
+    - include: '#function-type-parameter-name'
+    - include: '#function-type-parameter-type-hint'
+    - include: '#type'
+    - include: '#global'
+  function-type-parameter-name:
+    match: ([_a-zA-Z]\w*)(?=\s*:)
+    captures:
+      '1': {name: variable.parameter.hx}
+  function-type-parameter-type-hint:
+    begin: ':'
+    beginCaptures:
+      '0': {name: keyword.operator.type.annotation.hx}
+    end: (?=\)|,)
+    patterns:
+    - include: '#type'
   type-name:
     patterns:
     - match: \b(Any|Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|Enum|EnumValue|EReg|Float|IMap|Int|IntIterator|Iterable|Iterator|Lambda|List|ListIterator|ListNode|Map|Math|Null|Reflect|Single|Std|String|StringBuf|StringTools|Sys|Type|UInt|ValueType|Void|Xml|XmlType)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b
