@@ -101,7 +101,7 @@ class Colors {
                                                                 source.hx meta.brace.round.hx
                                                                  ^
                                                                  source.hx meta.brace.round.hx
-                                                                  ^
+                                                                  ^^
                                                                   source.hx
 >        "1";
  ^^^^^^^^
@@ -165,7 +165,7 @@ class Colors {
                                                                 source.hx meta.brace.round.hx
                                                                  ^
                                                                  source.hx meta.brace.round.hx
-                                                                  ^
+                                                                  ^^
                                                                   source.hx
 >        "2";
  ^^^^^^^^
@@ -267,7 +267,7 @@ class Colors {
                                                                                         source.hx
                                                                                           ^
                                                                                           source.hx meta.brace.round.hx
-                                                                                           ^
+                                                                                           ^^
                                                                                            source.hx
 >        "3";
  ^^^^^^^^

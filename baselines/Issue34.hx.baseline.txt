@@ -1,0 +1,140 @@
+original file
+-----------------------------------
+var option = haxe.ds.Option.Some(0);
+switch (option) {
+    case Foo(var a, var b): "foo";
+    case Some(var i): "bar";
+    case None:
+}
+-----------------------------------
+
+>var option = haxe.ds.Option.Some(0);
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^^^^^^
+     source.hx variable.other.hx
+           ^
+           source.hx
+            ^
+            source.hx keyword.operator.assignment.hx
+             ^
+             source.hx
+              ^^^^^^^^
+              source.hx support.package.hx
+                      ^^^^^^
+                      source.hx entity.name.type.hx
+                            ^
+                            source.hx support.package.hx
+                             ^^^^
+                             source.hx entity.name.type.hx
+                                 ^
+                                 source.hx meta.brace.round.hx
+                                  ^
+                                  source.hx constant.numeric.decimal.hx
+                                   ^
+                                   source.hx meta.brace.round.hx
+                                    ^
+                                    source.hx punctuation.terminator.hx
+>switch (option) {
+ ^^^^^^
+ source.hx keyword.control.flow-control.hx
+       ^
+       source.hx
+        ^
+        source.hx meta.brace.round.hx
+         ^^^^^^
+         source.hx variable.other.hx
+               ^
+               source.hx meta.brace.round.hx
+                ^
+                source.hx
+                 ^
+                 source.hx punctuation.definition.block.begin.hx
+>    case Foo(var a, var b): "foo";
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^^^
+          source.hx entity.name.type.hx
+             ^
+             source.hx meta.brace.round.hx
+              ^^^
+              source.hx storage.type.variable.hx
+                 ^
+                 source.hx
+                  ^
+                  source.hx variable.other.hx
+                   ^
+                   source.hx punctuation.separator.comma.hx
+                    ^
+                    source.hx
+                     ^^^
+                     source.hx storage.type.variable.hx
+                        ^
+                        source.hx
+                         ^
+                         source.hx variable.other.hx
+                          ^
+                          source.hx meta.brace.round.hx
+                           ^
+                           source.hx
+                            ^
+                            source.hx
+                             ^
+                             source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                              ^^^
+                              source.hx string.quoted.double.hx
+                                 ^
+                                 source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                  ^
+                                  source.hx punctuation.terminator.hx
+>    case Some(var i): "bar";
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^^^^
+          source.hx entity.name.type.hx
+              ^
+              source.hx meta.brace.round.hx
+               ^^^
+               source.hx storage.type.variable.hx
+                  ^
+                  source.hx
+                   ^
+                   source.hx variable.other.hx
+                    ^
+                    source.hx meta.brace.round.hx
+                     ^
+                     source.hx
+                      ^
+                      source.hx
+                       ^
+                       source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                        ^^^
+                        source.hx string.quoted.double.hx
+                           ^
+                           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                            ^
+                            source.hx punctuation.terminator.hx
+>    case None:
+ ^^^^
+ source.hx
+     ^^^^
+     source.hx keyword.control.flow-control.hx
+         ^
+         source.hx
+          ^^^^
+          source.hx entity.name.type.hx
+              ^
+              source.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx

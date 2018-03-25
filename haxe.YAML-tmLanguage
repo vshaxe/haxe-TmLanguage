@@ -767,11 +767,24 @@ repository:
     - begin: \b(case|default)\b
       beginCaptures:
         '1': {name: keyword.control.flow-control.hx}
-      end: ':'
-      endCaptures:
-        '1': {name: punctuation.definition.section.case-statement.hx}
+      end: ':|(?=if)'
       patterns:
-      - include: '#block-contents'
+      - include: '#global'
+      - match: \b(var)\b\s*([_a-zA-Z]\w*)\b
+        captures:
+          '1': {name: storage.type.variable.hx}
+          '2': {name: variable.other.hx}
+      - include: '#array'
+      - include: '#constants'
+      - include: '#strings'
+      - match: \(
+        name: meta.brace.round.hx
+      - match: \)
+        name: meta.brace.round.hx
+      - include: '#macro-reification'
+      - include: '#operator-assignment'
+      - include: '#punctuation-comma'
+      - include: '#identifiers'
     - match: \b(if|else|return|do|while|for|break|continue|switch|case|default)\b
       name: keyword.control.flow-control.hx
     - match: \b(cast|untyped)\b
