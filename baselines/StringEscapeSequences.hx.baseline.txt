@@ -1,0 +1,512 @@
+original file
+-----------------------------------
+// valid, double quote
+"\n \r \t \" \' \\";
+
+"\000 \123 \295 \371";
+"\x01";
+"\xFa";
+"\u2603";
+"\u{1}";
+"\u{1F37A}";
+
+// invalid, double quote
+"\foo \bar";
+
+"\400";
+"\1000";
+"\x1";
+"\x1000";
+"\u263";
+"\u26030";
+"\u{}";
+"\u{1F37P}";
+
+// valid, single quote
+'\n \r \t \" \' \\';
+
+'\000 \123 \295 \371';
+'\x01';
+'\xFa';
+'\u2603';
+'\u{1}';
+'\u{1F37A}';
+
+// invalid, single quote
+'\foo \bar';
+
+'\400';
+'\1000';
+'\x1';
+'\x1000';
+'\u263';
+'\u26030';
+'\u{}';
+'\u{1F37P}';
+-----------------------------------
+
+>// valid, double quote
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>"\n \r \t \" \' \\";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+    ^
+    source.hx string.quoted.double.hx
+     ^^
+     source.hx string.quoted.double.hx constant.character.escape.hx
+       ^
+       source.hx string.quoted.double.hx
+        ^^
+        source.hx string.quoted.double.hx constant.character.escape.hx
+          ^
+          source.hx string.quoted.double.hx
+           ^^
+           source.hx string.quoted.double.hx constant.character.escape.hx
+             ^
+             source.hx string.quoted.double.hx
+              ^^
+              source.hx string.quoted.double.hx constant.character.escape.hx
+                ^
+                source.hx string.quoted.double.hx
+                 ^^
+                 source.hx string.quoted.double.hx constant.character.escape.hx
+                   ^
+                   source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>"\000 \123 \295 \371";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.double.hx
+       ^^^^
+       source.hx string.quoted.double.hx constant.character.escape.hx
+           ^
+           source.hx string.quoted.double.hx
+            ^^^^
+            source.hx string.quoted.double.hx constant.character.escape.hx
+                ^
+                source.hx string.quoted.double.hx
+                 ^^^^
+                 source.hx string.quoted.double.hx constant.character.escape.hx
+                     ^
+                     source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                      ^
+                      source.hx punctuation.terminator.hx
+>"\x01";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>"\xFa";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>"\u2603";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+         ^
+         source.hx punctuation.terminator.hx
+>"\u{1}";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>"\u{1F37A}";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^^^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>// invalid, double quote
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>"\foo \bar";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx string.quoted.double.hx invalid.escape.sequence.hx
+    ^^^
+    source.hx string.quoted.double.hx
+       ^^
+       source.hx string.quoted.double.hx invalid.escape.sequence.hx
+         ^^
+         source.hx string.quoted.double.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>"\400";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx string.quoted.double.hx invalid.escape.sequence.hx
+    ^^
+    source.hx string.quoted.double.hx
+      ^
+      source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>"\1000";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.double.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>"\x1";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx string.quoted.double.hx invalid.escape.sequence.hx
+    ^
+    source.hx string.quoted.double.hx
+     ^
+     source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+      ^
+      source.hx punctuation.terminator.hx
+>"\x1000";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+      ^^
+      source.hx string.quoted.double.hx
+        ^
+        source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+         ^
+         source.hx punctuation.terminator.hx
+>"\u263";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx string.quoted.double.hx invalid.escape.sequence.hx
+    ^^^
+    source.hx string.quoted.double.hx
+       ^
+       source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>"\u26030";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^^^^^
+  source.hx string.quoted.double.hx constant.character.escape.hx
+        ^
+        source.hx string.quoted.double.hx
+         ^
+         source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+          ^
+          source.hx punctuation.terminator.hx
+>"\u{}";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx string.quoted.double.hx invalid.escape.sequence.hx
+    ^^
+    source.hx string.quoted.double.hx
+      ^
+      source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>"\u{1F37P}";
+ ^
+ source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx string.quoted.double.hx invalid.escape.sequence.hx
+    ^^^^^^^
+    source.hx string.quoted.double.hx
+           ^
+           source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>// valid, single quote
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>'\n \r \t \" \' \\';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx constant.character.escape.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^^
+     source.hx constant.character.escape.hx
+       ^
+       source.hx string.quoted.single.hx
+        ^^
+        source.hx constant.character.escape.hx
+          ^
+          source.hx string.quoted.single.hx
+           ^^
+           source.hx constant.character.escape.hx
+             ^
+             source.hx string.quoted.single.hx
+              ^^
+              source.hx constant.character.escape.hx
+                ^
+                source.hx string.quoted.single.hx
+                 ^^
+                 source.hx constant.character.escape.hx
+                   ^
+                   source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                    ^
+                    source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>'\000 \123 \295 \371';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^^^^
+       source.hx constant.character.escape.hx
+           ^
+           source.hx string.quoted.single.hx
+            ^^^^
+            source.hx constant.character.escape.hx
+                ^
+                source.hx string.quoted.single.hx
+                 ^^^^
+                 source.hx constant.character.escape.hx
+                     ^
+                     source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                      ^
+                      source.hx punctuation.terminator.hx
+>'\x01';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>'\xFa';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>'\u2603';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^^^
+  source.hx constant.character.escape.hx
+        ^
+        source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+         ^
+         source.hx punctuation.terminator.hx
+>'\u{1}';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^^
+  source.hx constant.character.escape.hx
+       ^
+       source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>'\u{1F37A}';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^^^^^^
+  source.hx constant.character.escape.hx
+           ^
+           source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>// invalid, single quote
+ ^^
+ source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
+   ^^^^^^^^^^^^^^^^^^^^^^^
+   source.hx comment.line.double-slash.hx
+>'\foo \bar';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx invalid.escape.sequence.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^^
+       source.hx invalid.escape.sequence.hx
+         ^
+         source.hx string.quoted.single.hx
+          ^
+          source.hx string.quoted.single.hx
+           ^
+           source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>'\400';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx invalid.escape.sequence.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>'\1000';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>'\x1';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx invalid.escape.sequence.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+      ^
+      source.hx punctuation.terminator.hx
+>'\x1000';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^
+  source.hx constant.character.escape.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx
+        ^
+        source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+         ^
+         source.hx punctuation.terminator.hx
+>'\u263';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx invalid.escape.sequence.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+        ^
+        source.hx punctuation.terminator.hx
+>'\u26030';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^^^^^
+  source.hx constant.character.escape.hx
+        ^
+        source.hx string.quoted.single.hx
+         ^
+         source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+          ^
+          source.hx punctuation.terminator.hx
+>'\u{}';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx invalid.escape.sequence.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+       ^
+       source.hx punctuation.terminator.hx
+>'\u{1F37P}';
+ ^
+ source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+  ^^
+  source.hx invalid.escape.sequence.hx
+    ^
+    source.hx string.quoted.single.hx
+     ^
+     source.hx string.quoted.single.hx
+      ^
+      source.hx string.quoted.single.hx
+       ^
+       source.hx string.quoted.single.hx
+        ^
+        source.hx string.quoted.single.hx
+         ^
+         source.hx string.quoted.single.hx
+          ^
+          source.hx string.quoted.single.hx
+           ^
+           source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+            ^
+            source.hx punctuation.terminator.hx

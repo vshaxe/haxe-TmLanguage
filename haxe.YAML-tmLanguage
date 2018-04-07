@@ -461,8 +461,7 @@ repository:
         '0': {name: punctuation.definition.string.end.hx}
       name: string.quoted.double.hx
       patterns:
-      - match: \\.
-        name: constant.character.escape.hx
+      - include: '#string-escape-sequences'
     - begin: (')
       beginCaptures:
         '0': {name: string.quoted.single.hx}
@@ -479,13 +478,7 @@ repository:
         endCaptures:
           '0': {name: constant.character.escape.hx}
         name: string.quoted.single.hx
-      - begin: \\(?=.)
-        beginCaptures:
-          '0': {name: constant.character.escape.hx}
-        end: .
-        endCaptures:
-          '0': {name: constant.character.escape.hx}
-        name: string.quoted.single.hx
+      - include: '#string-escape-sequences'
       # 'String interpolation : "${test.ole}"'
       - begin: (\${)
         beginCaptures:
@@ -504,6 +497,20 @@ repository:
         name: constant.character.escape.hx
       - match: .
         name: string.quoted.single.hx
+  string-escape-sequences:
+    patterns:
+      - match: \\[0-3][0-9]{2}
+        name: constant.character.escape.hx
+      - match: \\x[0-9A-Fa-f]{2}
+        name: constant.character.escape.hx
+      - match: \\u[0-9]{4}
+        name: constant.character.escape.hx
+      - match: \\u\{[0-9A-Fa-f]{1,}\}
+        name: constant.character.escape.hx
+      - match: \\[nrt"'\\]
+        name: constant.character.escape.hx
+      - match: \\.
+        name: invalid.escape.sequence.hx
   metadata:
     patterns:
     - begin: (@)(:(abi|abstract|access|allow|analyzer|annotation|arrayAccess|astSource|autoBuild|bind|bitmap|bridgeProperties|build|buildXml|callable|classCode|commutative|compilerGenerated|const|coreApi|coreType|cppFileCode|cppInclude|cppNamespaceCode|dce|debug|decl|delegate|depend|deprecated|eager|enum|event|expose|extern|fakeEnum|file|fileXml|final|fixed|font|forward|forwardStatics|from|functionCode|functionTailCode|generic|genericBuild|getter|hack|headerClassCode|headerCode|headerInclude|headerNamespaceCode|hxGen|ifFeature|include|internal|isVar|javaCanonical|jsRequire|keep|keepInit|keepSub|luaDotMethod|luaRequire|macro|mergeBlock|meta|multiReturn|multiType|native|nativeChildren|nativeGen|nativeProperty|nativeStaticExtension|noCompletion|noDebug|noDoc|noImportGlobal|noPrivateAccess|noStack|noUsing|nonVirtual|notNull|ns|objc|objcProtocol|op|optional|overload|phpConstants|phpGlobal|phpClassConst|phpMagic|phpNoConstructor|pos|privateAccess|property|protected|publicFields|pure|pythonImport|readOnly|remove|require|resolve|rtti|runtime|runtimeValue|scalar|selfCall|setter|sound|sourceFile|stackOnly|strict|struct|structAccess|structInit|suppressWarnings|templatedCall|throws|to|transient|unifyMinDynamic|unreflective|unsafe|value|void|volatile)\b)\s*(\()
