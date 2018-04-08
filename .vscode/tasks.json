@@ -1,8 +1,6 @@
 // This file is generated with vshaxe-build - DO NOT EDIT MANUALLY!
 {
-    "suppressTaskName": true,
     "version": "2.0.0",
-    "command": "haxelib",
     "tasks": [
         {
             "args": [
@@ -12,8 +10,14 @@
                 "tm-language",
                 "--debug"
             ],
-            "taskName": "tm-language",
-            "problemMatcher": "$haxe",
+            "label": "tm-language",
+            "command": "haxelib",
+            "problemMatcher": [
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -27,8 +31,14 @@
                 "tm-language-conversion",
                 "--debug"
             ],
-            "taskName": "tm-language-conversion",
-            "problemMatcher": "$haxe"
+            "label": "tm-language-conversion",
+            "command": "haxelib",
+            "problemMatcher": [
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
+            ]
         },
         {
             "args": [
@@ -38,8 +48,18 @@
                 "tm-language-tests",
                 "--debug"
             ],
-            "taskName": "tm-language-tests",
-            "problemMatcher": "$haxe"
+            "label": "tm-language-tests",
+            "command": "haxelib",
+            "problemMatcher": [
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         },
         {
             "args": [
@@ -49,8 +69,14 @@
                 "tm-language-build-tests",
                 "--debug"
             ],
-            "taskName": "tm-language-build-tests",
-            "problemMatcher": "$haxe"
+            "label": "tm-language-build-tests",
+            "command": "haxelib",
+            "problemMatcher": [
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
+            ]
         },
         {
             "args": [
@@ -61,8 +87,14 @@
                 "--mode",
                 "install"
             ],
-            "taskName": "{install-all}",
-            "problemMatcher": "$haxe"
+            "label": "{install-all}",
+            "command": "haxelib",
+            "problemMatcher": [
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
+            ]
         },
         {
             "args": [
@@ -72,8 +104,14 @@
                 "tm-language",
                 "--display"
             ],
-            "taskName": "{generate-complete-hxml}",
-            "problemMatcher": "$haxe"
+            "label": "{generate-complete-hxml}",
+            "command": "haxelib",
+            "problemMatcher": [
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
+            ]
         },
         {
             "args": [
@@ -83,8 +121,14 @@
                 "tm-language",
                 "--gen-tasks"
             ],
-            "taskName": "{generate-vscode-tasks}",
-            "problemMatcher": "$haxe"
+            "label": "{generate-vscode-tasks}",
+            "command": "haxelib",
+            "problemMatcher": [
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
+            ]
         }
     ]
 }
