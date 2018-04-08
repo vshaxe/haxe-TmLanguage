@@ -43,7 +43,6 @@ So when adding a new test, follow these steps:
 - verify that the highlighting is ok
 - run `build.js` and copy the new file in `/generated` into `/baselines`
 
-
 ## Workflow
 
 For convenience, there exists a `haxe all.hxml`, which runs both the conversion and the tests. If you have this project open in VSCode, you can just execute the build task (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>) to execute `all.hxml`.
@@ -53,4 +52,4 @@ VSCode currently needs to be restarted to pick up changes to grammar files. Henc
 The following VSCode extensions are helpful for working on the grammar files:
 
 - [scope-info](https://marketplace.visualstudio.com/items?itemName=siegebell.scope-info) - Shows tmLanguage scopes for the token under the cursor. Note: since VSCode 1.9.0, an `Inspect TM scopes` is built-in, but it uses the current caret location / doesn't work on hover.
-- [TextMate Languages](https://marketplace.visualstudio.com/items?itemName=Togusa09.tmlanguage) - Adds proper syntax highlighting for tmLanguage files. Note: currently there is a pending [open pull request](https://github.com/Togusa09/vscode-tmlanguage/pull/5) to fix regex highlighting.
+- [TextMate Languages](https://marketplace.visualstudio.com/items?itemName=Togusa09.tmlanguage) - Adds proper syntax highlighting for tmLanguage files.
