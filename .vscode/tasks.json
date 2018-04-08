@@ -13,7 +13,11 @@
                 "--debug"
             ],
             "taskName": "tm-language",
-            "problemMatcher": "$haxe"
+            "problemMatcher": "$haxe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "args": [
