@@ -48,6 +48,7 @@ repository:
     - include: '#keywords'
     - include: '#arrow-function'
     - include: '#method-call'
+    - include: '#enum-constructor-call'
     - include: '#punctuation-braces'
     - include: '#macro-reification'
     - include: '#operators'
@@ -860,6 +861,21 @@ repository:
       '1': {name: keyword.other.untyped-function.hx}
       '2': {name: entity.name.function.hx}
       '3': {name: meta.brace.round.hx}
+    end: (\))
+    endCaptures:
+      '1': {name: meta.brace.round.hx}
+    patterns:
+    - include: '#block'
+    - include: '#block-contents'
+  enum-constructor-call:
+    # largely the same regex as #type-name
+    begin: \b(?<!\.)((_*[a-z]\w*\.)*)(_*[A-Z]\w*)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\s*(\()
+    beginCaptures:
+      '1': {name: support.package.hx}
+      '3': {name: entity.name.type.hx}
+      '4': {name: support.package.hx}
+      '5': {name: entity.name.type.hx}
+      '6': {name: meta.brace.round.hx}
     end: (\))
     endCaptures:
       '1': {name: meta.brace.round.hx}
