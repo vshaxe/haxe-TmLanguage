@@ -11,17 +11,7 @@
                 "--debug"
             ],
             "label": "tm-language",
-            "command": "haxelib",
-            "problemMatcher": [
-                "$haxe-absolute",
-                "$haxe",
-                "$haxe-error",
-                "$haxe-trace"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "command": "haxelib"
         },
         {
             "args": [
@@ -32,13 +22,7 @@
                 "--debug"
             ],
             "label": "tm-language-conversion",
-            "command": "haxelib",
-            "problemMatcher": [
-                "$haxe-absolute",
-                "$haxe",
-                "$haxe-error",
-                "$haxe-trace"
-            ]
+            "command": "haxelib"
         },
         {
             "args": [
@@ -49,17 +33,7 @@
                 "--debug"
             ],
             "label": "tm-language-tests",
-            "command": "haxelib",
-            "problemMatcher": [
-                "$haxe-absolute",
-                "$haxe",
-                "$haxe-error",
-                "$haxe-trace"
-            ],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            }
+            "command": "haxelib"
         },
         {
             "args": [
@@ -70,13 +44,7 @@
                 "--debug"
             ],
             "label": "tm-language-build-tests",
-            "command": "haxelib",
-            "problemMatcher": [
-                "$haxe-absolute",
-                "$haxe",
-                "$haxe-error",
-                "$haxe-trace"
-            ]
+            "command": "haxelib"
         },
         {
             "args": [
@@ -88,13 +56,7 @@
                 "install"
             ],
             "label": "{install-all}",
-            "command": "haxelib",
-            "problemMatcher": [
-                "$haxe-absolute",
-                "$haxe",
-                "$haxe-error",
-                "$haxe-trace"
-            ]
+            "command": "haxelib"
         },
         {
             "args": [
@@ -105,13 +67,7 @@
                 "--display"
             ],
             "label": "{generate-complete-hxml}",
-            "command": "haxelib",
-            "problemMatcher": [
-                "$haxe-absolute",
-                "$haxe",
-                "$haxe-error",
-                "$haxe-trace"
-            ]
+            "command": "haxelib"
         },
         {
             "args": [
@@ -122,13 +78,7 @@
                 "--gen-tasks"
             ],
             "label": "{generate-vscode-tasks}",
-            "command": "haxelib",
-            "problemMatcher": [
-                "$haxe-absolute",
-                "$haxe",
-                "$haxe-error",
-                "$haxe-trace"
-            ]
+            "command": "haxelib"
         }
     ]
 }
