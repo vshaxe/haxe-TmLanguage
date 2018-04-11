@@ -1,9 +1,0 @@
-# This file is generated using the build script - DO NOT EDIT MANUALLY!
--cp src
--D js_unflatten
--lib hxnodejs
--lib jstack
--lib yaml
--lib plist
--debug
--js bin/build.js
