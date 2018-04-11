@@ -791,7 +791,7 @@ repository:
     - begin: \b(case|default)\b
       beginCaptures:
         '1': {name: keyword.control.flow-control.hx}
-      end: ':|(?=if)'
+      end: ':|(?=if)|$'
       patterns:
       - include: '#global'
       - match: \b(var)\b\s*([_a-zA-Z]\w*)\b
