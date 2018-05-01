@@ -1,0 +1,142 @@
+original file
+-----------------------------------
+enum extern abstract Foo(Int) {
+    var Bar;
+}
+
+extern enum abstract Foo(Int) {
+    var Bar;
+}
+
+enum abstract Foo(Int) {
+    var Bar = 1;
+}
+-----------------------------------
+
+>enum extern abstract Foo(Int) {
+ ^^^^
+ source.hx storage.modifier.hx
+     ^
+     source.hx
+      ^^^^^^
+      source.hx storage.modifier.hx
+            ^
+            source.hx
+             ^^^^^^^^
+             source.hx meta.abstract.hx storage.type.class.hx
+                     ^
+                     source.hx meta.abstract.hx
+                      ^^^
+                      source.hx meta.abstract.hx entity.name.type.class.hx
+                         ^
+                         source.hx meta.abstract.hx punctuation.definition.parameters.begin.hx
+                          ^^^
+                          source.hx meta.abstract.hx support.class.builtin.hx
+                             ^
+                             source.hx meta.abstract.hx punctuation.definition.parameters.end.hx
+                              ^
+                              source.hx meta.abstract.hx
+                               ^
+                               source.hx meta.abstract.hx punctuation.definition.block.begin.hx
+>    var Bar;
+ ^^^^
+ source.hx meta.abstract.hx meta.block.hx
+     ^^^
+     source.hx meta.abstract.hx meta.block.hx storage.type.variable.hx
+        ^
+        source.hx meta.abstract.hx meta.block.hx
+         ^^^
+         source.hx meta.abstract.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.abstract.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.abstract.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>extern enum abstract Foo(Int) {
+ ^^^^^^
+ source.hx storage.modifier.hx
+       ^
+       source.hx
+        ^^^^
+        source.hx storage.modifier.hx
+            ^
+            source.hx
+             ^^^^^^^^
+             source.hx meta.abstract.hx storage.type.class.hx
+                     ^
+                     source.hx meta.abstract.hx
+                      ^^^
+                      source.hx meta.abstract.hx entity.name.type.class.hx
+                         ^
+                         source.hx meta.abstract.hx punctuation.definition.parameters.begin.hx
+                          ^^^
+                          source.hx meta.abstract.hx support.class.builtin.hx
+                             ^
+                             source.hx meta.abstract.hx punctuation.definition.parameters.end.hx
+                              ^
+                              source.hx meta.abstract.hx
+                               ^
+                               source.hx meta.abstract.hx punctuation.definition.block.begin.hx
+>    var Bar;
+ ^^^^
+ source.hx meta.abstract.hx meta.block.hx
+     ^^^
+     source.hx meta.abstract.hx meta.block.hx storage.type.variable.hx
+        ^
+        source.hx meta.abstract.hx meta.block.hx
+         ^^^
+         source.hx meta.abstract.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.abstract.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.abstract.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>enum abstract Foo(Int) {
+ ^^^^
+ source.hx storage.modifier.hx
+     ^
+     source.hx
+      ^^^^^^^^
+      source.hx meta.abstract.hx storage.type.class.hx
+              ^
+              source.hx meta.abstract.hx
+               ^^^
+               source.hx meta.abstract.hx entity.name.type.class.hx
+                  ^
+                  source.hx meta.abstract.hx punctuation.definition.parameters.begin.hx
+                   ^^^
+                   source.hx meta.abstract.hx support.class.builtin.hx
+                      ^
+                      source.hx meta.abstract.hx punctuation.definition.parameters.end.hx
+                       ^
+                       source.hx meta.abstract.hx
+                        ^
+                        source.hx meta.abstract.hx punctuation.definition.block.begin.hx
+>    var Bar = 1;
+ ^^^^
+ source.hx meta.abstract.hx meta.block.hx
+     ^^^
+     source.hx meta.abstract.hx meta.block.hx storage.type.variable.hx
+        ^
+        source.hx meta.abstract.hx meta.block.hx
+         ^^^
+         source.hx meta.abstract.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.abstract.hx meta.block.hx
+             ^
+             source.hx meta.abstract.hx meta.block.hx keyword.operator.assignment.hx
+              ^
+              source.hx meta.abstract.hx meta.block.hx
+               ^
+               source.hx meta.abstract.hx meta.block.hx constant.numeric.decimal.hx
+                ^
+                source.hx meta.abstract.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.abstract.hx meta.block.hx punctuation.definition.block.end.hx

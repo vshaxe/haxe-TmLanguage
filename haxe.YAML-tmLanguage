@@ -170,7 +170,7 @@ repository:
     - include: '#block'
     - include: '#block-contents'
   enum:
-    begin: (?=enum)
+    begin: (?=enum\s+[A-Z])
     end: (?<=\})|(;)
     endCaptures:
       '1': {name: punctuation.terminator.hx}
@@ -731,7 +731,7 @@ repository:
     - match: '\b(get|set)_[_A-Za-z]\w*\b'
       name: entity.name.function.hx
   modifiers:
-    match: \b(public|private|static|dynamic|inline|macro|extern|override|final)\b
+    match: \b(public|private|static|dynamic|inline|macro|extern|override|final|enum)\b
     name: storage.modifier.hx
   new-expr:
     name: new.expr.hx

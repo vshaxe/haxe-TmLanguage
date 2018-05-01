@@ -4,7 +4,7 @@ class /**/ Main /**/ extends /**/ openfl.display.DisplayObject /**/ {} /**/
 abstract /**/ Abstract /**/ (/**/ String /**/) /**/ from /**/ String /**/ to /**/ /**/ String /**/ {}
 interface /**/ ITest /**/ extends /**/ IBase /**/ {} /**/
 typedef /**/ WinHandle /**/ = /**/ hl.Abstract /**/ <@:const 5 /**/>;
-enum /**/ Color /**/ </**/ T> /**/ {} /**/
+enum Color /**/ </**/ T> /**/ {} /**/
 
 public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
     /**/ @:const value2:T2 = SomeClass.Constant,
@@ -277,57 +277,51 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
                                                                     source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
                                                                      ^
                                                                      source.hx meta.typedef.hx punctuation.terminator.hx
->enum /**/ Color /**/ </**/ T> /**/ {} /**/
+>enum Color /**/ </**/ T> /**/ {} /**/
  ^^^^
  source.hx meta.enum.hx storage.type.class.hx
      ^
      source.hx meta.enum.hx
-      ^^
-      source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
-        ^^
-        source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
-          ^
-          source.hx meta.enum.hx
-           ^^^^^
-           source.hx meta.enum.hx entity.name.type.class.hx
+      ^^^^^
+      source.hx meta.enum.hx entity.name.type.class.hx
+           ^
+           source.hx meta.enum.hx
+            ^^
+            source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
+              ^^
+              source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
                 ^
                 source.hx meta.enum.hx
-                 ^^
-                 source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
-                   ^^
-                   source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
-                     ^
-                     source.hx meta.enum.hx
+                 ^
+                 source.hx meta.enum.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                  ^^
+                  source.hx meta.enum.hx meta.type-parameters.hx comment.block.hx punctuation.definition.comment.hx
+                    ^^
+                    source.hx meta.enum.hx meta.type-parameters.hx comment.block.hx punctuation.definition.comment.hx
                       ^
-                      source.hx meta.enum.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
-                       ^^
-                       source.hx meta.enum.hx meta.type-parameters.hx comment.block.hx punctuation.definition.comment.hx
-                         ^^
-                         source.hx meta.enum.hx meta.type-parameters.hx comment.block.hx punctuation.definition.comment.hx
-                           ^
-                           source.hx meta.enum.hx meta.type-parameters.hx
-                            ^
-                            source.hx meta.enum.hx meta.type-parameters.hx entity.name.type.hx
-                             ^
-                             source.hx meta.enum.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                      source.hx meta.enum.hx meta.type-parameters.hx
+                       ^
+                       source.hx meta.enum.hx meta.type-parameters.hx entity.name.type.hx
+                        ^
+                        source.hx meta.enum.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                         ^
+                         source.hx meta.enum.hx
+                          ^^
+                          source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
+                            ^^
+                            source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
                               ^
                               source.hx meta.enum.hx
-                               ^^
-                               source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
-                                 ^^
-                                 source.hx meta.enum.hx comment.block.hx punctuation.definition.comment.hx
-                                   ^
-                                   source.hx meta.enum.hx
-                                    ^
-                                    source.hx meta.enum.hx punctuation.definition.block.begin.hx
-                                     ^
-                                     source.hx meta.enum.hx meta.block.hx punctuation.definition.block.end.hx
-                                      ^
-                                      source.hx
-                                       ^^
-                                       source.hx comment.block.hx punctuation.definition.comment.hx
-                                         ^^
-                                         source.hx comment.block.hx punctuation.definition.comment.hx
+                               ^
+                               source.hx meta.enum.hx punctuation.definition.block.begin.hx
+                                ^
+                                source.hx meta.enum.hx meta.block.hx punctuation.definition.block.end.hx
+                                 ^
+                                 source.hx
+                                  ^^
+                                  source.hx comment.block.hx punctuation.definition.comment.hx
+                                    ^^
+                                    source.hx comment.block.hx punctuation.definition.comment.hx
 >
  ^
  source.hx
