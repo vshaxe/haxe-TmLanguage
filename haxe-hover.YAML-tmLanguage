@@ -1,0 +1,3 @@
+patterns:
+- include: 'source.hx#type'
+scopeName: source.hx.hover

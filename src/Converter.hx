@@ -4,6 +4,7 @@ class Converter {
     static function main() {
         Sys.print("Converting syntax files to plist...");
         convert("haxe.YAML-tmLanguage", "haxe.tmLanguage");
+        convert("haxe-hover.YAML-tmLanguage", "haxe-hover.tmLanguage");
         convert("hxml.YAML-tmLanguage", "hxml.tmLanguage");
         Sys.println(" Done.\n ");
     }
