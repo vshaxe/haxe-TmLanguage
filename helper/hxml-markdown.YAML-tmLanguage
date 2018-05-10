@@ -1,0 +1,14 @@
+injectionSelector: L:markup.fenced_code.block.markdown
+patterns:
+- include: '#hxml-code-block'
+repository:
+  hxml-code-block:
+    begin: hxml(\s+[^`~]*)?$
+    end: (^|\G)(?=\s*[`~]{3,}\s*$)
+    patterns:
+    - begin: (^|\G)(\s*)(.*)
+      while: (^|\G)(?!\s*([`~]{3,})\s*$)
+      contentName: meta.embedded.block.hxml
+      patterns:
+      - include: source.hxml
+scopeName: markdown.hxml.codeblock

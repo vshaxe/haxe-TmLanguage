@@ -3,9 +3,14 @@ import sys.io.File;
 class Converter {
     static function main() {
         Sys.print("Converting syntax files to plist...");
+
         convert("haxe.YAML-tmLanguage", "haxe.tmLanguage");
-        convert("haxe-hover.YAML-tmLanguage", "haxe-hover.tmLanguage");
         convert("hxml.YAML-tmLanguage", "hxml.tmLanguage");
+
+        convert("helper/haxe-hover.YAML-tmLanguage", "helper/haxe-hover.tmLanguage");
+        convert("helper/haxe-markdown.YAML-tmLanguage", "helper/haxe-markdown.tmLanguage");
+        convert("helper/hxml-markdown.YAML-tmLanguage", "helper/hxml-markdown.tmLanguage");
+
         Sys.println(" Done.\n ");
     }
 

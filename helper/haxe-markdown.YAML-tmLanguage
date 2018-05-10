@@ -1,0 +1,14 @@
+injectionSelector: L:markup.fenced_code.block.markdown
+patterns:
+- include: '#haxe-code-block'
+repository:
+  haxe-code-block:
+    begin: haxe(\s+[^`~]*)?$
+    end: (^|\G)(?=\s*[`~]{3,}\s*$)
+    patterns:
+    - begin: (^|\G)(\s*)(.*)
+      while: (^|\G)(?!\s*([`~]{3,})\s*$)
+      contentName: meta.embedded.block.haxe
+      patterns:
+      - include: source.hx
+scopeName: markdown.haxe.codeblock
