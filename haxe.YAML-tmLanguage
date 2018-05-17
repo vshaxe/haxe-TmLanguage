@@ -295,7 +295,7 @@ repository:
     - include: '#strings'
   typedef-extension:
     begin: '>'
-    end: ','
+    end: ',|$'
     patterns:
     - include: '#type'
   typedef-simple-field-type-hint:
