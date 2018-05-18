@@ -664,7 +664,7 @@ repository:
     match: '(\?)(?!\s)'
     name: keyword.operator.optional.hx
   variable:
-    begin: (?=\bvar\b)
+    begin: (?=\b(var|final)\b)
     end: (?=$)|(;)
     endCaptures:
       '1': {name: punctuation.terminator.hx}
@@ -674,7 +674,7 @@ repository:
     - include: '#variable-assign'
     - include: '#variable-name-post'
   variable-name:
-    begin: \b(var)\b
+    begin: \b(var|final)\b
     beginCaptures:
       '1': {name: storage.type.variable.hx}
     end: (?=$)|([_a-zA-Z]\w*)
@@ -731,8 +731,11 @@ repository:
     - match: '\b(get|set)_[_A-Za-z]\w*\b'
       name: entity.name.function.hx
   modifiers:
-    match: \b(public|private|static|dynamic|inline|macro|extern|override|final|enum)\b
-    name: storage.modifier.hx
+    patterns:
+    - match: \b(public|private|static|dynamic|inline|macro|extern|override|enum)\b
+      name: storage.modifier.hx
+    - match: \b(final)\b(?=\s+(public|private|static|dynamic|inline|macro|extern|override|function))
+      name: storage.modifier.hx
   new-expr:
     name: new.expr.hx
     begin: (?<!\.)\b(new)\b
