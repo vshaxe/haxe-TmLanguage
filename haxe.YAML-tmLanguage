@@ -993,6 +993,7 @@ repository:
     - include: '#punctuation-comma'
     - include: '#function-type-parameter-name'
     - include: '#function-type-parameter-type-hint'
+    - include: '#parameter-assign'
     - include: '#type'
     - include: '#global'
   function-type-parameter-name:
@@ -1003,7 +1004,7 @@ repository:
     begin: ':'
     beginCaptures:
       '0': {name: keyword.operator.type.annotation.hx}
-    end: (?=\)|,)
+    end: (?=\)|,|=)
     patterns:
     - include: '#type'
   type-name:

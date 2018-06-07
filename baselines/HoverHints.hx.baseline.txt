@@ -1,0 +1,126 @@
+original file
+-----------------------------------
+var t:(?opt:Int, ?opt2:Int, def:Int = 0, ?both:Int = 0, foo:String = "Foo", b:Bool = false) -> Void;
+-----------------------------------
+
+>var t:(?opt:Int, ?opt2:Int, def:Int = 0, ?both:Int = 0, foo:String = "Foo", b:Bool = false) -> Void;
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^
+     source.hx variable.other.hx
+      ^
+      source.hx keyword.operator.type.annotation.hx
+       ^
+       source.hx punctuation.definition.parameters.begin.hx
+        ^
+        source.hx keyword.operator.optional.hx
+         ^^^
+         source.hx variable.parameter.hx
+            ^
+            source.hx keyword.operator.type.annotation.hx
+             ^^^
+             source.hx support.class.builtin.hx
+                ^
+                source.hx
+                 ^
+                 source.hx
+                  ^
+                  source.hx keyword.operator.optional.hx
+                   ^^^^
+                   source.hx variable.parameter.hx
+                       ^
+                       source.hx keyword.operator.type.annotation.hx
+                        ^^^
+                        source.hx support.class.builtin.hx
+                           ^
+                           source.hx
+                            ^
+                            source.hx
+                             ^^^
+                             source.hx variable.parameter.hx
+                                ^
+                                source.hx keyword.operator.type.annotation.hx
+                                 ^^^
+                                 source.hx support.class.builtin.hx
+                                    ^
+                                    source.hx
+                                     ^
+                                     source.hx keyword.operator.assignment.hx
+                                      ^
+                                      source.hx
+                                       ^
+                                       source.hx constant.numeric.decimal.hx
+                                        ^
+                                        source.hx
+                                         ^
+                                         source.hx
+                                          ^
+                                          source.hx keyword.operator.optional.hx
+                                           ^^^^
+                                           source.hx variable.parameter.hx
+                                               ^
+                                               source.hx keyword.operator.type.annotation.hx
+                                                ^^^
+                                                source.hx support.class.builtin.hx
+                                                   ^
+                                                   source.hx
+                                                    ^
+                                                    source.hx keyword.operator.assignment.hx
+                                                     ^
+                                                     source.hx
+                                                      ^
+                                                      source.hx constant.numeric.decimal.hx
+                                                       ^
+                                                       source.hx
+                                                        ^
+                                                        source.hx
+                                                         ^^^
+                                                         source.hx variable.parameter.hx
+                                                            ^
+                                                            source.hx keyword.operator.type.annotation.hx
+                                                             ^^^^^^
+                                                             source.hx support.class.builtin.hx
+                                                                   ^
+                                                                   source.hx
+                                                                    ^
+                                                                    source.hx keyword.operator.assignment.hx
+                                                                     ^
+                                                                     source.hx
+                                                                      ^
+                                                                      source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                                                       ^^^
+                                                                       source.hx string.quoted.double.hx
+                                                                          ^
+                                                                          source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                                                           ^
+                                                                           source.hx
+                                                                            ^
+                                                                            source.hx
+                                                                             ^
+                                                                             source.hx variable.parameter.hx
+                                                                              ^
+                                                                              source.hx keyword.operator.type.annotation.hx
+                                                                               ^^^^
+                                                                               source.hx support.class.builtin.hx
+                                                                                   ^
+                                                                                   source.hx
+                                                                                    ^
+                                                                                    source.hx keyword.operator.assignment.hx
+                                                                                     ^
+                                                                                     source.hx
+                                                                                      ^^^^^
+                                                                                      source.hx constant.language.hx
+                                                                                           ^
+                                                                                           source.hx punctuation.definition.parameters.end.hx
+                                                                                            ^
+                                                                                            source.hx
+                                                                                             ^^
+                                                                                             source.hx keyword.operator.type.function.hx
+                                                                                               ^
+                                                                                               source.hx
+                                                                                                ^^^^
+                                                                                                source.hx support.class.builtin.hx
+                                                                                                    ^
+                                                                                                    source.hx punctuation.terminator.hx

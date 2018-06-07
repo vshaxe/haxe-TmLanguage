@@ -1,0 +1,1 @@
+var t:(?opt:Int, ?opt2:Int, def:Int = 0, ?both:Int = 0, foo:String = "Foo", b:Bool = false) -> Void;
