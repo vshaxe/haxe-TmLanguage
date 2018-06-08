@@ -1,0 +1,36 @@
+patterns:
+# can't just use 'source.hx#parameter' because of the lookarounds it has
+- include: '#parameter'
+repository:
+  parameter:
+    patterns:
+    - include: '#parameter-name'
+    - include: '#parameter-type-hint'
+    - include: '#parameter-assign'
+    - include: 'source.hx#punctuation-comma'
+    - include: 'source.hx#global'
+  parameter-name:
+    begin: ^
+    end: ([_a-zA-Z]\w*)
+    endCaptures:
+      '1': {name: variable.parameter.hx}
+    patterns:
+    - include: 'source.hx#global'
+    - include: 'source.hx#metadata'
+    - include: 'source.hx#operator-optional'
+  parameter-type-hint:
+    begin: ':'
+    beginCaptures:
+      '0': {name: keyword.operator.type.annotation.hx}
+    end: (?=\)(?!\s*->)|,|=)
+    patterns:
+    - include: 'source.hx#type'
+  parameter-assign:
+    begin: '='
+    beginCaptures:
+      '0': {name: keyword.operator.assignment.hx}
+    end: $
+    patterns:
+    - include: 'source.hx#block'
+    - include: 'source.hx#block-contents'
+scopeName: source.hx.argument

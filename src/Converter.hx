@@ -8,6 +8,7 @@ class Converter {
         convert("hxml.YAML-tmLanguage", "hxml.tmLanguage");
 
         convert("helper/haxe-type.YAML-tmLanguage", "helper/haxe-type.tmLanguage");
+        convert("helper/haxe-argument.YAML-tmLanguage", "helper/haxe-argument.tmLanguage");
         convert("helper/haxe-markdown.YAML-tmLanguage", "helper/haxe-markdown.tmLanguage");
         convert("helper/hxml-markdown.YAML-tmLanguage", "helper/hxml-markdown.tmLanguage");
 
