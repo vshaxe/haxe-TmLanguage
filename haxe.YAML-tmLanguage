@@ -64,21 +64,21 @@ repository:
   package:
     match: \b(package)(\s+([\w.*]*))?\s*(;)?
     captures:
-      '1': {name: keyword.control.package.hx}
+      '1': {name: keyword.other.package.hx}
       '2': {name: support.package.hx}
       '4': {name: punctuation.terminator.hx}
     name: meta.package.hx
   using:
     match: (using)\s+((?:_*[a-z]\w*\.?)*)((?:_*[A-Z]\w*\.?)+)?(;)?
     captures:
-      '1': {name: keyword.control.using.hx}
+      '1': {name: keyword.other.using.hx}
       '2': {name: support.package.hx}
       '3': {name: entity.name.type.hx}
       '4': {name: punctuation.terminator.hx}
   import:
     match: (import)\s+(?:((\b_*[a-z]\w*\.?)*)(?:((\b_*[A-Z]\w*\.?)+)|(\*))?(\b_*[a-z]\w*|(\*))?(?:\s+(as|in)\s+(\b_*[A-Z]\w*)?)?)?\s*(;)?
     captures:
-      '1': {name: keyword.control.import.hx}
+      '1': {name: keyword.other.import.hx}
       '3': {name: support.package.hx}
       '4': {name: entity.name.type.hx}
       '6': {name: constant.language.import-all.hx}

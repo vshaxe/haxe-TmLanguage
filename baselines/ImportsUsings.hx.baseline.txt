@@ -23,12 +23,12 @@ using net.onthewings.Test;
 
 >package;
  ^^^^^^^
- source.hx meta.package.hx keyword.control.package.hx
+ source.hx meta.package.hx keyword.other.package.hx
         ^
         source.hx meta.package.hx punctuation.terminator.hx
 >package net.onthewings;
  ^^^^^^^
- source.hx meta.package.hx keyword.control.package.hx
+ source.hx meta.package.hx keyword.other.package.hx
         ^^^^^^^^^^^^^^^
         source.hx meta.package.hx support.package.hx
                        ^
@@ -38,7 +38,7 @@ using net.onthewings.Test;
  source.hx
 >import net.onthewings.Test;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^^^^^
        source.hx
             ^^^^^^^^^^^
@@ -49,7 +49,7 @@ using net.onthewings.Test;
                            source.hx punctuation.terminator.hx
 >import net.onthewings.*;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^^^^^
        source.hx
             ^^^^^^^^^^^
@@ -60,7 +60,7 @@ using net.onthewings.Test;
                         source.hx punctuation.terminator.hx
 >import net.onthewings.Test.*;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^^^^^
        source.hx
             ^^^^^^^^^^^
@@ -73,7 +73,7 @@ using net.onthewings.Test;
                              source.hx punctuation.terminator.hx
 >import _net.onthewings.Test.field;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^^^^^^
        source.hx
              ^^^^^^^^^^^
@@ -89,7 +89,7 @@ using net.onthewings.Test;
  source.hx
 >import _ha_xe.Int64 as I64;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^
        source.hx
         ^^^^^^^
@@ -108,7 +108,7 @@ using net.onthewings.Test;
                            source.hx punctuation.terminator.hx
 >import haxe.Int64 in I64;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^
        source.hx
         ^^^^^
@@ -127,7 +127,7 @@ using net.onthewings.Test;
                          source.hx punctuation.terminator.hx
 >import haxe.Int64 in __Int64;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^
        source.hx
         ^^^^^
@@ -146,7 +146,7 @@ using net.onthewings.Test;
                              source.hx punctuation.terminator.hx
 >import haxe.macro.Expr;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^^^^^^
        source.hx
              ^^^^^^
@@ -157,7 +157,7 @@ using net.onthewings.Test;
                        source.hx punctuation.terminator.hx
 >import haxe.__Int64;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^
        source.hx
         ^^^^^
@@ -168,7 +168,7 @@ using net.onthewings.Test;
                     source.hx punctuation.terminator.hx
 >import haxe.__Int64.field;
  ^^^^^^
- source.hx keyword.control.import.hx
+ source.hx keyword.other.import.hx
        ^
        source.hx
         ^^^^^
@@ -184,7 +184,7 @@ using net.onthewings.Test;
  source.hx
 >using Lambda;
  ^^^^^
- source.hx keyword.control.using.hx
+ source.hx keyword.other.using.hx
       ^
       source.hx
        ^^^^^^
@@ -193,7 +193,7 @@ using net.onthewings.Test;
              source.hx punctuation.terminator.hx
 >using _ne_t.onthewings.__Int64;
  ^^^^^
- source.hx keyword.control.using.hx
+ source.hx keyword.other.using.hx
       ^
       source.hx
        ^^^^^^^^^^^^^^^^^
@@ -204,7 +204,7 @@ using net.onthewings.Test;
                                source.hx punctuation.terminator.hx
 >using __Int64;
  ^^^^^
- source.hx keyword.control.using.hx
+ source.hx keyword.other.using.hx
       ^
       source.hx
        ^^^^^^^
@@ -213,7 +213,7 @@ using net.onthewings.Test;
               source.hx punctuation.terminator.hx
 >using net.onthewings.Test;
  ^^^^^
- source.hx keyword.control.using.hx
+ source.hx keyword.other.using.hx
       ^
       source.hx
        ^^^^^^^^^^^^^^^
