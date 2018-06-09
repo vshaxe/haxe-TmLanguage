@@ -735,7 +735,9 @@ repository:
       name: entity.name.function.hx
   modifiers:
     patterns:
-    - match: \b(public|private|static|dynamic|inline|macro|extern|override|enum)\b
+    - match: \b(enum)\b
+      name: storage.type.class
+    - match: \b(public|private|static|dynamic|inline|macro|extern|override)\b
       name: storage.modifier.hx
     - match: \b(final)\b(?=\s+(public|private|static|dynamic|inline|macro|extern|override|function))
       name: storage.modifier.hx

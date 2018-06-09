@@ -15,7 +15,7 @@ enum abstract Foo(Int) {
 
 >enum extern abstract Foo(Int) {
  ^^^^
- source.hx storage.modifier.hx
+ source.hx storage.type.class
      ^
      source.hx
       ^^^^^^
@@ -61,7 +61,7 @@ enum abstract Foo(Int) {
        ^
        source.hx
         ^^^^
-        source.hx storage.modifier.hx
+        source.hx storage.type.class
             ^
             source.hx
              ^^^^^^^^
@@ -99,7 +99,7 @@ enum abstract Foo(Int) {
  source.hx
 >enum abstract Foo(Int) {
  ^^^^
- source.hx storage.modifier.hx
+ source.hx storage.type.class
      ^
      source.hx
       ^^^^^^^^
