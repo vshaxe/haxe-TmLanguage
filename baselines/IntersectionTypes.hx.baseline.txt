@@ -1,0 +1,216 @@
+original file
+-----------------------------------
+typedef Type3 = Type1 & Type2 & {
+	var field3:Bool;
+}
+
+typedef Type3 = {
+	var field3:Bool;
+} & Type1 & Type2;
+
+typedef Type3 =
+	Type1 &
+	Type2 & {
+	var field3:Bool;
+}
+
+class Class<Paramt:Type1 & Type2> { }
+
+-----------------------------------
+
+>typedef Type3 = Type1 & Type2 & {
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+              ^
+              source.hx meta.typedef.hx
+               ^
+               source.hx meta.typedef.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.typedef.hx
+                 ^^^^^
+                 source.hx meta.typedef.hx entity.name.type.hx
+                      ^
+                      source.hx meta.typedef.hx
+                       ^
+                       source.hx meta.typedef.hx keyword.operator.type.intersection.hx
+                        ^
+                        source.hx meta.typedef.hx
+                         ^^^^^
+                         source.hx meta.typedef.hx entity.name.type.hx
+                              ^
+                              source.hx meta.typedef.hx
+                               ^
+                               source.hx meta.typedef.hx keyword.operator.type.intersection.hx
+                                ^
+                                source.hx meta.typedef.hx
+                                 ^
+                                 source.hx meta.typedef.hx punctuation.definition.block.begin.hx
+>	var field3:Bool;
+ ^
+ source.hx meta.typedef.hx meta.block.hx
+  ^^^
+  source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx
+      ^^^^^^
+      source.hx meta.typedef.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+             ^^^^
+             source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                 ^
+                 source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>typedef Type3 = {
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+              ^
+              source.hx meta.typedef.hx
+               ^
+               source.hx meta.typedef.hx keyword.operator.assignment.hx
+                ^
+                source.hx meta.typedef.hx
+                 ^
+                 source.hx meta.typedef.hx punctuation.definition.block.begin.hx
+>	var field3:Bool;
+ ^
+ source.hx meta.typedef.hx meta.block.hx
+  ^^^
+  source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx
+      ^^^^^^
+      source.hx meta.typedef.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+             ^^^^
+             source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                 ^
+                 source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+>} & Type1 & Type2;
+ ^
+ source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx
+  ^
+  source.hx
+   ^
+   source.hx keyword.operator.bitwise.hx
+    ^
+    source.hx
+     ^^^^^
+     source.hx entity.name.type.hx
+          ^
+          source.hx
+           ^
+           source.hx keyword.operator.bitwise.hx
+            ^
+            source.hx
+             ^^^^^
+             source.hx entity.name.type.hx
+                  ^
+                  source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>typedef Type3 =
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+              ^
+              source.hx meta.typedef.hx
+               ^
+               source.hx meta.typedef.hx keyword.operator.assignment.hx
+>	Type1 &
+ ^
+ source.hx meta.typedef.hx
+  ^^^^^
+  source.hx meta.typedef.hx entity.name.type.hx
+       ^
+       source.hx meta.typedef.hx
+        ^
+        source.hx meta.typedef.hx keyword.operator.type.intersection.hx
+>	Type2 & {
+ ^
+ source.hx meta.typedef.hx
+  ^^^^^
+  source.hx meta.typedef.hx entity.name.type.hx
+       ^
+       source.hx meta.typedef.hx
+        ^
+        source.hx meta.typedef.hx keyword.operator.type.intersection.hx
+         ^
+         source.hx meta.typedef.hx
+          ^
+          source.hx meta.typedef.hx punctuation.definition.block.begin.hx
+>	var field3:Bool;
+ ^
+ source.hx meta.typedef.hx meta.block.hx
+  ^^^
+  source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+     ^
+     source.hx meta.typedef.hx meta.block.hx
+      ^^^^^^
+      source.hx meta.typedef.hx meta.block.hx variable.other.hx
+            ^
+            source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+             ^^^^
+             source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                 ^
+                 source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>class Class<Paramt:Type1 & Type2> { }
+ ^^^^^
+ source.hx meta.class.hx meta.class.identifier.hx storage.type.class.hx
+      ^
+      source.hx meta.class.hx meta.class.identifier.hx
+       ^^^^^
+       source.hx meta.class.hx meta.class.identifier.hx entity.name.type.class.hx
+            ^
+            source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+             ^^^^^^
+             source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                   ^
+                   source.hx meta.class.hx meta.type-parameters.hx
+                    ^^^^^
+                    source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                         ^
+                         source.hx meta.class.hx meta.type-parameters.hx
+                          ^
+                          source.hx meta.class.hx meta.type-parameters.hx keyword.operator.type.intersection.hx
+                           ^
+                           source.hx meta.class.hx meta.type-parameters.hx
+                            ^^^^^
+                            source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
+                                 ^
+                                 source.hx meta.class.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                  ^
+                                  source.hx meta.class.hx
+                                   ^
+                                   source.hx meta.class.hx punctuation.definition.block.begin.hx
+                                    ^
+                                    source.hx meta.class.hx meta.block.hx
+                                     ^
+                                     source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx

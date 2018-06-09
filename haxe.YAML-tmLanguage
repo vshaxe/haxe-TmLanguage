@@ -967,6 +967,8 @@ repository:
     - include: '#type-parameters'
     - match: '->'
       name: keyword.operator.type.function.hx
+    - match: '&'
+      name: keyword.operator.type.intersection.hx
     - match: '\?'
       name: punctuation.definition.tag
     - begin: (\{)
