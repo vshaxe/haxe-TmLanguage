@@ -1,0 +1,72 @@
+Target
+  --js <file>                                   compile code to JavaScript file
+  --lua <file>                                  compile code to Lua file
+  --swf <file>                                  compile code to Flash SWF file
+  --as3 <directory>                             generate AS3 code into target directory
+  --neko <file>                                 compile code to Neko Binary
+  --php <directory>                             generate PHP code into target directory
+  --cpp <directory>                             generate C++ code into target directory
+  --cppia <file>                                generate Cppia code into target file
+  --cs <directory>                              generate C# code into target directory
+  --java <directory>                            generate Java code into target directory
+  --python <file>                               generate Python code as target file
+  --hl <file>                                   compile HL code as target file
+  --interp                                      interpret the program using internal macro system
+Compilation
+  -p,
+  --class-path <path>                       add a directory to find source files
+  -m,
+  --main <class>                            select startup class
+  -L,
+  --library <library[:version]>             use a haxelib library
+  -D,
+  --define <var[=value]>                    define a conditional compilation flag
+  -r,
+  --resource <file>[@name]                  add a named resource file
+  --cmd <command>                               run the specified command after successful compilation
+  --remap <package:target>                      remap a package to another one
+#   --macro <macro>                               call the given macro before typing anything else
+  -C,
+  --cwd <dir>                               set current working directory
+Optimization
+  --dce,
+  --dead-code-elimination [std|full|no]  set the dead code elimination mode (default std)
+  --no-traces                                   don't compile trace calls in the program
+  --no-output                                   compiles but does not generate any file
+  --no-inline                                   disable inlining
+  --no-opt                                      disable code optimizations
+Debug
+  -v,
+  --verbose                                 turn on verbose mode
+  --debug                                       add debug information to the compiled code
+  --prompt                                      prompt on error
+  --times                                       measure compilation times
+Batch
+  --next                                        separate several haxe compilations
+  --each                                        append preceding parameters to all haxe compilations separated by --next
+Services
+  --display                                     display code tips
+  --xml <file>                                  generate XML types description
+  --json <file>                                 generate JSON types description
+  --gen-hx-classes                              generate hx headers for all input classes
+Compilation Server
+  --wait [[host:]port]|stdio]                   wait on the given port (or use standard i/o) for commands to run)
+  --connect <[host:]port>                       connect on the given port and run commands there)
+Target-specific
+  --swf-version <version>                       change the SWF version
+  --swf-header <header>                         define SWF header (width:height:fps:color)
+  --swf-lib <file>                              add the SWF library to the compiled SWF
+  --swf-lib-extern <file>                       use the SWF library for type checking
+  --flash-strict                                more type strict flash API
+  --java-lib <file>                             add an external JAR or class directory library
+  --net-lib <file>[@std]                        add an external .NET DLL file
+  --net-std <file>                              add a root std .NET DLL search path
+  --c-arg <arg>                                 pass option <arg> to the native Java/C# compiler
+Miscellaneous
+  --version                                     print version and exit
+  -h,
+  --help                                    show extended help information
+  --help-defines                                print help for all compiler specific defines
+  --help-metas                                  print help for all compiler metadatas
+  --run <module> [args...]                      compile and execute a Haxe module with command line arguments
+  -- [args...]                                  args that will be passed to the macro interpreter

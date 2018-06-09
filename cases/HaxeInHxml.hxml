@@ -1,5 +1,17 @@
 --macro server.setModuleCheckPolicy(['DefaultAssetLibrary'], [CheckFileContentModification])
 --macro include('haxe.ds')
+
+-m
+-m Main
+-m foo.unit.Main
+-m foo
+
+-main
 -main Main
 -main foo.unit.Main
 -main foo
+
+--main
+--main Main
+--main foo.unit.Main
+--main foo

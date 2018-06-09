@@ -3,12 +3,20 @@
 # leading whitespace:
  	-v
 # dce args
+-dce
 -dce std
 -dce full
 -dce no
 -dce invalid
+
+--dead-code-elimination
+--dead-code-elimination std
+--dead-code-elimination full
+--dead-code-elimination no
+--dead-code-elimination invalid
 # dce arg with random whitespace
 -dce   	 	 std
+--dead-code-elimination   	 	 std
 # argument inside another word
 -java some-version-test
 -java some-version

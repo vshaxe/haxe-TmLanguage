@@ -2,9 +2,22 @@ original file
 -----------------------------------
 --macro server.setModuleCheckPolicy(['DefaultAssetLibrary'], [CheckFileContentModification])
 --macro include('haxe.ds')
+
+-m
+-m Main
+-m foo.unit.Main
+-m foo
+
+-main
 -main Main
 -main foo.unit.Main
 -main foo
+
+--main
+--main Main
+--main foo.unit.Main
+--main foo
+
 -----------------------------------
 
 >--macro server.setModuleCheckPolicy(['DefaultAssetLibrary'], [CheckFileContentModification])
@@ -107,6 +120,41 @@ original file
                          source.hxml string.quoted.single.hx punctuation.definition.string.end.hx
                           ^
                           source.hxml meta.brace.round.hx
+>
+ ^
+ source.hxml
+>-m
+ ^^
+ source.hxml keyword.other.hxml
+>-m Main
+ ^^
+ source.hxml keyword.other.hxml
+   ^
+   source.hxml
+    ^^^^
+    source.hxml entity.name.type.hx
+>-m foo.unit.Main
+ ^^
+ source.hxml keyword.other.hxml
+   ^
+   source.hxml
+    ^^^^^^^^^
+    source.hxml support.package.hx
+             ^^^^
+             source.hxml entity.name.type.hx
+>-m foo
+ ^^
+ source.hxml keyword.other.hxml
+   ^
+   source.hxml
+    ^^^^
+    source.hxml
+>
+ ^
+ source.hxml
+>-main
+ ^^^^^
+ source.hxml keyword.other.hxml
 >-main Main
  ^^^^^
  source.hxml keyword.other.hxml
@@ -130,3 +178,35 @@ original file
       source.hxml
        ^^^^
        source.hxml
+>
+ ^
+ source.hxml
+>--main
+ ^^^^^^
+ source.hxml keyword.other.hxml
+>--main Main
+ ^^^^^^
+ source.hxml keyword.other.hxml
+       ^
+       source.hxml
+        ^^^^
+        source.hxml entity.name.type.hx
+>--main foo.unit.Main
+ ^^^^^^
+ source.hxml keyword.other.hxml
+       ^
+       source.hxml
+        ^^^^^^^^^
+        source.hxml support.package.hx
+                 ^^^^
+                 source.hxml entity.name.type.hx
+>--main foo
+ ^^^^^^
+ source.hxml keyword.other.hxml
+       ^
+       source.hxml
+        ^^^^
+        source.hxml
+>
+ ^
+ source.hxml

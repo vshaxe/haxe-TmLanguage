@@ -57,6 +57,7 @@ original file
 --help-metas : print help for all compiler metadatas
 -help  Display this list of options
 --help  Display this list of options
+
 -----------------------------------
 
 >-cp <path> : add a directory to find source files
@@ -344,3 +345,6 @@ original file
  source.hxml keyword.other.hxml
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
        source.hxml
+>
+ ^
+ source.hxml
