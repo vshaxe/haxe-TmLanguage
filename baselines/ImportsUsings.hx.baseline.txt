@@ -68,7 +68,7 @@ using net.onthewings.Test;
                        ^^^^^
                        source.hx entity.name.type.hx
                             ^
-                            source.hx support.package.hx constant.language.import-all.hx
+                            source.hx variable.other.hx constant.language.import-all.hx
                              ^
                              source.hx punctuation.terminator.hx
 >import _net.onthewings.Test.field;
@@ -81,7 +81,7 @@ using net.onthewings.Test;
                         ^^^^^
                         source.hx entity.name.type.hx
                              ^^^^^
-                             source.hx support.package.hx
+                             source.hx variable.other.hx
                                   ^
                                   source.hx punctuation.terminator.hx
 >
@@ -176,7 +176,7 @@ using net.onthewings.Test;
              ^^^^^^^^
              source.hx entity.name.type.hx
                      ^^^^^
-                     source.hx support.package.hx
+                     source.hx variable.other.hx
                           ^
                           source.hx punctuation.terminator.hx
 >

@@ -83,7 +83,7 @@ repository:
       '3': {name: support.package.hx}
       '4': {name: entity.name.type.hx}
       '6': {name: constant.language.import-all.hx}
-      '7': {name: support.package.hx}
+      '7': {name: variable.other.hx}
       '8': {name: constant.language.import-all.hx}
       '9': {name: keyword.other.hx}
       '10': {name: entity.name.type.hx}
