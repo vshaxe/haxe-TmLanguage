@@ -29,8 +29,10 @@ using net.onthewings.Test;
 >package net.onthewings;
  ^^^^^^^
  source.hx meta.package.hx keyword.other.package.hx
-        ^^^^^^^^^^^^^^^
-        source.hx meta.package.hx support.package.hx
+        ^^^^^
+        source.hx meta.package.hx
+             ^^^^^^^^^^
+             source.hx meta.package.hx support.package.hx
                        ^
                        source.hx meta.package.hx punctuation.terminator.hx
 >
@@ -41,8 +43,10 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^^^^^
        source.hx
-            ^^^^^^^^^^^
+            ^^^^^^^^^^
             source.hx support.package.hx
+                      ^
+                      source.hx support.package.hx puncutation.accessor.hx
                        ^^^^
                        source.hx entity.name.type.hx
                            ^
@@ -52,8 +56,10 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^^^^^
        source.hx
-            ^^^^^^^^^^^
+            ^^^^^^^^^^
             source.hx support.package.hx
+                      ^
+                      source.hx support.package.hx puncutation.accessor.hx
                        ^
                        source.hx constant.language.import-all.hx
                         ^
@@ -63,12 +69,16 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^^^^^
        source.hx
-            ^^^^^^^^^^^
+            ^^^^^^^^^^
             source.hx support.package.hx
-                       ^^^^^
+                      ^
+                      source.hx support.package.hx puncutation.accessor.hx
+                       ^^^^
                        source.hx entity.name.type.hx
+                           ^
+                           source.hx puncutation.accessor.hx
                             ^
-                            source.hx variable.other.hx constant.language.import-all.hx
+                            source.hx constant.language.import-all.hx
                              ^
                              source.hx punctuation.terminator.hx
 >import _net.onthewings.Test.field;
@@ -76,10 +86,14 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^^^^^^
        source.hx
-             ^^^^^^^^^^^
+             ^^^^^^^^^^
              source.hx support.package.hx
-                        ^^^^^
+                       ^
+                       source.hx support.package.hx puncutation.accessor.hx
+                        ^^^^
                         source.hx entity.name.type.hx
+                            ^
+                            source.hx puncutation.accessor.hx
                              ^^^^^
                              source.hx variable.other.hx
                                   ^
@@ -92,8 +106,10 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^
        source.hx
-        ^^^^^^^
+        ^^^^^^
         source.hx support.package.hx
+              ^
+              source.hx support.package.hx puncutation.accessor.hx
                ^^^^^
                source.hx entity.name.type.hx
                     ^
@@ -111,8 +127,10 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^
        source.hx
-        ^^^^^
+        ^^^^
         source.hx support.package.hx
+            ^
+            source.hx support.package.hx puncutation.accessor.hx
              ^^^^^
              source.hx entity.name.type.hx
                   ^
@@ -130,8 +148,10 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^
        source.hx
-        ^^^^^
+        ^^^^
         source.hx support.package.hx
+            ^
+            source.hx support.package.hx puncutation.accessor.hx
              ^^^^^
              source.hx entity.name.type.hx
                   ^
@@ -149,8 +169,10 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^^^^^^
        source.hx
-             ^^^^^^
+             ^^^^^
              source.hx support.package.hx
+                  ^
+                  source.hx support.package.hx puncutation.accessor.hx
                    ^^^^
                    source.hx entity.name.type.hx
                        ^
@@ -160,8 +182,10 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^
        source.hx
-        ^^^^^
+        ^^^^
         source.hx support.package.hx
+            ^
+            source.hx support.package.hx puncutation.accessor.hx
              ^^^^^^^
              source.hx entity.name.type.hx
                     ^
@@ -171,10 +195,14 @@ using net.onthewings.Test;
  source.hx keyword.other.import.hx
        ^
        source.hx
-        ^^^^^
+        ^^^^
         source.hx support.package.hx
-             ^^^^^^^^
+            ^
+            source.hx support.package.hx puncutation.accessor.hx
+             ^^^^^^^
              source.hx entity.name.type.hx
+                    ^
+                    source.hx puncutation.accessor.hx
                      ^^^^^
                      source.hx variable.other.hx
                           ^
@@ -194,10 +222,12 @@ using net.onthewings.Test;
 >using _ne_t.onthewings.__Int64;
  ^^^^^
  source.hx keyword.other.using.hx
-      ^
+      ^^^^^^^
       source.hx
-       ^^^^^^^^^^^^^^^^^
-       source.hx support.package.hx
+             ^^^^^^^^^^
+             source.hx support.package.hx
+                       ^
+                       source.hx puncutation.accessor.hx
                         ^^^^^^^
                         source.hx entity.name.type.hx
                                ^
@@ -214,10 +244,12 @@ using net.onthewings.Test;
 >using net.onthewings.Test;
  ^^^^^
  source.hx keyword.other.using.hx
-      ^
+      ^^^^^
       source.hx
-       ^^^^^^^^^^^^^^^
-       source.hx support.package.hx
+           ^^^^^^^^^^
+           source.hx support.package.hx
+                     ^
+                     source.hx puncutation.accessor.hx
                       ^^^^
                       source.hx entity.name.type.hx
                           ^

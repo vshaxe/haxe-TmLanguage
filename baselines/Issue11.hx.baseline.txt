@@ -8,10 +8,14 @@ import module.Module.SubType as Foo;
  source.hx keyword.other.import.hx
        ^
        source.hx
-        ^^^^^^^
+        ^^^^^^
         source.hx support.package.hx
-               ^^^^^^^^^^^^^^
-               source.hx entity.name.type.hx
+              ^
+              source.hx support.package.hx puncutation.accessor.hx
+               ^^^^^^^
+               source.hx
+                      ^^^^^^^
+                      source.hx entity.name.type.hx
                              ^
                              source.hx
                               ^^
