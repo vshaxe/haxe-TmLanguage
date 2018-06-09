@@ -190,7 +190,7 @@ class Class<Paramt:Type1 & Type2> { }
              ^^^^^^
              source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
                    ^
-                   source.hx meta.class.hx meta.type-parameters.hx
+                   source.hx meta.class.hx meta.type-parameters.hx keyword.operator.type.annotation.hxt
                     ^^^^^
                     source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
                          ^

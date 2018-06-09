@@ -26,7 +26,7 @@ class Test <T:Void->Void> {
              ^
              source.hx meta.class.hx meta.type-parameters.hx entity.name.type.hx
               ^
-              source.hx meta.class.hx meta.type-parameters.hx
+              source.hx meta.class.hx meta.type-parameters.hx keyword.operator.type.annotation.hxt
                ^^^^
                source.hx meta.class.hx meta.type-parameters.hx support.class.builtin.hx
                    ^^
