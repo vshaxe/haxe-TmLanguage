@@ -76,16 +76,17 @@ repository:
       '3': {name: entity.name.type.hx}
       '4': {name: punctuation.terminator.hx}
   import:
-    match: (import)\s+(?:((\b_*[a-z]\w*\.?)*)(?:((\b_*[A-Z]\w*\.?)+)|(\*))?(\b_*[a-z]\w*|\*)?(?:\s+(as|in)\s+(\b_*[A-Z]\w*)?)?)?\s*(;)?
+    match: (import)\s+(?:((\b_*[a-z]\w*\.?)*)(?:((\b_*[A-Z]\w*\.?)+)|(\*))?(\b_*[a-z]\w*|(\*))?(?:\s+(as|in)\s+(\b_*[A-Z]\w*)?)?)?\s*(;)?
     captures:
       '1': {name: storage.type.import.hx}
-      '2': {name: support.package.hx}
+      '3': {name: support.package.hx}
       '4': {name: entity.name.type.hx}
-      '6': {name: support.package.hx}
+      '6': {name: constant.language.import-all.hx}
       '7': {name: support.package.hx}
-      '8': {name: keyword.other.hx}
-      '9': {name: entity.name.type.hx}
-      '10': {name: punctuation.terminator.hx}
+      '8': {name: constant.language.import-all.hx}
+      '9': {name: keyword.other.hx}
+      '10': {name: entity.name.type.hx}
+      '11': {name: punctuation.terminator.hx}
   abstract:
     begin: (?=abstract)
     end: (?<=\})|(;)

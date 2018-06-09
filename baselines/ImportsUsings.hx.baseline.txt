@@ -39,10 +39,10 @@ using net.onthewings.Test;
 >import net.onthewings.Test;
  ^^^^^^
  source.hx storage.type.import.hx
-       ^
+       ^^^^^
        source.hx
-        ^^^^^^^^^^^^^^^
-        source.hx support.package.hx
+            ^^^^^^^^^^^
+            source.hx support.package.hx
                        ^^^^
                        source.hx entity.name.type.hx
                            ^
@@ -50,34 +50,34 @@ using net.onthewings.Test;
 >import net.onthewings.*;
  ^^^^^^
  source.hx storage.type.import.hx
-       ^
+       ^^^^^
        source.hx
-        ^^^^^^^^^^^^^^^
-        source.hx support.package.hx
+            ^^^^^^^^^^^
+            source.hx support.package.hx
                        ^
-                       source.hx support.package.hx
+                       source.hx constant.language.import-all.hx
                         ^
                         source.hx punctuation.terminator.hx
 >import net.onthewings.Test.*;
  ^^^^^^
  source.hx storage.type.import.hx
-       ^
+       ^^^^^
        source.hx
-        ^^^^^^^^^^^^^^^
-        source.hx support.package.hx
+            ^^^^^^^^^^^
+            source.hx support.package.hx
                        ^^^^^
                        source.hx entity.name.type.hx
                             ^
-                            source.hx support.package.hx
+                            source.hx support.package.hx constant.language.import-all.hx
                              ^
                              source.hx punctuation.terminator.hx
 >import _net.onthewings.Test.field;
  ^^^^^^
  source.hx storage.type.import.hx
-       ^
+       ^^^^^^
        source.hx
-        ^^^^^^^^^^^^^^^^
-        source.hx support.package.hx
+             ^^^^^^^^^^^
+             source.hx support.package.hx
                         ^^^^^
                         source.hx entity.name.type.hx
                              ^^^^^
@@ -147,10 +147,10 @@ using net.onthewings.Test;
 >import haxe.macro.Expr;
  ^^^^^^
  source.hx storage.type.import.hx
-       ^
+       ^^^^^^
        source.hx
-        ^^^^^^^^^^^
-        source.hx support.package.hx
+             ^^^^^^
+             source.hx support.package.hx
                    ^^^^
                    source.hx entity.name.type.hx
                        ^
