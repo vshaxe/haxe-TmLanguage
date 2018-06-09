@@ -680,6 +680,8 @@ repository:
     end: (?=$)|([_a-zA-Z]\w*)
     endCaptures:
       '1': {name: variable.other.hx}
+    patterns:
+    - include: '#operator-optional'
   variable-name-next:
     begin: ','
     beginCaptures:

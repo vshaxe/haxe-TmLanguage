@@ -1,0 +1,44 @@
+original file
+-----------------------------------
+typedef T = { var ?x : Int; }
+-----------------------------------
+
+>typedef T = { var ?x : Int; }
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+          ^
+          source.hx meta.typedef.hx
+           ^
+           source.hx meta.typedef.hx keyword.operator.assignment.hx
+            ^
+            source.hx meta.typedef.hx
+             ^
+             source.hx meta.typedef.hx punctuation.definition.block.begin.hx
+              ^
+              source.hx meta.typedef.hx meta.block.hx
+               ^^^
+               source.hx meta.typedef.hx meta.block.hx storage.type.variable.hx
+                  ^
+                  source.hx meta.typedef.hx meta.block.hx
+                   ^
+                   source.hx meta.typedef.hx meta.block.hx keyword.operator.optional.hx
+                    ^
+                    source.hx meta.typedef.hx meta.block.hx variable.other.hx
+                     ^
+                     source.hx meta.typedef.hx meta.block.hx
+                      ^
+                      source.hx meta.typedef.hx meta.block.hx keyword.operator.type.annotation.hx
+                       ^
+                       source.hx meta.typedef.hx meta.block.hx
+                        ^^^
+                        source.hx meta.typedef.hx meta.block.hx support.class.builtin.hx
+                           ^
+                           source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
+                            ^
+                            source.hx meta.typedef.hx meta.block.hx
+                             ^
+                             source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx
