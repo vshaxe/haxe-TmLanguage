@@ -95,7 +95,7 @@ repository:
       name: keyword.other.hx
     - match: \*
       name: constant.language.import-all.hx
-    - match: \b([_A-Za-z]\w*)\b(?=\s*($|(;)))
+    - match: \b([_A-Za-z]\w*)\b(?=\s*(as|in|$|(;)))
       name: variable.other.hxt
     - include: '#type-path-package-name'
   type-path:

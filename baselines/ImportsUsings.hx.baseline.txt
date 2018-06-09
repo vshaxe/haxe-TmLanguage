@@ -7,6 +7,7 @@ import net.onthewings.Test;
 import net.onthewings.*;
 import net.onthewings.Test.*;
 import _net.onthewings.Test.field;
+import _net.onthewings.Test.field as foo;
 
 import Type.SubType;
 import pack.Type.SubType;
@@ -126,6 +127,35 @@ using net.onthewings.Test;
                              source.hx variable.other.hxt
                                   ^
                                   source.hx punctuation.terminator.hx
+>import _net.onthewings.Test.field as foo;
+ ^^^^^^
+ source.hx keyword.other.import.hx
+       ^
+       source.hx
+        ^^^^
+        source.hx support.package.hx
+            ^
+            source.hx punctuation.accessor.hx
+             ^^^^^^^^^^
+             source.hx support.package.hx
+                       ^
+                       source.hx punctuation.accessor.hx
+                        ^^^^
+                        source.hx entity.name.type.hx
+                            ^
+                            source.hx punctuation.accessor.hx
+                             ^^^^^
+                             source.hx variable.other.hxt
+                                  ^
+                                  source.hx
+                                   ^^
+                                   source.hx keyword.other.hx
+                                     ^
+                                     source.hx
+                                      ^^^
+                                      source.hx variable.other.hxt
+                                         ^
+                                         source.hx punctuation.terminator.hx
 >
  ^
  source.hx

@@ -5,6 +5,7 @@ import net.onthewings.Test;
 import net.onthewings.*;
 import net.onthewings.Test.*;
 import _net.onthewings.Test.field;
+import _net.onthewings.Test.field as foo;
 
 import Type.SubType;
 import pack.Type.SubType;
