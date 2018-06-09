@@ -5,7 +5,7 @@ import module.Module.SubType as Foo;
 
 >import module.Module.SubType as Foo;
  ^^^^^^
- source.hx storage.type.import.hx
+ source.hx keyword.control.import.hx
        ^
        source.hx
         ^^^^^^^
