@@ -1046,7 +1046,8 @@ repository:
     name: meta.type-parameters.hx
     patterns:
     - include: '#type'
-    - include: '#type-parameter-constraint'
+    - include: '#type-parameter-constraint-old'
+    - include: '#type-parameter-constraint-new'
     - include: '#global'
     - include: '#regex'
     - include: '#array'
@@ -1054,7 +1055,7 @@ repository:
     - include: '#strings'
     - include: '#metadata'
     - include: '#punctuation-comma'
-  type-parameter-constraint:
+  type-parameter-constraint-old:
     begin: '(:)\s*(\()'
     beginCaptures:
       '1': {name: keyword.operator.type.annotation.hx}
@@ -1065,6 +1066,9 @@ repository:
     patterns:
     - include: '#type'
     - include: '#punctuation-comma'
+  type-parameter-constraint-new:
+    match: ':'
+    name: keyword.operator.type.annotation.hxt
   identifier-name:
     match: '\b([_A-Za-z]\w*)\b'
     name: variable.other.hx
