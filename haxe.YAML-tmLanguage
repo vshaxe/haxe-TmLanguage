@@ -55,6 +55,7 @@ repository:
     - include: '#operator-assignment'
     - include: '#punctuation-terminator'
     - include: '#punctuation-comma'
+    - include: '#punctuation-accessor'
     - include: '#identifiers'
   identifiers:
     patterns:
@@ -961,6 +962,9 @@ repository:
   punctuation-comma:
     match: ','
     name: punctuation.separator.comma.hx
+  punctuation-accessor:
+    match: '\.'
+    name: punctuation.accessor.hx
   punctuation-terminator:
     match: ;
     name: punctuation.terminator.hx

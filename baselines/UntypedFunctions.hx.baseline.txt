@@ -133,7 +133,7 @@ next : function() {
          ^^^^^^^^^^
          source.hx keyword.other.untyped-property.hx
                    ^
-                   source.hx
+                   source.hx punctuation.accessor.hx
                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                     source.hx variable.other.hx
 >untyped __global__["flash.utils.setTimeout"]
@@ -178,7 +178,7 @@ next : function() {
             ^^^^^^^^
             source.hx meta.method.hx meta.method.block.hx keyword.other.untyped-property.hx
                     ^
-                    source.hx meta.method.hx meta.method.block.hx
+                    source.hx meta.method.hx meta.method.block.hx punctuation.accessor.hx
                      ^^^
                      source.hx meta.method.hx meta.method.block.hx variable.other.hx
                         ^
@@ -186,7 +186,7 @@ next : function() {
                          ^^^^^^^^
                          source.hx meta.method.hx meta.method.block.hx meta.array.literal.hx keyword.other.untyped-property.hx
                                  ^
-                                 source.hx meta.method.hx meta.method.block.hx meta.array.literal.hx
+                                 source.hx meta.method.hx meta.method.block.hx meta.array.literal.hx punctuation.accessor.hx
                                   ^^^
                                   source.hx meta.method.hx meta.method.block.hx meta.array.literal.hx variable.other.hx
                                      ^^

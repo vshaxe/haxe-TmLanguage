@@ -39,7 +39,7 @@ var is:Int;
   ^^^^
   source.hx support.class.builtin.hx
       ^
-      source.hx
+      source.hx punctuation.accessor.hx
        ^^^^^^
        source.hx entity.name.function.hx
              ^
@@ -318,7 +318,7 @@ var is:Int;
  ^^^^
  source.hx support.class.builtin.hx
      ^
-     source.hx
+     source.hx punctuation.accessor.hx
       ^^^^^^
       source.hx entity.name.function.hx
             ^
@@ -567,7 +567,7 @@ var is:Int;
   ^^^
   source.hx support.class.builtin.hx
      ^
-     source.hx
+     source.hx punctuation.accessor.hx
       ^^
       source.hx entity.name.function.hx
         ^

@@ -8,11 +8,11 @@ pckage.Type
  ^^^^
  source.hx support.class.builtin.hx
      ^
-     source.hx
+     source.hx punctuation.accessor.hx
       ^^^^^^^^
       source.hx variable.other.hx
               ^
-              source.hx
+              source.hx punctuation.accessor.hx
                ^^^^^^^^
                source.hx variable.other.hx
 >pckage.Type

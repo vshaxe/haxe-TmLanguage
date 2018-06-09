@@ -15,7 +15,7 @@ original file
          ^^^^^^
          source.hxml variable.other.hx
                ^
-               source.hxml
+               source.hxml punctuation.accessor.hx
                 ^^^^^^^^^^^^^^^^^^^^
                 source.hxml entity.name.function.hx
                                     ^

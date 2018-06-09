@@ -41,7 +41,7 @@ class Colors {
         ^
         source.hx variable.other.hx
          ^
-         source.hx
+         source.hx punctuation.accessor.hx
           ^^^^
           source.hx variable.other.hx
               ^
@@ -80,7 +80,7 @@ class Colors {
                                  ^^^^^^^^^^^
                                  source.hx support.class.builtin.hx
                                             ^
-                                            source.hx
+                                            source.hx punctuation.accessor.hx
                                              ^^^^^^^^^^
                                              source.hx entity.name.function.hx
                                                        ^
@@ -144,7 +144,7 @@ class Colors {
                                  ^^^^^^^^^^^
                                  source.hx support.class.builtin.hx
                                             ^
-                                            source.hx
+                                            source.hx punctuation.accessor.hx
                                              ^^^^^^^^^^
                                              source.hx entity.name.function.hx
                                                        ^
@@ -212,7 +212,7 @@ class Colors {
                                      ^^^
                                      source.hx support.class.builtin.hx
                                         ^
-                                        source.hx
+                                        source.hx punctuation.accessor.hx
                                          ^^^^^^^^
                                          source.hx entity.name.function.hx
                                                  ^

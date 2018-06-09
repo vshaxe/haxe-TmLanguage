@@ -22,7 +22,7 @@ a...b;
      ^^^^^
      source.hx variable.other.hx
           ^
-          source.hx
+          source.hx punctuation.accessor.hx
            ^^^^^^
            source.hx variable.other.hx
                  ^

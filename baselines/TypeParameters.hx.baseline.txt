@@ -234,7 +234,7 @@ private class Signal2<T1, T2> extends FlxBaseSignal<T1->T2->Void>
                  ^^^^^^^^^^^^^
                  source.hx meta.abstract.hx meta.block.hx entity.name.type.hx
                               ^
-                              source.hx meta.abstract.hx meta.block.hx
+                              source.hx meta.abstract.hx meta.block.hx punctuation.accessor.hx
                                ^^^^^^^^
                                source.hx meta.abstract.hx meta.block.hx entity.name.function.hx
                                        ^

@@ -28,7 +28,7 @@ FlxColor.BLUE;
  ^^^^
  source.hx support.class.builtin.hx
      ^
-     source.hx
+     source.hx punctuation.accessor.hx
       ^^
       source.hx variable.other.hx
         ^
@@ -37,7 +37,7 @@ FlxColor.BLUE;
  ^^^^
  source.hx support.class.builtin.hx
      ^
-     source.hx
+     source.hx punctuation.accessor.hx
       ^^^^^^^^^^^^^^^^^
       source.hx variable.other.hx
                        ^
@@ -51,7 +51,7 @@ FlxColor.BLUE;
  ^^^^^^^^
  source.hx entity.name.type.hx
          ^
-         source.hx
+         source.hx punctuation.accessor.hx
           ^^^^
           source.hx variable.other.hx
               ^

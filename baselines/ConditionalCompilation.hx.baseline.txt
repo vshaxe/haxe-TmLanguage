@@ -225,7 +225,7 @@ class Foo {
                         ^^^
                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
                            ^
-                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.accessor.hx
                             ^^^^^^^
                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
                                    ^
@@ -266,7 +266,7 @@ class Foo {
                             ^^^
                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
                                ^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.accessor.hx
                                 ^^^^^^^
                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
                                        ^
@@ -294,7 +294,7 @@ class Foo {
                         ^^^^^^
                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
                               ^
-                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.accessor.hx
                                ^^^^^^^
                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
                                       ^
