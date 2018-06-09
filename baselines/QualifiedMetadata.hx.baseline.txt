@@ -1,0 +1,16 @@
+original file
+-----------------------------------
+@:js.someName
+-----------------------------------
+
+>@:js.someName
+ ^
+ source.hx punctuation.metadata.hx
+  ^
+  source.hx variable.metadata.hx
+   ^^
+   source.hx variable.metadata.hx
+     ^
+     source.hx variable.metadata.hx punctuation.accessor.hx
+      ^^^^^^^^
+      source.hx variable.metadata.hx
