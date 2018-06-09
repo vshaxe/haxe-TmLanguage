@@ -63,36 +63,50 @@ repository:
     - include: '#type-name'
     - include: '#identifier-name'
   package:
-    match: \b(package)(?:\s+(?:(_*[a-z]\w*)(\.)?)+)?\s*(;)?
-    captures:
-      '1': {name: keyword.other.package.hx}
-      '2': {name: support.package.hx}
-      '3': {name: puncutation.accessor.hx}
-      '4': {name: punctuation.terminator.hx}
-    name: meta.package.hx
+    begin: package
+    beginCaptures:
+      '0': {name: keyword.other.package.hx}
+    end: $|(;)
+    endCaptures:
+      '1': {name: punctuation.terminator.hx}
+    patterns:
+    - include: '#type-path'
   using:
-    match: (using)\s+(?:(?:(_*[a-z]\w*)(\.?))*)((?:_*[A-Z]\w*(\.?))+)?(;)?
-    captures:
-      '1': {name: keyword.other.using.hx}
-      '2': {name: support.package.hx}
-      '3': {name: puncutation.accessor.hx}
-      '4': {name: entity.name.type.hx}
-      '5': {name: puncutation.accessor.hx}
-      '6': {name: punctuation.terminator.hx}
+    begin: using
+    beginCaptures:
+      '0': {name: keyword.other.using.hx}
+    end: $|(;)
+    endCaptures:
+      '1': {name: punctuation.terminator.hx}
+    patterns:
+    - include: '#type-path'
   import:
-    match: (import)\s+(?:(?:(\b_*[a-z]\w*(\.?))*)(?:(?:(?:(\b_*[A-Z]\w*)(\.?))+)|(\*))?(?:\b(_*[a-z]\w*)|(\*))?(?:\s+(as|in)\s+(\b_*[A-Z]\w*)?)?)?\s*(;)?
-    captures:
-      '1': {name: keyword.other.import.hx}
-      '2': {name: support.package.hx}
-      '3': {name: puncutation.accessor.hx}
-      '4': {name: entity.name.type.hx}
-      '5': {name: puncutation.accessor.hx}
-      '6': {name: constant.language.import-all.hx}
-      '7': {name: variable.other.hx}
-      '8': {name: constant.language.import-all.hx}
-      '9': {name: keyword.other.hx}
-      '10': {name: entity.name.type.hx}
-      '11': {name: punctuation.terminator.hx}
+    begin: import
+    beginCaptures:
+      '0': {name: keyword.other.import.hx}
+    end: $|(;)
+    endCaptures:
+      '1': {name: punctuation.terminator.hx}
+    patterns:
+    - include: '#type-path'
+    - match: \b(as|in)\b
+      name: keyword.other.hx
+    - match: \*
+      name: constant.language.import-all.hx
+    - match: \b([_A-Za-z]\w*)\b(?=\s*($|(;)))
+      name: variable.other.hxt
+    - include: '#type-path-package-name'
+  type-path:
+    patterns:
+    - include: '#global'
+    - include: '#punctuation-accessor'
+    - include: '#type-path-type-name'
+  type-path-type-name:
+    match: \b(_*[A-Z]\w*)\b
+    name: entity.name.type.hx
+  type-path-package-name:
+    match: \b([_A-Za-z]\w*)\b
+    name: support.package.hx
   abstract:
     begin: (?=abstract)
     end: (?<=\})|(;)

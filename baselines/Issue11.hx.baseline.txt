@@ -11,9 +11,11 @@ import module.Module.SubType as Foo;
         ^^^^^^
         source.hx support.package.hx
               ^
-              source.hx support.package.hx puncutation.accessor.hx
-               ^^^^^^^
-               source.hx
+              source.hx punctuation.accessor.hx
+               ^^^^^^
+               source.hx entity.name.type.hx
+                     ^
+                     source.hx punctuation.accessor.hx
                       ^^^^^^^
                       source.hx entity.name.type.hx
                              ^
