@@ -71,6 +71,7 @@ repository:
       '1': {name: punctuation.terminator.hx}
     patterns:
     - include: '#type-path'
+    - include: '#type-path-package-name'
   using:
     begin: using
     beginCaptures:
@@ -80,6 +81,7 @@ repository:
       '1': {name: punctuation.terminator.hx}
     patterns:
     - include: '#type-path'
+    - include: '#type-path-package-name'
   import:
     begin: import
     beginCaptures:

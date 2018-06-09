@@ -37,12 +37,14 @@ using net.onthewings.Test;
 >package net.onthewings;
  ^^^^^^^
  source.hx keyword.other.package.hx
-        ^^^^
+        ^
         source.hx
+         ^^^
+         source.hx support.package.hx
             ^
             source.hx punctuation.accessor.hx
              ^^^^^^^^^^
-             source.hx
+             source.hx support.package.hx
                        ^
                        source.hx punctuation.terminator.hx
 >
@@ -363,12 +365,14 @@ using net.onthewings.Test;
 >using _ne_t.onthewings.__Int64;
  ^^^^^
  source.hx keyword.other.using.hx
-      ^^^^^^
+      ^
       source.hx
+       ^^^^^
+       source.hx support.package.hx
             ^
             source.hx punctuation.accessor.hx
              ^^^^^^^^^^
-             source.hx
+             source.hx support.package.hx
                        ^
                        source.hx punctuation.accessor.hx
                         ^^^^^^^
@@ -387,12 +391,14 @@ using net.onthewings.Test;
 >using net.onthewings.Test;
  ^^^^^
  source.hx keyword.other.using.hx
-      ^^^^
+      ^
       source.hx
+       ^^^
+       source.hx support.package.hx
           ^
           source.hx punctuation.accessor.hx
            ^^^^^^^^^^
-           source.hx
+           source.hx support.package.hx
                      ^
                      source.hx punctuation.accessor.hx
                       ^^^^
