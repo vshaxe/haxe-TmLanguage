@@ -1002,7 +1002,9 @@ repository:
       name: keyword.operator.type.function.hx
     - match: '&'
       name: keyword.operator.type.intersection.hx
-    - match: '\?'
+    - match: '\?(?=\s*[_A-Z])'
+      name: keyword.operator.optional
+    - match: '\?(?!\s*[_A-Z])'
       name: punctuation.definition.tag
     - begin: (\{)
       beginCaptures:
