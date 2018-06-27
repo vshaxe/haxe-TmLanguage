@@ -1,8 +1,19 @@
+import js.Promise;
+
+@:jsRequire("vscode-textmate")
+extern class GrammarReader {
+    static function parseRawGrammar(content:String, filePath:String):IRawGrammar;
+}
+
+typedef IRawGrammar = {}
+
 @:jsRequire("vscode-textmate", "Registry")
 extern class Registry {
     function new();
-    function loadGrammarFromPathSync(path:String):IGrammar;
+    function addGrammar(rawGrammar:IRawGrammar, ?initialLanguage:Int, ?embeddedLanguages:IEmbeddedLanguagesMap):Promise<IGrammar>;
 }
+
+typedef IEmbeddedLanguagesMap = {}
 
 typedef IGrammar = {
     function tokenizeLine(lineText:String, ?prevState:StackElement):ITokenizeLineResult;

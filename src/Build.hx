@@ -1,8 +1,7 @@
+import js.Promise;
 import sys.FileSystem;
 import sys.io.File;
-
 import VscodeTextmate;
-
 using StringTools;
 
 // ported and adapted from https://github.com/Microsoft/TypeScript-TmLanguage
@@ -20,18 +19,29 @@ class Build {
             FileSystem.createDirectory("generated");
         }
 
-        var register = new Registry();
-        var haxeGrammar = register.loadGrammarFromPathSync("haxe.tmLanguage");
-        var hxmlGrammar = register.loadGrammarFromPathSync("hxml.tmLanguage");
+        var registry = new Registry();
+        loadGrammar(registry, "haxe.tmLanguage").then(haxeGrammar -> {
+            testGrammar(haxeGrammar, ".hx");
+            loadGrammar(registry, "hxml.tmLanguage").then(hxmlGrammar -> testGrammar(hxmlGrammar, ".hxml"));
+        });
+    }
 
+    static function testGrammar(grammar:IGrammar, extension:String) {
         for (fileName in FileSystem.readDirectory(CASES_DIR)) {
             var text = File.getContent('$CASES_DIR/$fileName').replace("\r\n", "\n");
-            var grammar = if (fileName.endsWith(".hxml")) hxmlGrammar else haxeGrammar;
+            if (!fileName.endsWith(extension)) {
+                continue;
+            }
             var result = getScopesAtMarkers(text, grammar);
             if (result.markerScopes != null)
                 File.saveContent('$GENERATED_DIR/$fileName.txt', result.markerScopes);
             File.saveContent('$GENERATED_DIR/$fileName.baseline.txt', result.wholeBaseline);
         }
+    }
+
+    static function loadGrammar(registry:Registry, path:String):Promise<IGrammar> {
+        var rawGrammar = GrammarReader.parseRawGrammar(File.getContent(path), path);
+        return registry.addGrammar(rawGrammar);
     }
 
     static function getScopesAtMarkers(text:String, grammar:IGrammar):{markerScopes:String, wholeBaseline:String} {
