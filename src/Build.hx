@@ -19,8 +19,11 @@ class Build {
             FileSystem.createDirectory("generated");
         }
 
-        loadGrammar("haxe.tmLanguage").then(testGrammar.bind(_, ".hx"));
-        loadGrammar("hxml.tmLanguage").then(testGrammar.bind(_, ".hxml"));
+        var registry = new Registry();
+        loadGrammar(registry, "haxe.tmLanguage").then(haxeGrammar -> {
+            testGrammar(haxeGrammar, ".hx");
+            loadGrammar(registry, "hxml.tmLanguage").then(hxmlGrammar -> testGrammar(hxmlGrammar, ".hxml"));
+        });
     }
 
     static function testGrammar(grammar:IGrammar, extension:String) {
@@ -36,9 +39,9 @@ class Build {
         }
     }
 
-    static function loadGrammar(path:String):Promise<IGrammar> {
+    static function loadGrammar(registry:Registry, path:String):Promise<IGrammar> {
         var rawGrammar = GrammarReader.parseRawGrammar(File.getContent(path), path);
-        return new Registry().addGrammar(rawGrammar);
+        return registry.addGrammar(rawGrammar);
     }
 
     static function getScopesAtMarkers(text:String, grammar:IGrammar):{markerScopes:String, wholeBaseline:String} {
