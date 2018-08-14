@@ -827,6 +827,7 @@ repository:
       end: ':|(?=if)|$'
       patterns:
       - include: '#global'
+      - include: '#metadata'
       - match: \b(var)\b\s*([_a-zA-Z]\w*)\b
         captures:
           '1': {name: storage.type.variable.hx}
@@ -841,6 +842,8 @@ repository:
       - include: '#macro-reification'
       - include: '#operator-assignment'
       - include: '#punctuation-comma'
+      - include: '#keywords'
+      - include: '#method-call'
       - include: '#identifiers'
     - match: \b(if|else|return|do|while|for|break|continue|switch|case|default)\b
       name: keyword.control.flow-control.hx
@@ -921,7 +924,7 @@ repository:
       captures:
         '1': {name: punctuation.definition.reification.hx}
         '2': {name: keyword.reification.hx}
-    - match: ((\$)([a-zA-Z.]*))
+    - match: ((\$)([a-zA-Z]*))
       captures:
         '2': {name: punctuation.definition.reification.hx}
         '3': {name: variable.reification.hx}
