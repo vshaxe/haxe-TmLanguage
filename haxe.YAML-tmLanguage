@@ -748,6 +748,7 @@ repository:
       '0': {name: punctuation.definition.parameters.end.hx}
     name: meta.parameters.hx
     patterns:
+    - include: '#global'
     - include: '#keywords-accessor'
     - include: '#accessor-method'
     - include: '#punctuation-comma'
