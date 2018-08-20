@@ -1,4 +1,7 @@
 {
-    "editor.insertSpaces": true,
-    "haxe.diagnosticsPathFilter": "${workspaceRoot}/src"
+	"editor.insertSpaces": true,
+	"haxe.diagnosticsPathFilter": "${workspaceRoot}/src",
+	"[haxe]": {
+		"editor.formatOnSave": true
+	}
 }

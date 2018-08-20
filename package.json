@@ -1,6 +1,6 @@
 {
-    "name": "haxe-tmLanguage",
-    "devDependencies": {
-        "vscode-textmate": "^4.0.1"
-    }
+	"name": "haxe-tmLanguage",
+	"devDependencies": {
+		"vscode-textmate": "^4.0.1"
+	}
 }
