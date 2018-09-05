@@ -4,7 +4,7 @@
 	"haxelibs": [
 		{
 			"name": "yaml",
-			"installArgs": ["install", "yaml"]
+			"installArgs": ["git", "yaml", "https://github.com/mikestead/hx-yaml", "master", "src"]
 		},
 		{
 			"name": "plist",
