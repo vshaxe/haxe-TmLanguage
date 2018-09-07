@@ -831,7 +831,7 @@ repository:
       patterns:
       - include: '#global'
       - include: '#metadata'
-      - match: \b(var)\b\s*([_a-zA-Z]\w*)\b
+      - match: \b(var|final)\b\s*([_a-zA-Z]\w*)\b
         captures:
           '1': {name: storage.type.variable.hx}
           '2': {name: variable.other.hx}

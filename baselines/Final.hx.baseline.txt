@@ -4,6 +4,10 @@ final class Foo {}
 final private class Foo {}
 final extern class Foo {}
 final interface Foo {}
+
+switch (foo) {
+	case Pattern(final x):
+}
 -----------------------------------
 
 >final class Foo {}
@@ -82,3 +86,45 @@ final interface Foo {}
                      source.hx meta.interface.hx punctuation.definition.block.begin.hx
                       ^
                       source.hx meta.interface.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>switch (foo) {
+ ^^^^^^
+ source.hx keyword.control.flow-control.hx
+       ^
+       source.hx
+        ^
+        source.hx meta.brace.round.hx
+         ^^^
+         source.hx variable.other.hx
+            ^
+            source.hx meta.brace.round.hx
+             ^
+             source.hx
+              ^
+              source.hx punctuation.definition.block.begin.hx
+>	case Pattern(final x):
+ ^
+ source.hx
+  ^^^^
+  source.hx keyword.control.flow-control.hx
+      ^
+      source.hx
+       ^^^^^^^
+       source.hx entity.name.type.hx
+              ^
+              source.hx meta.brace.round.hx
+               ^^^^^
+               source.hx storage.type.variable.hx
+                    ^
+                    source.hx
+                     ^
+                     source.hx variable.other.hx
+                      ^
+                      source.hx meta.brace.round.hx
+                       ^
+                       source.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
