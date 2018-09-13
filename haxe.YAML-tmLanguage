@@ -978,6 +978,8 @@ repository:
       name: keyword.operator.arithmetic.hx
     - match: \.\.\.
       name: keyword.operator.intiterator.hx
+    - match: =>
+      name: keyword.operator.arrow.hx
     - begin: '\?'
       beginCaptures:
         '0': {name: keyword.operator.ternary.hx}

@@ -110,10 +110,8 @@ var f:Int->Int->(Int->Int);
         source.hx meta.array.literal.hx constant.numeric.decimal.hx
          ^
          source.hx meta.array.literal.hx
-          ^
-          source.hx meta.array.literal.hx keyword.operator.assignment.hx
-           ^
-           source.hx meta.array.literal.hx keyword.operator.comparison.hx
+          ^^
+          source.hx meta.array.literal.hx keyword.operator.arrow.hx
             ^
             source.hx meta.array.literal.hx
              ^
@@ -142,10 +140,8 @@ var f:Int->Int->(Int->Int);
                          source.hx meta.array.literal.hx constant.numeric.decimal.hx
                           ^
                           source.hx meta.array.literal.hx
-                           ^
-                           source.hx meta.array.literal.hx keyword.operator.assignment.hx
-                            ^
-                            source.hx meta.array.literal.hx keyword.operator.comparison.hx
+                           ^^
+                           source.hx meta.array.literal.hx keyword.operator.arrow.hx
                              ^
                              source.hx meta.array.literal.hx
                               ^
@@ -174,10 +170,8 @@ var f:Int->Int->(Int->Int);
                                           source.hx meta.array.literal.hx constant.numeric.decimal.hx
                                            ^
                                            source.hx meta.array.literal.hx
-                                            ^
-                                            source.hx meta.array.literal.hx keyword.operator.assignment.hx
-                                             ^
-                                             source.hx meta.array.literal.hx keyword.operator.comparison.hx
+                                            ^^
+                                            source.hx meta.array.literal.hx keyword.operator.arrow.hx
                                               ^
                                               source.hx meta.array.literal.hx
                                                ^
