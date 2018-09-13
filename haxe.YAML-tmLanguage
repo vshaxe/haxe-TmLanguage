@@ -778,16 +778,16 @@ repository:
     patterns:
     - include: '#type'
   for-loop:
-    begin: \b(for)\b\s*(\()\s*\b([_A-Za-z]\w*)\b\s+(in)
+    begin: \b(for)\b\s*(\()
     beginCaptures:
       '1': {name: keyword.control.flow-control.hx}
       '2': {name: meta.brace.round.hx}
-      '3': {name: variable.other.hx}
-      '4': {name: keyword.other.in.hx}
     end: (\))
     endCaptures:
       '1': {name: meta.brace.round.hx}
     patterns:
+    - match: \b(in)\b
+      name: keyword.other.in.hx
     - include: '#block'
     - include: '#block-contents'
   keywords:

@@ -36,8 +36,10 @@ switch e {
                 source.hx meta.array.literal.hx punctuation.definition.array.begin.hx
                  ^^^
                  source.hx meta.array.literal.hx keyword.control.flow-control.hx
-                    ^^
+                    ^
                     source.hx meta.array.literal.hx
+                     ^
+                     source.hx meta.array.literal.hx meta.brace.round.hx
                       ^
                       source.hx meta.array.literal.hx punctuation.definition.reification.hx
                        ^^

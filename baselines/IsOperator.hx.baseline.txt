@@ -446,8 +446,10 @@ var is:Int;
 >for ("" is String) {}
  ^^^
  source.hx keyword.control.flow-control.hx
-    ^^
+    ^
     source.hx
+     ^
+     source.hx meta.brace.round.hx
       ^
       source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
        ^

@@ -1,0 +1,120 @@
+original file
+-----------------------------------
+for (key => value in map) {
+    trace(key, value);
+}
+
+for (index => value in array) {
+    trace(key, value);
+}
+-----------------------------------
+
+>for (key => value in map) {
+ ^^^
+ source.hx keyword.control.flow-control.hx
+    ^
+    source.hx
+     ^
+     source.hx meta.brace.round.hx
+      ^^^
+      source.hx variable.other.hx
+         ^
+         source.hx
+          ^^
+          source.hx keyword.operator.arrow.hx
+            ^
+            source.hx
+             ^^^^^
+             source.hx variable.other.hx
+                  ^
+                  source.hx
+                   ^^
+                   source.hx keyword.other.in.hx
+                     ^
+                     source.hx
+                      ^^^
+                      source.hx variable.other.hx
+                         ^
+                         source.hx meta.brace.round.hx
+                          ^
+                          source.hx
+                           ^
+                           source.hx punctuation.definition.block.begin.hx
+>    trace(key, value);
+ ^^^^
+ source.hx
+     ^^^^^
+     source.hx keyword.other.trace.hx
+          ^
+          source.hx
+           ^^^
+           source.hx variable.other.hx
+              ^
+              source.hx punctuation.separator.comma.hx
+               ^
+               source.hx
+                ^^^^^
+                source.hx variable.other.hx
+                     ^
+                     source.hx meta.brace.round.hx
+                      ^
+                      source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>for (index => value in array) {
+ ^^^
+ source.hx keyword.control.flow-control.hx
+    ^
+    source.hx
+     ^
+     source.hx meta.brace.round.hx
+      ^^^^^
+      source.hx variable.other.hx
+           ^
+           source.hx
+            ^^
+            source.hx keyword.operator.arrow.hx
+              ^
+              source.hx
+               ^^^^^
+               source.hx variable.other.hx
+                    ^
+                    source.hx
+                     ^^
+                     source.hx keyword.other.in.hx
+                       ^
+                       source.hx
+                        ^^^^^
+                        source.hx variable.other.hx
+                             ^
+                             source.hx meta.brace.round.hx
+                              ^
+                              source.hx
+                               ^
+                               source.hx punctuation.definition.block.begin.hx
+>    trace(key, value);
+ ^^^^
+ source.hx
+     ^^^^^
+     source.hx keyword.other.trace.hx
+          ^
+          source.hx
+           ^^^
+           source.hx variable.other.hx
+              ^
+              source.hx punctuation.separator.comma.hx
+               ^
+               source.hx
+                ^^^^^
+                source.hx variable.other.hx
+                     ^
+                     source.hx meta.brace.round.hx
+                      ^
+                      source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
