@@ -63,9 +63,11 @@ original file
 @:headerCode
 @:headerInclude
 @:headerNamespaceCode
+@:hlNative
 @:hxGen
 @:ifFeature
 @:include
+@:inline
 @:internal
 @:isVar
 @:javaCanonical
@@ -73,10 +75,13 @@ original file
 @:keep
 @:keepInit
 @:keepSub
+@:luaDotMethod
 @:luaRequire
 @:macro
+@:markup
 @:mergeBlock
 @:meta
+@:multiReturn
 @:multiType
 @:native
 @:nativeChildren
@@ -93,14 +98,18 @@ original file
 @:nonVirtual
 @:notNull
 @:ns
+@:nullSafety
 @:objc
 @:objcProtocol
 @:op
 @:optional
 @:overload
-@:phpConstants
+@:phpClassConst
 @:phpGlobal
+@:phpMagic
+@:phpNoConstructor
 @:pos
+@:private
 @:privateAccess
 @:property
 @:protected
@@ -116,6 +125,7 @@ original file
 @:runtimeValue
 @:scalar
 @:selfCall
+@:semantics
 @:setter
 @:sound
 @:sourceFile
@@ -132,6 +142,7 @@ original file
 @:unifyMinDynamic
 @:unreflective
 @:unsafe
+@:using
 @:value
 @:void
 @:volatile
@@ -446,6 +457,11 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:hlNative
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:hxGen
  ^
  source.hx punctuation.metadata.hx
@@ -460,6 +476,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:inline
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:internal
  ^
@@ -496,6 +517,11 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:luaDotMethod
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:luaRequire
  ^
  source.hx punctuation.metadata.hx
@@ -506,6 +532,11 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:markup
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:mergeBlock
  ^
  source.hx punctuation.metadata.hx
@@ -515,6 +546,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:multiReturn
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:multiType
  ^
@@ -596,6 +632,11 @@ original file
  source.hx punctuation.metadata.hx
   ^^^
   source.hx storage.modifier.metadata.hx
+>@:nullSafety
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:objc
  ^
  source.hx punctuation.metadata.hx
@@ -621,20 +662,35 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:phpConstants
+>@:phpClassConst
  ^
  source.hx punctuation.metadata.hx
-  ^^^^^^^^^^^^^
+  ^^^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:phpGlobal
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:phpMagic
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:phpNoConstructor
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:pos
  ^
  source.hx punctuation.metadata.hx
   ^^^^
+  source.hx storage.modifier.metadata.hx
+>@:private
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:privateAccess
  ^
@@ -710,6 +766,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:semantics
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:setter
  ^
@@ -790,6 +851,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:using
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:value
  ^
