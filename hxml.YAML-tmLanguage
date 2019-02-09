@@ -8,23 +8,23 @@ patterns:
     '1': {name: punctuation.definition.comment.hxml}
   match: (#).*$\n?
   name: comment.line.number-sign.hxml
-- begin: (?:^|[^a-zA-Z])(--macro)\b
+- begin: \s*(--macro)\b
   beginCaptures:
     '1': {name: keyword.other.hxml}
   end: \n
   patterns:
   - include: 'source.hx'
-- match: (?:^|[^a-zA-Z])(-m|-main|--main)\b\s*\b(?:(([a-z][a-zA-Z0-9]*\.)*)(_*[A-Z]\w*))?\b
+- match: \s*(-m|-main|--main)\b\s*\b(?:(([a-z][a-zA-Z0-9]*\.)*)(_*[A-Z]\w*))?\b
   captures:
     '1': {name: keyword.other.hxml}
     '2': {name: support.package.hx}
     '4': {name: entity.name.type.hx}
 # Haxe 3 style CLI args
-- match: ^\s*(-cppia|-cpp?|-js|-as3|-swf-(header|version|lib(-extern)?)|-swf9?|-neko|-python|-php|-cs|-java-lib|-java|-xml|-lua|-hl|-x|-lib|-D|-resource|-exclude|-version|-v|-debug|-prompt|-cmd|-dce\s+(std|full|no)?|--flash-strict|--no-traces|--flash-use-stage|--neko-source|--gen-hx-classes|-net-lib|-net-std|-c-arg|--each|--next|--display|--no-output|--times|--no-inline|--no-opt|--php-front|--php-lib|--php-prefix|--remap|--help-defines|--help-metas|-help|--help|-java|-cs|--js-modern|--interp|--eval|--dce|--wait|--connect|--cwd|--run).*$
+- match: \s*(-cppia|-cpp?|-js|-as3|-swf-(header|version|lib(-extern)?)|-swf9?|-neko|-python|-php|-cs|-java-lib|-java|-xml|-lua|-hl|-x|-lib|-D|-resource|-exclude|-version|-v|-debug|-prompt|-cmd|-dce\s+(std|full|no)?|--flash-strict|--no-traces|--flash-use-stage|--neko-source|--gen-hx-classes|-net-lib|-net-std|-c-arg|--each|--next|--display|--no-output|--times|--no-inline|--no-opt|--php-front|--php-lib|--php-prefix|--remap|--help-defines|--help-metas|-help|--help|-java|-cs|--js-modern|--interp|--eval|--dce|--wait|--connect|--cwd|--run).*$
   captures:
     '1': {name: keyword.other.hxml}
 # Haxe 4 style CLI args
-- match: ^\s*(--js(on)?|--lua|--swf-(header|version|lib(-extern)?)|--swf|--as3|--neko|--php|--cppia|--cpp|--cppia|--cs|--java-lib|--java|--python|--hl|-p|--class-path|-L|--library|--define|-r|--resource|--cmd|-C|--verbose|--debug|--prompt|--xml|--json|--net-lib|--net-std|--c-arg|--version|-h|--main).*$
+- match: \s*(--js(on)?|--lua|--swf-(header|version|lib(-extern)?)|--swf|--as3|--neko|--php|--cppia|--cpp|--cppia|--cs|--java-lib|--java|--python|--hl|-p|--class-path|-L|--library|--define|-r|--resource|--cmd|-C|--verbose|--debug|--prompt|--xml|--json|--net-lib|--net-std|--c-arg|--version|-h|--main).*$
   captures:
     '1': {name: keyword.other.hxml}
 scopeName: source.hxml

@@ -185,10 +185,8 @@ Miscellaneous
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                source.hxml
 >  -m,
- ^
+ ^^
  source.hxml
-  ^
-  source.hxml
    ^^
    source.hxml keyword.other.hxml
      ^^
@@ -198,7 +196,7 @@ Miscellaneous
  source.hxml
    ^^^^^^
    source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.hxml
 >  -L,
  ^^
