@@ -11,6 +11,7 @@ class Converter {
 		convert("helper/haxe-argument.YAML-tmLanguage", "helper/haxe-argument.tmLanguage");
 		convert("helper/haxe-markdown.YAML-tmLanguage", "helper/haxe-markdown.tmLanguage");
 		convert("helper/hxml-markdown.YAML-tmLanguage", "helper/hxml-markdown.tmLanguage");
+		convert("helper/haxe-markdown-docs.YAML-tmLanguage", "helper/haxe-markdown-docs.tmLanguage");
 
 		Sys.println(" Done.\n ");
 	}
