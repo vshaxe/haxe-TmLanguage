@@ -74,28 +74,20 @@ original file
  ^
  source.hxml
 >--dead-code-elimination
- ^^^^^^^^^^^^^^^^^^^^^^^
- source.hxml keyword.other.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
 >--dead-code-elimination std
- ^^^^^^^^^^^^^^^^^^^^^^^
- source.hxml keyword.other.hxml
-                        ^^^^
-                        source.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
 >--dead-code-elimination full
- ^^^^^^^^^^^^^^^^^^^^^^^
- source.hxml keyword.other.hxml
-                        ^^^^^
-                        source.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
 >--dead-code-elimination no
- ^^^^^^^^^^^^^^^^^^^^^^^
- source.hxml keyword.other.hxml
-                        ^^^
-                        source.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
 >--dead-code-elimination invalid
- ^^^^^^^^^^^^^^^^^^^^^^^
- source.hxml keyword.other.hxml
-                        ^^^^^^^^
-                        source.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
 ># dce arg with random whitespace
  ^
  source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml
@@ -105,10 +97,8 @@ original file
  ^^^^^^^^^^^^^^
  source.hxml keyword.other.hxml
 >--dead-code-elimination   	 	 std
- ^^^^^^^^^^^^^^^^^^^^^^^
- source.hxml keyword.other.hxml
-                        ^^^^^^^^^^
-                        source.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
 ># argument inside another word
  ^
  source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml

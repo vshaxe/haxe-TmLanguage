@@ -32,7 +32,6 @@ Compilation
   --cwd <dir>                               set current working directory
 Optimization
   --dce,
-  --dead-code-elimination [std|full|no]  set the dead code elimination mode (default std)
   --no-traces                                   don't compile trace calls in the program
   --no-output                                   compiles but does not generate any file
   --no-inline                                   disable inlining
@@ -71,7 +70,6 @@ Miscellaneous
   --help-defines                                print help for all compiler specific defines
   --help-metas                                  print help for all compiler metadatas
   --run <module> [args...]                      compile and execute a Haxe module with command line arguments
-  -- [args...]                                  args that will be passed to the macro interpreter
 
 -----------------------------------
 
@@ -287,13 +285,6 @@ Miscellaneous
    source.hxml keyword.other.hxml
         ^
         source.hxml
->  --dead-code-elimination [std|full|no]  set the dead code elimination mode (default std)
- ^^
- source.hxml
-   ^^^^^^^^^^^^^^^^^^^^^^^
-   source.hxml keyword.other.hxml
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                          source.hxml
 >  --no-traces                                   don't compile trace calls in the program
  ^^
  source.hxml
@@ -536,13 +527,6 @@ Miscellaneous
    source.hxml keyword.other.hxml
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->  -- [args...]                                  args that will be passed to the macro interpreter
- ^^
- source.hxml
-   ^^
-   source.hxml keyword.other.hxml
-     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-     source.hxml
 >
  ^
  source.hxml
