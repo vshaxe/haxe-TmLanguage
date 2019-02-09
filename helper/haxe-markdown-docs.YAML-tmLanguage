@@ -4,7 +4,7 @@ patterns:
 repository:
   markdown-comment:
     begin: (?<=/\*\*)([^*]|\*(?!/))*$
-    while: (^|\G)\s*\*?(?!/)(?=([^*]|[*](?!/))*$)
+    while: (^|\G)(?:\s*[^\t*]\* |\s*)(?!\/)(?=([^*]|[*](?!\/))*$)
     patterns:
     - include: text.html.markdown#fenced_code_block
     - include: text.html.markdown#lists
