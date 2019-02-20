@@ -97,11 +97,11 @@ class Build {
 
 	static function writeTokenLine(token:IToken, preTextForToken:String, postTextForToken:String, outputLines:Array<String>) {
 		var startingSpaces = " ";
-		for (j in 0...token.startIndex)
+		for (_ in 0...token.startIndex)
 			startingSpaces += " ";
 
 		var locatingString = "";
-		for (j in token.startIndex...token.endIndex)
+		for (_ in token.startIndex...token.endIndex)
 			locatingString += "^";
 
 		outputLines.push(startingSpaces + locatingString);
@@ -109,7 +109,7 @@ class Build {
 	}
 
 	static inline function prepareOutput(originalLines:Array<String>, outputLines:Array<String>):String {
-		return "original file\n-----------------------------------\n" + originalLines.join("\n") + "\n-----------------------------------\n\n" + outputLines
-			.join("\n");
+		return "original file\n-----------------------------------\n" + originalLines.join("\n") + "\n-----------------------------------\n\n"
+			+ outputLines.join("\n");
 	}
 }
