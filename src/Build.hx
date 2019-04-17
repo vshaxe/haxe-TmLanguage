@@ -1,4 +1,4 @@
-import js.Promise;
+import js.lib.Promise;
 import sys.FileSystem;
 import sys.io.File;
 import VscodeTextmate;

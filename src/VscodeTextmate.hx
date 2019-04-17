@@ -1,4 +1,4 @@
-import js.Promise;
+import js.lib.Promise;
 
 @:jsRequire("vscode-textmate")
 extern class GrammarReader {
