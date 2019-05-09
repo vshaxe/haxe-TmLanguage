@@ -21,6 +21,7 @@
 @:bridgeProperties
 @:build
 @:buildXml
+@:bypassAccessor
 @:callable
 @:classCode
 @:commutative
@@ -47,6 +48,7 @@
 @:fileXml
 @:final
 @:fixed
+@:flash.property
 @:font
 @:forward
 @:forwardStatics

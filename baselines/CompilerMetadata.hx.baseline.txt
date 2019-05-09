@@ -23,6 +23,7 @@ original file
 @:bridgeProperties
 @:build
 @:buildXml
+@:bypassAccessor
 @:callable
 @:classCode
 @:commutative
@@ -49,6 +50,7 @@ original file
 @:fileXml
 @:final
 @:fixed
+@:flash.property
 @:font
 @:forward
 @:forwardStatics
@@ -257,6 +259,11 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:bypassAccessor
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:callable
  ^
  source.hx punctuation.metadata.hx
@@ -386,6 +393,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:flash.property
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:font
  ^
