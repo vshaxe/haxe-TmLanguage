@@ -5,7 +5,7 @@ import module.Module.SubType as Foo;
 
 >import module.Module.SubType as Foo;
  ^^^^^^
- source.hx keyword.other.import.hx
+ source.hx keyword.control.import.hx
        ^
        source.hx
         ^^^^^^
@@ -21,7 +21,7 @@ import module.Module.SubType as Foo;
                              ^
                              source.hx
                               ^^
-                              source.hx keyword.other.hx
+                              source.hx keyword.control.as.hx
                                 ^
                                 source.hx
                                  ^^^

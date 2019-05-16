@@ -87,14 +87,16 @@ repository:
   import:
     begin: import
     beginCaptures:
-      '0': {name: keyword.other.import.hx}
+      '0': {name: keyword.control.import.hx}
     end: $|(;)
     endCaptures:
       '1': {name: punctuation.terminator.hx}
     patterns:
     - include: '#type-path'
-    - match: \b(as|in)\b
-      name: keyword.other.hx
+    - match: \b(as)\b
+      name: keyword.control.as.hx
+    - match: \b(in)\b
+      name: keyword.control.in.hx
     - match: \*
       name: constant.language.import-all.hx
     - match: \b([_A-Za-z]\w*)\b(?=\s*(as|in|$|(;)))
