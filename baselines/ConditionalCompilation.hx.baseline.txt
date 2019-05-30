@@ -14,6 +14,12 @@ original file
     #error "Custom error message" // will display an error "Custom error message"
 #end
 
+#if target.static
+#end
+
+#if (haxe >= version("4.0.0"))
+#end
+
 class Foo {
     public static inline function indexOf<T>(?arr:Array<T>, v:T) : Int
     {
@@ -105,6 +111,36 @@ class Foo {
                                    source.hx comment.line.double-slash.hx punctuation.definition.comment.hx
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                                      source.hx comment.line.double-slash.hx
+>#end
+ ^^^^
+ source.hx punctuation.definition.tag
+>
+ ^
+ source.hx
+>#if target.static
+ ^^^^^^^^^^^^^^^^^
+ source.hx punctuation.definition.tag
+>#end
+ ^^^^
+ source.hx punctuation.definition.tag
+>
+ ^
+ source.hx
+>#if (haxe >= version("4.0.0"))
+ ^^^^
+ source.hx punctuation.definition.tag punctuation.definition.tag
+     ^
+     source.hx punctuation.definition.tag
+      ^^^^^^^^^^^^^^^
+      source.hx punctuation.definition.tag
+                     ^
+                     source.hx punctuation.definition.tag
+                      ^^^^^^^
+                      source.hx punctuation.definition.tag
+                             ^
+                             source.hx punctuation.definition.tag
+                              ^
+                              source.hx punctuation.definition.tag
 >#end
  ^^^^
  source.hx punctuation.definition.tag

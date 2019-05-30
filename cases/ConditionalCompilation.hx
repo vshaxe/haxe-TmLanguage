@@ -12,6 +12,12 @@
     #error "Custom error message" // will display an error "Custom error message"
 #end
 
+#if target.static
+#end
+
+#if (haxe >= version("4.0.0"))
+#end
+
 class Foo {
     public static inline function indexOf<T>(?arr:Array<T>, v:T) : Int
     {
