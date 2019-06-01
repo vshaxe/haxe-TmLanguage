@@ -4,7 +4,7 @@
 	"haxelibs": [
 		{
 			"name": "yaml",
-			"installArgs": ["git", "yaml", "https://github.com/mikestead/hx-yaml", "master", "src"]
+			"installArgs": ["git", "yaml", "https://github.com/Gama11/hx-yaml", "haxe4", "src"]
 		},
 		{
 			"name": "plist",
@@ -27,20 +27,19 @@
 			"inherit": "empty",
 			"name": "tm-language-conversion",
 			"args": {
-				"haxelibs": ["yaml", "plist"],
+				"haxelibs": ["yaml", "plist", "hxnodejs"],
 				"classPaths": [
 					"src"
 				],
 				"output": {
-					"target": "neko",
-					"path": "bin/convert.n"
+					"target": "js",
+					"path": "bin/convert.js"
 				},
 				"main": "Converter",
-
 				"debug": true
 			},
 			"afterBuildCommands": [
-				["neko", "bin/convert.n"]
+				["node", "bin/convert.js"]
 			]
 		},
 		{
