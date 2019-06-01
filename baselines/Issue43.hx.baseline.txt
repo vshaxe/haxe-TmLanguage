@@ -1,0 +1,26 @@
+original file
+-----------------------------------
+0...Utf8.length(_result)
+
+-----------------------------------
+
+>0...Utf8.length(_result)
+ ^
+ source.hx constant.numeric.decimal.hx
+  ^^^
+  source.hx keyword.operator.intiterator.hx
+     ^^^^
+     source.hx entity.name.type.hx
+         ^
+         source.hx punctuation.accessor.hx
+          ^^^^^^
+          source.hx entity.name.function.hx
+                ^
+                source.hx meta.brace.round.hx
+                 ^^^^^^^
+                 source.hx variable.other.hx
+                        ^
+                        source.hx meta.brace.round.hx
+>
+ ^
+ source.hx

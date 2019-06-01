@@ -1063,7 +1063,7 @@ repository:
         '1': {name: support.class.builtin.hx}
         '2': {name: support.package.hx}
         '3': {name: entity.name.type.hx}
-    - match: \b(?<!\.)((_*[a-z]\w*\.)*)(_*[A-Z]\w*)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b
+    - match: \b(?<![^.]\.)((_*[a-z]\w*\.)*)(_*[A-Z]\w*)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b
       captures:
         '1': {name: support.package.hx}
         '3': {name: entity.name.type.hx}
