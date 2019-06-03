@@ -18,6 +18,12 @@
 #if (haxe >= version("4.0.0"))
 #end
 
+#if FLX_RECORD
+#end
+
+#if FOO.BAR
+#end
+
 class Foo {
     public static inline function indexOf<T>(?arr:Array<T>, v:T) : Int
     {

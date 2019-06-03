@@ -20,6 +20,12 @@ original file
 #if (haxe >= version("4.0.0"))
 #end
 
+#if FLX_RECORD
+#end
+
+#if FOO.BAR
+#end
+
 class Foo {
     public static inline function indexOf<T>(?arr:Array<T>, v:T) : Int
     {
@@ -141,6 +147,24 @@ class Foo {
                              source.hx punctuation.definition.tag
                               ^
                               source.hx punctuation.definition.tag
+>#end
+ ^^^^
+ source.hx punctuation.definition.tag
+>
+ ^
+ source.hx
+>#if FLX_RECORD
+ ^^^^^^^^^^^^^^
+ source.hx punctuation.definition.tag
+>#end
+ ^^^^
+ source.hx punctuation.definition.tag
+>
+ ^
+ source.hx
+>#if FOO.BAR
+ ^^^^^^^^^^^
+ source.hx punctuation.definition.tag
 >#end
  ^^^^
  source.hx punctuation.definition.tag
