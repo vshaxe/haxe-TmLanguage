@@ -106,6 +106,7 @@ original file
 @:op
 @:optional
 @:overload
+@:persistent
 @:phpClassConst
 @:phpGlobal
 @:phpMagic
@@ -673,6 +674,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:persistent
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:phpClassConst
  ^

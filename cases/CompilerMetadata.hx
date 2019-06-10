@@ -104,6 +104,7 @@
 @:op
 @:optional
 @:overload
+@:persistent
 @:phpClassConst
 @:phpGlobal
 @:phpMagic
