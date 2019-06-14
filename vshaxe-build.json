@@ -34,9 +34,6 @@
 		},
 		{
 			"name": "tm-language-build-tests",
-			"installCommands": [
-				["npm", "install", "vscode-textmate"]
-			],
 			"args": {
 				"classPaths": [
 				"src"
