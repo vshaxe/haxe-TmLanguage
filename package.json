@@ -1,6 +1,10 @@
 {
 	"name": "haxe-tmLanguage",
 	"devDependencies": {
+		"lix": "^15.4.1",
 		"vscode-textmate": "^4.1.0"
+	},
+	"scripts": {
+		"postinstall": "npx lix download"
 	}
 }

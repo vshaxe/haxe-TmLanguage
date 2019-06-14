@@ -1,16 +1,6 @@
 {
 	"inherit": "vshaxe-node",
 	"mainTarget": "tm-language",
-	"haxelibs": [
-		{
-			"name": "yaml",
-			"installArgs": ["git", "yaml", "https://github.com/Gama11/hx-yaml", "haxe4", "src"]
-		},
-		{
-			"name": "plist",
-			"installArgs": ["git", "plist", "https://github.com/back2dos/plist"]
-		}
-	],
 	"targets": [
 		{
 			"name": "tm-language",

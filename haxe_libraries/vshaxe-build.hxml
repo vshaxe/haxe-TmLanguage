@@ -1,0 +1,4 @@
+-D vshaxe-build=0.0.1
+# @install: lix --silent download "gh://github.com/vshaxe/vshaxe-build#a9972b6e741f99200da6ba41563f780b33a554ae" into vshaxe-build/0.0.1/github/a9972b6e741f99200da6ba41563f780b33a554ae
+# @run: haxelib run-dir vshaxe-build ${HAXE_LIBCACHE}/vshaxe-build/0.0.1/github/a9972b6e741f99200da6ba41563f780b33a554ae
+-cp ${HAXE_LIBCACHE}/vshaxe-build/0.0.1/github/a9972b6e741f99200da6ba41563f780b33a554ae/
