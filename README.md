@@ -18,10 +18,10 @@ This repository contains `.tmLanguage` grammars for Haxe and HXML. They are curr
 
 ## Building
 
-This project uses [vshaxe-build](https://github.com/vshaxe/vshaxe-build). Run this command to install it:
+First install the dependencies:
 
 ```
-haxelib git vshaxe-build https://github.com/vshaxe/vshaxe-build
+npm install
 ```
 
 ### Conversion
@@ -29,9 +29,7 @@ haxelib git vshaxe-build https://github.com/vshaxe/vshaxe-build
 The `tmLanguage` XML files are converted from their `YAML-tmLanguage` source files like this:
 
 ```
-haxelib install yaml
-haxelib git plist https://github.com/back2dos/plisthaxelib
-haxelib run vshaxe-build --target tm-language-conversion
+npx lix run vshaxe-build --target tm-language-conversion
 ```
 
 ### Tests
@@ -39,9 +37,7 @@ haxelib run vshaxe-build --target tm-language-conversion
 There are some automated tests that can be run like this:
 
 ```
-haxelib install hxnodejs
-npm install vscode-textmate
-haxelib run vshaxe-build --target tm-language-tests
+npx lix run vshaxe-build --target tm-language-tests
 ```
 
 `/cases` contains the actual test cases. When running `build.js`, scope-annotated files are generated into the `/generated` directory. During the test step (running `test.js`), the files in `/baselines` are compared with the newly `/generated` ones, and the test fails if they are different.
