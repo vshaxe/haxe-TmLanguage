@@ -1,0 +1,9 @@
+# exe-runner
+--next
+compile-exe-runner.hxml
+
+# java-runner
+--next
+compile-java-runner.hxml
+
+-cmd node bin/cmd.js .temp/output.js -webpack -debug -debugmap .temp/index.js foo_Bar

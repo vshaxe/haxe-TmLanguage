@@ -1,0 +1,50 @@
+original file
+-----------------------------------
+# exe-runner
+--next
+compile-exe-runner.hxml
+
+# java-runner
+--next
+compile-java-runner.hxml
+
+-cmd node bin/cmd.js .temp/output.js -webpack -debug -debugmap .temp/index.js foo_Bar
+
+-----------------------------------
+
+># exe-runner
+ ^
+ source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml
+  ^^^^^^^^^^^^
+  source.hxml comment.line.number-sign.hxml
+>--next
+ ^^^^^^
+ source.hxml keyword.other.hxml
+>compile-exe-runner.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
+>
+ ^
+ source.hxml
+># java-runner
+ ^
+ source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml
+  ^^^^^^^^^^^^^
+  source.hxml comment.line.number-sign.hxml
+>--next
+ ^^^^^^
+ source.hxml keyword.other.hxml
+>compile-java-runner.hxml
+ ^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
+>
+ ^
+ source.hxml
+>-cmd node bin/cmd.js .temp/output.js -webpack -debug -debugmap .temp/index.js foo_Bar
+ ^^^^
+ source.hxml keyword.other.hxml
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.hxml
+>
+ ^
+ source.hxml
