@@ -1,6 +1,6 @@
+import Build.GENERATED_DIR;
 import sys.FileSystem;
 import sys.io.File;
-import Build.GENERATED_DIR;
 
 using StringTools;
 

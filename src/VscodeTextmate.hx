@@ -2,7 +2,7 @@ import js.lib.Promise;
 
 @:jsRequire("vscode-textmate")
 extern class GrammarReader {
-	static function parseRawGrammar(content:String, filePath:String):IRawGrammar;
+	static function parseRawGrammar(content:String, ?filePath:String):IRawGrammar;
 }
 
 typedef IRawGrammar = {}

@@ -1,7 +1,7 @@
+import VscodeTextmate;
 import js.lib.Promise;
 import sys.FileSystem;
 import sys.io.File;
-import VscodeTextmate;
 
 using StringTools;
 

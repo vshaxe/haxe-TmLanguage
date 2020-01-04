@@ -20,7 +20,7 @@ class Converter {
 		var content = File.getContent(source);
 		var parsed = new yaml.Parser().parse(content, new yaml.Parser.ParserOptions().useObjects());
 
-		switch (plist.Writer.write(parsed)) {
+		switch plist.Writer.write(parsed) {
 			case Success(data):
 				File.saveContent(dest, data);
 			case _:
