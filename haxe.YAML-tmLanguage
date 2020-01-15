@@ -845,6 +845,8 @@ repository:
       - match: \)
         name: meta.brace.round.hx
       - include: '#macro-reification'
+      - match: =>
+        name: keyword.operator.extractor.hx
       - include: '#operator-assignment'
       - include: '#punctuation-comma'
       - include: '#keywords'

@@ -1,0 +1,196 @@
+original file
+-----------------------------------
+switch (3) {
+	case add(_, 1) => mul(_, 3) => a:
+	trace(a);
+}
+
+var success = switch (e) {
+	case TString(_.toLowerCase() => "foo"):
+		true;
+	case _:
+		false;
+}
+
+-----------------------------------
+
+>switch (3) {
+ ^^^^^^
+ source.hx keyword.control.flow-control.hx
+       ^
+       source.hx
+        ^
+        source.hx meta.brace.round.hx
+         ^
+         source.hx constant.numeric.decimal.hx
+          ^
+          source.hx meta.brace.round.hx
+           ^
+           source.hx
+            ^
+            source.hx punctuation.definition.block.begin.hx
+>	case add(_, 1) => mul(_, 3) => a:
+ ^
+ source.hx
+  ^^^^
+  source.hx keyword.control.flow-control.hx
+      ^
+      source.hx
+       ^^^
+       source.hx entity.name.function.hx
+          ^
+          source.hx meta.brace.round.hx
+           ^
+           source.hx variable.other.hx
+            ^
+            source.hx punctuation.separator.comma.hx
+             ^
+             source.hx
+              ^
+              source.hx constant.numeric.decimal.hx
+               ^
+               source.hx meta.brace.round.hx
+                ^
+                source.hx
+                 ^^
+                 source.hx keyword.operator.extractor.hx
+                   ^
+                   source.hx
+                    ^^^
+                    source.hx entity.name.function.hx
+                       ^
+                       source.hx meta.brace.round.hx
+                        ^
+                        source.hx variable.other.hx
+                         ^
+                         source.hx punctuation.separator.comma.hx
+                          ^
+                          source.hx
+                           ^
+                           source.hx constant.numeric.decimal.hx
+                            ^
+                            source.hx meta.brace.round.hx
+                             ^
+                             source.hx
+                              ^^
+                              source.hx keyword.operator.extractor.hx
+                                ^
+                                source.hx
+                                 ^
+                                 source.hx variable.other.hx
+                                  ^
+                                  source.hx
+>	trace(a);
+ ^
+ source.hx
+  ^^^^^
+  source.hx keyword.other.trace.hx
+       ^
+       source.hx
+        ^
+        source.hx variable.other.hx
+         ^
+         source.hx meta.brace.round.hx
+          ^
+          source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>var success = switch (e) {
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^^^^^^^
+     source.hx variable.other.hx
+            ^
+            source.hx
+             ^
+             source.hx keyword.operator.assignment.hx
+              ^
+              source.hx
+               ^^^^^^
+               source.hx keyword.control.flow-control.hx
+                     ^
+                     source.hx
+                      ^
+                      source.hx meta.brace.round.hx
+                       ^
+                       source.hx variable.other.hx
+                        ^
+                        source.hx meta.brace.round.hx
+                         ^
+                         source.hx
+                          ^
+                          source.hx punctuation.definition.block.begin.hx
+>	case TString(_.toLowerCase() => "foo"):
+ ^
+ source.hx
+  ^^^^
+  source.hx keyword.control.flow-control.hx
+      ^
+      source.hx
+       ^^^^^^^
+       source.hx entity.name.type.hx
+              ^
+              source.hx meta.brace.round.hx
+               ^
+               source.hx variable.other.hx
+                ^
+                source.hx
+                 ^^^^^^^^^^^
+                 source.hx entity.name.function.hx
+                            ^
+                            source.hx meta.brace.round.hx
+                             ^
+                             source.hx meta.brace.round.hx
+                              ^
+                              source.hx
+                               ^^
+                               source.hx keyword.operator.extractor.hx
+                                 ^
+                                 source.hx
+                                  ^
+                                  source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                   ^^^
+                                   source.hx string.quoted.double.hx
+                                      ^
+                                      source.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                       ^
+                                       source.hx meta.brace.round.hx
+                                        ^
+                                        source.hx
+>		true;
+ ^^
+ source.hx
+   ^^^^
+   source.hx constant.language.hx
+       ^
+       source.hx punctuation.terminator.hx
+>	case _:
+ ^
+ source.hx
+  ^^^^
+  source.hx keyword.control.flow-control.hx
+      ^
+      source.hx
+       ^
+       source.hx variable.other.hx
+        ^
+        source.hx
+>		false;
+ ^^
+ source.hx
+   ^^^^^
+   source.hx constant.language.hx
+        ^
+        source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
