@@ -54,7 +54,4 @@ For convenience, there exists a `tm-language` target, which runs both the `tm-la
 
 VSCode currently needs to be restarted to pick up changes to grammar files. Hence it is helpful to assign an easily accessible shortcut to the `Reload Window` command, for instance <kbd>F6</kbd>. Sublime Text's [PackageDev](https://github.com/SublimeText/PackageDev) extension may offer a better workflow in this regard.
 
-The following VSCode extensions are helpful for working on the grammar files:
-
-- [scope-info](https://marketplace.visualstudio.com/items?itemName=siegebell.scope-info) - Shows tmLanguage scopes for the token under the cursor. Note: since VSCode 1.9.0, an `Inspect TM scopes` is built-in, but it uses the current caret location / doesn't work on hover.
-- [TextMate Languages](https://marketplace.visualstudio.com/items?itemName=Togusa09.tmlanguage) - Adds proper syntax highlighting for tmLanguage files.
+VSCode has a "Developer: Inspect Editor Tokens and Scopes" command that can be very helpful.
