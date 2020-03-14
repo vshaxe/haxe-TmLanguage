@@ -10,16 +10,16 @@ original file
 // haxe --help-metas | cut -c -24 | cut -c 4- | sed '/^\s*$/d' | tr -d ' '|  tr '\n' '|'
 
 @:abi
-@:abstract
-@:access
-@:allow
-@:analyzer
-@:annotation
+@:abstract   
+@:access     
+@:allow      
+@:analyzer   
+@:annotation 
 @:arrayAccess
-@:astSource
-@:autoBuild
-@:bind
-@:bitmap
+@:astSource  
+@:autoBuild  
+@:bind       
+@:bitmap     
 @:bridgeProperties
 @:build
 @:buildXml
@@ -34,6 +34,9 @@ original file
 @:cppFileCode
 @:cppInclude
 @:cppNamespaceCode
+@:cs.assemblyMeta
+@:cs.assemblyStrict
+@:cs.using
 @:dce
 @:debug
 @:decl
@@ -45,7 +48,6 @@ original file
 @:event
 @:expose
 @:extern
-@:fakeEnum
 @:file
 @:fileXml
 @:final
@@ -59,6 +61,7 @@ original file
 @:functionTailCode
 @:generic
 @:genericBuild
+@:genericClassPerMethod
 @:getter
 @:hack
 @:headerClassCode
@@ -72,8 +75,10 @@ original file
 @:inline
 @:internal
 @:isVar
+@:java.native
 @:javaCanonical
 @:jsRequire
+@:jvm.synthetic
 @:keep
 @:keepInit
 @:keepSub
@@ -82,7 +87,6 @@ original file
 @:macro
 @:markup
 @:mergeBlock
-@:meta
 @:multiReturn
 @:multiType
 @:native
@@ -90,6 +94,7 @@ original file
 @:nativeGen
 @:nativeProperty
 @:nativeStaticExtension
+@:noClosure
 @:noCompletion
 @:noDebug
 @:noDoc
@@ -99,7 +104,6 @@ original file
 @:noUsing
 @:nonVirtual
 @:notNull
-@:ns
 @:nullSafety
 @:objc
 @:objcProtocol
@@ -124,7 +128,6 @@ original file
 @:require
 @:resolve
 @:rtti
-@:runtime
 @:runtimeValue
 @:scalar
 @:selfCall
@@ -146,7 +149,6 @@ original file
 @:unreflective
 @:unsafe
 @:using
-@:value
 @:void
 @:volatile
 -----------------------------------
@@ -195,56 +197,74 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^
   source.hx storage.modifier.metadata.hx
->@:abstract
+>@:abstract   
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:access
+           ^^^^
+           source.hx
+>@:access     
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:allow
+         ^^^^^^
+         source.hx
+>@:allow      
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^
   source.hx storage.modifier.metadata.hx
->@:analyzer
+        ^^^^^^^
+        source.hx
+>@:analyzer   
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:annotation
+           ^^^^
+           source.hx
+>@:annotation 
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
+             ^^
+             source.hx
 >@:arrayAccess
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:astSource
+>@:astSource  
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:autoBuild
+            ^^^
+            source.hx
+>@:autoBuild  
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:bind
+            ^^^
+            source.hx
+>@:bind       
  ^
  source.hx punctuation.metadata.hx
   ^^^^^
   source.hx storage.modifier.metadata.hx
->@:bitmap
+       ^^^^^^^^
+       source.hx
+>@:bitmap     
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^
   source.hx storage.modifier.metadata.hx
+         ^^^^^^
+         source.hx
 >@:bridgeProperties
  ^
  source.hx punctuation.metadata.hx
@@ -315,6 +335,21 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:cs.assemblyMeta
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:cs.assemblyStrict
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:cs.using
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:dce
  ^
  source.hx punctuation.metadata.hx
@@ -369,11 +404,6 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^
-  source.hx storage.modifier.metadata.hx
->@:fakeEnum
- ^
- source.hx punctuation.metadata.hx
-  ^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:file
  ^
@@ -440,6 +470,11 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:genericClassPerMethod
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:getter
  ^
  source.hx punctuation.metadata.hx
@@ -505,6 +540,11 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^
   source.hx storage.modifier.metadata.hx
+>@:java.native
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
 >@:javaCanonical
  ^
  source.hx punctuation.metadata.hx
@@ -514,6 +554,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:jvm.synthetic
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:keep
  ^
@@ -555,11 +600,6 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
->@:meta
- ^
- source.hx punctuation.metadata.hx
-  ^^^^^
-  source.hx storage.modifier.metadata.hx
 >@:multiReturn
  ^
  source.hx punctuation.metadata.hx
@@ -594,6 +634,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^^^^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:noClosure
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:noCompletion
  ^
@@ -639,11 +684,6 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^
-  source.hx storage.modifier.metadata.hx
->@:ns
- ^
- source.hx punctuation.metadata.hx
-  ^^^
   source.hx storage.modifier.metadata.hx
 >@:nullSafety
  ^
@@ -765,11 +805,6 @@ original file
  source.hx punctuation.metadata.hx
   ^^^^^
   source.hx storage.modifier.metadata.hx
->@:runtime
- ^
- source.hx punctuation.metadata.hx
-  ^^^^^^^^
-  source.hx storage.modifier.metadata.hx
 >@:runtimeValue
  ^
  source.hx punctuation.metadata.hx
@@ -871,11 +906,6 @@ original file
   ^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:using
- ^
- source.hx punctuation.metadata.hx
-  ^^^^^^
-  source.hx storage.modifier.metadata.hx
->@:value
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^

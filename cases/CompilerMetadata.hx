@@ -8,16 +8,16 @@
 // haxe --help-metas | cut -c -24 | cut -c 4- | sed '/^\s*$/d' | tr -d ' '|  tr '\n' '|'
 
 @:abi
-@:abstract
-@:access
-@:allow
-@:analyzer
-@:annotation
+@:abstract   
+@:access     
+@:allow      
+@:analyzer   
+@:annotation 
 @:arrayAccess
-@:astSource
-@:autoBuild
-@:bind
-@:bitmap
+@:astSource  
+@:autoBuild  
+@:bind       
+@:bitmap     
 @:bridgeProperties
 @:build
 @:buildXml
@@ -32,6 +32,9 @@
 @:cppFileCode
 @:cppInclude
 @:cppNamespaceCode
+@:cs.assemblyMeta
+@:cs.assemblyStrict
+@:cs.using
 @:dce
 @:debug
 @:decl
@@ -43,7 +46,6 @@
 @:event
 @:expose
 @:extern
-@:fakeEnum
 @:file
 @:fileXml
 @:final
@@ -57,6 +59,7 @@
 @:functionTailCode
 @:generic
 @:genericBuild
+@:genericClassPerMethod
 @:getter
 @:hack
 @:headerClassCode
@@ -70,8 +73,10 @@
 @:inline
 @:internal
 @:isVar
+@:java.native
 @:javaCanonical
 @:jsRequire
+@:jvm.synthetic
 @:keep
 @:keepInit
 @:keepSub
@@ -80,7 +85,6 @@
 @:macro
 @:markup
 @:mergeBlock
-@:meta
 @:multiReturn
 @:multiType
 @:native
@@ -88,6 +92,7 @@
 @:nativeGen
 @:nativeProperty
 @:nativeStaticExtension
+@:noClosure
 @:noCompletion
 @:noDebug
 @:noDoc
@@ -97,7 +102,6 @@
 @:noUsing
 @:nonVirtual
 @:notNull
-@:ns
 @:nullSafety
 @:objc
 @:objcProtocol
@@ -122,7 +126,6 @@
 @:require
 @:resolve
 @:rtti
-@:runtime
 @:runtimeValue
 @:scalar
 @:selfCall
@@ -144,6 +147,5 @@
 @:unreflective
 @:unsafe
 @:using
-@:value
 @:void
 @:volatile
