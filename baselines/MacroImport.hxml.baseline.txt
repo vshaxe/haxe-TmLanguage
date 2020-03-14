@@ -1,0 +1,26 @@
+original file
+-----------------------------------
+--macro utest.utils.Macro.importEnvSettings()
+
+-----------------------------------
+
+>--macro utest.utils.Macro.importEnvSettings()
+ ^^^^^^^
+ source.hxml keyword.other.hxml
+        ^
+        source.hxml
+         ^^^^^^^^^^^^
+         source.hxml support.package.hx
+                     ^^^^^
+                     source.hxml entity.name.type.hx
+                          ^
+                          source.hxml punctuation.accessor.hx
+                           ^^^^^^^^^^^^^^^^^
+                           source.hxml entity.name.function.hx
+                                            ^
+                                            source.hxml meta.brace.round.hx
+                                             ^
+                                             source.hxml meta.brace.round.hx
+>
+ ^
+ source.hxml

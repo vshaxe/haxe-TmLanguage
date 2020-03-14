@@ -13,7 +13,7 @@ patterns:
     '1': {name: keyword.other.hxml}
   end: \n
   patterns:
-  - include: 'source.hx'
+  - include: 'source.hx#block-contents'
 - match: (?<!\w)(-m|-main|--main)\b\s*\b(?:(([a-z][a-zA-Z0-9]*\.)*)(_*[A-Z]\w*))?\b
   captures:
     '1': {name: keyword.other.hxml}
