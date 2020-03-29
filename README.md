@@ -1,6 +1,6 @@
 # haxe-TmLanguage
 
-[![Build Status](https://travis-ci.org/vshaxe/haxe-TmLanguage.svg?branch=master)](https://travis-ci.org/vshaxe/haxe-TmLanguage)
+[![CI](https://img.shields.io/github/workflow/status/vshaxe/haxe-TmLanguage/CI.svg?logo=github)](https://github.com/vshaxe/haxe-TmLanguage/actions?query=workflow%3ACI)
 
 This repository contains `.tmLanguage` grammars for Haxe and HXML. They are currently used by the following projects:
 
