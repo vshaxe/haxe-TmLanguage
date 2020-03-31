@@ -2,8 +2,10 @@ original file
 -----------------------------------
 import
 using
+package
 importFoo();
 usingBar();
+packageTest();
 
 -----------------------------------
 
@@ -13,6 +15,9 @@ usingBar();
 >using
  ^^^^^
  source.hx keyword.other.using.hx
+>package
+ ^^^^^^^
+ source.hx keyword.other.package.hx
 >importFoo();
  ^^^^^^^^^
  source.hx entity.name.function.hx
@@ -31,6 +36,15 @@ usingBar();
           source.hx meta.brace.round.hx
            ^
            source.hx punctuation.terminator.hx
+>packageTest();
+ ^^^^^^^^^^^
+ source.hx entity.name.function.hx
+            ^
+            source.hx meta.brace.round.hx
+             ^
+             source.hx meta.brace.round.hx
+              ^
+              source.hx punctuation.terminator.hx
 >
  ^
  source.hx

@@ -65,7 +65,7 @@ repository:
     - include: '#type-name'
     - include: '#identifier-name'
   package:
-    begin: package
+    begin: package\b
     beginCaptures:
       '0': {name: keyword.other.package.hx}
     end: $|(;)
