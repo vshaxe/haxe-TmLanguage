@@ -1,0 +1,36 @@
+original file
+-----------------------------------
+import
+using
+importFoo();
+usingBar();
+
+-----------------------------------
+
+>import
+ ^^^^^^
+ source.hx keyword.control.import.hx
+>using
+ ^^^^^
+ source.hx keyword.other.using.hx
+>importFoo();
+ ^^^^^^^^^
+ source.hx entity.name.function.hx
+          ^
+          source.hx meta.brace.round.hx
+           ^
+           source.hx meta.brace.round.hx
+            ^
+            source.hx punctuation.terminator.hx
+>usingBar();
+ ^^^^^^^^
+ source.hx entity.name.function.hx
+         ^
+         source.hx meta.brace.round.hx
+          ^
+          source.hx meta.brace.round.hx
+           ^
+           source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx

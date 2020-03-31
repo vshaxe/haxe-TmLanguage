@@ -75,7 +75,7 @@ repository:
     - include: '#type-path'
     - include: '#type-path-package-name'
   using:
-    begin: using
+    begin: using\b
     beginCaptures:
       '0': {name: keyword.other.using.hx}
     end: $|(;)
@@ -85,7 +85,7 @@ repository:
     - include: '#type-path'
     - include: '#type-path-package-name'
   import:
-    begin: import
+    begin: import\b
     beginCaptures:
       '0': {name: keyword.control.import.hx}
     end: $|(;)

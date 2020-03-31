@@ -1,0 +1,4 @@
+import
+using
+importFoo();
+usingBar();
