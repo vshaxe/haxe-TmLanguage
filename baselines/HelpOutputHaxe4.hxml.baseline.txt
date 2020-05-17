@@ -1,174 +1,205 @@
 original file
 -----------------------------------
-Target
-  --js <file>                                   compile code to JavaScript file
-  --lua <file>                                  compile code to Lua file
-  --swf <file>                                  compile code to Flash SWF file
-  --as3 <directory>                             generate AS3 code into target directory
-  --neko <file>                                 compile code to Neko Binary
-  --php <directory>                             generate PHP code into target directory
-  --cpp <directory>                             generate C++ code into target directory
-  --cppia <file>                                generate Cppia code into target file
-  --cs <directory>                              generate C# code into target directory
-  --java <directory>                            generate Java code into target directory
-  --python <file>                               generate Python code as target file
-  --hl <file>                                   compile HL code as target file
-  --interp                                      interpret the program using internal macro system
-Compilation
+Haxe Compiler 4.2.0-rc.1+5ce697efb - (C)2005-2020 Haxe Foundation
+Usage: haxe.exe <target> [options] [hxml files and dot paths...]
+
+Target:
+  --js <file>                           compile JavaScript code into target file
+  --lua <file>                          compile Lua code into target file
+  --swf <file>                          compile Flash SWF bytecode into target file
+  --neko <file>                         compile Neko bytecode into target file
+  --php <directory>                     compile PHP code into target directory
+  --cpp <directory>                     compile C++ code into target directory
+  --cppia <file>                        compile Cppia bytecode into target file
+  --cs <directory>                      compile C# code into target directory
+  --java <directory>                    compile Java code into target directory
+  --jvm <file>                          compile JVM bytecode into target file
+  --python <file>                       compile Python code into target file
+  --hl <file>                           compile HashLink .hl bytecode or .c code into target file
+  --interp                              interpret the program using internal macro system
+  --run <module> [args...]              interpret a Haxe module with command line arguments
+
+Compilation:
   -p,
-  --class-path <path>                       add a directory to find source files
+  --class-path <path>               add a directory to find source files
   -m,
-  --main <class>                            select startup class
+  --main <class>                    select startup class
   -L,
-  --library <library[:version]>             use a haxelib library
+  --library <name[:ver]>            use a haxelib library
   -D,
-  --define <var[=value]>                    define a conditional compilation flag
+  --define <var[=value]>            define a conditional compilation flag
   -r,
-  --resource <file>[@name]                  add a named resource file
-  --cmd <command>                               run the specified command after successful compilation
-  --remap <package:target>                      remap a package to another one
-#   --macro <macro>                               call the given macro before typing anything else
+  --resource <file>[@name]          add a named resource file
+  --cmd <command>                       run the specified command after successful compilation
+  --remap <package:target>              remap a package to another one
+  # --macro <macro>                       call the given macro before typing anything else
   -C,
-  --cwd <dir>                               set current working directory
-Optimization
-  --dce,
-  --no-traces                                   don't compile trace calls in the program
-  --no-output                                   compiles but does not generate any file
-  --no-inline                                   disable inlining
-  --no-opt                                      disable code optimizations
-Debug
+  --cwd <dir>                       set current working directory
+  --haxelib-global                      pass --global argument to haxelib
+
+Optimization:
+  --dce [std|full|no]                   set the dead code elimination mode (default std)
+  --no-traces                           don't compile trace calls in the program
+  --no-output                           compiles but does not generate any file
+  --no-inline                           disable inlining
+  --no-opt                              disable code optimizations
+
+Debug:
   -v,
-  --verbose                                 turn on verbose mode
-  --debug                                       add debug information to the compiled code
-  --prompt                                      prompt on error
-  --times                                       measure compilation times
-Batch
-  --next                                        separate several haxe compilations
-  --each                                        append preceding parameters to all haxe compilations separated by --next
-Services
-  --display                                     display code tips
-  --xml <file>                                  generate XML types description
-  --json <file>                                 generate JSON types description
-  --gen-hx-classes                              generate hx headers for all input classes
-Compilation Server
-  --wait [[host:]port]|stdio]                   wait on the given port (or use standard i/o) for commands to run)
-  --connect <[host:]port>                       connect on the given port and run commands there)
-Target-specific
-  --swf-version <version>                       change the SWF version
-  --swf-header <header>                         define SWF header (width:height:fps:color)
-  --swf-lib <file>                              add the SWF library to the compiled SWF
-  --swf-lib-extern <file>                       use the SWF library for type checking
-  --flash-strict                                more type strict flash API
-  --java-lib <file>                             add an external JAR or class directory library
-  --net-lib <file>[@std]                        add an external .NET DLL file
-  --net-std <file>                              add a root std .NET DLL search path
-  --c-arg <arg>                                 pass option <arg> to the native Java/C# compiler
-Miscellaneous
-  --version                                     print version and exit
+  --verbose                         turn on verbose mode
+  --debug                               add debug information to the compiled code
+  --prompt                              prompt on error
+  --times                               measure compilation times
+
+Batch:
+  --next                                separate several haxe compilations
+  --each                                append preceding parameters to all Haxe compilations separated by --next
+
+Services:
+  --display                             display code tips
+  --xml <file>                          generate XML types description
+  --json <file>                         generate JSON types description
+
+Compilation Server:
+  --server-listen [[host:]port]|stdio]  wait on the given port (or use standard i/o) for commands to run
+  --server-connect [host:]port]         connect to the given port and wait for commands to run
+  --connect <[host:]port>               connect on the given port and run commands there
+
+Target-specific:
+  --swf-version <version>               change the SWF version
+  --swf-header <header>                 define SWF header (width:height:fps:color)
+  --flash-strict                        more type strict flash API
+  --swf-lib <file>                      add the SWF library to the compiled SWF
+  --swf-lib-extern <file>               use the SWF library for type checking
+  --java-lib <file>                     add an external JAR or class directory library
+  --net-lib <file>[@std]                add an external .NET DLL file
+  --net-std <file>                      add a root std .NET DLL search path
+  --c-arg <arg>                         pass option <arg> to the native Java/C# compiler
+
+Miscellaneous:
+  --version                             print version and exit
   -h,
-  --help                                    show extended help information
-  --help-defines                                print help for all compiler specific defines
-  --help-metas                                  print help for all compiler metadatas
-  --run <module> [args...]                      compile and execute a Haxe module with command line arguments
+  --help                            show extended help information
+  --help-defines                        print help for all compiler specific defines
+  --help-metas                          print help for all compiler metadatas
 
 -----------------------------------
 
->Target
- ^^^^^^^
+>Haxe Compiler 4.2.0-rc.1+5ce697efb - (C)2005-2020 Haxe Foundation
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  source.hxml
->  --js <file>                                   compile code to JavaScript file
+>Usage: haxe.exe <target> [options] [hxml files and dot paths...]
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hxml
+>
+ ^
+ source.hxml
+>Target:
+ ^^^^^^^^
+ source.hxml
+>  --js <file>                           compile JavaScript code into target file
  ^^
  source.hxml
    ^^^^
    source.hxml keyword.other.hxml
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
        source.hxml
->  --lua <file>                                  compile code to Lua file
+>  --lua <file>                          compile Lua code into target file
  ^^
  source.hxml
    ^^^^^
    source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->  --swf <file>                                  compile code to Flash SWF file
+>  --swf <file>                          compile Flash SWF bytecode into target file
+ ^^
+ source.hxml
+   ^^^^^
+   source.hxml keyword.other.hxml
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.hxml
+>  --neko <file>                         compile Neko bytecode into target file
+ ^^
+ source.hxml
+   ^^^^^^
+   source.hxml keyword.other.hxml
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.hxml
+>  --php <directory>                     compile PHP code into target directory
  ^^
  source.hxml
    ^^^^^
    source.hxml keyword.other.hxml
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->  --as3 <directory>                             generate AS3 code into target directory
+>  --cpp <directory>                     compile C++ code into target directory
  ^^
  source.hxml
    ^^^^^
    source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->  --neko <file>                                 compile code to Neko Binary
- ^^
- source.hxml
-   ^^^^^^
-   source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.hxml
->  --php <directory>                             generate PHP code into target directory
- ^^
- source.hxml
-   ^^^^^
-   source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        source.hxml
->  --cpp <directory>                             generate C++ code into target directory
- ^^
- source.hxml
-   ^^^^^
-   source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        source.hxml
->  --cppia <file>                                generate Cppia code into target file
+>  --cppia <file>                        compile Cppia bytecode into target file
  ^^
  source.hxml
    ^^^^^^^
    source.hxml keyword.other.hxml
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
           source.hxml
->  --cs <directory>                              generate C# code into target directory
+>  --cs <directory>                      compile C# code into target directory
  ^^
  source.hxml
    ^^^^
    source.hxml keyword.other.hxml
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
        source.hxml
->  --java <directory>                            generate Java code into target directory
+>  --java <directory>                    compile Java code into target directory
  ^^
  source.hxml
    ^^^^^^
    source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.hxml
->  --python <file>                               generate Python code as target file
+>  --jvm <file>                          compile JVM bytecode into target file
+ ^^
+ source.hxml
+   ^^^^^
+   source.hxml keyword.other.hxml
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.hxml
+>  --python <file>                       compile Python code into target file
  ^^
  source.hxml
    ^^^^^^^^
    source.hxml keyword.other.hxml
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
            source.hxml
->  --hl <file>                                   compile HL code as target file
+>  --hl <file>                           compile HashLink .hl bytecode or .c code into target file
  ^^
  source.hxml
    ^^^^
    source.hxml keyword.other.hxml
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
        source.hxml
->  --interp                                      interpret the program using internal macro system
+>  --interp                              interpret the program using internal macro system
  ^^
  source.hxml
    ^^^^^^^^
    source.hxml keyword.other.hxml
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
            source.hxml
->Compilation
- ^^^^^^^^^^^^
+>  --run <module> [args...]              interpret a Haxe module with command line arguments
+ ^^
+ source.hxml
+   ^^^^^
+   source.hxml keyword.other.hxml
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.hxml
+>
+ ^
+ source.hxml
+>Compilation:
+ ^^^^^^^^^^^^^
  source.hxml
 >  -p,
  ^^
@@ -177,12 +208,12 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^
      source.hxml
->  --class-path <path>                       add a directory to find source files
+>  --class-path <path>               add a directory to find source files
  ^^
  source.hxml
    ^^^^^^^^^^^^
    source.hxml keyword.other.hxml
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                source.hxml
 >  -m,
  ^^
@@ -191,12 +222,12 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^^
      source.hxml
->  --main <class>                            select startup class
+>  --main <class>                    select startup class
  ^^
  source.hxml
    ^^^^^^
    source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.hxml
 >  -L,
  ^^
@@ -205,12 +236,12 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^
      source.hxml
->  --library <library[:version]>             use a haxelib library
+>  --library <name[:ver]>            use a haxelib library
  ^^
  source.hxml
    ^^^^^^^^^
    source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             source.hxml
 >  -D,
  ^^
@@ -219,12 +250,12 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^
      source.hxml
->  --define <var[=value]>                    define a conditional compilation flag
+>  --define <var[=value]>            define a conditional compilation flag
  ^^
  source.hxml
    ^^^^^^^^
    source.hxml keyword.other.hxml
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
            source.hxml
 >  -r,
  ^^
@@ -233,32 +264,34 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^
      source.hxml
->  --resource <file>[@name]                  add a named resource file
+>  --resource <file>[@name]          add a named resource file
  ^^
  source.hxml
    ^^^^^^^^^^
    source.hxml keyword.other.hxml
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
              source.hxml
->  --cmd <command>                               run the specified command after successful compilation
+>  --cmd <command>                       run the specified command after successful compilation
  ^^
  source.hxml
    ^^^^^
    source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->  --remap <package:target>                      remap a package to another one
+>  --remap <package:target>              remap a package to another one
  ^^
  source.hxml
    ^^^^^^^
    source.hxml keyword.other.hxml
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
           source.hxml
->#   --macro <macro>                               call the given macro before typing anything else
- ^
- source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  source.hxml comment.line.number-sign.hxml
+>  # --macro <macro>                       call the given macro before typing anything else
+ ^^
+ source.hxml
+   ^
+   source.hxml comment.line.number-sign.hxml punctuation.definition.comment.hxml
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    source.hxml comment.line.number-sign.hxml
 >  -C,
  ^^
  source.hxml
@@ -266,53 +299,66 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^
      source.hxml
->  --cwd <dir>                               set current working directory
+>  --cwd <dir>                       set current working directory
  ^^
  source.hxml
    ^^^^^
    source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->Optimization
- ^^^^^^^^^^^^^
+>  --haxelib-global                      pass --global argument to haxelib
+ ^^
  source.hxml
->  --dce,
+   ^^^^^^^^^^^^^^^^
+   source.hxml keyword.other.hxml
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   source.hxml
+>
+ ^
+ source.hxml
+>Optimization:
+ ^^^^^^^^^^^^^^
+ source.hxml
+>  --dce [std|full|no]                   set the dead code elimination mode (default std)
  ^^
  source.hxml
    ^^^^^
    source.hxml keyword.other.hxml
-        ^
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->  --no-traces                                   don't compile trace calls in the program
+>  --no-traces                           don't compile trace calls in the program
  ^^
  source.hxml
    ^^^^^^^^^^^
    source.hxml keyword.other.hxml
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
               source.hxml
->  --no-output                                   compiles but does not generate any file
+>  --no-output                           compiles but does not generate any file
  ^^
  source.hxml
    ^^^^^^^^^^^
    source.hxml keyword.other.hxml
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
               source.hxml
->  --no-inline                                   disable inlining
+>  --no-inline                           disable inlining
  ^^
  source.hxml
    ^^^^^^^^^^^
    source.hxml keyword.other.hxml
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
               source.hxml
->  --no-opt                                      disable code optimizations
+>  --no-opt                              disable code optimizations
  ^^
  source.hxml
    ^^^^^^^^
    source.hxml keyword.other.hxml
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
            source.hxml
->Debug
- ^^^^^^
+>
+ ^
+ source.hxml
+>Debug:
+ ^^^^^^^
  source.hxml
 >  -v,
  ^^
@@ -321,174 +367,189 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^
      source.hxml
->  --verbose                                 turn on verbose mode
+>  --verbose                         turn on verbose mode
  ^^
  source.hxml
    ^^^^^^^^^
    source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             source.hxml
->  --debug                                       add debug information to the compiled code
+>  --debug                               add debug information to the compiled code
  ^^
  source.hxml
    ^^^^^^^
    source.hxml keyword.other.hxml
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
           source.hxml
->  --prompt                                      prompt on error
+>  --prompt                              prompt on error
  ^^
  source.hxml
    ^^^^^^^^
    source.hxml keyword.other.hxml
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
            source.hxml
->  --times                                       measure compilation times
+>  --times                               measure compilation times
  ^^
  source.hxml
    ^^^^^^^
    source.hxml keyword.other.hxml
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
           source.hxml
->Batch
- ^^^^^^
+>
+ ^
  source.hxml
->  --next                                        separate several haxe compilations
+>Batch:
+ ^^^^^^^
+ source.hxml
+>  --next                                separate several haxe compilations
  ^^
  source.hxml
    ^^^^^^
    source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.hxml
->  --each                                        append preceding parameters to all haxe compilations separated by --next
+>  --each                                append preceding parameters to all Haxe compilations separated by --next
  ^^
  source.hxml
    ^^^^^^
    source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.hxml
->Services
- ^^^^^^^^^
+>
+ ^
  source.hxml
->  --display                                     display code tips
+>Services:
+ ^^^^^^^^^^
+ source.hxml
+>  --display                             display code tips
  ^^
  source.hxml
    ^^^^^^^^^
    source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             source.hxml
->  --xml <file>                                  generate XML types description
+>  --xml <file>                          generate XML types description
  ^^
  source.hxml
    ^^^^^
    source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         source.hxml
->  --json <file>                                 generate JSON types description
+>  --json <file>                         generate JSON types description
  ^^
  source.hxml
    ^^^^^^
    source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.hxml
->  --gen-hx-classes                              generate hx headers for all input classes
+>
+ ^
+ source.hxml
+>Compilation Server:
+ ^^^^^^^^^^^^^^^^^^^^
+ source.hxml
+>  --server-listen [[host:]port]|stdio]  wait on the given port (or use standard i/o) for commands to run
+ ^^
+ source.hxml
+   ^^^^^^^^^^^^^^^
+   source.hxml keyword.other.hxml
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  source.hxml
+>  --server-connect [host:]port]         connect to the given port and wait for commands to run
  ^^
  source.hxml
    ^^^^^^^^^^^^^^^^
    source.hxml keyword.other.hxml
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                    source.hxml
->Compilation Server
- ^^^^^^^^^^^^^^^^^^^
- source.hxml
->  --wait [[host:]port]|stdio]                   wait on the given port (or use standard i/o) for commands to run)
- ^^
- source.hxml
-   ^^^^^^
-   source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.hxml
->  --connect <[host:]port>                       connect on the given port and run commands there)
+>  --connect <[host:]port>               connect on the given port and run commands there
  ^^
  source.hxml
    ^^^^^^^^^
    source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             source.hxml
->Target-specific
- ^^^^^^^^^^^^^^^^
+>
+ ^
  source.hxml
->  --swf-version <version>                       change the SWF version
+>Target-specific:
+ ^^^^^^^^^^^^^^^^^
+ source.hxml
+>  --swf-version <version>               change the SWF version
  ^^
  source.hxml
    ^^^^^^^^^^^^^
    source.hxml keyword.other.hxml
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                 source.hxml
->  --swf-header <header>                         define SWF header (width:height:fps:color)
+>  --swf-header <header>                 define SWF header (width:height:fps:color)
  ^^
  source.hxml
    ^^^^^^^^^^^^
    source.hxml keyword.other.hxml
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                source.hxml
->  --swf-lib <file>                              add the SWF library to the compiled SWF
- ^^
- source.hxml
-   ^^^^^^^^^
-   source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            source.hxml
->  --swf-lib-extern <file>                       use the SWF library for type checking
- ^^
- source.hxml
-   ^^^^^^^^^^^^^^^^
-   source.hxml keyword.other.hxml
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                   source.hxml
->  --flash-strict                                more type strict flash API
+>  --flash-strict                        more type strict flash API
  ^^
  source.hxml
    ^^^^^^^^^^^^^^
    source.hxml keyword.other.hxml
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                  source.hxml
->  --java-lib <file>                             add an external JAR or class directory library
+>  --swf-lib <file>                      add the SWF library to the compiled SWF
+ ^^
+ source.hxml
+   ^^^^^^^^^
+   source.hxml keyword.other.hxml
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            source.hxml
+>  --swf-lib-extern <file>               use the SWF library for type checking
+ ^^
+ source.hxml
+   ^^^^^^^^^^^^^^^^
+   source.hxml keyword.other.hxml
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   source.hxml
+>  --java-lib <file>                     add an external JAR or class directory library
  ^^
  source.hxml
    ^^^^^^^^^^
    source.hxml keyword.other.hxml
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
              source.hxml
->  --net-lib <file>[@std]                        add an external .NET DLL file
+>  --net-lib <file>[@std]                add an external .NET DLL file
  ^^
  source.hxml
    ^^^^^^^^^
    source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             source.hxml
->  --net-std <file>                              add a root std .NET DLL search path
+>  --net-std <file>                      add a root std .NET DLL search path
  ^^
  source.hxml
    ^^^^^^^^^
    source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             source.hxml
->  --c-arg <arg>                                 pass option <arg> to the native Java/C# compiler
+>  --c-arg <arg>                         pass option <arg> to the native Java/C# compiler
  ^^
  source.hxml
    ^^^^^^^
    source.hxml keyword.other.hxml
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
           source.hxml
->Miscellaneous
- ^^^^^^^^^^^^^^
+>
+ ^
  source.hxml
->  --version                                     print version and exit
+>Miscellaneous:
+ ^^^^^^^^^^^^^^^
+ source.hxml
+>  --version                             print version and exit
  ^^
  source.hxml
    ^^^^^^^^^
    source.hxml keyword.other.hxml
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             source.hxml
 >  -h,
  ^^
@@ -497,34 +558,27 @@ Miscellaneous
    source.hxml keyword.other.hxml
      ^
      source.hxml
->  --help                                    show extended help information
+>  --help                            show extended help information
  ^^
  source.hxml
    ^^^^^^
    source.hxml keyword.other.hxml
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.hxml
->  --help-defines                                print help for all compiler specific defines
+>  --help-defines                        print help for all compiler specific defines
  ^^
  source.hxml
    ^^^^^^^^^^^^^^
    source.hxml keyword.other.hxml
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                  source.hxml
->  --help-metas                                  print help for all compiler metadatas
+>  --help-metas                          print help for all compiler metadatas
  ^^
  source.hxml
    ^^^^^^^^^^^^
    source.hxml keyword.other.hxml
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                source.hxml
->  --run <module> [args...]                      compile and execute a Haxe module with command line arguments
- ^^
- source.hxml
-   ^^^^^
-   source.hxml keyword.other.hxml
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        source.hxml
 >
  ^
  source.hxml
