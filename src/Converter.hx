@@ -16,8 +16,8 @@ function main() {
 }
 
 private function convert(source:String, dest:String) {
-	var content = File.getContent(source);
-	var parsed = new yaml.Parser().parse(content, new yaml.Parser.ParserOptions().useObjects());
+	final content = File.getContent(source);
+	final parsed = new yaml.Parser().parse(content, new yaml.Parser.ParserOptions().useObjects());
 
 	switch plist.Writer.write(parsed) {
 		case Success(data):

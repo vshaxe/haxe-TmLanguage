@@ -6,9 +6,9 @@ import sys.io.File;
 using StringTools;
 
 // ported and adapted from https://github.com/Microsoft/TypeScript-TmLanguage
-inline var GENERATED_DIR = "generated";
-private inline var CASES_DIR = "cases";
-private inline var MARKER = '^^';
+inline final GENERATED_DIR = "generated";
+private inline final CASES_DIR = "cases";
+private inline final MARKER = '^^';
 
 function main() {
 	// clean the generated dir
@@ -19,7 +19,7 @@ function main() {
 		FileSystem.createDirectory("generated");
 	}
 
-	var registry = new Registry();
+	final registry = new Registry();
 	loadGrammar(registry, "haxe.tmLanguage").then(haxeGrammar -> {
 		testGrammar(haxeGrammar, ".hx");
 		loadGrammar(registry, "hxml.tmLanguage").then(hxmlGrammar -> testGrammar(hxmlGrammar, ".hxml"));
@@ -28,11 +28,11 @@ function main() {
 
 private function testGrammar(grammar:IGrammar, extension:String) {
 	for (fileName in FileSystem.readDirectory(CASES_DIR)) {
-		var text = File.getContent('$CASES_DIR/$fileName').replace("\r\n", "\n");
+		final text = File.getContent('$CASES_DIR/$fileName').replace("\r\n", "\n");
 		if (!fileName.endsWith(extension)) {
 			continue;
 		}
-		var result = getScopesAtMarkers(text, grammar);
+		final result = getScopesAtMarkers(text, grammar);
 		if (result.markerScopes != null)
 			File.saveContent('$GENERATED_DIR/$fileName.txt', result.markerScopes);
 		File.saveContent('$GENERATED_DIR/$fileName.baseline.txt', result.wholeBaseline);
@@ -40,28 +40,28 @@ private function testGrammar(grammar:IGrammar, extension:String) {
 }
 
 private function loadGrammar(registry:Registry, path:String):Promise<IGrammar> {
-	var rawGrammar = GrammarReader.parseRawGrammar(File.getContent(path), path);
+	final rawGrammar = GrammarReader.parseRawGrammar(File.getContent(path), path);
 	return registry.addGrammar(rawGrammar);
 }
 
 private function getScopesAtMarkers(text:String, grammar:IGrammar):{markerScopes:String, wholeBaseline:String} {
-	var oriLines = text.split('\n');
+	final oriLines = text.split('\n');
 
-	var outputLines = [];
-	var cleanLines = [];
-	var baselineLines = [];
+	final outputLines = [];
+	final cleanLines = [];
+	final baselineLines = [];
 
 	var hasMarkers = false;
 	var ruleStack = null;
 	for (i in 0...oriLines.length) {
 		var line = oriLines[i];
-		var markerLocations = getMarkerLocations(line);
+		final markerLocations = getMarkerLocations(line);
 		if (markerLocations.length > 0) {
 			hasMarkers = true;
 			line = line.replace(MARKER, "");
 		}
 
-		var result = grammar.tokenizeLine(line, ruleStack);
+		final result = grammar.tokenizeLine(line, ruleStack);
 		ruleStack = result.ruleStack;
 
 		cleanLines.push(line);
@@ -84,7 +84,7 @@ private function getScopesAtMarkers(text:String, grammar:IGrammar):{markerScopes
 }
 
 private function getMarkerLocations(str:String):Array<Int> {
-	var locations = [];
+	final locations = [];
 	var markerLocation = str.indexOf(MARKER);
 	while (markerLocation != -1) {
 		locations.push(markerLocation);

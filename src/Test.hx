@@ -10,14 +10,14 @@ private inline final BASELINES_DIR = "baselines";
 function main() {
 	var hasError = false;
 	for (file in FileSystem.readDirectory(GENERATED_DIR)) {
-		var generatedText = File.getContent('$GENERATED_DIR/$file');
-		var baseline = '$BASELINES_DIR/$file';
+		final generatedText = File.getContent('$GENERATED_DIR/$file');
+		final baseline = '$BASELINES_DIR/$file';
 		if (!FileSystem.exists(baseline)) {
 			hasError = true;
 			Sys.println('Warning: "$file" has no baseline.');
 			continue;
 		}
-		var baselinesText = File.getContent(baseline);
+		final baselinesText = File.getContent(baseline);
 		if (removeNewlines(generatedText) != removeNewlines(baselinesText)) {
 			hasError = true;
 			Sys.println('Error: "$file" is not the same as the baseline!');
@@ -25,8 +25,9 @@ function main() {
 	}
 
 	Sys.println(" \n" + if (hasError) "Failed!" else "Success.");
-	if (hasError)
+	if (hasError) {
 		Sys.exit(1);
+	}
 }
 
 private function removeNewlines(text:String):String {
