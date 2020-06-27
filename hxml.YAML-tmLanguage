@@ -14,7 +14,7 @@ patterns:
   end: \n
   patterns:
   - include: 'source.hx#block-contents'
-- match: (?<!\w)(-m|-main|--main)\b\s*\b(?:(([a-z][a-zA-Z0-9]*\.)*)(_*[A-Z]\w*))?\b
+- match: (?<!\w)(-m|-main|--main|--run)\b\s*\b(?:(([a-z][a-zA-Z0-9]*\.)*)(_*[A-Z]\w*))?\b
   captures:
     '1': {name: keyword.other.hxml}
     '2': {name: support.package.hx}
