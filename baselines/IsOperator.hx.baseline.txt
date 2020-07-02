@@ -336,7 +336,7 @@ var is:Int;
                   ^
                   source.hx
                    ^^
-                   source.hx variable.other.hx
+                   source.hx keyword.other.hx
                      ^
                      source.hx
                       ^^^^^^
@@ -355,7 +355,7 @@ var is:Int;
          ^
          source.hx
           ^^
-          source.hx variable.other.hx
+          source.hx keyword.other.hx
             ^
             source.hx
              ^^^^^^
@@ -376,7 +376,7 @@ var is:Int;
          ^
          source.hx
           ^^
-          source.hx variable.other.hx
+          source.hx keyword.other.hx
             ^
             source.hx
              ^^^^^^
@@ -397,7 +397,7 @@ var is:Int;
           ^
           source.hx
            ^^
-           source.hx variable.other.hx
+           source.hx keyword.other.hx
              ^
              source.hx
               ^^^^^^
@@ -422,7 +422,7 @@ var is:Int;
           ^
           source.hx
            ^^
-           source.hx variable.other.hx
+           source.hx keyword.other.hx
              ^
              source.hx
               ^^^^^^
@@ -457,7 +457,7 @@ var is:Int;
         ^
         source.hx
          ^^
-         source.hx variable.other.hx
+         source.hx keyword.other.hx
            ^
            source.hx
             ^^^^^^
@@ -486,7 +486,7 @@ var is:Int;
             ^
             source.hx
              ^^
-             source.hx variable.other.hx
+             source.hx keyword.other.hx
                ^
                source.hx
                 ^^^^^^
@@ -507,7 +507,7 @@ var is:Int;
             ^
             source.hx
              ^^
-             source.hx variable.other.hx
+             source.hx keyword.other.hx
                ^
                source.hx
                 ^^^^^^
@@ -530,7 +530,7 @@ var is:Int;
                     ^
                     source.hx
                      ^^
-                     source.hx variable.other.hx
+                     source.hx keyword.other.hx
                        ^
                        source.hx
                         ^^^^^^

@@ -881,9 +881,6 @@ repository:
       '0': {name: meta.brace.round.hx}
     patterns:
     - include: '#keywords'
-    # is-operator, only allowed with mandatory braces
-    - match: \bis\b(?!\()
-      name: keyword.other.hx
     - include: '#block'
     - include: '#block-contents'
     - include: '#type-check'
@@ -984,6 +981,8 @@ repository:
       name: keyword.operator.intiterator.hx
     - match: =>
       name: keyword.operator.arrow.hx
+    - match: \bis\b(?!\()
+      name: keyword.other.hx
     - begin: '\?'
       beginCaptures:
         '0': {name: keyword.operator.ternary.hx}
