@@ -145,6 +145,7 @@ original file
 @:throws
 @:to
 @:transient
+@:transitive
 @:unifyMinDynamic
 @:unreflective
 @:unsafe
@@ -889,6 +890,11 @@ original file
  ^
  source.hx punctuation.metadata.hx
   ^^^^^^^^^^
+  source.hx storage.modifier.metadata.hx
+>@:transitive
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^^^^^^^^
   source.hx storage.modifier.metadata.hx
 >@:unifyMinDynamic
  ^

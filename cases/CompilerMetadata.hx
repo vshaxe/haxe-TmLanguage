@@ -143,6 +143,7 @@
 @:throws
 @:to
 @:transient
+@:transitive
 @:unifyMinDynamic
 @:unreflective
 @:unsafe
