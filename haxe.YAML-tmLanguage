@@ -114,7 +114,7 @@ repository:
     match: \b([_A-Za-z]\w*)\b
     name: support.package.hx
   abstract:
-    begin: (?=abstract)
+    begin: (?=abstract\s+[A-Z])
     end: (?<=\})|(;)
     endCaptures:
       '1': {name: punctuation.terminator.hx}
@@ -767,9 +767,9 @@ repository:
     patterns:
     - match: \b(enum)\b
       name: storage.type.class
-    - match: \b(public|private|static|dynamic|inline|macro|extern|override)\b
+    - match: \b(public|private|static|dynamic|inline|macro|extern|override|abstract)\b
       name: storage.modifier.hx
-    - match: \b(final)\b(?=\s+(public|private|static|dynamic|inline|macro|extern|override|function))
+    - match: \b(final)\b(?=\s+(public|private|static|dynamic|inline|macro|extern|override|abstract|function))
       name: storage.modifier.hx
   new-expr:
     name: new.expr.hx

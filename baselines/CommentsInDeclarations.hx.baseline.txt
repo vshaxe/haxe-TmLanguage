@@ -68,101 +68,101 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
                                                                           source.hx comment.block.hx punctuation.definition.comment.hx
 >abstract /**/ Abstract /**/ (/**/ String /**/) /**/ from /**/ String /**/ to /**/ /**/ String /**/ {}
  ^^^^^^^^
- source.hx meta.abstract.hx storage.type.class.hx
+ source.hx storage.modifier.hx
          ^
-         source.hx meta.abstract.hx
+         source.hx
           ^^
-          source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+          source.hx comment.block.hx punctuation.definition.comment.hx
             ^^
-            source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+            source.hx comment.block.hx punctuation.definition.comment.hx
               ^
-              source.hx meta.abstract.hx
+              source.hx
                ^^^^^^^^
-               source.hx meta.abstract.hx entity.name.type.class.hx
+               source.hx entity.name.type.hx
                        ^
-                       source.hx meta.abstract.hx
+                       source.hx
                         ^^
-                        source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                        source.hx comment.block.hx punctuation.definition.comment.hx
                           ^^
-                          source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                          source.hx comment.block.hx punctuation.definition.comment.hx
                             ^
-                            source.hx meta.abstract.hx
+                            source.hx
                              ^
-                             source.hx meta.abstract.hx punctuation.definition.parameters.begin.hx
+                             source.hx meta.brace.round.hx
                               ^^
-                              source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                              source.hx comment.block.hx punctuation.definition.comment.hx
                                 ^^
-                                source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                source.hx comment.block.hx punctuation.definition.comment.hx
                                   ^
-                                  source.hx meta.abstract.hx
+                                  source.hx
                                    ^^^^^^
-                                   source.hx meta.abstract.hx support.class.builtin.hx
+                                   source.hx support.class.builtin.hx
                                          ^
-                                         source.hx meta.abstract.hx
+                                         source.hx
                                           ^^
-                                          source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                          source.hx comment.block.hx punctuation.definition.comment.hx
                                             ^^
-                                            source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                            source.hx comment.block.hx punctuation.definition.comment.hx
                                               ^
-                                              source.hx meta.abstract.hx punctuation.definition.parameters.end.hx
+                                              source.hx meta.brace.round.hx
                                                ^
-                                               source.hx meta.abstract.hx
+                                               source.hx
                                                 ^^
-                                                source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                source.hx comment.block.hx punctuation.definition.comment.hx
                                                   ^^
-                                                  source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                  source.hx comment.block.hx punctuation.definition.comment.hx
                                                     ^
-                                                    source.hx meta.abstract.hx
+                                                    source.hx
                                                      ^^^^
-                                                     source.hx meta.abstract.hx keyword.other.hx
+                                                     source.hx variable.other.hx
                                                          ^
-                                                         source.hx meta.abstract.hx
+                                                         source.hx
                                                           ^^
-                                                          source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                          source.hx comment.block.hx punctuation.definition.comment.hx
                                                             ^^
-                                                            source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                            source.hx comment.block.hx punctuation.definition.comment.hx
                                                               ^
-                                                              source.hx meta.abstract.hx
+                                                              source.hx
                                                                ^^^^^^
-                                                               source.hx meta.abstract.hx support.class.builtin.hx
+                                                               source.hx support.class.builtin.hx
                                                                      ^
-                                                                     source.hx meta.abstract.hx
+                                                                     source.hx
                                                                       ^^
-                                                                      source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                      source.hx comment.block.hx punctuation.definition.comment.hx
                                                                         ^^
-                                                                        source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                        source.hx comment.block.hx punctuation.definition.comment.hx
                                                                           ^
-                                                                          source.hx meta.abstract.hx
+                                                                          source.hx
                                                                            ^^
-                                                                           source.hx meta.abstract.hx keyword.other.hx
+                                                                           source.hx variable.other.hx
                                                                              ^
-                                                                             source.hx meta.abstract.hx
+                                                                             source.hx
                                                                               ^^
-                                                                              source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                              source.hx comment.block.hx punctuation.definition.comment.hx
                                                                                 ^^
-                                                                                source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                source.hx comment.block.hx punctuation.definition.comment.hx
                                                                                   ^
-                                                                                  source.hx meta.abstract.hx
+                                                                                  source.hx
                                                                                    ^^
-                                                                                   source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                   source.hx comment.block.hx punctuation.definition.comment.hx
                                                                                      ^^
-                                                                                     source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                     source.hx comment.block.hx punctuation.definition.comment.hx
                                                                                        ^
-                                                                                       source.hx meta.abstract.hx
+                                                                                       source.hx
                                                                                         ^^^^^^
-                                                                                        source.hx meta.abstract.hx support.class.builtin.hx
+                                                                                        source.hx support.class.builtin.hx
                                                                                               ^
-                                                                                              source.hx meta.abstract.hx
+                                                                                              source.hx
                                                                                                ^^
-                                                                                               source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                               source.hx comment.block.hx punctuation.definition.comment.hx
                                                                                                  ^^
-                                                                                                 source.hx meta.abstract.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                                 source.hx comment.block.hx punctuation.definition.comment.hx
                                                                                                    ^
-                                                                                                   source.hx meta.abstract.hx
+                                                                                                   source.hx
                                                                                                     ^
-                                                                                                    source.hx meta.abstract.hx punctuation.definition.block.begin.hx
+                                                                                                    source.hx punctuation.definition.block.begin.hx
                                                                                                      ^
-                                                                                                     source.hx meta.abstract.hx meta.block.hx punctuation.definition.block.end.hx
+                                                                                                     source.hx punctuation.definition.block.end.hx
 >interface /**/ ITest /**/ extends /**/ IBase /**/ {} /**/
  ^^^^^^^^^
  source.hx meta.interface.hx storage.type.class.hx
