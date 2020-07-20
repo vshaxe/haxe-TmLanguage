@@ -767,9 +767,9 @@ repository:
     patterns:
     - match: \b(enum)\b
       name: storage.type.class
-    - match: \b(public|private|static|dynamic|inline|macro|extern|override|abstract)\b
+    - match: \b(public|private|static|dynamic|inline|macro|extern|override|overload|abstract)\b
       name: storage.modifier.hx
-    - match: \b(final)\b(?=\s+(public|private|static|dynamic|inline|macro|extern|override|abstract|function))
+    - match: \b(final)\b(?=\s+(public|private|static|dynamic|inline|macro|extern|override|overload|abstract|function))
       name: storage.modifier.hx
   new-expr:
     name: new.expr.hx
