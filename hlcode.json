@@ -1,0 +1,1865 @@
+{
+	"name": "Hashlink bytecode dump file",
+	"scopeName": "source.hlcode",
+	"patterns": [
+		{
+			"match": "^(hl) (v)(\\d+)$",
+			"captures": {
+				"1": {
+					"name": "keyword.hlcode"
+				},
+				"2": {
+					"name": "constant.language.hlcode"
+				},
+				"3": {
+					"name": "constant.numeric.hlcode"
+				}
+			}
+		},
+		{
+			"match": "^(entry) (@\\d+)$",
+			"captures": {
+				"1": {
+					"name": "keyword.hlcode"
+				},
+				"2": {
+					"name": "support.function.hlcode"
+				}
+			}
+		},
+		{
+			"begin": "^(\\d+) (strings)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "^(?=\\d+ bytes)",
+			"patterns": [
+				{
+					"match": "^\\t(@\\d+) (:) (.*)$",
+					"captures": {
+						"1": {
+							"name": "constant.language.hlcode"
+						},
+						"2": {
+							"name": "operator.hlcode"
+						},
+						"3": {
+							"name": "string.hlcode"
+						}
+					}
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (bytes)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "^(?=\\d+ ints)",
+			"patterns": [
+				{
+					"match": "^\\t(@\\d+) (:) (\\d+)$",
+					"captures": {
+						"1": {
+							"name": "constant.language.hlcode"
+						},
+						"2": {
+							"name": "operator.hlcode"
+						},
+						"3": {
+							"name": "constant.numeric.hlcode"
+						}
+					}
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (ints)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "^(?=\\d+ floats)",
+			"patterns": [
+				{
+					"match": "^\\t(@\\d+) (:) (-?\\d+)$",
+					"captures": {
+						"1": {
+							"name": "constant.language.hlcode"
+						},
+						"2": {
+							"name": "operator.hlcode"
+						},
+						"3": {
+							"name": "constant.numeric.hlcode"
+						}
+					}
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (floats)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "^(?=\\d+ globals)",
+			"patterns": [
+				{
+					"match": "^\\t(@\\d+) (:) (-?(?:\\d+\\.\\d*|\\.\\d+))$",
+					"captures": {
+						"1": {
+							"name": "constant.language.hlcode"
+						},
+						"2": {
+							"name": "operator.hlcode"
+						},
+						"3": {
+							"name": "constant.numeric.hlcode"
+						}
+					}
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (globals)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "^(?=\\d+ natives)",
+			"patterns": [
+				{
+					"match": "^\\t(@\\d+) (:) (.*)$",
+					"captures": {
+						"1": {
+							"name": "constant.language.hlcode"
+						},
+						"2": {
+							"name": "operator.hlcode"
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "#types"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						}
+					}
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (natives)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "^(?=\\d+ functions)",
+			"patterns": [
+				{
+					"match": "^\\t(@\\d+) (native) (std@\\w+) (.*)$",
+					"captures": {
+						"1": {
+							"name": "constant.language.hlcode"
+						},
+						"2": {
+							"name": "keyword.hlcode"
+						},
+						"3": {
+							"name": "support.function.hlcode"
+						},
+						"4": {
+							"patterns": [
+								{
+									"include": "#types"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						}
+					}
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (functions)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "^(?=\\d+ objects protos)",
+			"patterns": [
+				{
+					"begin": "^\\t(fun)(@\\d+)(\\()(\\h+h)(\\)) (.*)$",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "support.function.hlcode"
+						},
+						"3": {
+							"name": "punctuation.definition.param.begin.hlcode"
+						},
+						"4": {
+							"name": "constant.numeric.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.param.end.hlcode"
+						},
+						"6": {
+							"patterns": [
+								{
+									"include": "#func-type"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						}
+					},
+					"end": "^(?=\\tfun@\\d+|\\d+ objects protos)",
+					"patterns": [
+						{
+							"include": "#line-comment"
+						},
+						{
+							"match": "^[ \\t]*(r)(\\d+) (.*)$",
+							"captures": {
+								"1": {
+									"name": "keyword.hlcode"
+								},
+								"2": {
+									"name": "constant.numeric.hlcode"
+								},
+								"3": {
+									"patterns": [
+										{
+											"include": "#types"
+										},
+										{
+											"include": "#invalid"
+										}
+									]
+								}
+							}
+						},
+						{
+							"match": "^[ \\t]+(\\.\\d+)[ \\t]+(@\\h+)[ \\t]+(.*)$",
+							"captures": {
+								"1": {
+									"name": "string.hlcode"
+								},
+								"2": {
+									"name": "constant.numeric.hlcode"
+								},
+								"3": {
+									"patterns": [
+										{
+											"include": "#opcodes"
+										},
+										{
+											"include": "#invalid"
+										}
+									]
+								}
+							}
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (objects protos)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "(?=^\\d+ constant values)",
+			"patterns": [
+				{
+					"begin": "^\\t([a-zA-Z_$][\\w$]*(?:\\.[a-zA-Z_$][\\w$]*)*) (no global)$",
+					"beginCaptures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-name"
+								}
+							]
+						},
+						"2": {
+							"name": "keyword.hlcode"
+						}
+					},
+					"end": "^(?=\\t(?!\\t)|\\d+ constant values)",
+					"patterns": [
+						{
+							"include": "#proto-body"
+						}
+					]
+				},
+				{
+					"begin": "^\\t([a-zA-Z_$][\\w$]*(?:\\.[a-zA-Z_$][\\w$]*)*) (@\\d+)$",
+					"beginCaptures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-name"
+								}
+							]
+						},
+						"2": {
+							"name": "constant.language.hlcode"
+						}
+					},
+					"end": "^(?=\\t(?!\\t)|\\d+ constant values)",
+					"patterns": [
+						{
+							"include": "#proto-body"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"include": "#invalid"
+				}
+			]
+		},
+		{
+			"begin": "^(\\d+) (constant values)$",
+			"beginCaptures": {
+				"1": {
+					"name": "constant.numeric.hlcode"
+				},
+				"2": {
+					"name": "keyword.hlcode"
+				}
+			},
+			"end": "(?=end)never",
+			"patterns": [
+				{
+					"begin": "^[ \\t]+(@\\d+) ",
+					"beginCaptures": {
+						"1": {
+							"name": "constant.language.hlcode"
+						}
+					},
+					"end": " (\\[)((?:\\d+(?:,\\d+)*)?)(\\])$",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.brackets.begin.hlcode"
+						},
+						"2": {
+							"patterns": [
+								{
+									"match": "\\d+",
+									"name": "constant.numeric.hlcode"
+								},
+								{
+									"match": ",",
+									"name": "operator.hlcode"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						},
+						"3": {
+							"name": "punctuation.definition.brackets.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#types"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				}
+			]
+		}
+	],
+	"repository": {
+		"line-comment": {
+			"match": "[ \\t]*;.*$",
+			"name": "comment.hlcode"
+		},
+		"invalid": {
+			"match": ".",
+			"name": "invalid.illegal.hlcode"
+		},
+		"type-name": {
+			"patterns": [
+				{
+					"begin": "@?[a-zA-Z_$][\\w$]*(?=\\.[a-zA-Z_$])",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.type.hlcode"
+						}
+					},
+					"end": "(\\.)([a-zA-Z_$][\\w$]*)(?!\\.)",
+					"endCaptures": {
+						"1": {
+							"name": "operator.hlcode"
+						},
+						"2": {
+							"name": "entity.name.type.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "(\\.)([a-zA-Z_$][\\w$]*)(?=\\.)",
+							"captures": {
+								"1": {
+									"name": "operator.hlcode"
+								},
+								"2": {
+									"name": "entity.name.type.hlcode"
+								}
+							}
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"match": "@?[A-Z_$][\\w$]*(?![\\w$]+[(:.])",
+					"name": "entity.name.type.hlcode"
+				}
+			]
+		},
+		"func-type": {
+			"patterns": [
+				{
+					"begin": "\\(",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.typeparams.begin.hlcode"
+						}
+					},
+					"end": "(\\))(?=:(?:[a-zA-Z_$(]|@?\\[))",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.typeparams.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#types"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "(:)(?=[a-zA-Z_$(]|@?\\[)",
+					"beginCaptures": {
+						"1": {
+							"name": "operator.hlcode"
+						}
+					},
+					"end": "(?=[),]|$)",
+					"patterns": [
+						{
+							"include": "#types"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"match": "(?:ui8|ui16|[if](?:32|64)|bool|bytes|string|void|array|dyn(?:obj)?|type)(?=\\b)",
+					"name": "entity.name.type.hlcode"
+				},
+				{
+					"begin": "(ref|null)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.type.hlcode"
+						},
+						"2": {
+							"name": "punctuation.definition.typeparams.begin.hlcode"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.typeparams.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#types"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"match": "(abstract)(\\()([a-zA-Z_$][\\w$]*)(\\))",
+					"captures": {
+						"1": {
+							"name": "entity.name.type.hlcode"
+						},
+						"2": {
+							"name": "punctuation.definition.typeparams.begin.hlcode"
+						},
+						"3": {
+							"name": "entity.name.type.hlcode"
+						},
+						"4": {
+							"name": "punctuation.definition.typeparams.end.hlcode"
+						}
+					}
+				},
+				{
+					"begin": "(enum)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.type.hlcode"
+						},
+						"2": {
+							"name": "punctuation.definition.typeparams.begin.hlcode"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.typeparams.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#types"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "(method)(:)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.type.hlcode"
+						},
+						"2": {
+							"name": "operator.hlcode"
+						},
+						"3": {
+							"name": "punctuation.definition.args.begin.hlcode"
+						}
+					},
+					"end": "(\\))(:)(?=[a-zA-Z_$(]|@?\\[)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.args.end.hlcode"
+						},
+						"2": {
+							"name": "operator.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#types"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"include": "#func-type"
+				},
+				{
+					"begin": "(virtual)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.type.hlcode"
+						},
+						"2": {
+							"name": "punctuation.definition.args.begin.hlcode"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.args.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"begin": "([a-zA-Z_$][\\w$]*)(:)",
+							"beginCaptures": {
+								"1": {
+									"name": "variable.hlcode"
+								},
+								"2": {
+									"name": "operator.hlcode"
+								}
+							},
+							"end": "(?=[,)])",
+							"patterns": [
+								{
+									"include": "#types"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"match": "\\.{3}",
+					"name": "entity.name.type.hlcode"
+				},
+				{
+					"include": "#type-name"
+				},
+				{
+					"begin": "@?\\[",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.obj.begin.hlcode"
+						}
+					},
+					"end": "\\]",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.obj.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"begin": ">",
+							"beginCaptures": {
+								"0": {
+									"name": "operator.hlcode"
+								}
+							},
+							"end": " ",
+							"endCaptures": {
+								"0": {
+									"name": "text.hlcode"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#type-name"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						},
+						{
+							"begin": "(fields)(=)(\\{)",
+							"beginCaptures": {
+								"1": {
+									"name": "keyword.hlcode"
+								},
+								"2": {
+									"name": "operator.hlcode"
+								},
+								"3": {
+									"name": "punctuation.definition.fields.begin.hlcode"
+								}
+							},
+							"end": "\\}",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.fields.end.hlcode"
+								}
+							},
+							"patterns": [
+								{
+									"begin": "([a-zA-Z_$][\\w$]*)(:)",
+									"beginCaptures": {
+										"1": {
+											"name": "variable.hlcode"
+										},
+										"2": {
+											"name": "keyword.operator.hlcode"
+										}
+									},
+									"end": "(?=[},])",
+									"patterns": [
+										{
+											"include": "#types"
+										},
+										{
+											"include": "#invalid"
+										}
+									]
+								},
+								{
+									"match": ",",
+									"name": "operator.hlcode"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						},
+						{
+							"begin": "(proto)(=)(\\{)",
+							"beginCaptures": {
+								"1": {
+									"name": "keyword.hlcode"
+								},
+								"2": {
+									"name": "operator.hlcode"
+								},
+								"3": {
+									"name": "punctuation.definition.fields.begin.hlcode"
+								}
+							},
+							"end": "\\}",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.fields.end.hlcode"
+								}
+							},
+							"patterns": [
+								{
+									"match": "((?:virtual )?)([a-zA-Z_$][\\w$]*)(@\\d+)",
+									"captures": {
+										"1": {
+											"name": "keyword.hlcode"
+										},
+										"2": {
+											"name": "entity.name.function.hlcode"
+										},
+										"3": {
+											"name": "support.function.hlcode"
+										}
+									}
+								},
+								{
+									"match": ",",
+									"name": "operator.hlcode"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				}
+			]
+		},
+		"opcodes": {
+			"patterns": [
+				{
+					"match": "(mov|neg|not|to(?:dyn|[su]float|int|virtual)|(?:un)?safecast|arraysize|get(?:type|tid)|enumindex|refdata) (\\d+) *(,) *(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(int|float|string|bytes) (\\d+) *(,) *(@\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "constant.language.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(true|false|null(?:check)?|incr|decr|ret|new|(?:re)?throw) (\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(add|sub|mul|[su](?:div|mod|shr)|shl|and|x?or|set(?:ui8|ui16|mem)|refoffset) (\\d+) *(,) *(\\d+) *(,) *(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "operator.hlcode"
+						},
+						"6": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"begin": "(call) (\\d+)(,) ((?:[a-zA-Z_$][\\w$]*\\.)*)([a-zA-Z_$][\\w$]*)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"patterns": [
+								{
+									"match": "[a-zA-Z_$][\\w$]*(?=\\.[a-zA-Z_$][\\w$]*\\()",
+									"name": "entity.name.type.hlcode"
+								},
+								{
+									"begin": "[a-zA-Z_$][\\w$]*(?=\\.)",
+									"beginCaptures": {
+										"0": {
+											"name": "entity.name.type.hlcode"
+										}
+									},
+									"end": "\\.(?=[a-zA-Z_$][\\w$]*\\()",
+									"endCaptures": {
+										"0": {
+											"name": "operator.hlcode"
+										}
+									},
+									"patterns": [
+										{
+											"match": "(\\.)([a-zA-Z_$][\\w$]*)(?![\\w$]*\\()",
+											"captures": {
+												"1": {
+													"name": "operator.hlcode"
+												},
+												"2": {
+													"name": "entity.name.type.hlcode"
+												}
+											}
+										}
+									]
+								}
+							]
+						},
+						"5": {
+							"name": "entity.name.function.hlcode"
+						},
+						"6": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					},
+					"end": "\\)$",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.params.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "\\d+",
+							"name": "variable.hlcode"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "(call) (\\d+)(,) (std@\\w+)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "support.function.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					},
+					"end": "\\)$",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.params.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "\\d+",
+							"name": "variable.hlcode"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "(callmethod) (\\d+)(,) (\\d+)(\\[)(\\d+)(\\])(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"6": {
+							"name": "entity.name.function.hlcode"
+						},
+						"7": {
+							"name": "punctuation.definition.index.end.hlcode"
+						},
+						"8": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					},
+					"end": "\\)$",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.params.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "\\d+",
+							"name": "variable.hlcode"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "(callclosure) (\\d+)(,) (\\d+)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					},
+					"end": "\\)$",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.params.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "\\d+",
+							"name": "variable.hlcode"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "(callthis) (\\d+)(,) (\\[)(\\d+)(\\])(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"5": {
+							"name": "entity.name.function.hlcode"
+						},
+						"6": {
+							"name": "punctuation.definition.index.end.hlcode"
+						},
+						"7": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					},
+					"end": "\\)$",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.params.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "\\d+",
+							"name": "variable.hlcode"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"match": "(staticclosure) (\\d+)(,) +([a-zA-Z_$][\\w$]*)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "entity.name.function.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(instanceclosure) (\\d+)(,) +([a-zA-Z_$][\\w$]*)(\\()(\\d+)(\\))$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "entity.name.function.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						},
+						"6": {
+							"name": "variable.hlcode"
+						},
+						"7": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(virtualclosure) (\\d+)(,) *(\\d+)(\\[)(\\d+)(\\])$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						},
+						"6": {
+							"name": "entity.name.function.hlcode"
+						},
+						"7": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(global|enumalloc) (\\d+) *(,) *(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "constant.language.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(setglobal) (\\d+) *(,) *(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "constant.language.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(jalways) (-?\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "constant.language.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(j(?:true|false|null|notnull)|trap) (\\d+) *(,) *(-?\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "constant.language.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(j(?:s[gl]te?|(?:u|not)(?:lt|gte)|eq|noteq)) (\\d+) *(,) *(\\d+) *(,) *(-?\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "operator.hlcode"
+						},
+						"6": {
+							"name": "constant.language.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(get(?:ui8|ui16|mem|array)) (\\d+)(,)(\\d+)(\\[)(\\d+)(\\])$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"6": {
+							"name": "variable.hlcode"
+						},
+						"7": {
+							"name": "punctuation.definition.index.end.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(setarray) (\\d+)(\\[)(\\d+)(\\])(,)(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.end.hlcode"
+						},
+						"6": {
+							"name": "operator.hlcode"
+						},
+						"7": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(type) (\\d+) *(,) *(.*)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"patterns": [
+								{
+									"include": "#types"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						}
+					}
+				},
+				{
+					"match": "(ref) (\\d+) *(,) *(&)(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "constant.language.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "keyword.operator.hlcode"
+						},
+						"5": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(unref) (\\d+) *(,) *(\\*)(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "constant.language.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "keyword.operator.hlcode"
+						},
+						"5": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(setref) (\\*)(\\d+) *(,) *(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "keyword.operator.hlcode"
+						},
+						"3": {
+							"name": "constant.language.hlcode"
+						},
+						"4": {
+							"name": "operator.hlcode"
+						},
+						"5": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(label|assert|nop)$",
+					"name": "keyword.hlcode"
+				},
+				{
+					"match": "(field) (\\d+)(,) *(\\d+)(\\[)(\\d+)(\\])$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"6": {
+							"name": "constant.language.hlcode"
+						},
+						"7": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(set(?:enum)?field) (\\d+)(\\[)(\\d+)(\\])(,)(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"4": {
+							"name": "constant.language.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.end.hlcode"
+						},
+						"6": {
+							"name": "operator.hlcode"
+						},
+						"7": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(getthis) (\\d+)(,) *(\\[)(\\d+)(\\])$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"5": {
+							"name": "constant.language.hlcode"
+						},
+						"6": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(setthis) (\\[)(\\d+)(\\])(,)(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"3": {
+							"name": "constant.language.hlcode"
+						},
+						"4": {
+							"name": "punctuation.definition.index.end.hlcode"
+						},
+						"5": {
+							"name": "operator.hlcode"
+						},
+						"6": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(dynget) (\\d+)(,) *(\\d+)(\\[)(@\\d+)(\\])$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"6": {
+							"name": "constant.language.hlcode"
+						},
+						"7": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						}
+					}
+				},
+				{
+					"match": "(dynset) (\\d+)(\\[)(@\\d+)(\\])(,)(\\d+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"4": {
+							"name": "constant.language.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.end.hlcode"
+						},
+						"6": {
+							"name": "operator.hlcode"
+						},
+						"7": {
+							"name": "variable.hlcode"
+						}
+					}
+				},
+				{
+					"begin": "(makeenum) (\\d+)(,) (\\d+)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "constant.language.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.params.begin.hlcode"
+						}
+					},
+					"end": "\\)$",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.params.end.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "\\d+",
+							"name": "variable.hlcode"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"match": "(enumfield) (\\d+)(,) *(\\d+)(\\[)(\\d+)(:)(\\d+)(\\])$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "operator.hlcode"
+						},
+						"4": {
+							"name": "variable.hlcode"
+						},
+						"5": {
+							"name": "punctuation.definition.index.begin.hlcode"
+						},
+						"6": {
+							"name": "constant.language.hlcode"
+						},
+						"7": {
+							"name": "operator.hlcode"
+						},
+						"8": {
+							"name": "constant.language.hlcode"
+						},
+						"9": {
+							"name": "punctuation.definition.index.end.hlcode"
+						}
+					}
+				},
+				{
+					"begin": "(switch) (\\d+) (\\[)",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "variable.hlcode"
+						},
+						"3": {
+							"name": "punctuation.definition.indices.begin.hlcode"
+						}
+					},
+					"end": "(\\]) (\\d+)$",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.indices.end.hlcode"
+						},
+						"2": {
+							"name": "constant.language.hlcode"
+						}
+					},
+					"patterns": [
+						{
+							"match": "\\d+",
+							"name": "constant.language.hlcode"
+						},
+						{
+							"match": ",",
+							"name": "operator.hlcode"
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"match": "(endtrap) (true|false)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"name": "constant.language.hlcode"
+						}
+					}
+				}
+			]
+		},
+		"proto-body": {
+			"patterns": [
+				{
+					"match": "^\\t{2}(extends) (.*)$",
+					"captures": {
+						"1": {
+							"name": "keyword.hlcode"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#types"
+								},
+								{
+									"include": "#invalid"
+								}
+							]
+						}
+					}
+				},
+				{
+					"begin": "^\\t{2}(\\d+) (fields)$",
+					"beginCaptures": {
+						"1": {
+							"name": "constant.numeric.hlcode"
+						},
+						"2": {
+							"name": "keyword.hlcode"
+						}
+					},
+					"end": "^(?!\\t{2} {2})",
+					"patterns": [
+						{
+							"match": "^\\t{2} {2}(@\\d+) ([a-zA-Z_$][\\w$]*) (.*)$",
+							"captures": {
+								"1": {
+									"name": "constant.language.hlcode"
+								},
+								"2": {
+									"name": "variable.hlcode"
+								},
+								"3": {
+									"patterns": [
+										{
+											"include": "#types"
+										},
+										{
+											"include": "#invalid"
+										}
+									]
+								}
+							}
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "^\\t{2}(\\d+) (methods)$",
+					"beginCaptures": {
+						"1": {
+							"name": "constant.numeric.hlcode"
+						},
+						"2": {
+							"name": "keyword.hlcode"
+						}
+					},
+					"end": "^(?!\\t{2} {2})",
+					"patterns": [
+						{
+							"match": "^\\t{2} {2}(@\\d+) ([a-zA-Z_$][\\w$]*) (fun)(@\\d+)(?:(\\[)(\\d+)(\\]))?$",
+							"captures": {
+								"1": {
+									"name": "constant.language.hlcode"
+								},
+								"2": {
+									"name": "entity.name.function.hlcode"
+								},
+								"3": {
+									"name": "keyword.hlcode"
+								},
+								"4": {
+									"name": "support.function.hlcode"
+								},
+								"5": {
+									"name": "punctuation.definition.index.begin.hlcode"
+								},
+								"6": {
+									"name": "entity.name.function.hlcode"
+								},
+								"7": {
+									"name": "punctuation.definition.index.end.hlcode"
+								}
+							}
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"begin": "^\\t{2}(\\d+) (bindings)$",
+					"beginCaptures": {
+						"1": {
+							"name": "constant.numeric.hlcode"
+						},
+						"2": {
+							"name": "keyword.hlcode"
+						}
+					},
+					"end": "^(?!\\t{2} {2})",
+					"patterns": [
+						{
+							"match": "^\\t{2} {2}(@\\d+) (fun)(@\\d+)$",
+							"captures": {
+								"1": {
+									"name": "constant.language.hlcode"
+								},
+								"2": {
+									"name": "keyword.hlcode"
+								},
+								"3": {
+									"name": "support.function.hlcode"
+								}
+							}
+						},
+						{
+							"include": "#invalid"
+						}
+					]
+				},
+				{
+					"include": "#illegal"
+				}
+			]
+		}
+	}
+}
