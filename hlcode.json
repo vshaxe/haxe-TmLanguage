@@ -202,7 +202,7 @@
 			"end": "^(?=\\d+ functions)",
 			"patterns": [
 				{
-					"match": "^\\t(@\\d+) (native) (std@\\w+) (.*)$",
+					"match": "^\\t(@\\d+) (native) (\\w+@\\w+) (.*)$",
 					"captures": {
 						"1": {
 							"name": "constant.language.hlcode"
@@ -990,7 +990,7 @@
 					]
 				},
 				{
-					"begin": "(call) (\\d+)(,) (std@\\w+)(\\()",
+					"begin": "(call) (\\d+)(,) (\\w+@\\w+)(\\()",
 					"beginCaptures": {
 						"1": {
 							"name": "keyword.hlcode"
