@@ -8,6 +8,9 @@ final interface Foo {}
 switch (foo) {
 	case Pattern(final x):
 }
+
+final classSomething:Int;
+
 -----------------------------------
 
 >final class Foo {}
@@ -128,3 +131,22 @@ switch (foo) {
 >}
  ^
  source.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>final classSomething:Int;
+ ^^^^^
+ source.hx storage.type.variable.hx
+      ^
+      source.hx
+       ^^^^^^^^^^^^^^
+       source.hx variable.other.hx
+                     ^
+                     source.hx keyword.operator.type.annotation.hx
+                      ^^^
+                      source.hx support.class.builtin.hx
+                         ^
+                         source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx

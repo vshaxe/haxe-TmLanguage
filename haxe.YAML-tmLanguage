@@ -11,7 +11,7 @@ repository:
     - include: '#package'
     - include: '#import'
     - include: '#using'
-    - match: \b(final)\b(?=\s+(class|interface|extern|private))
+    - match: \b(final)\b(?=\s+(class|interface|extern|private)\b)
       name: storage.modifier.hx
     - include: '#abstract'
     - include: '#class'

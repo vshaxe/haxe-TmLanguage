@@ -6,3 +6,5 @@ final interface Foo {}
 switch (foo) {
 	case Pattern(final x):
 }
+
+final classSomething:Int;
