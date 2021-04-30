@@ -5,6 +5,7 @@ function main() {
 
 	convert("haxe.YAML-tmLanguage", "haxe.tmLanguage");
 	convert("hxml.YAML-tmLanguage", "hxml.tmLanguage");
+	convert("hlcode.YAML-tmLanguage", "hlcode.tmLanguage");
 
 	convert("helper/haxe-type.YAML-tmLanguage", "helper/haxe-type.tmLanguage");
 	convert("helper/haxe-argument.YAML-tmLanguage", "helper/haxe-argument.tmLanguage");
