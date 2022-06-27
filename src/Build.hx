@@ -1,5 +1,7 @@
 import VscodeTextmate;
+import haxe.io.Path;
 import js.lib.Promise;
+import js.node.Fs.Fs;
 import sys.FileSystem;
 import sys.io.File;
 
@@ -19,7 +21,19 @@ function main() {
 		FileSystem.createDirectory("generated");
 	}
 
-	final registry = new Registry();
+	final wasmPath = "../node_modules/vscode-oniguruma/release/onig.wasm";
+	final wasmBin = Fs.readFileSync(Path.join([js.Node.__dirname, wasmPath])).buffer;
+	final vscodeOnigurumaLib = Oniguruma.loadWASM(wasmBin).then((_) -> {
+		final lib:IOnigLib = {
+			createOnigScanner: (sources) -> new OnigScanner(sources),
+			createOnigString: (str) -> new OnigString(str)
+		};
+		return lib;
+	});
+
+	final registry = new Registry({
+		onigLib: vscodeOnigurumaLib
+	});
 	loadGrammar(registry, "haxe.tmLanguage").then(haxeGrammar -> {
 		testGrammar(haxeGrammar, ".hx");
 		loadGrammar(registry, "hxml.tmLanguage").then(hxmlGrammar -> testGrammar(hxmlGrammar, ".hxml"));
