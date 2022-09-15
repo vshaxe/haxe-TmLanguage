@@ -4,6 +4,12 @@ original file
 -134;
 0xFF00;
 
+0i32;
+1_000i32;
+-134i64;
+-134_i64;
+0xFF00u64;
+
 123.0;
 123.;
 .14179;
@@ -11,7 +17,23 @@ original file
 -1e-99;
 -1E+99;
 
+123.0f32;
+123.f64;
+.14179f64;
+13e50f64;
+-1e-99f64;
+-1E+99f64;
+
+1_23.0f32;
+12_3.f64;
+.14_179f64;
+1_3e5_0f64;
+-1_e-99f64;
+-1E+99f64;
+
 0xFFff50;
+
+0xFFf_f50i32;
 
 "hello";
 "hello \"world\" !";
@@ -48,6 +70,48 @@ null;
  source.hx constant.numeric.hex.hx
        ^
        source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>0i32;
+ ^
+ source.hx constant.numeric.decimal.hx
+  ^^^
+  source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+     ^
+     source.hx punctuation.terminator.hx
+>1_000i32;
+ ^^^^^
+ source.hx constant.numeric.decimal.hx
+      ^^^
+      source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+         ^
+         source.hx punctuation.terminator.hx
+>-134i64;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^
+  source.hx constant.numeric.decimal.hx
+     ^^^
+     source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+        ^
+        source.hx punctuation.terminator.hx
+>-134_i64;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^^
+  source.hx constant.numeric.decimal.hx
+      ^^^
+      source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+         ^
+         source.hx punctuation.terminator.hx
+>0xFF00u64;
+ ^^^^^^
+ source.hx constant.numeric.hex.hx
+       ^^^
+       source.hx constant.numeric.hex.hx constant.numeric.suffix.hx
+          ^
+          source.hx punctuation.terminator.hx
 >
  ^
  source.hx
@@ -96,11 +160,135 @@ null;
 >
  ^
  source.hx
+>123.0f32;
+ ^^^
+ source.hx constant.numeric.decimal.hx
+    ^
+    source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+     ^
+     source.hx constant.numeric.decimal.hx
+      ^^^
+      source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+         ^
+         source.hx punctuation.terminator.hx
+>123.f64;
+ ^^^
+ source.hx constant.numeric.decimal.hx
+    ^
+    source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+     ^^^
+     source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+        ^
+        source.hx punctuation.terminator.hx
+>.14179f64;
+ ^
+ source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+  ^^^^^
+  source.hx constant.numeric.decimal.hx
+       ^^^
+       source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+          ^
+          source.hx punctuation.terminator.hx
+>13e50f64;
+ ^^^^^
+ source.hx constant.numeric.decimal.hx
+      ^^^
+      source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+         ^
+         source.hx punctuation.terminator.hx
+>-1e-99f64;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^^^
+  source.hx constant.numeric.decimal.hx
+       ^^^
+       source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+          ^
+          source.hx punctuation.terminator.hx
+>-1E+99f64;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^^^
+  source.hx constant.numeric.decimal.hx
+       ^^^
+       source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+          ^
+          source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>1_23.0f32;
+ ^^^^
+ source.hx constant.numeric.decimal.hx
+     ^
+     source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+      ^
+      source.hx constant.numeric.decimal.hx
+       ^^^
+       source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+          ^
+          source.hx punctuation.terminator.hx
+>12_3.f64;
+ ^^^^
+ source.hx constant.numeric.decimal.hx
+     ^
+     source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+      ^^^
+      source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+         ^
+         source.hx punctuation.terminator.hx
+>.14_179f64;
+ ^
+ source.hx constant.numeric.decimal.hx meta.delimiter.decimal.period.hx
+  ^^^^^^
+  source.hx constant.numeric.decimal.hx
+        ^^^
+        source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+           ^
+           source.hx punctuation.terminator.hx
+>1_3e5_0f64;
+ ^^^^^^^
+ source.hx constant.numeric.decimal.hx
+        ^^^
+        source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+           ^
+           source.hx punctuation.terminator.hx
+>-1_e-99f64;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^^^^
+  source.hx constant.numeric.decimal.hx
+        ^^^
+        source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+           ^
+           source.hx punctuation.terminator.hx
+>-1E+99f64;
+ ^
+ source.hx keyword.operator.arithmetic.hx
+  ^^^^^
+  source.hx constant.numeric.decimal.hx
+       ^^^
+       source.hx constant.numeric.decimal.hx constant.numeric.suffix.hx
+          ^
+          source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
 >0xFFff50;
  ^^^^^^^^
  source.hx constant.numeric.hex.hx
          ^
          source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>0xFFf_f50i32;
+ ^^^^^^^^^
+ source.hx constant.numeric.hex.hx
+          ^^^
+          source.hx constant.numeric.hex.hx constant.numeric.suffix.hx
+             ^
+             source.hx punctuation.terminator.hx
 >
  ^
  source.hx
