@@ -806,7 +806,7 @@ repository:
     patterns:
     - begin: (?<=trace|$type|if|while|for|super)\s*(\()
       beginCaptures:
-        '2': {name: meta.brace.round.hx}
+        '1': {name: meta.brace.round.hx}
       end: \)
       endCaptures:
         '0': {name: meta.brace.round.hx}
