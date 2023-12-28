@@ -814,7 +814,7 @@ repository:
       - include: '#block-contents'
     - begin: (?<=catch)\s*(\()
       beginCaptures:
-        '2': {name: meta.brace.round.hx}
+        '1': {name: meta.brace.round.hx}
       end: \)
       endCaptures:
         '0': {name: meta.brace.round.hx}
@@ -824,7 +824,7 @@ repository:
     # safe cast
     - begin: (?<=cast)\s*(\()
       beginCaptures:
-        '2': {name: meta.brace.round.hx}
+        '1': {name: meta.brace.round.hx}
       end: \)
       endCaptures:
         '0': {name: meta.brace.round.hx}
