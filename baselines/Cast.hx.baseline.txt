@@ -49,8 +49,10 @@ var b:Int = cast (2, Dynamic<Int>);
             source.hx
              ^^^^
              source.hx keyword.other.untyped.hx
-                 ^^
+                 ^
                  source.hx
+                  ^
+                  source.hx meta.brace.round.hx
                    ^
                    source.hx constant.numeric.decimal.hx
                     ^^
@@ -80,8 +82,10 @@ var b:Int = cast (2, Dynamic<Int>);
             source.hx
              ^^^^
              source.hx keyword.other.untyped.hx
-                 ^^
+                 ^
                  source.hx
+                  ^
+                  source.hx meta.brace.round.hx
                    ^
                    source.hx constant.numeric.decimal.hx
                     ^^

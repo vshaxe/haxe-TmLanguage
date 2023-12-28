@@ -75,8 +75,10 @@ class Colors {
                             source.hx
                              ^^
                              source.hx keyword.control.flow-control.hx
-                               ^^
+                               ^
                                source.hx
+                                ^
+                                source.hx meta.brace.round.hx
                                  ^^^^^^^^^^^
                                  source.hx support.class.builtin.hx
                                             ^
@@ -139,8 +141,10 @@ class Colors {
                             source.hx
                              ^^
                              source.hx keyword.control.flow-control.hx
-                               ^^
+                               ^
                                source.hx
+                                ^
+                                source.hx meta.brace.round.hx
                                  ^^^^^^^^^^^
                                  source.hx support.class.builtin.hx
                                             ^
@@ -203,8 +207,10 @@ class Colors {
                          source.hx
                           ^^
                           source.hx keyword.control.flow-control.hx
-                            ^^
+                            ^
                             source.hx
+                             ^
+                             source.hx meta.brace.round.hx
                               ^^^^^^
                               source.hx keyword.control.flow-control.hx
                                     ^

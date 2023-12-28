@@ -70,7 +70,7 @@ var is:Int;
  ^^^^^
  source.hx keyword.other.trace.hx
       ^
-      source.hx
+      source.hx meta.brace.round.hx
        ^
        source.hx meta.brace.round.hx
         ^
@@ -95,7 +95,7 @@ var is:Int;
  ^^^^^
  source.hx variable.language.hx
       ^
-      source.hx
+      source.hx meta.brace.round.hx
        ^
        source.hx meta.brace.round.hx
         ^
@@ -162,8 +162,10 @@ var is:Int;
 >while (("" is String)) {}
  ^^^^^
  source.hx keyword.control.flow-control.hx
-      ^^
+      ^
       source.hx
+       ^
+       source.hx meta.brace.round.hx
         ^
         source.hx meta.brace.round.hx
          ^
@@ -347,7 +349,7 @@ var is:Int;
  ^^^^^
  source.hx keyword.other.trace.hx
       ^
-      source.hx
+      source.hx meta.brace.round.hx
        ^
        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
         ^
@@ -368,7 +370,7 @@ var is:Int;
  ^^^^^
  source.hx variable.language.hx
       ^
-      source.hx
+      source.hx meta.brace.round.hx
        ^
        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
         ^
@@ -388,8 +390,10 @@ var is:Int;
 >while ("" is String) {}
  ^^^^^
  source.hx keyword.control.flow-control.hx
-      ^^
+      ^
       source.hx
+       ^
+       source.hx meta.brace.round.hx
         ^
         source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
          ^

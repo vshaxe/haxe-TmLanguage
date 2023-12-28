@@ -86,7 +86,7 @@ var success = switch (e) {
   ^^^^^
   source.hx keyword.other.trace.hx
        ^
-       source.hx
+       source.hx meta.brace.round.hx
         ^
         source.hx variable.other.hx
          ^

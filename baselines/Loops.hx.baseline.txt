@@ -71,8 +71,10 @@ do {
 >while (true) {}
  ^^^^^
  source.hx keyword.control.flow-control.hx
-      ^^
+      ^
       source.hx
+       ^
+       source.hx meta.brace.round.hx
         ^^^^
         source.hx constant.language.hx
             ^
@@ -114,8 +116,10 @@ do {
   source.hx
    ^^^^^
    source.hx keyword.control.flow-control.hx
-        ^^
+        ^
         source.hx
+         ^
+         source.hx meta.brace.round.hx
           ^^^^
           source.hx constant.language.hx
               ^

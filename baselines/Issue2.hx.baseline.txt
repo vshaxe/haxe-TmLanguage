@@ -67,7 +67,7 @@ class C {
          ^^^^^
          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.other.trace.hx
               ^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
                ^
                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
                 ^^

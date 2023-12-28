@@ -34,8 +34,10 @@ try {
   source.hx
    ^^^^^
    source.hx keyword.control.catch-exception.hx
-        ^^
+        ^
         source.hx
+         ^
+         source.hx meta.brace.round.hx
           ^
           source.hx variable.other.hx
            ^

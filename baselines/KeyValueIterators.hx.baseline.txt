@@ -46,7 +46,7 @@ for (index => value in array) {
      ^^^^^
      source.hx keyword.other.trace.hx
           ^
-          source.hx
+          source.hx meta.brace.round.hx
            ^^^
            source.hx variable.other.hx
               ^
@@ -102,7 +102,7 @@ for (index => value in array) {
      ^^^^^
      source.hx keyword.other.trace.hx
           ^
-          source.hx
+          source.hx meta.brace.round.hx
            ^^^
            source.hx variable.other.hx
               ^

@@ -8,7 +8,7 @@ trace(" ) -> ");
  ^^
  source.hx keyword.control.flow-control.hx
    ^
-   source.hx
+   source.hx meta.brace.round.hx
     ^
     source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
      ^^^^^^
@@ -21,7 +21,7 @@ trace(" ) -> ");
  ^^^^^
  source.hx keyword.other.trace.hx
       ^
-      source.hx
+      source.hx meta.brace.round.hx
        ^
        source.hx string.quoted.double.hx punctuation.definition.string.begin.hx
         ^^^^^^
