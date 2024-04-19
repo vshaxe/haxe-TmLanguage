@@ -35,6 +35,11 @@ original file
 
 0xFFf_f50i32;
 
+0b1000;
+0b11111111111111111111111111111111u32;
+0b1111111111111111111111111111111111111111111111111111111111111111i64;
+0b11_0i32;
+
 "hello";
 "hello \"world\" !";
 'hello "world" !';
@@ -289,6 +294,35 @@ null;
           source.hx constant.numeric.hex.hx constant.numeric.suffix.hx
              ^
              source.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>0b1000;
+ ^^^^^^
+ source.hx constant.numeric.bin.hx
+       ^
+       source.hx punctuation.terminator.hx
+>0b11111111111111111111111111111111u32;
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hx constant.numeric.bin.hx
+                                   ^^^
+                                   source.hx constant.numeric.bin.hx constant.numeric.suffix.hx
+                                      ^
+                                      source.hx punctuation.terminator.hx
+>0b1111111111111111111111111111111111111111111111111111111111111111i64;
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.hx constant.numeric.bin.hx
+                                                                   ^^^
+                                                                   source.hx constant.numeric.bin.hx constant.numeric.suffix.hx
+                                                                      ^
+                                                                      source.hx punctuation.terminator.hx
+>0b11_0i32;
+ ^^^^^^
+ source.hx constant.numeric.bin.hx
+       ^^^
+       source.hx constant.numeric.bin.hx constant.numeric.suffix.hx
+          ^
+          source.hx punctuation.terminator.hx
 >
  ^
  source.hx

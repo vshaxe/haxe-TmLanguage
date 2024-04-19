@@ -424,6 +424,10 @@ repository:
       captures:
         '0': {name: constant.numeric.hex.hx}
         '1': {name: constant.numeric.suffix.hx}
+    - match: \b(?:0[bB][01][_01]*([iu][0-9][0-9_]*)?)\b
+      captures:
+        '0': {name: constant.numeric.bin.hx}
+        '1': {name: constant.numeric.suffix.hx}
     - match: |-
         (?x)
         (?<!\$)(?:
