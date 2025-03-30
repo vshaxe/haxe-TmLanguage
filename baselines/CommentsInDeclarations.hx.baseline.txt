@@ -393,7 +393,7 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
                                                                           ^
                                                                           source.hx meta.method.hx meta.parameters.hx string.quoted.double.hx punctuation.definition.string.end.hx
                                                                            ^
-                                                                           source.hx meta.method.hx meta.parameters.hx
+                                                                           source.hx meta.method.hx meta.parameters.hx punctuation.separator.comma.hx
 >    /**/ @:const value2:T2 = SomeClass.Constant,
  ^^^^
  source.hx meta.method.hx meta.parameters.hx
@@ -428,7 +428,7 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
                                         ^^^^^^^^
                                         source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
                                                 ^
-                                                source.hx meta.method.hx meta.parameters.hx
+                                                source.hx meta.method.hx meta.parameters.hx punctuation.separator.comma.hx
 >    value2:/**/{ /**/ ?foo /**/ : /**/ Dynamic /**/ <String> /**/ }):Void
  ^^^^
  source.hx meta.method.hx meta.parameters.hx
