@@ -24,10 +24,6 @@ class Trailing {
             a:Int,
             b:Int,
         ):Void {}
-        var a = (
-            a:Int,
-            b:Int,
-        ) -> 0;
         var a:(
             a:Int,
             b:Int,

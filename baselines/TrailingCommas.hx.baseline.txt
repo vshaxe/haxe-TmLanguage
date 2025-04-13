@@ -26,10 +26,6 @@ class Trailing {
             a:Int,
             b:Int,
         ):Void {}
-        var a = (
-            a:Int,
-            b:Int,
-        ) -> 0;
         var a:(
             a:Int,
             b:Int,
@@ -454,58 +450,6 @@ function noargs(
                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx punctuation.definition.block.begin.hx
                  ^
                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
->        var a = (
- ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-         ^^^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.variable.hx
-            ^
-            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-             ^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
-              ^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-               ^
-               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.assignment.hx
-                ^
-                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-                 ^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
->            a:Int,
- ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-             ^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
-              ^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.type.annotation.hx
-               ^^^
-               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx support.class.builtin.hx
-                  ^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
->            b:Int,
- ^^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-              ^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.type.annotation.hx
-               ^^^
-               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx support.class.builtin.hx
-                  ^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
->        ) -> 0;
- ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-         ^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
-          ^
-          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-           ^^
-           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx storage.type.function.arrow.hx
-             ^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
-              ^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
-               ^
-               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
 >        var a:(
  ^^^^^^^^
  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
