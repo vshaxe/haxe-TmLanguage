@@ -226,7 +226,7 @@ class Foo {
                                                           ^
                                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
                                                            ^
-                                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.separator.comma.hx
+                                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx
                                                             ^
                                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx
                                                              ^

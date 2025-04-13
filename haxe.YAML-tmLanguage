@@ -637,30 +637,27 @@ repository:
     name: meta.parameters.hx
     patterns:
     - include: '#parameter'
-    - include: '#punctuation-comma'
   parameter:
-    # name: "meta.parameter.hx"
-    begin: (?:(?<=\()|(?<=,))
-    end: (?=\)|,)
+    begin: (?<=\(|,)
+    end: (?=\)(?!\s*->)|,)
     patterns:
     - include: '#parameter-name'
     - include: '#parameter-type-hint'
     - include: '#parameter-assign'
+    - include: '#punctuation-comma'
     - include: '#global'
   parameter-name:
-    # name: "meta.parameter-name.hx"
     patterns:
-    - begin: (\?)(?!\s)
-      beginCaptures:
-        '1': {name: keyword.operator.optional.hx}
-      end: (?=[_a-zA-Z])
-      patterns:
-        - include: '#comments'
     - match: \s*([_a-zA-Z]\w*)
       captures:
         '1': {name: variable.parameter.hx}
+    - include: '#global'
     - include: '#metadata'
-    - include: '#comments'
+    - include: '#operator-optional'
+    - include: '#operator-rest'
+  operator-rest:
+    match: '\.\.\.'
+    name: keyword.operator.rest.hx
   parameter-type-hint:
     begin: ':'
     beginCaptures:
