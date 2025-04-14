@@ -76,20 +76,28 @@ return e2 == null ? { t : HDyn } : bar(e2);
                   source.hx
                    ^
                    source.hx keyword.operator.ternary.hx
-                    ^^^
+                    ^
                     source.hx
+                     ^
+                     source.hx punctuation.definition.block.begin.hx
+                      ^
+                      source.hx
                        ^
                        source.hx variable.other.hx
-                        ^
+                        ^^^
                         source.hx
-                         ^
-                         source.hx keyword.operator.ternary.hx
-                          ^
-                          source.hx
                            ^^^^
                            source.hx entity.name.type.hx
-                               ^^^^^
+                               ^
                                source.hx
+                                ^
+                                source.hx punctuation.definition.block.end.hx
+                                 ^
+                                 source.hx
+                                  ^
+                                  source.hx keyword.operator.ternary.hx
+                                   ^
+                                   source.hx
                                     ^^^
                                     source.hx entity.name.function.hx
                                        ^
