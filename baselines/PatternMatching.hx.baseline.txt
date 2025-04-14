@@ -511,300 +511,300 @@ class Colors {
                                       ^
                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
                                        ^
-                                       source.hx meta.class.hx meta.block.hx meta.method.hx
+                                       source.hx meta.class.hx meta.block.hx
                                         ^
-                                        source.hx meta.class.hx meta.block.hx meta.method.hx keyword.operator.type.annotation.hx
+                                        source.hx meta.class.hx meta.block.hx keyword.operator.type.annotation.hx
                                          ^
-                                         source.hx meta.class.hx meta.block.hx meta.method.hx
+                                         source.hx meta.class.hx meta.block.hx
                                           ^^^
-                                          source.hx meta.class.hx meta.block.hx meta.method.hx support.class.builtin.hx
+                                          source.hx meta.class.hx meta.block.hx support.class.builtin.hx
                                              ^
-                                             source.hx meta.class.hx meta.block.hx meta.method.hx
+                                             source.hx meta.class.hx meta.block.hx
                                               ^
-                                              source.hx meta.class.hx meta.block.hx meta.method.hx punctuation.definition.block.begin.hx
+                                              source.hx meta.class.hx meta.block.hx punctuation.definition.block.begin.hx
 >        return switch( c ) {
  ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
          ^^^^^^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+         source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                ^
-               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+               source.hx meta.class.hx meta.block.hx
                 ^^^^^^
-                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                       ^
-                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                      source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                        ^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       source.hx meta.class.hx meta.block.hx
                         ^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                        source.hx meta.class.hx meta.block.hx variable.other.hx
                          ^
-                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                         source.hx meta.class.hx meta.block.hx
                           ^
-                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                          source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                            ^
-                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                           source.hx meta.class.hx meta.block.hx
                             ^
-                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.begin.hx
+                            source.hx meta.class.hx meta.block.hx punctuation.definition.block.begin.hx
 >            case Red: 0xFF0000;
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                  ^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 source.hx meta.class.hx meta.block.hx
                   ^^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                  source.hx meta.class.hx meta.block.hx entity.name.type.hx
                      ^
-                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                     source.hx meta.class.hx meta.block.hx
                       ^
-                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                      source.hx meta.class.hx meta.block.hx
                        ^^^^^^^^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                       source.hx meta.class.hx meta.block.hx constant.numeric.hex.hx
                                ^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                               source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >            case Green: 0x00FF00;
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                  ^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 source.hx meta.class.hx meta.block.hx
                   ^^^^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                  source.hx meta.class.hx meta.block.hx entity.name.type.hx
                        ^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       source.hx meta.class.hx meta.block.hx
                         ^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                        source.hx meta.class.hx meta.block.hx
                          ^^^^^^^^
-                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                         source.hx meta.class.hx meta.block.hx constant.numeric.hex.hx
                                  ^
-                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                 source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >            case Blue: 0x0000FF;
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                  ^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 source.hx meta.class.hx meta.block.hx
                   ^^^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                  source.hx meta.class.hx meta.block.hx entity.name.type.hx
                       ^
-                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                      source.hx meta.class.hx meta.block.hx
                        ^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       source.hx meta.class.hx meta.block.hx
                         ^^^^^^^^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                        source.hx meta.class.hx meta.block.hx constant.numeric.hex.hx
                                 ^
-                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >            case Grey(v): (v << 16) | (v << 8) | v;
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                  ^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 source.hx meta.class.hx meta.block.hx
                   ^^^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                  source.hx meta.class.hx meta.block.hx entity.name.type.hx
                       ^
-                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                      source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                        ^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                       source.hx meta.class.hx meta.block.hx variable.other.hx
                         ^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                        source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                          ^
-                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                         source.hx meta.class.hx meta.block.hx
                           ^
-                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                          source.hx meta.class.hx meta.block.hx
                            ^
-                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                           source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                             ^
-                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                            source.hx meta.class.hx meta.block.hx variable.other.hx
                              ^
-                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                             source.hx meta.class.hx meta.block.hx
                               ^^
-                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                              source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                 ^
-                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                source.hx meta.class.hx meta.block.hx
                                  ^^
-                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                 source.hx meta.class.hx meta.block.hx constant.numeric.decimal.hx
                                    ^
-                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                   source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                     ^
-                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                    source.hx meta.class.hx meta.block.hx
                                      ^
-                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                     source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                       ^
-                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                      source.hx meta.class.hx meta.block.hx
                                        ^
-                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                       source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                         ^
-                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                        source.hx meta.class.hx meta.block.hx variable.other.hx
                                          ^
-                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                         source.hx meta.class.hx meta.block.hx
                                           ^^
-                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                          source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                             ^
-                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                            source.hx meta.class.hx meta.block.hx
                                              ^
-                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                             source.hx meta.class.hx meta.block.hx constant.numeric.decimal.hx
                                               ^
-                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                              source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                                ^
-                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                               source.hx meta.class.hx meta.block.hx
                                                 ^
-                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                                source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                                  ^
-                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                 source.hx meta.class.hx meta.block.hx
                                                   ^
-                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                  source.hx meta.class.hx meta.block.hx variable.other.hx
                                                    ^
-                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                                   source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >            case Rgb(r,g,b): (r << 16) | (g << 8) | b;
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                  ^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 source.hx meta.class.hx meta.block.hx
                   ^^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                  source.hx meta.class.hx meta.block.hx entity.name.type.hx
                      ^
-                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                     source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                       ^
-                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                      source.hx meta.class.hx meta.block.hx variable.other.hx
                        ^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                       source.hx meta.class.hx meta.block.hx punctuation.separator.comma.hx
                         ^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                        source.hx meta.class.hx meta.block.hx variable.other.hx
                          ^
-                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                         source.hx meta.class.hx meta.block.hx punctuation.separator.comma.hx
                           ^
-                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                          source.hx meta.class.hx meta.block.hx variable.other.hx
                            ^
-                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                           source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                             ^
-                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                            source.hx meta.class.hx meta.block.hx
                              ^
-                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                             source.hx meta.class.hx meta.block.hx
                               ^
-                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                              source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                ^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                               source.hx meta.class.hx meta.block.hx variable.other.hx
                                 ^
-                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                source.hx meta.class.hx meta.block.hx
                                  ^^
-                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                 source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                    ^
-                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                   source.hx meta.class.hx meta.block.hx
                                     ^^
-                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                    source.hx meta.class.hx meta.block.hx constant.numeric.decimal.hx
                                       ^
-                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                      source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                        ^
-                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                       source.hx meta.class.hx meta.block.hx
                                         ^
-                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                        source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                          ^
-                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                         source.hx meta.class.hx meta.block.hx
                                           ^
-                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                          source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                            ^
-                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                           source.hx meta.class.hx meta.block.hx variable.other.hx
                                             ^
-                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                            source.hx meta.class.hx meta.block.hx
                                              ^^
-                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                             source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                                ^
-                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                               source.hx meta.class.hx meta.block.hx
                                                 ^
-                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                                source.hx meta.class.hx meta.block.hx constant.numeric.decimal.hx
                                                  ^
-                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                 source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                                   ^
-                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                  source.hx meta.class.hx meta.block.hx
                                                    ^
-                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                                   source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                                     ^
-                                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                    source.hx meta.class.hx meta.block.hx
                                                      ^
-                                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                     source.hx meta.class.hx meta.block.hx variable.other.hx
                                                       ^
-                                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                                      source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >            case Alpha(a,c): (a << 24) | (toInt(c) & 0xFFFFFF);
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                  ^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                 source.hx meta.class.hx meta.block.hx
                   ^^^^^
-                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                  source.hx meta.class.hx meta.block.hx entity.name.type.hx
                        ^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                       source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                         ^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                        source.hx meta.class.hx meta.block.hx variable.other.hx
                          ^
-                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                         source.hx meta.class.hx meta.block.hx punctuation.separator.comma.hx
                           ^
-                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                          source.hx meta.class.hx meta.block.hx variable.other.hx
                            ^
-                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                           source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                             ^
-                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                            source.hx meta.class.hx meta.block.hx
                              ^
-                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                             source.hx meta.class.hx meta.block.hx
                               ^
-                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                              source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                ^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                               source.hx meta.class.hx meta.block.hx variable.other.hx
                                 ^
-                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                source.hx meta.class.hx meta.block.hx
                                  ^^
-                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                 source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                    ^
-                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                   source.hx meta.class.hx meta.block.hx
                                     ^^
-                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+                                    source.hx meta.class.hx meta.block.hx constant.numeric.decimal.hx
                                       ^
-                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                      source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                        ^
-                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                       source.hx meta.class.hx meta.block.hx
                                         ^
-                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                        source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                          ^
-                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                         source.hx meta.class.hx meta.block.hx
                                           ^
-                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                          source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                            ^^^^^
-                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                                           source.hx meta.class.hx meta.block.hx entity.name.function.hx
                                                 ^
-                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                                  ^
-                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                                 source.hx meta.class.hx meta.block.hx variable.other.hx
                                                   ^
-                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                  source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                                    ^
-                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                   source.hx meta.class.hx meta.block.hx
                                                     ^
-                                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.operator.bitwise.hx
+                                                    source.hx meta.class.hx meta.block.hx keyword.operator.bitwise.hx
                                                      ^
-                                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                     source.hx meta.class.hx meta.block.hx
                                                       ^^^^^^^^
-                                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.hex.hx
+                                                      source.hx meta.class.hx meta.block.hx constant.numeric.hex.hx
                                                               ^
-                                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                                              source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                                                ^
-                                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                                               source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >        }
  ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
          ^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+         source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
 >    }
  ^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
      ^
-     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+     source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
 >}
  ^
  source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx

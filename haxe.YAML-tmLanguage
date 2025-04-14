@@ -24,6 +24,7 @@ repository:
     patterns:
     - include: '#comments'
     - include: '#conditional-compilation'
+    - include: '#method-return-type-hint'
   block:
     begin: \{
     beginCaptures:
@@ -586,15 +587,31 @@ repository:
         '3': {name: variable.metadata.hx}
         '4': {name: punctuation.accessor.hx}
         '5': {name: variable.metadata.hx}
+
   method:
     begin: (?=\bfunction\b)
-    end: (?<=[\};])
+    beginCaptures:
+      '1': {name: keyword.declaration.function.hx}
+    # end scope before typehint and body
+    end: (?<=\))(?!\s*->)
     name: meta.method.hx
     patterns:
     - include: '#macro-reification'
     - include: '#method-name'
-    - include: '#method-name-post'
-    - include: '#method-block'
+    - include: '#method-parameters'
+    # will be matched in global
+    # - include: '#method-return-type-hint'
+  method-parameters:
+    name: meta.parameters.hx
+    begin: \(
+    beginCaptures:
+      '0': {name: punctuation.definition.parameters.begin.hx}
+    end: \)
+    endCaptures:
+      '0': {name: punctuation.definition.parameters.end.hx}
+    patterns:
+    - include: '#parameter'
+    - include: '#punctuation-comma'
   method-name:
     begin: \b(function)\b\s*\b(?:(new)|([_A-Za-z]\w*))?\b
     beginCaptures:
@@ -605,17 +622,6 @@ repository:
     patterns:
     - include: '#macro-reification'
     - include: '#type-parameters'
-  method-name-post:
-    begin: (?<=[\w\s>])
-    end: (\{)|(;)
-    endCaptures:
-      '1': {name: punctuation.definition.block.begin.hx}
-      '2': {name: punctuation.terminator.hx}
-    patterns:
-    - include: '#parameters'
-    - include: '#method-return-type-hint'
-    - include: '#block'
-    - include: '#block-contents'
   method-block:
     begin: (?<=\{)
     beginCaptures:
@@ -627,6 +633,7 @@ repository:
     patterns:
     - include: '#block'
     - include: '#block-contents'
+
   parameters:
     begin: \(
     beginCaptures:
@@ -701,7 +708,7 @@ repository:
     patterns:
     - include: '#type'
   method-return-type-hint:
-    begin: (?<=\))\s*(:)
+    begin: (?<=\bfunction\b.+\))\s*(:)
     beginCaptures:
       '1': {name: keyword.operator.type.annotation.hx}
     end: (?=\{|;|[a-z0-9])

@@ -238,154 +238,154 @@ class Foo {
                                                                 ^
                                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
                                                                  ^
-                                                                 source.hx meta.class.hx meta.block.hx meta.method.hx
+                                                                 source.hx meta.class.hx meta.block.hx
                                                                   ^
-                                                                  source.hx meta.class.hx meta.block.hx meta.method.hx keyword.operator.type.annotation.hx
+                                                                  source.hx meta.class.hx meta.block.hx keyword.operator.type.annotation.hx
                                                                    ^
-                                                                   source.hx meta.class.hx meta.block.hx meta.method.hx
+                                                                   source.hx meta.class.hx meta.block.hx
                                                                     ^^^
-                                                                    source.hx meta.class.hx meta.block.hx meta.method.hx support.class.builtin.hx
+                                                                    source.hx meta.class.hx meta.block.hx support.class.builtin.hx
 >    {
  ^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx
+ source.hx meta.class.hx meta.block.hx
      ^
-     source.hx meta.class.hx meta.block.hx meta.method.hx punctuation.definition.block.begin.hx
+     source.hx meta.class.hx meta.block.hx punctuation.definition.block.begin.hx
 >        #if ((haxe_ver >= 3.1) && foo)
  ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
          ^^^^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag punctuation.definition.tag
+         source.hx meta.class.hx meta.block.hx punctuation.definition.tag punctuation.definition.tag
              ^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+             source.hx meta.class.hx meta.block.hx punctuation.definition.tag
               ^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+              source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                ^^^^^^^^^^^^^^^
-               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+               source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                               ^
-                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                              source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                                ^^^^^^^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                               source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                                       ^
-                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                                      source.hx meta.class.hx meta.block.hx punctuation.definition.tag
 >        #line 0 return arr.indexOf(v);
  ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
          ^^^^^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+         source.hx meta.class.hx meta.block.hx punctuation.definition.tag
               ^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+              source.hx meta.class.hx meta.block.hx
                ^
-               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.numeric.decimal.hx
+               source.hx meta.class.hx meta.block.hx constant.numeric.decimal.hx
                 ^
-                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                source.hx meta.class.hx meta.block.hx
                  ^^^^^^
-                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                 source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                        ^
-                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                       source.hx meta.class.hx meta.block.hx
                         ^^^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                        source.hx meta.class.hx meta.block.hx variable.other.hx
                            ^
-                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.accessor.hx
+                           source.hx meta.class.hx meta.block.hx punctuation.accessor.hx
                             ^^^^^^^
-                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                            source.hx meta.class.hx meta.block.hx entity.name.function.hx
                                    ^
-                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                   source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                     ^
-                                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                    source.hx meta.class.hx meta.block.hx variable.other.hx
                                      ^
-                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                     source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                       ^
-                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                      source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >        #if foo
  ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
          ^^^^^^^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+         source.hx meta.class.hx meta.block.hx punctuation.definition.tag
 >            #if !!(flash || js)
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag punctuation.definition.tag
+             source.hx meta.class.hx meta.block.hx punctuation.definition.tag punctuation.definition.tag
                    ^
-                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                   source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                     ^^^^^^^^^^^
-                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                    source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                                ^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                               source.hx meta.class.hx meta.block.hx punctuation.definition.tag
 >            return untyped arr.indexOf(v);
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                    ^
-                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                   source.hx meta.class.hx meta.block.hx
                     ^^^^^^^
-                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.other.untyped.hx
+                    source.hx meta.class.hx meta.block.hx keyword.other.untyped.hx
                            ^
-                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                           source.hx meta.class.hx meta.block.hx
                             ^^^
-                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                            source.hx meta.class.hx meta.block.hx variable.other.hx
                                ^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.accessor.hx
+                               source.hx meta.class.hx meta.block.hx punctuation.accessor.hx
                                 ^^^^^^^
-                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                                source.hx meta.class.hx meta.block.hx entity.name.function.hx
                                        ^
-                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                       source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                         ^
-                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                        source.hx meta.class.hx meta.block.hx variable.other.hx
                                          ^
-                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                         source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                           ^
-                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                          source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >            #else
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+             source.hx meta.class.hx meta.block.hx punctuation.definition.tag
 >            return std.Lambda.indexOf(arr, v);
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+             source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                    ^
-                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                   source.hx meta.class.hx meta.block.hx
                     ^^^^
-                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx support.package.hx
+                    source.hx meta.class.hx meta.block.hx support.package.hx
                         ^^^^^^
-                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.type.hx
+                        source.hx meta.class.hx meta.block.hx entity.name.type.hx
                               ^
-                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.accessor.hx
+                              source.hx meta.class.hx meta.block.hx punctuation.accessor.hx
                                ^^^^^^^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx entity.name.function.hx
+                               source.hx meta.class.hx meta.block.hx entity.name.function.hx
                                       ^
-                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                      source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                        ^^^
-                                       source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                       source.hx meta.class.hx meta.block.hx variable.other.hx
                                           ^
-                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.separator.comma.hx
+                                          source.hx meta.class.hx meta.block.hx punctuation.separator.comma.hx
                                            ^
-                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                           source.hx meta.class.hx meta.block.hx
                                             ^
-                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx variable.other.hx
+                                            source.hx meta.class.hx meta.block.hx variable.other.hx
                                              ^
-                                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx meta.brace.round.hx
+                                             source.hx meta.class.hx meta.block.hx meta.brace.round.hx
                                               ^
-                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                              source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >            #end
  ^^^^^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
              ^^^^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+             source.hx meta.class.hx meta.block.hx punctuation.definition.tag
 >        #end
  ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
          ^^^^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+         source.hx meta.class.hx meta.block.hx punctuation.definition.tag
 >    }
  ^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
      ^
-     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+     source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
 >
  ^
  source.hx meta.class.hx meta.block.hx
@@ -412,69 +412,69 @@ class Foo {
                    ^
                    source.hx meta.class.hx meta.block.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
                     ^
-                    source.hx meta.class.hx meta.block.hx meta.method.hx
+                    source.hx meta.class.hx meta.block.hx
                      ^
-                     source.hx meta.class.hx meta.block.hx meta.method.hx punctuation.definition.block.begin.hx
+                     source.hx meta.class.hx meta.block.hx punctuation.definition.block.begin.hx
 >        #if (haxe_ver >= 3.1) return true #elseif false return false #else throw "error" #end ;
  ^^^^^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
          ^^^^
-         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag punctuation.definition.tag
+         source.hx meta.class.hx meta.block.hx punctuation.definition.tag punctuation.definition.tag
              ^
-             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+             source.hx meta.class.hx meta.block.hx punctuation.definition.tag
               ^^^^^^^^^^^^^^^
-              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+              source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                              ^
-                             source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                             source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                               ^
-                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                              source.hx meta.class.hx meta.block.hx
                                ^^^^^^
-                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                               source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                                      ^
-                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                     source.hx meta.class.hx meta.block.hx
                                       ^^^^
-                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.language.hx
+                                      source.hx meta.class.hx meta.block.hx constant.language.hx
                                           ^
-                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                          source.hx meta.class.hx meta.block.hx
                                            ^^^^^^^^^^^^^
-                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                                           source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                                                         ^
-                                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                        source.hx meta.class.hx meta.block.hx
                                                          ^^^^^^
-                                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.flow-control.hx
+                                                         source.hx meta.class.hx meta.block.hx keyword.control.flow-control.hx
                                                                ^
-                                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                               source.hx meta.class.hx meta.block.hx
                                                                 ^^^^^
-                                                                source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx constant.language.hx
+                                                                source.hx meta.class.hx meta.block.hx constant.language.hx
                                                                      ^
-                                                                     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                                     source.hx meta.class.hx meta.block.hx
                                                                       ^^^^^
-                                                                      source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                                                                      source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                                                                            ^
-                                                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                                           source.hx meta.class.hx meta.block.hx
                                                                             ^^^^^
-                                                                            source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx keyword.control.catch-exception.hx
+                                                                            source.hx meta.class.hx meta.block.hx keyword.control.catch-exception.hx
                                                                                  ^
-                                                                                 source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                                                 source.hx meta.class.hx meta.block.hx
                                                                                   ^
-                                                                                  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
+                                                                                  source.hx meta.class.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.begin.hx
                                                                                    ^^^^^
-                                                                                   source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx
+                                                                                   source.hx meta.class.hx meta.block.hx string.quoted.double.hx
                                                                                         ^
-                                                                                        source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx string.quoted.double.hx punctuation.definition.string.end.hx
+                                                                                        source.hx meta.class.hx meta.block.hx string.quoted.double.hx punctuation.definition.string.end.hx
                                                                                          ^
-                                                                                         source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                                                         source.hx meta.class.hx meta.block.hx
                                                                                           ^^^^
-                                                                                          source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.tag
+                                                                                          source.hx meta.class.hx meta.block.hx punctuation.definition.tag
                                                                                               ^
-                                                                                              source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+                                                                                              source.hx meta.class.hx meta.block.hx
                                                                                                ^
-                                                                                               source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
+                                                                                               source.hx meta.class.hx meta.block.hx punctuation.terminator.hx
 >    }
  ^^^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ source.hx meta.class.hx meta.block.hx
      ^
-     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+     source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
 >}
  ^
  source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx

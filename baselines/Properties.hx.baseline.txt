@@ -24,7 +24,7 @@ public static var tweens(#if haxe3 get #else get_tweens #end , /* foo */ never):
                       ^
                       source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
                        ^
-                       source.hx meta.method.hx punctuation.terminator.hx
+                       source.hx punctuation.terminator.hx
 >private var attr(get, set):Dynamic<Float> = 1;
  ^^^^^^^
  source.hx storage.modifier.hx
