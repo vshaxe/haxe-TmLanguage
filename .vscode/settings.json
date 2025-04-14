@@ -5,5 +5,8 @@
 		"editor.codeActionsOnSave": {
 			"source.sortImports": "explicit"
 		}
-	}
+	},
+	"[plaintext]": {
+		"editor.stickyScroll.maxLineCount": 1
+	},
 }
