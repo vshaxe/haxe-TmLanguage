@@ -1011,6 +1011,7 @@ repository:
       endCaptures:
         '0': {name: keyword.operator.ternary.hx}
       patterns:
+      - include: '#block'
       - include: '#block-contents'
   punctuation-comma:
     match: ','
