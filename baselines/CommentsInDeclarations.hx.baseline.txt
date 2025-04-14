@@ -6,11 +6,12 @@ interface /**/ ITest /**/ extends /**/ IBase /**/ {} /**/
 typedef /**/ WinHandle /**/ = /**/ hl.Abstract /**/ <@:const 5 /**/>;
 enum Color /**/ </**/ T> /**/ {} /**/
 
-public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
-    /**/ @:const value2:T2 = SomeClass.Constant,
-    value2:/**/{ /**/ ?foo /**/ : /**/ Dynamic /**/ <String> /**/ }):Void
+public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "" /**/,
+    /**/ @:const /**/ value2:T2 = SomeClass.Constant,
+    value2:/**/{ /**/ ?foo /**/ : /**/ Dynamic /**/ <String> /**/ }, /**/.../**/args:Rest/**/):Void
 {
 }
+
 -----------------------------------
 
 >class /**/ Main /**/ extends /**/ openfl.display.DisplayObject /**/ {} /**/
@@ -325,7 +326,7 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
 >
  ^
  source.hx
->public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
+>public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "" /**/,
  ^^^^^^
  source.hx storage.modifier.hx
        ^
@@ -394,7 +395,13 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
                                                                           source.hx meta.method.hx meta.parameters.hx string.quoted.double.hx punctuation.definition.string.end.hx
                                                                            ^
                                                                            source.hx meta.method.hx meta.parameters.hx
->    /**/ @:const value2:T2 = SomeClass.Constant,
+                                                                            ^^
+                                                                            source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                              ^^
+                                                                              source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                ^
+                                                                                source.hx meta.method.hx meta.parameters.hx punctuation.separator.comma.hx
+>    /**/ @:const /**/ value2:T2 = SomeClass.Constant,
  ^^^^
  source.hx meta.method.hx meta.parameters.hx
      ^^
@@ -409,27 +416,33 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
            source.hx meta.method.hx meta.parameters.hx storage.modifier.metadata.hx
                  ^
                  source.hx meta.method.hx meta.parameters.hx
-                  ^^^^^^
-                  source.hx meta.method.hx meta.parameters.hx variable.parameter.hx
-                        ^
-                        source.hx meta.method.hx meta.parameters.hx keyword.operator.type.annotation.hx
-                         ^^
-                         source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
-                           ^
-                           source.hx meta.method.hx meta.parameters.hx
-                            ^
-                            source.hx meta.method.hx meta.parameters.hx keyword.operator.assignment.hx
+                  ^^
+                  source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                    ^^
+                    source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                      ^
+                      source.hx meta.method.hx meta.parameters.hx
+                       ^^^^^^
+                       source.hx meta.method.hx meta.parameters.hx variable.parameter.hx
                              ^
-                             source.hx meta.method.hx meta.parameters.hx
-                              ^^^^^^^^^
+                             source.hx meta.method.hx meta.parameters.hx keyword.operator.type.annotation.hx
+                              ^^
                               source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
-                                       ^
-                                       source.hx meta.method.hx meta.parameters.hx support.package.hx
-                                        ^^^^^^^^
-                                        source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
-                                                ^
-                                                source.hx meta.method.hx meta.parameters.hx
->    value2:/**/{ /**/ ?foo /**/ : /**/ Dynamic /**/ <String> /**/ }):Void
+                                ^
+                                source.hx meta.method.hx meta.parameters.hx
+                                 ^
+                                 source.hx meta.method.hx meta.parameters.hx keyword.operator.assignment.hx
+                                  ^
+                                  source.hx meta.method.hx meta.parameters.hx
+                                   ^^^^^^^^^
+                                   source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
+                                            ^
+                                            source.hx meta.method.hx meta.parameters.hx support.package.hx
+                                             ^^^^^^^^
+                                             source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
+                                                     ^
+                                                     source.hx meta.method.hx meta.parameters.hx punctuation.separator.comma.hx
+>    value2:/**/{ /**/ ?foo /**/ : /**/ Dynamic /**/ <String> /**/ }, /**/.../**/args:Rest/**/):Void
  ^^^^
  source.hx meta.method.hx meta.parameters.hx
      ^^^^^^
@@ -499,14 +512,41 @@ public function dispatch2(/**/?/**/value1/**/:/**/T1/**/<T2>/**/ = /**/ "",
                                                                    ^
                                                                    source.hx meta.method.hx meta.parameters.hx meta.block.hx punctuation.definition.block.end.hx
                                                                     ^
-                                                                    source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                                                    source.hx meta.method.hx meta.parameters.hx punctuation.separator.comma.hx
                                                                      ^
-                                                                     source.hx meta.method.hx keyword.operator.type.annotation.hx
-                                                                      ^^^^
-                                                                      source.hx meta.method.hx support.class.builtin.hx
+                                                                     source.hx meta.method.hx meta.parameters.hx
+                                                                      ^^
+                                                                      source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                        ^^
+                                                                        source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                          ^^^
+                                                                          source.hx meta.method.hx meta.parameters.hx keyword.operator.rest.hx
+                                                                             ^^
+                                                                             source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                               ^^
+                                                                               source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                 ^^^^
+                                                                                 source.hx meta.method.hx meta.parameters.hx variable.parameter.hx
+                                                                                     ^
+                                                                                     source.hx meta.method.hx meta.parameters.hx keyword.operator.type.annotation.hx
+                                                                                      ^^^^
+                                                                                      source.hx meta.method.hx meta.parameters.hx entity.name.type.hx
+                                                                                          ^^
+                                                                                          source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                            ^^
+                                                                                            source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                                                                              ^
+                                                                                              source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                                                                               ^
+                                                                                               source.hx meta.method.hx keyword.operator.type.annotation.hx
+                                                                                                ^^^^
+                                                                                                source.hx meta.method.hx support.class.builtin.hx
 >{
  ^
  source.hx meta.method.hx punctuation.definition.block.begin.hx
 >}
  ^
  source.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx

@@ -637,6 +637,7 @@ repository:
     name: meta.parameters.hx
     patterns:
     - include: '#parameter'
+    - include: '#punctuation-comma'
   parameter:
     begin: (?<=\(|,)
     end: (?=\)(?!\s*->)|,)
@@ -644,17 +645,19 @@ repository:
     - include: '#parameter-name'
     - include: '#parameter-type-hint'
     - include: '#parameter-assign'
-    - include: '#punctuation-comma'
     - include: '#global'
   parameter-name:
-    begin: (?<=\(|,)
-    end: ([_a-zA-Z]\w*)
-    endCaptures:
-      '1': {name: variable.parameter.hx}
     patterns:
+    - match: \s*([_a-zA-Z]\w*)
+      captures:
+        '1': {name: variable.parameter.hx}
     - include: '#global'
     - include: '#metadata'
     - include: '#operator-optional'
+    - include: '#operator-rest'
+  operator-rest:
+    match: '\.\.\.'
+    name: keyword.operator.rest.hx
   parameter-type-hint:
     begin: ':'
     beginCaptures:

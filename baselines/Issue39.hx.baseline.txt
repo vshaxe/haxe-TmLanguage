@@ -1,0 +1,108 @@
+original file
+-----------------------------------
+@:put('/thumbnail')
+function uploadThumbnail(/* body:RealSource */):Promise<OutgoingResponse>;
+
+@:get
+function image():Promise<OutgoingResponse>;
+
+-----------------------------------
+
+>@:put('/thumbnail')
+ ^
+ source.hx punctuation.metadata.hx
+  ^^^^
+  source.hx variable.metadata.hx
+      ^
+      source.hx meta.brace.round.hx
+       ^
+       source.hx string.quoted.single.hx punctuation.definition.string.begin.hx
+        ^
+        source.hx string.quoted.single.hx
+         ^
+         source.hx string.quoted.single.hx
+          ^
+          source.hx string.quoted.single.hx
+           ^
+           source.hx string.quoted.single.hx
+            ^
+            source.hx string.quoted.single.hx
+             ^
+             source.hx string.quoted.single.hx
+              ^
+              source.hx string.quoted.single.hx
+               ^
+               source.hx string.quoted.single.hx
+                ^
+                source.hx string.quoted.single.hx
+                 ^
+                 source.hx string.quoted.single.hx
+                  ^
+                  source.hx string.quoted.single.hx punctuation.definition.string.end.hx
+                   ^
+                   source.hx meta.brace.round.hx
+>function uploadThumbnail(/* body:RealSource */):Promise<OutgoingResponse>;
+ ^^^^^^^^
+ source.hx meta.method.hx storage.type.function.hx
+         ^
+         source.hx meta.method.hx
+          ^^^^^^^^^^^^^^^
+          source.hx meta.method.hx entity.name.function.hx
+                         ^
+                         source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                          ^^
+                          source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                            ^^^^^^^^^^^^^^^^^
+                            source.hx meta.method.hx meta.parameters.hx comment.block.hx
+                                             ^^
+                                             source.hx meta.method.hx meta.parameters.hx comment.block.hx punctuation.definition.comment.hx
+                                               ^
+                                               source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                                                ^
+                                                source.hx meta.method.hx keyword.operator.type.annotation.hx
+                                                 ^^^^^^^
+                                                 source.hx meta.method.hx entity.name.type.hx
+                                                        ^
+                                                        source.hx meta.method.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                                                         ^^^^^^^^^^^^^^^^
+                                                         source.hx meta.method.hx meta.type-parameters.hx entity.name.type.hx
+                                                                         ^
+                                                                         source.hx meta.method.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                                                          ^
+                                                                          source.hx meta.method.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
+>@:get
+ ^
+ source.hx punctuation.metadata.hx
+  ^
+  source.hx variable.metadata.hx
+   ^^^
+   source.hx variable.metadata.hx
+>function image():Promise<OutgoingResponse>;
+ ^^^^^^^^
+ source.hx meta.method.hx storage.type.function.hx
+         ^
+         source.hx meta.method.hx
+          ^^^^^
+          source.hx meta.method.hx entity.name.function.hx
+               ^
+               source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.begin.hx
+                ^
+                source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
+                 ^
+                 source.hx meta.method.hx keyword.operator.type.annotation.hx
+                  ^^^^^^^
+                  source.hx meta.method.hx entity.name.type.hx
+                         ^
+                         source.hx meta.method.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                          ^^^^^^^^^^^^^^^^
+                          source.hx meta.method.hx meta.type-parameters.hx entity.name.type.hx
+                                          ^
+                                          source.hx meta.method.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                                           ^
+                                           source.hx meta.method.hx punctuation.terminator.hx
+>
+ ^
+ source.hx
