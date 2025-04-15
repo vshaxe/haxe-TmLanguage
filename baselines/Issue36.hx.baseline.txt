@@ -19,17 +19,17 @@ return e2 == null ? { t : HDyn } : bar(e2);
                ^
                source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
                 ^
-                source.hx meta.method.hx
+                source.hx
                  ^^^^^^
-                 source.hx meta.method.hx keyword.control.flow-control.hx
+                 source.hx keyword.control.flow-control.hx
                        ^
-                       source.hx meta.method.hx
+                       source.hx
                         ^
-                        source.hx meta.method.hx variable.other.hx
+                        source.hx variable.other.hx
                          ^
-                         source.hx meta.method.hx
+                         source.hx meta.brace.round.hx
                           ^
-                          source.hx meta.method.hx punctuation.terminator.hx
+                          source.hx punctuation.terminator.hx
 >pack.Foo(function(i) return i);
  ^^^^^
  source.hx support.package.hx
@@ -46,17 +46,17 @@ return e2 == null ? { t : HDyn } : bar(e2);
                     ^
                     source.hx meta.method.hx meta.parameters.hx punctuation.definition.parameters.end.hx
                      ^
-                     source.hx meta.method.hx
+                     source.hx
                       ^^^^^^
-                      source.hx meta.method.hx keyword.control.flow-control.hx
+                      source.hx keyword.control.flow-control.hx
                             ^
-                            source.hx meta.method.hx
+                            source.hx
                              ^
-                             source.hx meta.method.hx variable.other.hx
+                             source.hx variable.other.hx
                               ^
-                              source.hx meta.method.hx
+                              source.hx meta.brace.round.hx
                                ^
-                               source.hx meta.method.hx punctuation.terminator.hx
+                               source.hx punctuation.terminator.hx
 >return e2 == null ? { t : HDyn } : bar(e2);
  ^^^^^^
  source.hx keyword.control.flow-control.hx
