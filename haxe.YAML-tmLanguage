@@ -24,7 +24,6 @@ repository:
     patterns:
     - include: '#comments'
     - include: '#conditional-compilation'
-    - include: '#method-return-type-hint'
   block:
     begin: \{
     beginCaptures:
@@ -60,6 +59,7 @@ repository:
     - include: '#punctuation-comma'
     - include: '#punctuation-accessor'
     - include: '#identifiers'
+    - include: '#method-return-type-hint'
   identifiers:
     patterns:
     - include: '#constant-name'
@@ -599,7 +599,7 @@ repository:
     - include: '#macro-reification'
     - include: '#method-name'
     - include: '#method-parameters'
-    # will be matched in global
+    # will be matched in block-contents
     # - include: '#method-return-type-hint'
   method-parameters:
     name: meta.parameters.hx
@@ -622,17 +622,6 @@ repository:
     patterns:
     - include: '#macro-reification'
     - include: '#type-parameters'
-  method-block:
-    begin: (?<=\{)
-    beginCaptures:
-      '1': {name: punctuation.definition.block.begin.hx}
-    end: (\})
-    endCaptures:
-      '1': {name: punctuation.definition.block.end.hx}
-    name: meta.method.block.hx
-    patterns:
-    - include: '#block'
-    - include: '#block-contents'
 
   parameters:
     begin: \(
