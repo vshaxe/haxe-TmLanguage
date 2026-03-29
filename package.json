@@ -3,7 +3,7 @@
 	"devDependencies": {
 		"lix": "^15.10.1",
 		"vscode-oniguruma": "^1.6.2",
-		"vscode-textmate": "^7.0.1"
+		"vscode-textmate": "^7.0.4"
 	},
 	"scripts": {
 		"postinstall": "npx lix download"

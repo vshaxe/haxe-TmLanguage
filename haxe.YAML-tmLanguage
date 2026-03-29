@@ -49,7 +49,10 @@ repository:
     - include: '#for-loop'
     - include: '#keywords'
     - include: '#arrow-function'
-    - include: '#method-call'
+
+    - include: '#method-call-dotted'
+    - include: '#constructor-call'
+    - include: '#method-call-simple'
     - include: '#enum-constructor-call'
     - include: '#punctuation-braces'
     - include: '#macro-reification'
@@ -58,12 +61,18 @@ repository:
     - include: '#punctuation-terminator'
     - include: '#punctuation-comma'
     - include: '#punctuation-accessor'
+    - include: '#type-member-access'
     - include: '#identifiers'
+  enum-member:
+    # enum pascal fix
+    - match: (?m)^\s*([_A-Z]\w*)(?=\s*(?:;|,|\n))
+      captures:
+        '1': { name: variable.other.hx }
   identifiers:
     patterns:
     - include: '#constant-name'
+    - include: '#identifier-name' # prefer this first (fixes var and finals)
     - include: '#type-name'
-    - include: '#identifier-name'
   package:
     begin: package\b
     beginCaptures:
@@ -102,13 +111,31 @@ repository:
     - match: \b([_A-Za-z]\w*)\b(?=\s*(as|in|$|(;)))
       name: variable.other.hxt
     - include: '#type-path-package-name'
+  method-call-dotted:
+    match: \b((?:_*[a-z]\w*\.)*)(_*[A-Z][a-z]\w*)(\.)([_A-Za-z]\w*)(?=\s*\()
+    captures:
+      '1': { name: support.package.hx }      # package / earlier path segments (optional)
+      '2': { name: entity.name.type.hx }     # Class / Type token (PascalCase)
+      '3': { name: punctuation.accessor.hx } # the dot between Class and Function
+      '4': { name: entity.name.function.hx } # the Method token
+  constructor-call:
+    # fix addChild(new FlxGame())'s FlxGame being colored as a function instead of a class
+    match: \b(_*[A-Z][a-zA-Z0-9]*)\s*(?=\()
+    captures:
+      '1': { name: entity.name.type.hx }
+  method-call-simple:
+    match: (?<!\bnew\s)\b([_a-z]\w*)(?=\s*\()
+    captures:
+      '1': { name: entity.name.function.hx }
   type-path:
     patterns:
     - include: '#global'
     - include: '#punctuation-accessor'
     - include: '#type-path-type-name'
   type-path-type-name:
-    match: \b(_*[A-Z]\w*)\b
+    # OLD: match anything uppercase as class (BAD): match: \b(_*[A-Z]\w*)\b
+    # NEW: filter functions, vars, finals, and things that start with "("
+    match: (?<!\bfunction\s)(?<!\bvar\s)(?<!\bfinal\s)\b(_*[A-Z][a-z]\w*)\b(?!\s*\()
     name: entity.name.type.hx
   type-path-package-name:
     match: \b([_A-Za-z]\w*)\b
@@ -232,6 +259,8 @@ repository:
     - include: '#global'
     - include: '#metadata'
     - include: '#parameters'
+    - include: '#enum-member'
+    - include: '#punctuation-terminator' # makes ENUM""";"" get colored correctly
     - include: '#identifiers'
   interface:
     begin: (?=interface)
@@ -789,13 +818,23 @@ repository:
     - match: \b(final)\b(?=\s+(public|private|static|dynamic|inline|macro|extern|override|overload|abstract|function))
       name: storage.modifier.hx
   new-expr:
-    name: new.expr.hx
-    begin: (?<!\.)\b(new)\b
-    beginCaptures:
-      '1': { name: keyword.operator.new.hx }
-    end: (?=$|\()
     patterns:
-    - include: '#type'
+    # handle generic Class<T>
+    - begin: (?<!\.)\b(new)\b\s*((?:_*[a-z]\w*\.)*(?:_*[A-Z]\w*))(?:\s*)(<)
+      beginCaptures:
+        '1': { name: keyword.operator.new.hx }
+        '2': { name: entity.name.type.hx }
+        '3': { name: punctuation.definition.typeparameters.begin.hx }
+      end: (>)
+      endCaptures:
+        '1': { name: punctuation.definition.typeparameters.end.hx }
+      patterns:
+        - include: '#type'
+    # handle regular constructors n types
+    - match: (?<!\.)\b(new)\b\s*((?:_*[a-z]\w*\.)*(?:_*[A-Z]\w*))
+      captures:
+        '1': { name: keyword.operator.new.hx }
+        '2': { name: entity.name.type.hx }
   for-loop:
     begin: \b(for)\b\s*(\()
     beginCaptures:
@@ -867,7 +906,9 @@ repository:
       - include: '#operator-assignment'
       - include: '#punctuation-comma'
       - include: '#keywords'
-      - include: '#method-call'
+      - include: "#enum-constructor-call" # so stuff like case RGB(r,g,b) gets colored blue
+      - include: '#method-call-dotted'
+      - include: '#method-call-simple'
       - include: '#identifiers'
     - match: \b(if|else|return|do|while|for|break|continue|switch|case|default)\b
       name: keyword.control.flow-control.hx
@@ -879,8 +920,11 @@ repository:
       name: keyword.other.type.hx
     - match: \__(global|this)__\b
       name: keyword.other.untyped-property.hx
-    - match: \b(this|super)\b
-      name: variable.language.hx
+    # tiny correction for super and this
+    - match: \b(this)\b
+      name: variable.language.this.hx
+    - match: \b(super)\b
+      name: variable.language.super.hx
     - match: \bnew\b
       name: keyword.operator.new.hx
     - match: \b(abstract|class|enum|interface|typedef)\b
@@ -910,35 +954,12 @@ repository:
   modifiers-inheritance:
     match: \b(implements|extends)\b
     name: storage.modifier.hx
-  method-call:
-    # for a starting point, run this on the haxe repo:
-    # egrep -oh -r --include=*.hx '__[a-z][A-Za-z_]+__\s*\(' | sort | uniq | cut -c 3- | rev | cut -c 4- | rev
-    begin: \b(?:(__(?:addressOf|as|call|checked|cpp|cs|define_feature|delete|feature|field|fixed|foreach|forin|has_next|hkeys|in|int|is|java|js|keys|lock|lua|lua_table|new|php|physeq|prefix|ptr|resources|rethrow|set|setfield|sizeof|type|typeof|unprotect|unsafe|valueOf|var|vector|vmem_get|vmem_set|vmem_sign|instanceof|strict_eq|strict_neq)__)|([_a-z]\w*))\s*(\()
-    beginCaptures:
-      '1': {name: keyword.other.untyped-function.hx}
-      '2': {name: entity.name.function.hx}
-      '3': {name: meta.brace.round.hx}
-    end: (\))
-    endCaptures:
-      '1': {name: meta.brace.round.hx}
-    patterns:
-    - include: '#block'
-    - include: '#block-contents'
   enum-constructor-call:
     # largely the same regex as #type-name
-    begin: \b(?<!\.)((_*[a-z]\w*\.)*)(_*[A-Z]\w*)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\s*(\()
-    beginCaptures:
-      '1': {name: support.package.hx}
-      '3': {name: entity.name.type.hx}
-      '4': {name: support.package.hx}
-      '5': {name: entity.name.type.hx}
-      '6': {name: meta.brace.round.hx}
-    end: (\))
-    endCaptures:
-      '1': {name: meta.brace.round.hx}
-    patterns:
-    - include: '#block'
-    - include: '#block-contents'
+    match: \b((?:_*[a-z]\w*\.)*)(_*[A-Z][A-Z0-9_]*)\s*(?=\()
+    captures:
+      '1': { name: support.package.hx }
+      '2': { name: entity.name.function.hx }
   macro-reification:
     patterns:
     - match: (\$)([eabipv])\{
@@ -1079,6 +1100,21 @@ repository:
     end: (?=\)|,|=)
     patterns:
     - include: '#type'
+  type-member-access:
+    # old: \b(_*[A-Z]\w*)
+    patterns:
+      # Class.method()
+      - match: \b(_*[A-Z][a-z]+[A-Za-z0-9]*)(\.)([_A-Za-z]\w*)(?=\()
+        captures:
+          '1': { name: entity.name.type.hx }
+          '2': { name: punctuation.accessor.hx }
+          '3': { name: entity.name.function.hx }
+      # Class.variable
+      - match: \b(_*[A-Z][a-z]+[A-Za-z0-9]*)(\.)([_A-Za-z]\w*)
+        captures:
+          '1': { name: entity.name.type.hx }
+          '2': { name: punctuation.accessor.hx }
+          '3': { name: variable.other.hx }
   type-name:
     patterns:
     - match: \b(Any|Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|Enum|EnumValue|EReg|Float|IMap|Int|IntIterator|Iterable|Iterator|KeyValueIterator|KeyValueIterable|Lambda|List|ListIterator|ListNode|Map|Math|Null|Reflect|Single|Std|String|StringBuf|StringTools|Sys|Type|UInt|UnicodeString|ValueType|Void|Xml|XmlType)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b
@@ -1086,11 +1122,11 @@ repository:
         '1': {name: support.class.builtin.hx}
         '2': {name: support.package.hx}
         '3': {name: entity.name.type.hx}
-    - match: \b(?<![^.]\.)((_*[a-z]\w*\.)*)(_*[A-Z]\w*)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b
+    - match: \b(?<![^.]\.)((_*[a-z]\w*\.)*)(_*[A-Z][a-z]\w*)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\b(?!\s*\() # try ensuring that anything ending with "(" wont be classified as types
       captures:
         '1': {name: support.package.hx}
         '3': {name: entity.name.type.hx}
-        '4': {name: support.package.hx}
+        '4': {name: punctuation.accessor.hx}
         '5': {name: entity.name.type.hx}
   type-parameters:
     begin: (<)
