@@ -51,6 +51,7 @@ repository:
     - include: '#arrow-function'
 
     - include: '#method-call-dotted'
+    - include: '#constructor-call'
     - include: '#method-call-simple'
     - include: '#enum-constructor-call'
     - include: '#punctuation-braces'
@@ -67,10 +68,6 @@ repository:
     - match: (?m)^\s*([_A-Z]\w*)(?=\s*(?:;|,|\n))
       captures:
         '1': { name: variable.other.hx }
-    # color blue if it ends with (
-    - match: \b([_A-Za-z]\w*)(?=\s*\()
-      captures:
-        '1': { name: entity.name.function.hx }
   identifiers:
     patterns:
     - include: '#constant-name'
@@ -121,8 +118,13 @@ repository:
       '2': { name: entity.name.type.hx }     # Class / Type token (PascalCase)
       '3': { name: punctuation.accessor.hx } # the dot between Class and Function
       '4': { name: entity.name.function.hx } # the Method token
+  constructor-call:
+    # fix addChild(new FlxGame())'s FlxGame being colored as a function instead of a class
+    match: \b(_*[A-Z][a-zA-Z0-9]*)\s*(?=\()
+    captures:
+      '1': { name: entity.name.type.hx }
   method-call-simple:
-    match: \b([_A-Za-z]\w*)(?=\s*\()
+    match: (?<!\bnew\s)\b([_a-z]\w*)(?=\s*\()
     captures:
       '1': { name: entity.name.function.hx }
   type-path:
@@ -258,6 +260,7 @@ repository:
     - include: '#metadata'
     - include: '#parameters'
     - include: '#enum-member'
+    - include: '#punctuation-terminator' # makes ENUM""";"" get colored correctly
     - include: '#identifiers'
   interface:
     begin: (?=interface)
@@ -903,6 +906,7 @@ repository:
       - include: '#operator-assignment'
       - include: '#punctuation-comma'
       - include: '#keywords'
+      - include: "#enum-constructor-call" # so stuff like case RGB(r,g,b) gets colored blue
       - include: '#method-call-dotted'
       - include: '#method-call-simple'
       - include: '#identifiers'
@@ -952,19 +956,10 @@ repository:
     name: storage.modifier.hx
   enum-constructor-call:
     # largely the same regex as #type-name
-    begin: \b(?<!\.)((_*[a-z]\w*\.)*)(_*[A-Z]\w*)(?:(\.)(_*[A-Z]\w*[a-z]\w*))*\s*(\()
-    beginCaptures:
-      '1': {name: support.package.hx}
-      '3': {name: entity.name.function.hx}
-      '4': {name: support.package.hx}
-      '5': {name: variable.other.hx}
-      '6': {name: meta.brace.round.hx}
-    end: (\))
-    endCaptures:
-      '1': {name: meta.brace.round.hx}
-    patterns:
-    - include: '#block'
-    - include: '#block-contents'
+    match: \b((?:_*[a-z]\w*\.)*)(_*[A-Z][A-Z0-9_]*)\s*(?=\()
+    captures:
+      '1': { name: support.package.hx }
+      '2': { name: entity.name.function.hx }
   macro-reification:
     patterns:
     - match: (\$)([eabipv])\{
