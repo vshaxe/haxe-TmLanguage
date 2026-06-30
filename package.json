@@ -1,7 +1,7 @@
 {
 	"name": "haxe-tm-language",
 	"devDependencies": {
-		"lix": "^15.10.1",
+		"lix": "^17.0.0",
 		"vscode-oniguruma": "^1.6.2",
 		"vscode-textmate": "^7.0.1"
 	},
