@@ -138,7 +138,7 @@ typedef DS = Dynamic<String>;
                                  ^^^^
                                  source.hx meta.typedef.hx meta.block.hx meta.method.hx support.class.builtin.hx
                                      ^
-                                     source.hx meta.typedef.hx meta.block.hx meta.method.hx punctuation.terminator.hx
+                                     source.hx meta.typedef.hx meta.block.hx punctuation.terminator.hx
 >}
  ^
  source.hx meta.typedef.hx meta.block.hx punctuation.definition.block.end.hx

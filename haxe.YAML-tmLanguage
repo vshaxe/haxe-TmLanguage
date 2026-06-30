@@ -59,6 +59,7 @@ repository:
     - include: '#punctuation-comma'
     - include: '#punctuation-accessor'
     - include: '#identifiers'
+    - include: '#method-return-type-hint'
   identifiers:
     patterns:
     - include: '#constant-name'
@@ -321,6 +322,7 @@ repository:
     - include: '#variable'
     - include: '#modifiers'
     - include: '#punctuation-comma'
+    - include: '#punctuation-terminator'
     - include: '#operator-optional'
     - include: '#typedef-extension'
     - include: '#typedef-simple-field-type-hint'
@@ -595,13 +597,27 @@ repository:
         '5': {name: variable.metadata.hx}
   method:
     begin: (?=\bfunction\b)
-    end: (?<=[\};])
+    # span a braced body (including Allman brace on the next line)
+    # but end at the signature for a braceless body, whose terminator can't be known here
+    end: (?<=\})|(?=\s*[^\s{])
+    applyEndPatternLast: true
     name: meta.method.hx
     patterns:
     - include: '#macro-reification'
     - include: '#method-name'
-    - include: '#method-name-post'
+    - include: '#parameters'
+    - include: '#method-return'
+    - match: (\{)
+      captures:
+        '1': {name: punctuation.definition.block.begin.hx}
     - include: '#method-block'
+  method-return:
+    begin: (?<=\))\s*(:)
+    beginCaptures:
+      '1': {name: keyword.operator.type.annotation.hx}
+    end: (?=\{|;|[a-z0-9])
+    patterns:
+    - include: '#type'
   method-name:
     begin: \b(function)\b\s*\b(?:(new)|([_A-Za-z]\w*))?\b
     beginCaptures:
@@ -612,17 +628,6 @@ repository:
     patterns:
     - include: '#macro-reification'
     - include: '#type-parameters'
-  method-name-post:
-    begin: (?<=[\w\s>])
-    end: (\{)|(;)
-    endCaptures:
-      '1': {name: punctuation.definition.block.begin.hx}
-      '2': {name: punctuation.terminator.hx}
-    patterns:
-    - include: '#parameters'
-    - include: '#method-return-type-hint'
-    - include: '#block'
-    - include: '#block-contents'
   method-block:
     begin: (?<=\{)
     beginCaptures:
@@ -708,7 +713,7 @@ repository:
     patterns:
     - include: '#type'
   method-return-type-hint:
-    begin: (?<=\))\s*(:)
+    begin: (?<=\bfunction\b.+\))\s*(:)
     beginCaptures:
       '1': {name: keyword.operator.type.annotation.hx}
     end: (?=\{|;|[a-z0-9])
