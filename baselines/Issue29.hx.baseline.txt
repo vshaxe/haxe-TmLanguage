@@ -49,4 +49,4 @@ function new(init:(T->Void)->(Dynamic->Void)->Void):Void;
                                                      ^^^^
                                                      source.hx meta.method.hx support.class.builtin.hx
                                                          ^
-                                                         source.hx meta.method.hx punctuation.terminator.hx
+                                                         source.hx punctuation.terminator.hx

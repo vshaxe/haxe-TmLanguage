@@ -46,7 +46,7 @@ overload static function itWasYou(f1:Float, f2:Float):String;
                                                    ^^^^^^
                                                    source.hx meta.method.hx support.class.builtin.hx
                                                          ^
-                                                         source.hx meta.method.hx punctuation.terminator.hx
+                                                         source.hx punctuation.terminator.hx
 >overload static function itWasYou(s1:String, s2:String):String;
  ^^^^^^^^
  source.hx storage.modifier.hx
@@ -87,7 +87,7 @@ overload static function itWasYou(f1:Float, f2:Float):String;
                                                          ^^^^^^
                                                          source.hx meta.method.hx support.class.builtin.hx
                                                                ^
-                                                               source.hx meta.method.hx punctuation.terminator.hx
+                                                               source.hx punctuation.terminator.hx
 >overload static function itWasYou(f1:Float, f2:Float):String;
  ^^^^^^^^
  source.hx storage.modifier.hx
@@ -128,7 +128,7 @@ overload static function itWasYou(f1:Float, f2:Float):String;
                                                        ^^^^^^
                                                        source.hx meta.method.hx support.class.builtin.hx
                                                              ^
-                                                             source.hx meta.method.hx punctuation.terminator.hx
+                                                             source.hx punctuation.terminator.hx
 >
  ^
  source.hx
