@@ -749,7 +749,7 @@ repository:
     begin: '='
     beginCaptures:
       '0': {name: keyword.operator.assignment.hx}
-    end: (?=;|,)
+    end: (?=;|,|$)
     patterns:
     - include: '#block'
     - include: '#block-contents'

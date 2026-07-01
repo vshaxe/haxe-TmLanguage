@@ -739,8 +739,10 @@ class Foo {
                                           ^
                                           source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.terminator.hx
 >    }
- ^^^^^^
+ ^^^^
  source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+     ^
+     source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx punctuation.definition.block.end.hx
 >}
- ^^
- source.hx meta.class.hx meta.block.hx meta.method.hx meta.method.block.hx
+ ^
+ source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
