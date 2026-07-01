@@ -855,6 +855,7 @@ repository:
       end: ':|(?=if)|$'
       patterns:
       - include: '#global'
+      - include: '#case-object-pattern'
       - include: '#metadata'
       - match: \b(var|final)\b\s*([_a-zA-Z]\w*)\b
         captures:
@@ -895,6 +896,22 @@ repository:
       name: storage.type.function.arrow.hx
     - include: '#modifiers'
     - include: '#modifiers-inheritance'
+  case-object-pattern:
+    begin: \{
+    beginCaptures:
+      '0': {name: meta.brace.curly.hx}
+    end: \}
+    endCaptures:
+      '0': {name: meta.brace.curly.hx}
+    patterns:
+    - include: '#global'
+    - include: '#case-object-pattern'
+    - include: '#array'
+    - include: '#constants'
+    - include: '#strings'
+    - include: '#macro-reification'
+    - include: '#punctuation-comma'
+    - include: '#identifiers'
   punctuation-braces:
     begin: \(
     beginCaptures:
