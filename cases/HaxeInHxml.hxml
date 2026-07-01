@@ -15,3 +15,6 @@
 --main Main
 --main foo.unit.Main
 --main foo
+
+Main
+foo.unit.Main

@@ -18,6 +18,9 @@ original file
 --main foo.unit.Main
 --main foo
 
+Main
+foo.unit.Main
+
 -----------------------------------
 
 >--macro server.setModuleCheckPolicy(['DefaultAssetLibrary'], [CheckFileContentModification])
@@ -207,6 +210,17 @@ original file
        source.hxml
         ^^^^
         source.hxml
+>
+ ^
+ source.hxml
+>Main
+ ^^^^
+ source.hxml entity.name.type.hx
+>foo.unit.Main
+ ^^^^^^^^^
+ source.hxml support.package.hx
+          ^^^^
+          source.hxml entity.name.type.hx
 >
  ^
  source.hxml
