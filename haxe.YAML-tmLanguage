@@ -139,6 +139,12 @@ repository:
       '1': {name: punctuation.definition.block.begin.hx}
     patterns:
     - include: '#global'
+    - begin: \b(from|to)\b(?=\s*\{)
+      beginCaptures:
+        '1': {name: keyword.other.hx}
+      end: (?<=\})
+      patterns:
+      - include: '#type'
     - match: \b(from|to)\b
       name: keyword.other.hx
     - include: '#type'
