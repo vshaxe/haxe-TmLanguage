@@ -6,3 +6,8 @@ class Main {
 		trace("help, I broke!");
 	}
 }
+
+var foo = {
+	1;
+}
+typedef Bar = T<T1, T2>;

@@ -9,6 +9,11 @@ class Main {
 	}
 }
 
+var foo = {
+	1;
+}
+typedef Bar = T<T1, T2>;
+
 -----------------------------------
 
 >class Main {
@@ -145,6 +150,63 @@ class Main {
 >}
  ^
  source.hx meta.class.hx meta.block.hx punctuation.definition.block.end.hx
+>
+ ^
+ source.hx
+>var foo = {
+ ^^^
+ source.hx storage.type.variable.hx
+    ^
+    source.hx
+     ^^^
+     source.hx variable.other.hx
+        ^
+        source.hx
+         ^
+         source.hx keyword.operator.assignment.hx
+          ^
+          source.hx
+           ^
+           source.hx punctuation.definition.block.begin.hx
+>	1;
+ ^
+ source.hx
+  ^
+  source.hx constant.numeric.decimal.hx
+   ^
+   source.hx punctuation.terminator.hx
+>}
+ ^
+ source.hx punctuation.definition.block.end.hx
+>typedef Bar = T<T1, T2>;
+ ^^^^^^^
+ source.hx meta.typedef.hx storage.type.class.hx
+        ^
+        source.hx meta.typedef.hx
+         ^^^
+         source.hx meta.typedef.hx entity.name.type.class.hx
+            ^
+            source.hx meta.typedef.hx
+             ^
+             source.hx meta.typedef.hx keyword.operator.assignment.hx
+              ^
+              source.hx meta.typedef.hx
+               ^
+               source.hx meta.typedef.hx entity.name.type.hx
+                ^
+                source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.begin.hx
+                 ^^
+                 source.hx meta.typedef.hx meta.type-parameters.hx entity.name.type.hx
+                   ^
+                   source.hx meta.typedef.hx meta.type-parameters.hx punctuation.separator.comma.hx
+                    ^
+                    source.hx meta.typedef.hx meta.type-parameters.hx
+                     ^^
+                     source.hx meta.typedef.hx meta.type-parameters.hx entity.name.type.hx
+                       ^
+                       source.hx meta.typedef.hx meta.type-parameters.hx punctuation.definition.typeparameters.end.hx
+                        ^
+                        source.hx meta.typedef.hx punctuation.terminator.hx
 >
  ^
  source.hx
