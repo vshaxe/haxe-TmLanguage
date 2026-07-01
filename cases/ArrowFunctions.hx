@@ -6,3 +6,8 @@ map = [1 => a -> a + a, 2 => a -> a + a, 3 => a -> a + a];
 
 var f:Void->Int;
 var f:Int->Int->(Int->Int);
+
+var a = (
+	a:Int,
+	b:Int
+) -> a + b;

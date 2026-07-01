@@ -903,7 +903,7 @@ repository:
     - include: '#type-check'
   type-check:
     begin: (?<!macro)(?=:)
-    end: (?=\))
+    end: (?=\)|,)
     patterns:
     - include: '#operator-type-hint'
     - include: '#type'
