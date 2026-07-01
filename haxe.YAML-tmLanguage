@@ -535,6 +535,7 @@ repository:
         endCaptures:
           '0': {name: punctuation.definition.block.end.hx}
         patterns:
+        - include: '#block'
         - include: '#block-contents'
       # String interpolation : "$test"'
       - match: (\$)([_a-zA-Z]\w*)
