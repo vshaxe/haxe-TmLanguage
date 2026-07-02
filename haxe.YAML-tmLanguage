@@ -615,7 +615,7 @@ repository:
     begin: (?<=\))\s*(:)
     beginCaptures:
       '1': {name: keyword.operator.type.annotation.hx}
-    end: (?=\{|;|[a-z0-9])
+    end: (?=\{|;)|(?<=\s)(?=[a-z0-9]\w*\b(?!\s*\.))
     patterns:
     - include: '#type'
   method-name:
@@ -716,7 +716,7 @@ repository:
     begin: (?<=\bfunction\b.+\))\s*(:)
     beginCaptures:
       '1': {name: keyword.operator.type.annotation.hx}
-    end: (?=\{|;|[a-z0-9])
+    end: (?=\{|;)|(?<=\s)(?=[a-z0-9]\w*\b(?!\s*\.))
     patterns:
     - include: '#type'
   operator-optional:
