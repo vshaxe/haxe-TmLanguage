@@ -9,4 +9,6 @@
 	"[plaintext]": {
 		"editor.stickyScroll.maxLineCount": 1
 	},
+	"haxe.executable": "auto",
+	"haxelib.executable": "auto"
 }
